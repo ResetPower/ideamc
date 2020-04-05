@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ideamc.iml" filepath="$PROJECT_DIR$/ideamc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ideamc-core/ideamc-core.iml" filepath="$PROJECT_DIR$/ideamc-core/ideamc-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ideamc-launcher/ideamc-launcher.iml" filepath="$PROJECT_DIR$/ideamc-launcher/ideamc-launcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ideamc-toolkit/ideamc-toolkit.iml" filepath="$PROJECT_DIR$/ideamc-toolkit/ideamc-toolkit.iml" />
+    </modules>
+  </component>
+</project>
