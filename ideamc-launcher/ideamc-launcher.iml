@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
     <orderEntry type="module" module-name="ideamc-toolkit" />
+    <orderEntry type="module" module-name="ideamc-core" />
   </component>
 </module>

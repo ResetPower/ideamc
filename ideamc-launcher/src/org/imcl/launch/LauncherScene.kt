@@ -1,11 +1,17 @@
 package org.imcl.launch
 
+import javafx.collections.FXCollections
 import javafx.scene.Scene
 import javafx.scene.control.*
 import javafx.scene.layout.BorderPane
 import javafx.scene.layout.GridPane
+import javafx.scene.layout.Pane
+import org.imcl.core.LaunchOptions
+import org.imcl.core.Launcher
+import org.imcl.core.authentication.OfflineAuthenticator
 import org.imcl.lang.Translator
 import org.imcl.struct.StructedList
+import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.util.*
@@ -125,16 +131,34 @@ object LauncherScene {
         tab2.content = BorderPane().apply {
             center = Button(translator.get("launch")).apply {
                 setOnAction {
-                    if (gamePathList.items.size==0) {
+                    if (gamePathList.items.size==0||gamePathList.selectionModel.selectedItem==null) {
                         val alert = Alert(Alert.AlertType.INFORMATION)
                         alert.contentText = "Game path not selected"
                         alert.showAndWait()
-                    } else if (accountList.items.size==0) {
+                    } else if (accountList.items.size==0||accountList.selectionModel.selectedItem==null) {
                         val alert = Alert(Alert.AlertType.INFORMATION)
                         alert.contentText = "Account not selected"
                         alert.showAndWait()
                     } else {
-                        // TODO Launch
+                        val alert = Alert(Alert.AlertType.INFORMATION)
+                        alert.title = translator.get("wefoundtheseversions")
+                        val pane = Pane()
+                        val list = FXCollections.observableArrayList<String>()
+                        File(gamePathList.selectionModel.selectedItem.text+"/versions").listFiles().forEach {
+                            if (it.isDirectory) {
+                                list.add(it.name)
+                            }
+                        }
+                        val choiceBox = ChoiceBox(list)
+                        pane.children.add(GridPane().apply {
+                            add(choiceBox, 1, 0)
+                        })
+                        alert.dialogPane.content = pane
+                        alert.buttonTypes.addAll(ButtonType(translator.get("launch"), ButtonBar.ButtonData.YES))
+                        val buttonType = alert.showAndWait()
+                        if (buttonType.get().buttonData==ButtonBar.ButtonData.YES){
+                            Launcher.launch(LaunchOptions(gamePathList.selectionModel.selectedItem.text, choiceBox.selectionModel.selectedItem, OfflineAuthenticator(accountList.selectionModel.selectedItem.text)))
+                        }
                     }
                 }
             }
