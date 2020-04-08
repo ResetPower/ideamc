@@ -9,7 +9,7 @@ Simpla Minecraft lanĉilo
 ## Enkonduko
 IMCL estas Minecraft-lanzilo, kiu subtenas Moduladministrado, ludokutimo, Elŝuta ludo, elŝuta Ekspansio de ludoj(Forge, LiteLoader, Fabric kaj Optifine) ktp.
 ## Komentario
-La projekto komenciĝis la 5an de aprilo 2020. Ĉi tiu programaro estas nuntempe en tre malstabila disvolva fazo. Minecraft ankoraŭ ne povas esti komencita.
+La projekto komenciĝis la 5an de aprilo 2020. Ĉi tiu programaro estas nuntempe en tre malstabila disvolva fazo.
 ## Rapida komenco
 Kurado ideamc-launcher/out/artifacts/ideamc_jar/ideamc.jar
 ## Atenton
