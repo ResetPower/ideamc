@@ -2,6 +2,7 @@ package org.imcl.core
 
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
+import org.imcl.core.artifacts.ArtifactExtractor
 import java.io.File
 
 object Launcher {
@@ -20,7 +21,7 @@ object Launcher {
 
         val launchScript = generateMacOSLaunchScript(launchOptions, jsonObject)
         print(launchScript)
-        Runtime.getRuntime().exec("/Users/resetpower/Desktop/launch.sh")
+        Runtime.getRuntime().exec(launchScript)
     }
     fun generateMacOSLaunchScript(launchOptions: LaunchOptions, jsonObject: JSONObject) : String {
         val sb = StringBuffer("/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/bin/java -XstartOnFirstThread -Djava.library.path=\"${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}-natives\" -Dfml.ignoreInvalidMinecraftCertificates=true -Dfml.ignorePatchDiscrepancies=true ")
@@ -66,7 +67,6 @@ object Launcher {
                         }
                     }
                 }*/
-                //println("Native")
             } else {
                 val artifact = downloads.getJSONObject("artifact")
                 val path = artifact.get("path")
@@ -76,7 +76,7 @@ object Launcher {
             }
         }
         cpBuff.append("${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}.jar")
-        sb.append("${cpBuff.removeSuffix(";")}\" ")
+        sb.append("${cpBuff.removeSuffix(":")}\" ")
         sb.append(jsonObject.get("mainClass"))
         sb.append(" --username ${launchOptions.authenticator.username()} --version ${launchOptions.version} --gameDir \"${launchOptions.dir}\" --assetsDir \"${launchOptions.dir}/assets\" --assetIndex ${jsonObject.getJSONObject("assetIndex").get("id")} --uuid ${((launchOptions.authenticator.username().hashCode()).toString()).removePrefix("-")} --accessToken ${((launchOptions.authenticator.username().hashCode()+1).toString()).removePrefix("-")} --userType mojang --versionType release")
 
