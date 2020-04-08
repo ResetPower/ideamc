@@ -11,7 +11,7 @@ IMCLは、モジュール管理、ゲームのカスタマイズ、ゲームの�
 ## 解説
 このプロジェクトは令和2年4月5日に始まりました。このソフトウェアは現在、非常に不安定な開発段階にあります。
 ## すぐに始め
-実行 ideamc-launcher/out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
+実行 out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## 注目
 - 起動機は現在macOSのみをサポートしています
 - 起動機は現在Minecraftの公式フォルダーのみをサポートています

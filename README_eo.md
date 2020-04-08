@@ -11,7 +11,7 @@ IMCL estas Minecraft-lanzilo, kiu subtenas Moduladministrado, ludokutimo, Elŝut
 ## Komentario
 La projekto komenciĝis la 5an de aprilo 2020. Ĉi tiu programaro estas nuntempe en tre malstabila disvolva fazo.
 ## Rapida komenco
-Kurado ideamc-launcher/out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
+Kurado out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## Atenton
 - La lanĉisto nun nur subtenas macOS
 - La lanĉisto nun nur subtenas la oficialan Minecraft-dosierujon

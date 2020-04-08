@@ -11,7 +11,7 @@ IMCL is a Minecraft launcher which supports Mod managment, game customizing, gam
 ## Explanation
 The project started on Apr 5, 2020, CST. This software is in a very unstable development stage.
 ## Quick start
-Run ideamc-launcher/out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
+Run out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## Notice
 - The launcher supports only macOS now
 - The launcher supports only the official Minecraft folder now
