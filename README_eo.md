@@ -18,5 +18,8 @@ Kurado out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 - La lanĉisto nun nur subtenas senretan reĝimon
 - La lanĉisto nuntempe nur subtenas la puran version
 - La lanĉilo ne subtenas denaskan bibliotekon malŝpari, bonvolu malkompreni en .../versions/${version}/${version}-native dosierujo
+## Dependecoj
+- [Fastjson](https://github.com/alibaba/fastjson)
+- [JFoenix](https://github.com/jfoenixadmin/JFoenix)
 ## Ellaboranto
 ResetPower

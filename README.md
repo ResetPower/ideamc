@@ -18,5 +18,8 @@ Run out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 - The launcher supports only offline mode now
 - The launcher supports only pure version
 - The launcher not support native library unzip, please unzip to .../versions/${version}/${version}-natives folder
+## Dependencies
+- [Fastjson](https://github.com/alibaba/fastjson)
+- [JFoenix](https://github.com/jfoenixadmin/JFoenix)
 ## Developer
 ResetPower

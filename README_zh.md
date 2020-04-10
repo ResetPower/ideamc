@@ -18,5 +18,8 @@ IMCL是一个支持模组管理、游戏自定义、游戏下载和游戏扩展�
 - 这个启动器目前仅支持离线模式
 - 这个启动器目前仅支持纯净版
 - 启动器目前不支持native库解压，请手动解压到 .../${version}/${version}-native 文件夹
+## 依赖
+- [Fastjson](https://github.com/alibaba/fastjson)
+- [JFoenix](https://github.com/jfoenixadmin/JFoenix)
 ## 开发者
 ResetPower
