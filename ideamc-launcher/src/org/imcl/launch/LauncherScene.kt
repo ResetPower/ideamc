@@ -54,7 +54,7 @@ object LauncherScene {
                         }, 2, 2)
                         gridPane1.background = Background(
                             BackgroundImage(
-                                Image("file:///Users/resetpower/ideaProjects/ideamc/imcl/res/bg.png", 840.0, 502.5, false, true),
+                                Image("file://"+File("imcl/res/bg.png").absolutePath, 840.0, 502.5, false, true),
                                 BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
                                 BackgroundSize.DEFAULT
                             )

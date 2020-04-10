@@ -11,6 +11,8 @@
       <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk7.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk8.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/ideamc-core/lib/fastjson-1.2.68.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ideamc-launcher/lib/jfoenix-8.0.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/ideamc-launcher/lib/fastjson-1.2.68.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

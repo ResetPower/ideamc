@@ -17,6 +17,7 @@ import org.imcl.lang.Translator
 import org.imcl.launch.LauncherScene
 import org.imcl.constraints.Toolkit
 import org.imcl.users.UserInformation
+import java.io.File
 
 
 object MainScene {
@@ -29,7 +30,7 @@ object MainScene {
         val scene = Scene(BorderPane().apply {
             var translator = updateLanguage()
             background = Background(BackgroundImage(
-                Image("file:///Users/resetpower/ideaProjects/ideamc/imcl/res/bg.png", 840.0, 502.5, false, true),
+                Image("file://"+ File("imcl/res/bg.png").absolutePath, 840.0, 502.5, false, true),
                 BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
                 BackgroundSize.DEFAULT
             ))
