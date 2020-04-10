@@ -1,0 +1,17 @@
+[17:38:06] [Render thread/INFO]: Setting user: ResetPower
+[17:38:08] [Render thread/INFO]: Backend library: LWJGL version 3.2.1 build 12
+[17:38:09] [Render thread/INFO]: Reloading ResourceManager: Default, Depixel1.15.zip
+[17:38:11] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[17:38:14] [Render thread/INFO]: OpenAL initialized.
+[17:38:14] [Render thread/INFO]: Sound engine started
+[17:38:14] [Render thread/INFO]: Created: 1024x4096x4 minecraft:textures/atlas/blocks.png-atlas
+[17:38:14] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/signs.png-atlas
+[17:38:14] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[17:38:14] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[17:38:14] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
+[17:38:14] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
+[17:38:14] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[17:38:14] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
+[17:38:14] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
+[17:38:14] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
+[17:38:20] [Render thread/INFO]: Stopping!

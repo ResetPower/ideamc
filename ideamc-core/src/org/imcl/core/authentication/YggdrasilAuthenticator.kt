@@ -7,7 +7,7 @@ import java.io.PrintWriter
 import java.net.URL
 import java.net.URLConnection
 
-class YggdrasilAuthenticator {
+class YggdrasilAuthenticator(val username: String, val password: String) {
     fun authenticate() : String? {
         return sendPost("https://authserver.mojang.com/authenticate", """
             {

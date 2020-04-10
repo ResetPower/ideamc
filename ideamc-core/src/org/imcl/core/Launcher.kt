@@ -2,6 +2,7 @@ package org.imcl.core
 
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
+import org.imcl.core.artifacts.ArtifactExtractor
 import java.io.BufferedReader
 import java.io.File
 import java.io.InputStream
@@ -20,7 +21,6 @@ object Launcher {
             return
         }
         val jsonObject = JSON.parseObject(json.readText())
-        //println(generateMacOSLaunchScript(launchOptions, jsonObject))
 
         val p = Runtime.getRuntime().exec(arrayOf("sh", "-c", generateMacOSLaunchScript(launchOptions, jsonObject)))
         val fis: InputStream = p.inputStream
@@ -38,7 +38,7 @@ object Launcher {
             nativeFolder.mkdir()
         }
         nativeFolder.listFiles().forEach {
-            //it.delete()
+            it.delete()
         }
         sb.append("-cp ")
         val cpBuff = StringBuffer("\"")
@@ -48,23 +48,22 @@ object Launcher {
             val jsonObject = JSON.toJSON(iterator.next()) as JSONObject
             val downloads = jsonObject.getJSONObject("downloads")
             if (downloads.containsKey("classifiers")) {
-                /*val artifact = downloads.getJSONObject("artifact")
+                val artifact = downloads.getJSONObject("artifact")
                 val path = artifact.get("path")
                 val nativeLibFile = File("${launchOptions.dir}/libraries/$path")
                 if (nativeLibFile.exists()) {
                     val macosNative = File("${launchOptions.dir}/libraries/${path.toString().removeSuffix(".jar")+"-natives-macos.jar"}")
                     if (macosNative.exists()) {
-                        val files = ArtifactExtractor.extract(macosNative, extractFileOnly = true)
+                        val files = ArtifactExtractor.extract(macosNative)
                         for (i in files) {
                             val f = File("${nativeFolder.path}/${i.first}")
-                            println(f.path)
                             if (!f.exists()) {
                                 f.createNewFile()
                             }
                             f.writeBytes(i.second)
                         }
                     } else {
-                        val files = ArtifactExtractor.extract(nativeLibFile, extractFileOnly = true)
+                        val files = ArtifactExtractor.extract(nativeLibFile)
                         for (i in files) {
                             val f = File("${nativeFolder.path}/${i.first}")
                             println(f.path)
@@ -74,7 +73,7 @@ object Launcher {
                             f.writeBytes(i.second)
                         }
                     }
-                }*/
+                }
             } else {
                 val artifact = downloads.getJSONObject("artifact")
                 val path = artifact.get("path")

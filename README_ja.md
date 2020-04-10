@@ -17,7 +17,7 @@ IMCLは、モジュール管理、ゲームのカスタマイズ、ゲームの�
 - 起動機は現在Minecraftの公式フォルダーのみをサポートています
 - 起動機は現在オフラインモードのみをサポートています
 - 起動機は現在ピュアバージョンのみをサポートています
-- 起動機はネイティブライブラリの解凍をサポートしていません。.../versions/${version}/${version}-nativesフォルダーに解凍してください
+- 起動機は1.15.2でのみテストに成功しました
 ## 頼り
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)

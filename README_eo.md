@@ -17,7 +17,7 @@ Kurado out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 - La lanĉisto nun nur subtenas la oficialan Minecraft-dosierujon
 - La lanĉisto nun nur subtenas senretan reĝimon
 - La lanĉisto nuntempe nur subtenas la puran version
-- La lanĉilo ne subtenas denaskan bibliotekon malŝpari, bonvolu malkompreni en .../versions/${version}/${version}-native dosierujo
+- La lanĉilo nur sukcese testis en 1.15.2
 ## Dependecoj
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)
