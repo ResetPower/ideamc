@@ -1,136 +1,17 @@
-[08:46:30] [Render thread/INFO]: Backend library: LWJGL version 3.2.1 build 12
-[08:46:32] [Render thread/INFO]: Reloading ResourceManager: Default, Depixel1.15.zip
-[08:46:36] [Render thread/INFO]: OpenAL initialized.
-[08:46:36] [Render thread/INFO]: Sound engine started
-[08:46:37] [Render thread/INFO]: Created: 1024x4096x4 minecraft:textures/atlas/blocks.png-atlas
-[08:46:37] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/signs.png-atlas
-[08:46:37] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[08:46:37] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[08:46:37] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
-[08:46:37] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
-[08:46:37] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[08:46:37] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
-[08:46:37] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
-[08:46:37] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
-[08:46:38] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
-[08:46:41] [Render thread/WARN]: Unable to start LAN server detection: Can't assign requested address
-[08:46:45] [Render thread/WARN]: Unable to start LAN server detection: Can't assign requested address
-[08:46:46] [Render thread/WARN]: Unable to start LAN server detection: Can't assign requested address
-[08:46:49] [Render thread/ERROR]: Can't ping play.eumc.cc: 切断されました
-[08:46:52] [Render thread/WARN]: Unable to start LAN server detection: Can't assign requested address
-[08:46:55] [Render thread/INFO]: Connecting to mc.pixelwar.cn, 25565
-[08:46:55] [Render thread/WARN]: Unknown custom packed identifier: minecraft:register
-[08:46:56] [Render thread/WARN]: Unknown custom packed identifier: minecraft:register
-[08:46:56] [Render thread/FATAL]: Error executing task on Client
-java.lang.NullPointerException: null
-	at cwl.d(SourceFile:199) ~[1.15.2.jar:?]
-	at dnp.a(SourceFile:2117) ~[1.15.2.jar:?]
-	at os.a(SourceFile:122) ~[1.15.2.jar:?]
-	at os.a(SourceFile:16) ~[1.15.2.jar:?]
-	at lv.a(SourceFile:21) ~[1.15.2.jar:?]
-	at ais.c(SourceFile:144) [1.15.2.jar:?]
-	at aiw.c(SourceFile:23) [1.15.2.jar:?]
-	at ais.w(SourceFile:118) [1.15.2.jar:?]
-	at ais.bk(SourceFile:103) [1.15.2.jar:?]
-	at dbn.d(SourceFile:956) [1.15.2.jar:?]
-	at dbn.d(SourceFile:619) [1.15.2.jar:?]
-	at net.minecraft.client.main.Main.main(SourceFile:204) [1.15.2.jar:?]
-[08:46:57] [Render thread/INFO]: [CHAT]  
-[08:46:57] [Render thread/INFO]: [CHAT] ﻿
-[08:46:57] [Render thread/INFO]: [CHAT] 
-[08:46:57] [Render thread/INFO]: [CHAT] 
-[08:46:57] [Render thread/INFO]: [CHAT] 
-[08:46:57] [Render thread/INFO]: [CHAT] 
-[08:46:57] [Render thread/INFO]: [CHAT] 
-[08:46:57] [Render thread/INFO]: [CHAT] 
-[08:46:57] [Render thread/INFO]: [CHAT] 
-[08:46:57] [Render thread/INFO]: [CHAT] ████████   ➤欢迎来到PixelWar-登录大厅
-[08:46:57] [Render thread/INFO]: [CHAT] ████████   
-[08:46:57] [Render thread/INFO]: [CHAT] ████████   ➥我们的QQ群： 872871394
-[08:46:57] [Render thread/INFO]: [CHAT] ████████   ➥PixelWar祝贺你游戏愉快！
-[08:46:57] [Render thread/INFO]: [CHAT] ████████
-[08:46:57] [Render thread/INFO]: [CHAT] ████████  
-[08:46:57] [Render thread/INFO]: [CHAT] ████████   适度游戏益脑，过度游戏伤身，
-[08:46:57] [Render thread/INFO]: [CHAT] ████████   合理安排时间，享受健康生活。            
-[08:46:57] [Render thread/INFO]: [CHAT] 玩家ResetPowera加入了服务器!
-[08:46:59] [Render thread/INFO]: [CHAT]  [你知道吗] 快速赚钱最好的方式就是加入职业和收集资源卖给系统商店
-[08:46:59] [Render thread/INFO]: Loaded 2 advancements
-[08:47:02] [Render thread/INFO]: Loaded 4 advancements
-[08:47:05] [Render thread/INFO]: [CHAT] 错误:你没有权限打开这个菜单
-[08:47:07] [Render thread/WARN]: Unknown custom packed identifier: minecraft:register
-[08:47:07] [Render thread/FATAL]: Error executing task on Client
-java.lang.IllegalStateException: Invalid entity data item type for field 11 on entity avp['The Delivery Man'/2147483644, l='MpServer', x=0.00, y=100.00, z=0.00]: old=0(class java.lang.Integer), new=8(class java.lang.Byte)
-	at se.a(SourceFile:241) ~[1.15.2.jar:?]
-	at se.a(SourceFile:228) ~[1.15.2.jar:?]
-	at dnp.a(SourceFile:552) ~[1.15.2.jar:?]
-	at ok.a(SourceFile:42) ~[1.15.2.jar:?]
-	at ok.a(SourceFile:11) ~[1.15.2.jar:?]
-	at lv.a(SourceFile:21) ~[1.15.2.jar:?]
-	at ais.c(SourceFile:144) [1.15.2.jar:?]
-	at aiw.c(SourceFile:23) [1.15.2.jar:?]
-	at ais.w(SourceFile:118) [1.15.2.jar:?]
-	at ais.bk(SourceFile:103) [1.15.2.jar:?]
-	at dbn.d(SourceFile:956) [1.15.2.jar:?]
-	at dbn.d(SourceFile:619) [1.15.2.jar:?]
-	at net.minecraft.client.main.Main.main(SourceFile:204) [1.15.2.jar:?]
-[08:47:07] [Render thread/FATAL]: Error executing task on Client
-java.lang.IllegalStateException: Invalid entity data item type for field 11 on entity avp['Carl the Creeper'/2147483641, l='MpServer', x=5.00, y=100.00, z=0.00]: old=0(class java.lang.Integer), new=8(class java.lang.Byte)
-	at se.a(SourceFile:241) ~[1.15.2.jar:?]
-	at se.a(SourceFile:228) ~[1.15.2.jar:?]
-	at dnp.a(SourceFile:552) ~[1.15.2.jar:?]
-	at ok.a(SourceFile:42) ~[1.15.2.jar:?]
-	at ok.a(SourceFile:11) ~[1.15.2.jar:?]
-	at lv.a(SourceFile:21) ~[1.15.2.jar:?]
-	at ais.c(SourceFile:144) [1.15.2.jar:?]
-	at aiw.c(SourceFile:23) [1.15.2.jar:?]
-	at ais.w(SourceFile:118) [1.15.2.jar:?]
-	at ais.bk(SourceFile:103) [1.15.2.jar:?]
-	at dbn.d(SourceFile:956) [1.15.2.jar:?]
-	at dbn.d(SourceFile:619) [1.15.2.jar:?]
-	at net.minecraft.client.main.Main.main(SourceFile:204) [1.15.2.jar:?]
-[08:47:07] [Render thread/INFO]: [CHAT] 欢迎ResetPowera第一次进入游戏!
-[08:47:07] [Render thread/INFO]: [CHAT] Welcome ResetPowera to spawn, owned by An_Lan.
-[08:47:07] [Render thread/FATAL]: Error executing task on Client
-java.lang.NullPointerException: null
-	at cwl.d(SourceFile:199) ~[1.15.2.jar:?]
-	at dnp.a(SourceFile:2117) ~[1.15.2.jar:?]
-	at os.a(SourceFile:122) ~[1.15.2.jar:?]
-	at os.a(SourceFile:16) ~[1.15.2.jar:?]
-	at lv.a(SourceFile:21) ~[1.15.2.jar:?]
-	at ais.c(SourceFile:144) [1.15.2.jar:?]
-	at aiw.c(SourceFile:23) [1.15.2.jar:?]
-	at ais.w(SourceFile:118) [1.15.2.jar:?]
-	at ais.bk(SourceFile:103) [1.15.2.jar:?]
-	at dbn.d(SourceFile:956) [1.15.2.jar:?]
-	at dbn.d(SourceFile:619) [1.15.2.jar:?]
-	at net.minecraft.client.main.Main.main(SourceFile:204) [1.15.2.jar:?]
-[08:47:07] [Render thread/INFO]: [CHAT] [每日礼包] 你有未领取的每日礼包.
-[08:47:07] [Render thread/INFO]: [CHAT] [竞技系统]数据加载中...
-[08:47:08] [Render thread/INFO]: [CHAT] ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-[08:47:08] [Render thread/INFO]: [CHAT]                欢迎来到史诗生存 ResetPowera
-[08:47:08] [Render thread/INFO]: [CHAT] 
-[08:47:08] [Render thread/INFO]: [CHAT] 
-[08:47:08] [Render thread/INFO]: [CHAT]                MC.PIXELWAR.CN
-[08:47:08] [Render thread/INFO]: [CHAT] 
-[08:47:08] [Render thread/INFO]: [CHAT]                §6加入QQ群聊 §b§l872871394 
-[08:47:08] [Render thread/INFO]: [CHAT] ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-[08:47:08] [Server-Worker-10/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@4c1d456[id=34b5341a-bc73-387d-9477-d50c8ea78ed7,name=ResetPowera,properties={},legacy=false]
-com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
-	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:79) ~[authlib-1.5.25.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:180) ~[authlib-1.5.25.jar:?]
-	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:173) ~[authlib-1.5.25.jar:?]
-	at eaz.a(SourceFile:94) ~[1.15.2.jar:?]
-	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402) [?:1.8.0_221]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) [?:1.8.0_221]
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) [?:1.8.0_221]
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [?:1.8.0_221]
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) [?:1.8.0_221]
-[08:47:08] [Render thread/INFO]: [CHAT] [竞技系统]你的数据加载成功.
-[08:47:24] [Render thread/INFO]: [CHAT] 你没有 destroy 权限.
-[08:47:27] [Render thread/INFO]: [CHAT] 你没有 destroy 权限.
-[08:47:28] [Render thread/INFO]: [CHAT] 你没有 destroy 权限.
-[08:47:32] [Render thread/INFO]: [CHAT] 你没有 destroy 权限.
-[08:47:59] [Render thread/INFO]: [CHAT]  [秩序神音] 欢迎加入QQ群： 872871394 进行交流
-[08:48:37] [Render thread/WARN]: Unable to start LAN server detection: Can't assign requested address
-[08:48:41] [Render thread/INFO]: Connecting to gateway.craft.moe., 25565
-[08:49:19] [Render thread/INFO]: Stopping!
+[13:50:43] [Render thread/INFO]: Setting user: ResetPower
+[13:50:45] [Render thread/INFO]: Backend library: LWJGL version 3.2.1 build 12
+[13:50:46] [Render thread/INFO]: Reloading ResourceManager: Default, Depixel1.15.zip
+[13:50:51] [Render thread/INFO]: OpenAL initialized.
+[13:50:51] [Render thread/INFO]: Sound engine started
+[13:50:51] [Render thread/INFO]: Created: 1024x4096x4 minecraft:textures/atlas/blocks.png-atlas
+[13:50:51] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/signs.png-atlas
+[13:50:51] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[13:50:51] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[13:50:51] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
+[13:50:51] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
+[13:50:51] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[13:50:52] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
+[13:50:52] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
+[13:50:52] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
+[13:50:56] [Realms Notification Availability checker #1/INFO]: Could not authorize you against Realms server: Invalid session id
+[13:51:02] [Render thread/INFO]: Stopping!

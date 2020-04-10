@@ -1,171 +1,124 @@
 package org.imcl.launch
 
+import com.alibaba.fastjson.JSON
+import com.alibaba.fastjson.JSONObject
+import com.jfoenix.controls.*
 import javafx.collections.FXCollections
 import javafx.scene.Scene
 import javafx.scene.control.*
-import javafx.scene.layout.BorderPane
-import javafx.scene.layout.GridPane
-import javafx.scene.layout.Pane
+import javafx.scene.image.Image
+import javafx.scene.layout.*
+import javafx.stage.Stage
 import org.imcl.core.LaunchOptions
 import org.imcl.core.Launcher
 import org.imcl.core.authentication.OfflineAuthenticator
 import org.imcl.lang.Translator
-import org.imcl.struct.StructedList
+import org.imcl.users.UserInformation
 import java.io.File
-import java.io.FileInputStream
-import java.io.FileOutputStream
 import java.util.*
 
 
 object LauncherScene {
     @JvmStatic
-    fun get(translator: Translator) : Scene {
-        val tabPane = TabPane()
+    fun get(translator: Translator, userInformation: UserInformation) : Scene {
+        val mainBorderPane = BorderPane()
 
-        val pro0 = Properties()
-        val in0 = FileInputStream("properties/offline.properties")
-        pro0.load(in0)
-        val acprop = pro0.getProperty("accounts")
-        val accounts = StructedList<String>(if (acprop=="") Vector<String>() else Vector(acprop.split(",")), ",")
-        in0.close()
-        val tab0 = Tab(translator.get("accounts"))
-        tab0.isClosable = false
-        val borderPane0 = BorderPane()
-        val accountList = ListView<Label>()
-        accountList.setPrefSize(840.0, 502.0)
-        for (i in accounts.list) {
-            accountList.items.add(Label(i))
-        }
-        accountList.selectionModel.selectFirst()
-        borderPane0.center = accountList
-        val gridPane0 = GridPane()
-        gridPane0.hgap = 10.0
-        gridPane0.vgap = 10.0
-        gridPane0.add(Button(translator.get("add")).apply {
-            setOnAction {
-                val dialog = TextInputDialog()
-                dialog.headerText = translator.get("pleaseinputyourusername")
-                dialog.contentText = translator.get("username")
-                dialog.title = translator.get("pleaseinputyourusername")
-                val result = dialog.showAndWait()
-                if (result.isPresent) {
-                    val un = result.get()
-                    accounts.list.add(un)
-                    accountList.items.add(Label(un))
-                    pro0.setProperty("accounts", accounts.toString())
-                    val out = FileOutputStream("properties/offline.properties")
-                    pro0.store(out, "")
-                    out.close()
-                }
-            }
-        }, 0, 0)
-        gridPane0.add(Button(translator.get("remove")).apply {
-            setOnAction {
-                val selectedIndex = accountList.selectionModel.selectedIndex
-                val selectedItem = accountList.selectionModel.selectedItem
-                accounts.list.removeAt(selectedIndex)
-                accountList.items.remove(selectedItem)
-                pro0.setProperty("accounts", accounts.toString())
-                val out = FileOutputStream("properties/offline.properties")
-                pro0.store(out, "")
-                out.close()
-            }
-        }, 1, 0)
-        borderPane0.bottom = gridPane0
-        tab0.content = borderPane0
+        mainBorderPane.left = JFXListView<String>().apply {
+            items.add("News")
+            items.add("Minecraft: Java Edition")
+            items.add("Kousaten: Java Edition")
+            selectionModel.selectedItemProperty().addListener { observerable, oldValue, newValue ->
+                when (newValue) {
+                    "News" -> { mainBorderPane.center = Label("News") }
+                    "Minecraft: Java Edition" -> {
+                        val profileList = JFXListView<Label>()
+                        val launcherProfiles = JSON.parseArray(File("imcl/launcher/launcher_profiles.json").readText())
+                        val iterator = launcherProfiles.iterator()
+                        while (iterator.hasNext()) {
+                            val obj = JSON.toJSON(iterator.next()) as JSONObject
+                            val nomo = obj.getString("name")
+                            profileList.items.add(Label(nomo))
+                        }
+                        profileList.selectionModel.selectFirst()
 
-        val pro1 = Properties()
-        val in1 = FileInputStream("properties/game.properties")
-        pro1.load(in1)
-        val gmprop = pro1.getProperty("gamePaths")
-        val gamePaths = StructedList<String>(if (gmprop=="") Vector<String>() else Vector(gmprop.split(",")), ",")
-        in1.close()
-        val tab1 = Tab(translator.get("game"))
-        tab1.isClosable = false
-        val borderPane1 = BorderPane()
-        val gamePathList = ListView<Label>()
-        gamePathList.setPrefSize(840.0, 502.0)
-        for (i in gamePaths.list) {
-            gamePathList.items.add(Label(i))
-        }
-        gamePathList.selectionModel.selectFirst()
-        borderPane1.center = gamePathList
-        val gridPane1 = GridPane()
-        gridPane1.hgap = 10.0
-        gridPane1.vgap = 10.0
-        gridPane1.add(Button(translator.get("add")).apply {
-            setOnAction {
-                val dialog = TextInputDialog()
-                dialog.headerText = translator.get("pleaseinputgamepath")
-                dialog.contentText = translator.get("gamepath")//gamepath
-                dialog.title = translator.get("pleaseinputgamepath")
-                val result = dialog.showAndWait()
-                if (result.isPresent) {
-                    val un = result.get()
-                    gamePaths.list.add(un)
-                    gamePathList.items.add(Label(un))
-                    pro1.setProperty("gamePaths", gamePaths.toString())
-                    val out = FileOutputStream("properties/game.properties")
-                    pro1.store(out, "")
-                    out.close()
-                }
-            }
-        }, 0, 0)
-        gridPane1.add(Button(translator.get("remove")).apply {
-            setOnAction {
-                val selectedIndex = gamePathList.selectionModel.selectedIndex
-                val selectedItem = gamePathList.selectionModel.selectedItem
-                gamePaths.list.removeAt(selectedIndex)
-                gamePathList.items.remove(selectedItem)
-                pro1.setProperty("gamePaths", gamePaths.toString())
-                val out = FileOutputStream("properties/game.properties")
-                pro1.store(out, "")
-                out.close()
-            }
-        }, 1, 0)
-        borderPane1.bottom = gridPane1
-        tab1.content = borderPane1
+                        val tabPane = JFXTabPane()
+                        val gridPane1 = GridPane()
+                        gridPane1.hgap = 10.0
+                        gridPane1.vgap = 10.0
+                        gridPane1.add(JFXButton(translator.get("launch")).apply {
+                            setOnAction {
+                                val prof = launcherProfiles.getJSONObject(profileList.selectionModel.selectedIndex)
 
-        val tab2 = Tab(translator.get("launch"))
-        tab2.isClosable = false
-        tab2.content = BorderPane().apply {
-            center = Button(translator.get("launch")).apply {
-                setOnAction {
-                    if (gamePathList.items.size==0||gamePathList.selectionModel.selectedItem==null) {
-                        val alert = Alert(Alert.AlertType.INFORMATION)
-                        alert.contentText = "Game path not selected"
-                        alert.showAndWait()
-                    } else if (accountList.items.size==0||accountList.selectionModel.selectedItem==null) {
-                        val alert = Alert(Alert.AlertType.INFORMATION)
-                        alert.contentText = "Account not selected"
-                        alert.showAndWait()
-                    } else {
-                        val alert = Alert(Alert.AlertType.INFORMATION)
-                        alert.title = translator.get("wefoundtheseversions")
-                        val pane = Pane()
-                        val list = FXCollections.observableArrayList<String>()
-                        File(gamePathList.selectionModel.selectedItem.text+"/versions").listFiles().forEach {
-                            if (it.isDirectory) {
-                                list.add(it.name)
+                                Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username)))
                             }
-                        }
-                        val choiceBox = ChoiceBox(list)
-                        pane.children.add(GridPane().apply {
-                            add(choiceBox, 1, 0)
+                        }, 2, 2)
+                        gridPane1.background = Background(
+                            BackgroundImage(
+                                Image("file:///Users/resetpower/ideaProjects/ideamc/imcl/res/bg.png", 840.0, 502.5, false, true),
+                                BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+                                BackgroundSize.DEFAULT
+                            )
+                        )
+                        tabPane.tabs.addAll(Tab("Play").apply {
+                            content = gridPane1
+                        }, Tab("Installations").apply {
+                            val installations = GridPane()
+                            installations.addRow(0, JFXButton(translator.get("add")).apply {
+                                setOnAction {
+                                    val secondStage = Stage()
+                                    secondStage.scene = Scene(GridPane().apply {
+                                        addColumn( 0, Label(translator.get("newprofile")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")))
+                                        val nameField = JFXTextField()
+                                        val verField = JFXTextField()
+                                        val dirField = JFXTextField()
+                                        add(nameField, 1, 1)
+                                        add(verField, 1, 2)
+                                        add(dirField, 1, 3)
+                                        add(JFXButton(translator.get("cancel")).apply {
+                                            setOnAction {
+                                                secondStage.close()
+                                            }
+                                        }, 0, 4)
+                                        add(JFXButton(translator.get("add")).apply {
+                                            setOnAction {
+                                                val nm = nameField.text
+                                                launcherProfiles.add(JSONObject(mapOf(Pair("name", nm), Pair("version", verField.text), Pair("directory", dirField.text))))
+                                                File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
+                                                profileList.items.add(Label(nm))
+                                                secondStage.close()
+                                            }
+                                        }, 1, 4)
+                                    }, 420.0, 251.0)
+                                    secondStage.show()
+                                }
+                            }, JFXButton(translator.get("remove")).apply {
+                                setOnAction {
+                                    val theIndex = profileList.selectionModel.selectedIndex
+                                    val theObj = launcherProfiles[theIndex]
+                                    launcherProfiles.remove(theObj)
+                                    File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
+                                    profileList.items.removeAt(theIndex)
+                                }
+                            }, JFXButton(translator.get("edit")).apply {
+                                setOnAction {
+
+                                }
+                            })
+                            val instBorderPane = BorderPane()
+                            instBorderPane.top = installations
+                            instBorderPane.center = profileList
+                            content = instBorderPane
+                        }, Tab("Skin").apply {
+                            content = Label("Skin")
                         })
-                        alert.dialogPane.content = pane
-                        alert.buttonTypes.addAll(ButtonType(translator.get("launch"), ButtonBar.ButtonData.YES))
-                        val buttonType = alert.showAndWait()
-                        if (buttonType.get().buttonData==ButtonBar.ButtonData.YES){
-                            Launcher.launch(LaunchOptions(gamePathList.selectionModel.selectedItem.text, choiceBox.selectionModel.selectedItem, OfflineAuthenticator(accountList.selectionModel.selectedItem.text)))
-                        }
+                        mainBorderPane.center = tabPane
                     }
+                    "Kousaten: Java Edition" -> { mainBorderPane.center = Label("Kousaten: Java Edition") }
                 }
             }
+            selectionModel.select("Minecraft: Java Edition")
         }
 
-        tabPane.tabs.addAll(tab0, tab1, tab2)
-
-        return Scene(tabPane)
+        return Scene(mainBorderPane, 840.0, 502.0)
     }
 }

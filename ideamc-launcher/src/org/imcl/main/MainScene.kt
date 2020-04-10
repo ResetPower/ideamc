@@ -1,5 +1,6 @@
 package org.imcl.main
 
+import com.jfoenix.controls.JFXButton
 import javafx.collections.FXCollections
 import javafx.geometry.Insets
 import javafx.geometry.Pos
@@ -15,19 +16,20 @@ import javafx.stage.Stage
 import org.imcl.lang.Translator
 import org.imcl.launch.LauncherScene
 import org.imcl.constraints.Toolkit
+import org.imcl.users.UserInformation
 
 
 object MainScene {
-    val emailLabel = Label("Email")
+    val emailLabel = Label("Email or username")
     val passwordLabel = Label("Password")
-    val loginButton = Button("Login")
-    val offlineButton = Button("Offline")
+    val loginButton = JFXButton("Login")
+    val offlineButton = JFXButton("Offline")
     @JvmStatic
     fun get(primaryStage: Stage) : Scene {
         val scene = Scene(BorderPane().apply {
             var translator = updateLanguage()
             background = Background(BackgroundImage(
-                Image("file:///Users/resetpower/ideaProjects/ideamc/res/bg.png", 840.0, 502.5, false, true),
+                Image("file:///Users/resetpower/ideaProjects/ideamc/imcl/res/bg.png", 840.0, 502.5, false, true),
                 BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
                 BackgroundSize.DEFAULT
             ))
@@ -48,7 +50,7 @@ object MainScene {
                 hgap = 10.0
                 vgap = 10.0
                 padding = Insets(25.0, 25.0, 25.0, 25.0)
-                val scenetitle = Text("Minecraft")
+                val scenetitle = Text("IMCL")
                 scenetitle.font = Font.font("Tahoma", FontWeight.NORMAL, 20.0)
                 add(scenetitle, 0, 0, 2, 1)
                 add(emailLabel, 0, 1)
@@ -64,7 +66,14 @@ object MainScene {
                 }, 0, 3)
                 add(offlineButton.apply {
                     setOnAction {
-                        primaryStage.scene = LauncherScene.get(translator)
+                        if (userTextField.text.trim()=="") {
+                            val alert = Alert(Alert.AlertType.INFORMATION)
+                            alert.title = "Username not set"
+                            alert.contentText = "Username not set"
+                            alert.showAndWait()
+                        } else {
+                            primaryStage.scene = LauncherScene.get(translator, UserInformation(userTextField.text))
+                        }
                     }
                 }, 1, 3)
             }

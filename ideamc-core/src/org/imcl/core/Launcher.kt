@@ -2,8 +2,10 @@ package org.imcl.core
 
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
-import org.imcl.core.artifacts.ArtifactExtractor
+import java.io.BufferedReader
 import java.io.File
+import java.io.InputStream
+import java.io.InputStreamReader
 
 object Launcher {
     fun launch(launchOptions: LaunchOptions) {
@@ -18,10 +20,16 @@ object Launcher {
             return
         }
         val jsonObject = JSON.parseObject(json.readText())
+        //println(generateMacOSLaunchScript(launchOptions, jsonObject))
 
-        val launchScript = generateMacOSLaunchScript(launchOptions, jsonObject)
-        print(launchScript)
-        Runtime.getRuntime().exec(launchScript)
+        val p = Runtime.getRuntime().exec(arrayOf("sh", "-c", generateMacOSLaunchScript(launchOptions, jsonObject)))
+        val fis: InputStream = p.inputStream
+        val isr = InputStreamReader(fis)
+        val br = BufferedReader(isr)
+        var line: String? = null
+        while (br.readLine().also { line = it } != null) {
+            println(line)
+        }
     }
     fun generateMacOSLaunchScript(launchOptions: LaunchOptions, jsonObject: JSONObject) : String {
         val sb = StringBuffer("/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/bin/java -XstartOnFirstThread -Djava.library.path=\"${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}-natives\" -Dfml.ignoreInvalidMinecraftCertificates=true -Dfml.ignorePatchDiscrepancies=true ")
@@ -79,7 +87,6 @@ object Launcher {
         sb.append("${cpBuff.removeSuffix(":")}\" ")
         sb.append(jsonObject.get("mainClass"))
         sb.append(" --username ${launchOptions.authenticator.username()} --version ${launchOptions.version} --gameDir \"${launchOptions.dir}\" --assetsDir \"${launchOptions.dir}/assets\" --assetIndex ${jsonObject.getJSONObject("assetIndex").get("id")} --uuid ${((launchOptions.authenticator.username().hashCode()).toString()).removePrefix("-")} --accessToken ${((launchOptions.authenticator.username().hashCode()+1).toString()).removePrefix("-")} --userType mojang --versionType release")
-
         return sb.toString()
     }
 }

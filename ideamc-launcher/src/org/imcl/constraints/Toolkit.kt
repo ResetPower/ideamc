@@ -7,7 +7,7 @@ import java.util.*
 object Toolkit {
     @JvmStatic
     fun getCurrentLanguage() : String {
-        val ins = FileInputStream("properties/ideamc.properties")
+        val ins = FileInputStream("imcl/properties/ideamc.properties")
         val prop = Properties()
         prop.load(ins)
         ins.close()
@@ -15,12 +15,12 @@ object Toolkit {
     }
     @JvmStatic
     fun updateLanguage(language: String) {
-        val ins = FileInputStream("properties/ideamc.properties")
+        val ins = FileInputStream("imcl/properties/ideamc.properties")
         val prop = Properties()
         prop.load(ins)
         ins.close()
         prop.setProperty("language", language)
-        val out = FileOutputStream("properties/ideamc.properties")
+        val out = FileOutputStream("imcl/properties/ideamc.properties")
         prop.store(out, "")
         out.close()
     }
