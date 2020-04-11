@@ -15,7 +15,6 @@ Run out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## Notice
 - The launcher supports only macOS now
 - The launcher supports only the official Minecraft folder now
-- The launcher supports only offline mode now
 - The launcher supports only pure version
 - The launcher only successfully tested in 1.15.2
 ## Dependencies

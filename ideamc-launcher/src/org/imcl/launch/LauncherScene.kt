@@ -3,7 +3,6 @@ package org.imcl.launch
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
 import com.jfoenix.controls.*
-import javafx.collections.FXCollections
 import javafx.scene.Scene
 import javafx.scene.control.*
 import javafx.scene.image.Image
@@ -12,10 +11,12 @@ import javafx.stage.Stage
 import org.imcl.core.LaunchOptions
 import org.imcl.core.Launcher
 import org.imcl.core.authentication.OfflineAuthenticator
+import org.imcl.core.authentication.YggdrasilAuthenticator
 import org.imcl.lang.Translator
+import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
+import org.imcl.users.YggdrasilUserInformation
 import java.io.File
-import java.util.*
 
 
 object LauncherScene {
@@ -48,8 +49,11 @@ object LauncherScene {
                         gridPane1.add(JFXButton(translator.get("launch")).apply {
                             setOnAction {
                                 val prof = launcherProfiles.getJSONObject(profileList.selectionModel.selectedIndex)
-
-                                Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username)))
+                                if (userInformation is OfflineUserInformation) {
+                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username())))
+                                } else if (userInformation is YggdrasilUserInformation) {
+                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.password())))
+                                }
                             }
                         }, 2, 2)
                         gridPane1.background = Background(

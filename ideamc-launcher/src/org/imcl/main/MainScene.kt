@@ -16,7 +16,9 @@ import javafx.stage.Stage
 import org.imcl.lang.Translator
 import org.imcl.launch.LauncherScene
 import org.imcl.constraints.Toolkit
+import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
+import org.imcl.users.YggdrasilUserInformation
 import java.io.File
 
 
@@ -62,7 +64,14 @@ object MainScene {
                 add(pwBox, 1, 2)
                 add(loginButton.apply {
                     setOnAction {
-                        // TODO Login
+                        if (userTextField.text.trim()==""||pwBox.text.trim()=="") {
+                            val alert = Alert(Alert.AlertType.INFORMATION)
+                            alert.title = "Username or password not input"
+                            alert.contentText = "Username or password not input"
+                            alert.showAndWait()
+                        } else {
+                            primaryStage.scene = LauncherScene.get(translator, YggdrasilUserInformation(userTextField.text, pwBox.text))
+                        }
                     }
                 }, 0, 3)
                 add(offlineButton.apply {
@@ -73,7 +82,7 @@ object MainScene {
                             alert.contentText = "Username not set"
                             alert.showAndWait()
                         } else {
-                            primaryStage.scene = LauncherScene.get(translator, UserInformation(userTextField.text))
+                            primaryStage.scene = LauncherScene.get(translator, OfflineUserInformation(userTextField.text))
                         }
                     }
                 }, 1, 3)

@@ -21,17 +21,21 @@ object Launcher {
             return
         }
         val jsonObject = JSON.parseObject(json.readText())
+        //generateMacOSLaunchScript(launchOptions, jsonObject)
 
-        val p = Runtime.getRuntime().exec(arrayOf("sh", "-c", generateMacOSLaunchScript(launchOptions, jsonObject)))
-        val fis: InputStream = p.inputStream
-        val isr = InputStreamReader(fis)
-        val br = BufferedReader(isr)
-        var line: String? = null
-        while (br.readLine().also { line = it } != null) {
-            println(line)
-        }
+        Thread {
+            val p = Runtime.getRuntime().exec(arrayOf("sh", "-c", generateMacOSLaunchScript(launchOptions, jsonObject)))
+            val fis: InputStream = p.inputStream
+            val isr = InputStreamReader(fis)
+            val br = BufferedReader(isr)
+            var line: String? = null
+            while (br.readLine().also { line = it } != null) {
+                println(line)
+            }
+        }.start()
     }
     fun generateMacOSLaunchScript(launchOptions: LaunchOptions, jsonObject: JSONObject) : String {
+        launchOptions.authenticator.authenticate()
         val sb = StringBuffer("/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/bin/java -XstartOnFirstThread -Djava.library.path=\"${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}-natives\" -Dfml.ignoreInvalidMinecraftCertificates=true -Dfml.ignorePatchDiscrepancies=true ")
         val nativeFolder = File("${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}-natives")
         if (!nativeFolder.exists()) {
@@ -85,7 +89,7 @@ object Launcher {
         cpBuff.append("${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}.jar")
         sb.append("${cpBuff.removeSuffix(":")}\" ")
         sb.append(jsonObject.get("mainClass"))
-        sb.append(" --username ${launchOptions.authenticator.username()} --version ${launchOptions.version} --gameDir \"${launchOptions.dir}\" --assetsDir \"${launchOptions.dir}/assets\" --assetIndex ${jsonObject.getJSONObject("assetIndex").get("id")} --uuid ${((launchOptions.authenticator.username().hashCode()).toString()).removePrefix("-")} --accessToken ${((launchOptions.authenticator.username().hashCode()+1).toString()).removePrefix("-")} --userType mojang --versionType release")
+        sb.append(" --username ${launchOptions.authenticator.username()} --version ${launchOptions.version} --gameDir \"${launchOptions.dir}\" --assetsDir \"${launchOptions.dir}/assets\" --assetIndex ${jsonObject.getJSONObject("assetIndex").get("id")} --uuid ${launchOptions.authenticator.uuid()} --accessToken ${launchOptions.authenticator.accessToken()} --userType mojang --versionType release")
         return sb.toString()
     }
 }

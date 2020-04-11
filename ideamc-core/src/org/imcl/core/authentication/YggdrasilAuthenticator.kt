@@ -1,5 +1,7 @@
 package org.imcl.core.authentication
 
+import com.alibaba.fastjson.JSON
+import javafx.scene.control.Alert
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
@@ -7,21 +9,36 @@ import java.io.PrintWriter
 import java.net.URL
 import java.net.URLConnection
 
-class YggdrasilAuthenticator(val username: String, val password: String) {
-    fun authenticate() : String? {
-        return sendPost("https://authserver.mojang.com/authenticate", """
+class YggdrasilAuthenticator(val username: String, val password: String) : Authenticator {
+    var player = ""
+    var uuid = ""
+    var accessToken = ""
+    override fun username() = player
+    override fun uuid() = uuid
+    override fun accessToken() = accessToken
+    override fun authenticate() {
+        val result = sendPost("https://authserver.mojang.com/authenticate", """
             {
                "agent": {
                    "name": "Minecraft",
                    "version": 1
                },
-               "username": "lingxian0874@163.com",
-               "password": "我的密码不是hodiau =-= 不信你试试",
+               "username": "$username",
+               "password": "$password",
                "clientToken": "imcl-xxx"
             }
-        """.trimIndent())
+            """.trimIndent())
+        if (result==null) {
+            throw NullPointerException("result")
+        } else {
+            val obj = JSON.parseObject(result)
+            accessToken = obj.getString("accessToken")
+            val profile = obj.getJSONObject("selectedProfile")
+            uuid = profile.getString("id")
+            player = profile.getString("name")
+        }
     }
-    fun sendPost(url: String?, param: String?): String? {
+    fun sendPost(url: String, param: String): String? {
         var out: PrintWriter? = null
         var `in`: BufferedReader? = null
         var result: String? = ""
@@ -49,8 +66,10 @@ class YggdrasilAuthenticator(val username: String, val password: String) {
                 result += line
             }
         } catch (e: Exception) {
-            println("发送 POST 请求出现异常！$e")
-            e.printStackTrace()
+            val alert = Alert(Alert.AlertType.INFORMATION)
+            alert.title = "Password error"
+            alert.contentText = "Password error"
+            alert.show()
         } //使用finally块来关闭输出流、输入流
         finally {
             try {
