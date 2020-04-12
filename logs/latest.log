@@ -1,98 +1,51 @@
-[09:30:03] [Render thread/INFO]: Setting user: ResetPower
-[09:30:05] [Render thread/INFO]: Backend library: LWJGL version 3.2.1 build 12
-[09:30:06] [Render thread/INFO]: Reloading ResourceManager: Default, Depixel1.15.zip
-[09:30:11] [Render thread/INFO]: OpenAL initialized.
-[09:30:11] [Render thread/INFO]: Sound engine started
-[09:30:11] [Render thread/INFO]: Created: 1024x4096x4 minecraft:textures/atlas/blocks.png-atlas
-[09:30:11] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/signs.png-atlas
-[09:30:11] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[09:30:11] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[09:30:11] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
-[09:30:11] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
-[09:30:11] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[09:30:11] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
-[09:30:11] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
-[09:30:11] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
-[09:30:16] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[09:30:16] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[09:30:16] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[09:30:16] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[09:30:16] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[09:30:16] [Server thread/INFO]: Starting integrated minecraft server version 1.15.2
-[09:30:16] [Server thread/INFO]: Generating keypair
-[09:30:16] [Server thread/INFO]: Reloading ResourceManager: Default
-[09:30:16] [Server thread/INFO]: Loaded 6 recipes
-[09:30:17] [Server thread/INFO]: Loaded 825 advancements
-[09:30:17] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[09:30:17] [Render thread/INFO]: 准备生成区域中：0%
-[09:30:18] [Render thread/INFO]: 准备生成区域中：7%
-[09:30:18] [Render thread/INFO]: Time elapsed: 636 ms
-[09:30:18] [Server thread/INFO]: Changing view distance to 31, from 10
-[09:30:25] [Server thread/INFO]: ResetPower[local:E:ccbcd886] logged in with entity id 4 at (9.599763086209395, 61.493148237392326, 14.739966979160483)
-[09:30:25] [Server thread/INFO]: ResetPower加入了游戏
-[09:30:25] [Server thread/INFO]: Saving and pausing game...
-[09:30:25] [Server thread/INFO]: Saving chunks for level '新的世界'/minecraft:the_end
-[09:30:25] [Server thread/INFO]: Saving chunks for level '新的世界'/minecraft:overworld
-[09:30:25] [Render thread/INFO]: Loaded 42 advancements
-[09:30:25] [Server thread/INFO]: Saving chunks for level '新的世界'/minecraft:the_nether
-[09:30:51] [Server thread/INFO]: Saving and pausing game...
-[09:30:51] [Server thread/INFO]: Saving chunks for level '新的世界'/minecraft:the_end
-[09:30:51] [Server thread/INFO]: Saving chunks for level '新的世界'/minecraft:overworld
-[09:30:51] [Server thread/INFO]: Saving chunks for level '新的世界'/minecraft:the_nether
-[09:30:52] [Server thread/INFO]: ResetPower lost connection: 连接中止
-[09:30:52] [Server thread/INFO]: ResetPower退出了游戏
-[09:30:52] [Server thread/INFO]: Stopping singleplayer server as player logged out
-[09:30:52] [Server thread/INFO]: Stopping server
-[09:30:52] [Server thread/INFO]: Saving players
-[09:30:52] [Server thread/INFO]: Saving worlds
-[09:30:52] [Server thread/INFO]: Saving chunks for level '新的世界'/minecraft:the_end
-[09:30:52] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[09:30:52] [Server thread/INFO]: Saving chunks for level '新的世界'/minecraft:overworld
-[09:30:52] [Server thread/INFO]: ThreadedAnvilChunkStorage (新的世界): All chunks are saved
-[09:30:52] [Server thread/INFO]: Saving chunks for level '新的世界'/minecraft:the_nether
-[09:30:52] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[09:30:52] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[09:30:52] [Server thread/INFO]: ThreadedAnvilChunkStorage (新的世界): All chunks are saved
-[09:30:52] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[09:30:53] [Render thread/WARN]: Unable to start LAN server detection: Can't assign requested address
-[09:30:54] [Render thread/ERROR]: Invalid icon for server Minecraft サーバー (play.eumc.cc)
-java.lang.IllegalStateException: Must be 64 pixels wide
-	at org.apache.commons.lang3.Validate.validState(Validate.java:829) ~[commons-lang3-3.5.jar:3.5]
-	at dii$d.c(SourceFile:377) [1.15.2.jar:?]
-	at dii$d.render(SourceFile:306) [1.15.2.jar:?]
-	at dcr.renderList(SourceFile:446) [1.15.2.jar:?]
-	at dcr.render(SourceFile:196) [1.15.2.jar:?]
-	at dig.render(SourceFile:211) [1.15.2.jar:?]
-	at dqn.a(SourceFile:604) [1.15.2.jar:?]
-	at dbn.d(SourceFile:989) [1.15.2.jar:?]
-	at dbn.d(SourceFile:619) [1.15.2.jar:?]
-	at net.minecraft.client.main.Main.main(SourceFile:204) [1.15.2.jar:?]
-[09:30:54] [Render thread/INFO]: Connecting to gateway.craft.moe., 25565
-[09:30:57] [Render thread/WARN]: Unknown custom packed identifier: minecraft:register
-[09:30:57] [Render thread/WARN]: Unknown custom packed identifier: minecraft:register
-[09:30:57] [Render thread/INFO]: Loaded 505 advancements
-[09:30:57] [Render thread/INFO]: [CHAT] >> かわいい ResetPower AtomWorld 来啦喵~
-[09:30:57] [Render thread/INFO]: [CHAT] 你没有新的邮件
-[09:30:57] [Render thread/INFO]: [CHAT] [v3] <银行 | 储蓄 | 借贷 Niunai_> qw
-[09:30:59] [Render thread/INFO]: [CHAT] [v3] <Mizhou1418> .,'
-[09:31:02] [Render thread/INFO]: [CHAT] 欢迎回来毛线物语，かわいい ResetPower AtomWorld！
-[09:31:02] [Render thread/INFO]: [CHAT] 当前世界时间 91年2月12日 00:12 | 在线玩家数量 34 | 你的钱包余额 卷4,304.50
-[09:31:02] [Render thread/INFO]: [CHAT] 新玩家请阅读 www.craft.moe/get-started 。插件帮助请查阅 www.craft.moe/help 。
-[09:31:02] [Render thread/INFO]: [CHAT] 如果你喜欢这里，请使用评分或提升卡支持毛线 -> www.mcbbs.net/thread-551395-1-1.html
-[09:31:02] [Render thread/INFO]: [CHAT] >> 喀兰贸易 skycity111 慕容月魂 来啦喵~
-[09:31:05] [Render thread/INFO]: [CHAT] [v3] <かわいい ResetPower AtomWorld> 很高兴地告诉大家
-[09:31:15] [Render thread/INFO]: [CHAT] [v3] <かわいい ResetPower AtomWorld> 我的启动器成功支持正版验证
-[09:31:24] [Render thread/INFO]: [CHAT] [v3] <かわいい ResetPower AtomWorld> 我现在正在用我的启动器玩mc
-[09:31:26] [Render thread/INFO]: [CHAT] [v3] <Carlo's wine_producer 小九> 奥
-[09:31:30] [Render thread/INFO]: [CHAT] [v3] <Carlo's wine_producer 小九> 嗯？
-[09:31:30] [Render thread/INFO]: [CHAT] *雪落白堤 lbpc2333 绫波蓝白 暂时离开了.
-[09:31:33] [Render thread/INFO]: [CHAT] [互通频道] <tg2kedama> [Daidouji Sakura] /list
-[09:31:37] [Render thread/INFO]: [CHAT] [v3] <かわいい ResetPower AtomWorld> https://github.com/resetpower/imcl
-[09:31:42] [Render thread/INFO]: [CHAT] [v3] <かわいい ResetPower AtomWorld> 希望支持一下qwq
-[09:31:47] [Render thread/INFO]: [CHAT] [v3] <Carlo's wine_producer 小九> 安全吗（
-[09:31:56] [Render thread/INFO]: [CHAT] [v3] <かわいい ResetPower AtomWorld> 目前只支持macOS
-[09:32:01] [Render thread/INFO]: [CHAT] [v3] <Carlo's wine_producer 小九> 打扰了
-[09:32:04] [Render thread/INFO]: [CHAT] [v3] <かわいい ResetPower AtomWorld> 安全是肯定安全的 毕竟是开源的
-[09:32:09] [Render thread/INFO]: [CHAT] [v3] <かわいい ResetPower AtomWorld> 开源的东西你懂的
-[09:32:31] [Render thread/INFO]: [CHAT] Baink从高处摔了下来
-[09:33:13] [Render thread/INFO]: Stopping!
+[1242020 09:29:53.197] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--username, ResetPower, --version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --assetIndex, 1.15, --uuid, d9876a2d14694b86859d902f267067d6, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release, --launchTarget, fmlclient, --fml.forgeVersion, 31.1.0, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20200122.131323]
+[1242020 09:29:53.200] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.0.0-milestone.4+67+b1a340b starting: java version 1.8.0_221 by Oracle Corporation
+[1242020 09:29:53.355] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[1242020 09:29:54.100] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmlclient' with arguments [--version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --uuid, d9876a2d14694b86859d902f267067d6, --username, ResetPower, --assetIndex, 1.15, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release]
+[1242020 09:29:55.344] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: ResetPower
+[1242020 09:30:00.068] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.1 build 12
+[1242020 09:30:01.219] [modloading-worker-13/INFO] [CocoaInput:Java/]: CocoaInput has copied library to native directory.
+[1242020 09:30:01.220] [modloading-worker-9/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.1.0, for MC 1.15.2 with MCP 20200122.131323
+[1242020 09:30:01.220] [modloading-worker-9/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.1.0 Initialized
+[1242020 09:30:01.271] [modloading-worker-13/INFO] [CocoaInput:ObjC/]: Libcocoainput was built on Feb 12 2020 03:01:48.
+[1242020 09:30:01.272] [modloading-worker-13/INFO] [CocoaInput:ObjC/]: CocoaInput is being initialized.Now running thread for modify GLFWview .
+[1242020 09:30:01.272] [modloading-worker-13/INFO] [CocoaInput:Java/]: DarwinController has been initialized.
+[1242020 09:30:01.273] [modloading-worker-13/INFO] [CocoaInput:Java/]: CocoaInput is now using controller:class jp.axer.cocoainput.arch.darwin.DarwinController
+[1242020 09:30:01.273] [modloading-worker-13/INFO] [CocoaInput:Java/]: CocoaInput has been initialized.
+[1242020 09:30:03.235] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Mod Resources, Default, Depixel1.15.zip
+[1242020 09:30:05.896] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[1242020 09:30:06.077] [Render thread/INFO] [STDOUT/]: [com.mamiyaotaru.voxelmap.Map:<init>:423]: CATEGORY ORDER IS 7
+[1242020 09:30:06.301] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x256 waypoints-atlas
+[1242020 09:30:06.442] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x128 chooser-atlas
+[1242020 09:30:06.963] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 512x512 mobs-atlas
+[1242020 09:30:07.110] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 64x64 pings-atlas
+[1242020 09:30:07.354] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 31.1.0 Target: null
+[1242020 09:30:08.303] [modloading-worker-11/INFO] [Waila/]: Registered plugin at mcp.mobius.waila.addons.minecraft.PluginMinecraft
+[1242020 09:30:08.680] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[1242020 09:30:08.683] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[1242020 09:30:08.861] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x2048x4 minecraft:textures/atlas/blocks.png-atlas
+[1242020 09:30:08.877] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[1242020 09:30:08.877] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[1242020 09:30:08.880] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[1242020 09:30:08.883] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
+[1242020 09:30:08.884] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
+[1242020 09:30:08.886] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[1242020 09:30:09.287] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
+[1242020 09:30:09.289] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
+[1242020 09:30:09.290] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
+[1242020 09:30:28.558] [pool-5-thread-1/ERROR] [com.mojang.realmsclient.gui.RealmsDataFetcher/]: Couldn't get pending invite count
+com.mojang.realmsclient.exception.RealmsServiceException: Could not connect to Realms: connect timed out
+	at com.mojang.realmsclient.client.RealmsClient.func_224938_a(SourceFile:442) ~[?:?]
+	at com.mojang.realmsclient.client.RealmsClient.func_224909_j(SourceFile:321) ~[?:?]
+	at com.mojang.realmsclient.gui.RealmsDataFetcher$PendingInviteUpdateTask.func_225051_a(SourceFile:262) [?:?]
+	at com.mojang.realmsclient.gui.RealmsDataFetcher$PendingInviteUpdateTask.run(SourceFile:253) [?:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_221]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) [?:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) [?:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_221]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_221]
+[1242020 09:30:32.454] [Thread-7/INFO] [CocoaInput:ObjC/]: Complete to modify GLFWView
+[1242020 09:30:34.245] [Render thread/WARN] [net.minecraft.client.gui.screen.MultiplayerScreen/]: Unable to start LAN server detection: Can't assign requested address
+[1242020 09:30:36.962] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

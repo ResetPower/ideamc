@@ -15,7 +15,7 @@ IMCL是一个支持模组管理、游戏自定义、游戏下载和游戏扩展�
 ## 注意
 - 这个启动器目前仅支持macOS
 - 这个启动器目前仅支持Minecraft官方文件夹
-- 这个启动器目前仅支持纯净版
+- 这个启动器目前仅支持纯净版和Forge版
 - 启动器只在1.15.2测试成功
 ## 依赖
 - [Fastjson](https://github.com/alibaba/fastjson)

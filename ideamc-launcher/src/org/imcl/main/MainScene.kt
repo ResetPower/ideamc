@@ -1,6 +1,9 @@
 package org.imcl.main
 
 import com.jfoenix.controls.JFXButton
+import com.jfoenix.controls.JFXComboBox
+import com.jfoenix.controls.JFXPasswordField
+import com.jfoenix.controls.JFXTextField
 import javafx.collections.FXCollections
 import javafx.geometry.Insets
 import javafx.geometry.Pos
@@ -37,7 +40,7 @@ object MainScene {
                 BackgroundSize.DEFAULT
             ))
             val list = FXCollections.observableArrayList("English", "简体中文", "繁體中文", "Esperanto", "日本語")
-            top = ChoiceBox(list).apply {
+            top = JFXComboBox(list).apply {
                 selectionModel.select(Toolkit.getLanguageNameInThatLanguage(translator.languageName))
                 selectionModel.selectedIndexProperty().addListener { observable, oldValue, newValue ->
                     Toolkit.updateLanguage(Toolkit.getLanguageEnglishName(list.get(newValue as Int)))
@@ -57,10 +60,10 @@ object MainScene {
                 scenetitle.font = Font.font("Tahoma", FontWeight.NORMAL, 20.0)
                 add(scenetitle, 0, 0, 2, 1)
                 add(emailLabel, 0, 1)
-                val userTextField = TextField()
+                val userTextField = JFXTextField()
                 add(userTextField, 1, 1)
                 add(passwordLabel, 0, 2)
-                val pwBox = PasswordField()
+                val pwBox = JFXPasswordField()
                 add(pwBox, 1, 2)
                 add(loginButton.apply {
                     setOnAction {

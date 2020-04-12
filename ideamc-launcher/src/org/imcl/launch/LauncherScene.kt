@@ -7,6 +7,7 @@ import javafx.scene.Scene
 import javafx.scene.control.*
 import javafx.scene.image.Image
 import javafx.scene.layout.*
+import javafx.scene.paint.Color
 import javafx.stage.Stage
 import org.imcl.core.LaunchOptions
 import org.imcl.core.Launcher
@@ -28,6 +29,8 @@ object LauncherScene {
             items.add("News")
             items.add("Minecraft: Java Edition")
             items.add("Kousaten: Java Edition")
+            items.add("Settings")
+            border = null
             selectionModel.selectedItemProperty().addListener { observerable, oldValue, newValue ->
                 when (newValue) {
                     "News" -> { mainBorderPane.center = Label("News") }
@@ -118,6 +121,14 @@ object LauncherScene {
                         mainBorderPane.center = tabPane
                     }
                     "Kousaten: Java Edition" -> { mainBorderPane.center = Label("Kousaten: Java Edition") }
+                    "Settings" -> { mainBorderPane.center = GridPane().apply {
+                        add(Label(if (userInformation is OfflineUserInformation) userInformation.username() else if (userInformation is YggdrasilUserInformation) userInformation.username() else "Unknown User" ), 0, 0)
+                        add(JFXButton("Log out").apply {
+                            setOnAction {
+                                // TODO Log out
+                            }
+                        }, 0, 1)
+                    } }
                 }
             }
             selectionModel.select("Minecraft: Java Edition")

@@ -15,7 +15,7 @@ Run out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## Notice
 - The launcher supports only macOS now
 - The launcher supports only the official Minecraft folder now
-- The launcher supports only pure version
+- The launcher supports only pure version and Forge version
 - The launcher only successfully tested in 1.15.2
 ## Dependencies
 - [Fastjson](https://github.com/alibaba/fastjson)
