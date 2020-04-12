@@ -108,7 +108,38 @@ object LauncherScene {
                                 }
                             }, JFXButton(translator.get("edit")).apply {
                                 setOnAction {
-
+                                    val secondStage = Stage()
+                                    val theIndex = profileList.selectionModel.selectedIndex
+                                    val theObj = launcherProfiles[theIndex] as JSONObject
+                                    secondStage.scene = Scene(GridPane().apply {
+                                        addColumn( 0, Label(translator.get("edit")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")))
+                                        val nameField = JFXTextField()
+                                        val verField = JFXTextField()
+                                        val dirField = JFXTextField()
+                                        nameField.text = theObj.getString("name")
+                                        verField.text = theObj.getString("version")
+                                        dirField.text = theObj.getString("directory")
+                                        add(nameField, 1, 1)
+                                        add(verField, 1, 2)
+                                        add(dirField, 1, 3)
+                                        add(JFXButton(translator.get("cancel")).apply {
+                                            setOnAction {
+                                                secondStage.close()
+                                            }
+                                        }, 0, 4)
+                                        add(JFXButton(translator.get("edit")).apply {
+                                            setOnAction {
+                                                val nm = nameField.text
+                                                theObj.set("name", nameField.text)
+                                                theObj.set("versions", verField.text)
+                                                theObj.set("directory", dirField.text)
+                                                profileList.items[theIndex].text = nameField.text
+                                                File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
+                                                secondStage.close()
+                                            }
+                                        }, 1, 4)
+                                    }, 420.0, 251.0)
+                                    secondStage.show()
                                 }
                             })
                             val instBorderPane = BorderPane()

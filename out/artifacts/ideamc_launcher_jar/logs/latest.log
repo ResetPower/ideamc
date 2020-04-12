@@ -1,16 +1,38 @@
-[11:46:56] [Render thread/INFO]: Setting user: ResetPower
-[11:46:58] [Render thread/INFO]: Backend library: LWJGL version 3.2.1 build 12
-[11:46:59] [Render thread/INFO]: Reloading ResourceManager: Default, Depixel1.15.zip
-[11:47:03] [Render thread/INFO]: OpenAL initialized.
-[11:47:03] [Render thread/INFO]: Sound engine started
-[11:47:03] [Render thread/INFO]: Created: 1024x4096x4 minecraft:textures/atlas/blocks.png-atlas
-[11:47:03] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/signs.png-atlas
-[11:47:03] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[11:47:03] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[11:47:03] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
-[11:47:03] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
-[11:47:03] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[11:47:03] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
-[11:47:03] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
-[11:47:03] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
-[11:47:28] [Render thread/INFO]: Stopping!
+[1242020 12:12:36.572] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--username, ResetPower, --version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --assetIndex, 1.15, --uuid, d9876a2d14694b86859d902f267067d6, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release, --launchTarget, fmlclient, --fml.forgeVersion, 31.1.0, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20200122.131323]
+[1242020 12:12:36.575] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.0.0-milestone.4+67+b1a340b starting: java version 1.8.0_221 by Oracle Corporation
+[1242020 12:12:36.734] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[1242020 12:12:37.477] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmlclient' with arguments [--version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --uuid, d9876a2d14694b86859d902f267067d6, --username, ResetPower, --assetIndex, 1.15, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release]
+[1242020 12:12:38.747] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: ResetPower
+[1242020 12:12:43.308] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.1 build 12
+[1242020 12:12:44.342] [modloading-worker-13/INFO] [CocoaInput:Java/]: CocoaInput has copied library to native directory.
+[1242020 12:12:44.348] [modloading-worker-9/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.1.0, for MC 1.15.2 with MCP 20200122.131323
+[1242020 12:12:44.349] [modloading-worker-9/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.1.0 Initialized
+[1242020 12:12:44.462] [modloading-worker-13/INFO] [CocoaInput:ObjC/]: Libcocoainput was built on Feb 12 2020 03:01:48.
+[1242020 12:12:44.463] [modloading-worker-13/INFO] [CocoaInput:ObjC/]: CocoaInput is being initialized.Now running thread for modify GLFWview .
+[1242020 12:12:44.463] [modloading-worker-13/INFO] [CocoaInput:Java/]: DarwinController has been initialized.
+[1242020 12:12:44.463] [modloading-worker-13/INFO] [CocoaInput:Java/]: CocoaInput is now using controller:class jp.axer.cocoainput.arch.darwin.DarwinController
+[1242020 12:12:44.464] [modloading-worker-13/INFO] [CocoaInput:Java/]: CocoaInput has been initialized.
+[1242020 12:12:46.349] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Mod Resources, Default, Depixel1.15.zip
+[1242020 12:12:47.841] [Thread-6/INFO] [CocoaInput:ObjC/]: Complete to modify GLFWView
+[1242020 12:12:48.167] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[1242020 12:12:48.307] [Render thread/INFO] [STDOUT/]: [com.mamiyaotaru.voxelmap.Map:<init>:423]: CATEGORY ORDER IS 7
+[1242020 12:12:48.447] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x256 waypoints-atlas
+[1242020 12:12:48.533] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x128 chooser-atlas
+[1242020 12:12:48.852] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 512x512 mobs-atlas
+[1242020 12:12:49.005] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 64x64 pings-atlas
+[1242020 12:12:49.792] [modloading-worker-4/INFO] [Waila/]: Registered plugin at mcp.mobius.waila.addons.minecraft.PluginMinecraft
+[1242020 12:12:50.143] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[1242020 12:12:50.146] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[1242020 12:12:50.310] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x2048x4 minecraft:textures/atlas/blocks.png-atlas
+[1242020 12:12:50.325] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[1242020 12:12:50.326] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[1242020 12:12:50.328] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[1242020 12:12:50.331] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
+[1242020 12:12:50.332] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
+[1242020 12:12:50.333] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[1242020 12:12:50.675] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
+[1242020 12:12:50.677] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
+[1242020 12:12:50.678] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
+[1242020 12:12:50.929] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 31.1.0 Target: null
+[1242020 12:12:58.458] [Render thread/WARN] [net.minecraft.client.gui.screen.MultiplayerScreen/]: Unable to start LAN server detection: Can't assign requested address
+[1242020 12:13:07.411] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
