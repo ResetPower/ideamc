@@ -15,7 +15,7 @@ Kurado out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## Atenton
 - La lanĉisto nun nur subtenas macOS
 - La lanĉisto nun nur subtenas la oficialan Minecraft-dosierujon
-- La lanĉisto nuntempe nur subtenas la puran version kaj Forge version
+- La lanĉisto nuntempe nur subtenas la puran version kaj Forge/Fabric version
 - La lanĉilo nur sukcese testis en 1.15.2
 ## Dependecoj
 - [Fastjson](https://github.com/alibaba/fastjson)

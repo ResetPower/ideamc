@@ -21,7 +21,7 @@ object Launcher {
             return
         }
         val jsonObject = JSON.parseObject(json.readText())
-        println(generateMacOSLaunchScript(launchOptions, jsonObject))
+        //println(generateMacOSLaunchScript(launchOptions, jsonObject))
 
         Thread {
             val p = Runtime.getRuntime().exec(arrayOf("sh", "-c", generateMacOSLaunchScript(launchOptions, jsonObject)))
@@ -57,36 +57,45 @@ object Launcher {
             val modLoaderIterator = modLoaderLibraries.iterator()
             while (modLoaderIterator.hasNext()) {
                 val jsonObject = JSON.toJSON(modLoaderIterator.next()) as JSONObject
-                val downloads = jsonObject.getJSONObject("downloads")
-                if (downloads.containsKey("classifiers")) {
-                    val artifact = downloads.getJSONObject("artifact")
-                    val path = artifact.get("path")
-                    val nativeLibFile = File("${launchOptions.dir}/libraries/$path")
-                    if (nativeLibFile.exists()) {
-                        val macosNative = File("${launchOptions.dir}/libraries/${path.toString().removeSuffix(".jar")+"-natives-macos.jar"}")
-                        if (macosNative.exists()) {
-                            val files = ArtifactExtractor.extract(macosNative)
-                            for (i in files) {
-                                val f = File("${nativeFolder.path}/${i.first}")
-                                if (!f.exists()) {
-                                    f.createNewFile()
+                if (jsonObject.containsKey("downloads")) {
+                    val downloads = jsonObject.getJSONObject("downloads")
+                    if (downloads.containsKey("classifiers")) {
+                        val artifact = downloads.getJSONObject("artifact")
+                        val path = artifact.get("path")
+                        val nativeLibFile = File("${launchOptions.dir}/libraries/$path")
+                        if (nativeLibFile.exists()) {
+                            val macosNative = File("${launchOptions.dir}/libraries/${path.toString().removeSuffix(".jar")+"-natives-macos.jar"}")
+                            if (macosNative.exists()) {
+                                val files = ArtifactExtractor.extract(macosNative)
+                                for (i in files) {
+                                    val f = File("${nativeFolder.path}/${i.first}")
+                                    if (!f.exists()) {
+                                        f.createNewFile()
+                                    }
+                                    f.writeBytes(i.second)
                                 }
-                                f.writeBytes(i.second)
-                            }
-                        } else {
-                            val files = ArtifactExtractor.extract(nativeLibFile)
-                            for (i in files) {
-                                val f = File("${nativeFolder.path}/${i.first}")
-                                if (!f.exists()) {
-                                    f.createNewFile()
+                            } else {
+                                val files = ArtifactExtractor.extract(nativeLibFile)
+                                for (i in files) {
+                                    val f = File("${nativeFolder.path}/${i.first}")
+                                    if (!f.exists()) {
+                                        f.createNewFile()
+                                    }
+                                    f.writeBytes(i.second)
                                 }
-                                f.writeBytes(i.second)
                             }
+                        }
+                    } else {
+                        val artifact = downloads.getJSONObject("artifact")
+                        val path = artifact.get("path")
+                        if (File("${launchOptions.dir}/libraries/$path").exists()) {
+                            cpBuff.append("${launchOptions.dir}/libraries/$path:")
                         }
                     }
                 } else {
-                    val artifact = downloads.getJSONObject("artifact")
-                    val path = artifact.get("path")
+                    val name = jsonObject.getString("name")
+                    val nameSpl = name.split(":")
+                    val path = "${nameSpl[0].replace(".", "/")}/${nameSpl[1]}/${nameSpl[2]}/${nameSpl[1]}-${nameSpl[2]}.jar"
                     if (File("${launchOptions.dir}/libraries/$path").exists()) {
                         cpBuff.append("${launchOptions.dir}/libraries/$path:")
                     }
