@@ -19,10 +19,15 @@ import javafx.stage.Stage
 import org.imcl.lang.Translator
 import org.imcl.launch.LauncherScene
 import org.imcl.constraints.Toolkit
+import org.imcl.core.authentication.YggdrasilAuthenticator
+import org.imcl.toolkit.MyProperties
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
 import org.imcl.users.YggdrasilUserInformation
 import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.util.*
 
 
 object MainScene {
@@ -73,7 +78,38 @@ object MainScene {
                             alert.contentText = "Username or password not input"
                             alert.showAndWait()
                         } else {
-                            primaryStage.scene = LauncherScene.get(translator, YggdrasilUserInformation(userTextField.text, pwBox.text))
+                            val result = YggdrasilAuthenticator.authenticate(userTextField.text, pwBox.text).split(" ")
+                            if (result[0]=="true") {
+                                val ins = FileInputStream("imcl/properties/ideamc.properties")
+                                val prop = Properties()
+                                prop.load(ins)
+                                ins.close()
+                                prop.setProperty("isLoggedIn", "true")
+                                val out = FileOutputStream("imcl/properties/ideamc.properties")
+                                prop.store(out, "")
+                                out.close()
+
+                                val username = result[1]
+                                val uuid = result[2]
+                                val accessToken = result[3]
+                                val acinfIns = FileInputStream("imcl/account/acinf.text")
+                                val acinf = Properties()
+                                acinf.load(acinfIns)
+                                acinfIns.close()
+                                acinf.setProperty("username", username)
+                                acinf.setProperty("uuid", uuid)
+                                acinf.setProperty("accessToken", accessToken)
+                                val acinfOut = FileOutputStream("imcl/account/acinf.text")
+                                acinf.store(acinfOut, "")
+                                acinfOut.close()
+
+                                primaryStage.scene = LauncherScene.get(translator, YggdrasilUserInformation(username, uuid, accessToken), primaryStage)
+                            } else {
+                                val alert = Alert(Alert.AlertType.INFORMATION)
+                                alert.title = "Password Error"
+                                alert.contentText = "Password Error"
+                                alert.show()
+                            }
                         }
                     }
                 }, 0, 3)
@@ -85,7 +121,26 @@ object MainScene {
                             alert.contentText = "Username not set"
                             alert.showAndWait()
                         } else {
-                            primaryStage.scene = LauncherScene.get(translator, OfflineUserInformation(userTextField.text))
+                            val ins = FileInputStream("imcl/properties/ideamc.properties")
+                            val prop = Properties()
+                            prop.load(ins)
+                            ins.close()
+                            prop.setProperty("isLoggedIn", "true")
+                            val out = FileOutputStream("imcl/properties/ideamc.properties")
+                            prop.store(out, "")
+                            out.close()
+
+                            val acinfIns = FileInputStream("imcl/account/acinf.text")
+                            val acinf = Properties()
+                            acinf.load(acinfIns)
+                            acinfIns.close()
+                            acinf.setProperty("username", userTextField.text)
+                            acinf.setProperty("uuid", "none")
+                            acinf.setProperty("accessToken", "none")
+                            val acinfOut = FileOutputStream("imcl/account/acinf.text")
+                            acinf.store(acinfOut, "")
+                            acinfOut.close()
+                            primaryStage.scene = LauncherScene.get(translator, OfflineUserInformation(userTextField.text), primaryStage)
                         }
                     }
                 }, 1, 3)

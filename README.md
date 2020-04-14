@@ -17,6 +17,7 @@ Run out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 - The launcher supports only the official Minecraft folder now
 - The launcher supports only pure version and Forge/Fabric version
 - The launcher only successfully tested in 1.15.2
+- The launcher theoretical supports 1.13.x-1.15.x
 ## Dependencies
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)

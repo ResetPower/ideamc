@@ -3,6 +3,7 @@ package org.imcl.launch
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
 import com.jfoenix.controls.*
+import javafx.geometry.HPos
 import javafx.scene.Scene
 import javafx.scene.control.*
 import javafx.scene.image.Image
@@ -14,15 +15,19 @@ import org.imcl.core.Launcher
 import org.imcl.core.authentication.OfflineAuthenticator
 import org.imcl.core.authentication.YggdrasilAuthenticator
 import org.imcl.lang.Translator
+import org.imcl.main.MainScene
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
 import org.imcl.users.YggdrasilUserInformation
 import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.util.*
 
 
 object LauncherScene {
     @JvmStatic
-    fun get(translator: Translator, userInformation: UserInformation) : Scene {
+    fun get(translator: Translator, userInformation: UserInformation, primaryStage: Stage) : Scene {
         val mainBorderPane = BorderPane()
 
         mainBorderPane.left = JFXListView<String>().apply {
@@ -55,7 +60,7 @@ object LauncherScene {
                                 if (userInformation is OfflineUserInformation) {
                                     Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username())))
                                 } else if (userInformation is YggdrasilUserInformation) {
-                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.password())))
+                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken())))
                                 }
                             }
                         }, 2, 2)
@@ -147,18 +152,36 @@ object LauncherScene {
                             instBorderPane.center = profileList
                             content = instBorderPane
                         }, Tab("Skin").apply {
-                            content = Label("Skin")
+                            if (userInformation is YggdrasilUserInformation) {
+
+                            } else {
+                                content = Label("Offline mode not support Skin. Please buy Minecraft.")
+                            }
                         })
                         mainBorderPane.center = tabPane
                     }
                     "Kousaten: Java Edition" -> { mainBorderPane.center = Label("Kousaten: Java Edition") }
                     "Settings" -> { mainBorderPane.center = GridPane().apply {
-                        add(Label(if (userInformation is OfflineUserInformation) userInformation.username() else if (userInformation is YggdrasilUserInformation) userInformation.username() else "Unknown User" ), 0, 0)
+                        add(Label(if (userInformation is OfflineUserInformation) userInformation.username()+" - Offline" else if (userInformation is YggdrasilUserInformation) userInformation.username()+" - Yggdrasil" else "Unknown User" ).apply {
+                            GridPane.setHalignment(this, HPos.CENTER)
+                        }, 0, 0)
+                        add(Label("").apply {
+                            GridPane.setHalignment(this, HPos.CENTER)
+                        }, 0, 1)
                         add(JFXButton("Log out").apply {
                             setOnAction {
-                                // TODO Log out
+                                primaryStage.scene = MainScene.get(primaryStage)
+                                val ins = FileInputStream("imcl/properties/ideamc.properties")
+                                val prop = Properties()
+                                prop.load(ins)
+                                ins.close()
+                                prop.setProperty("isLoggedIn", "false")
+                                val out = FileOutputStream("imcl/properties/ideamc.properties")
+                                prop.store(out, "")
+                                out.close()
                             }
-                        }, 0, 1)
+                            GridPane.setHalignment(this, HPos.CENTER)
+                        }, 0, 2)
                     } }
                 }
             }

@@ -17,6 +17,7 @@ IMCLは、モジュール管理、ゲームのカスタマイズ、ゲームの�
 - 起動機は現在Minecraftの公式フォルダーのみをサポートています
 - 起動機は現在ピュアバージョンとForge/Fabricバージョンのみをサポートています
 - 起動機は1.15.2でのみテストに成功しました
+- 起動機は1.13.x-1.15.xを理論的サポートています。
 ## 頼り
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)

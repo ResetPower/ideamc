@@ -1,6 +1,7 @@
 package org.imcl.users
 
-class YggdrasilUserInformation(val username: String, val password: String) : UserInformation {
+class YggdrasilUserInformation(val username: String, val uuid: String, val accessToken: String) : UserInformation {
     fun username() = username
-    fun password() = password
+    fun uuid() = uuid
+    fun accessToken() = accessToken
 }

@@ -35,7 +35,6 @@ object Launcher {
         }.start()
     }
     fun generateMacOSLaunchScript(launchOptions: LaunchOptions, jsonObject: JSONObject) : String {
-        launchOptions.authenticator.authenticate()
         val sb = StringBuffer("/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/bin/java -XstartOnFirstThread -Djava.library.path=\"${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}-natives\" ")
         var inheritsFrom: String? = null
         var inheritsObject: JSONObject? = null

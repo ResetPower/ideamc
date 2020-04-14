@@ -14,6 +14,14 @@ object Toolkit {
         return prop.getProperty("language")
     }
     @JvmStatic
+    fun isLoggedIn() : Boolean {
+        val ins = FileInputStream("imcl/properties/ideamc.properties")
+        val prop = Properties()
+        prop.load(ins)
+        ins.close()
+        return prop.getProperty("isLoggedIn")=="true"
+    }
+    @JvmStatic
     fun updateLanguage(language: String) {
         val ins = FileInputStream("imcl/properties/ideamc.properties")
         val prop = Properties()

@@ -1,19 +1,15 @@
-[12:50:27] [main/INFO]: Loading for game Minecraft 1.15.2
-[12:50:27] [main/INFO]: [FabricLoader] Loading 2 mods: minecraft@1.15.2, fabricloader@0.8.2+build.194
-[12:50:27] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8 Source=file:/Users/resetpower/Library/Application%20Support/minecraft/libraries/net/fabricmc/sponge-mixin/0.8+build.18/sponge-mixin-0.8+build.18.jar Service=Knot/Fabric Env=CLIENT
-[12:50:28] [main/INFO]: Setting user: zxcv
-[12:50:30] [main/INFO]: Backend library: LWJGL version 3.2.1 build 12
-[12:50:32] [main/INFO]: Reloading ResourceManager: Default, Depixel1.15.zip
-[12:50:38] [main/INFO]: OpenAL initialized.
-[12:50:38] [main/INFO]: Sound engine started
-[12:50:38] [main/INFO]: Created: 1024x4096x4 minecraft:textures/atlas/blocks.png-atlas
-[12:50:38] [main/INFO]: Created: 512x256x4 minecraft:textures/atlas/signs.png-atlas
-[12:50:38] [main/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[12:50:38] [main/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[12:50:38] [main/INFO]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
-[12:50:38] [main/INFO]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
-[12:50:38] [main/INFO]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[12:50:38] [main/INFO]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
-[12:50:38] [main/INFO]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
-[12:50:38] [main/INFO]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
-[12:51:07] [main/INFO]: Stopping!
+[21:06:36] [Client thread/INFO]: Setting user: ResetPower
+[21:06:37] [Client thread/WARN]: Skipping bad option: lastServer:
+[21:06:37] [Client thread/INFO]: LWJGL Version: 3.1.6 build 14
+[21:06:38] [Client thread/WARN]: Removed resource pack file/Depixel1.15.zip from options because it is no longer compatible
+[21:06:38] [Client thread/INFO]: Reloading ResourceManager: Default
+[21:06:38] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[21:06:38] [Thread-2/INFO]: Initializing No Sound
+[21:06:38] [Thread-2/INFO]: (Silent Mode)
+[21:06:38] [Thread-2/INFO]: OpenAL initialized.
+[21:06:39] [Sound Library Loader/INFO]: Preloading sound minecraft:sounds/ambient/underwater/underwater_ambience.ogg
+[21:06:39] [Sound Library Loader/INFO]: Sound engine started
+[21:06:40] [Client thread/INFO]: Created: 1024x512 textures-atlas
+[21:09:41] [Client thread/INFO]: Stopping!
+[21:09:42] [Client thread/INFO]: SoundSystem shutting down...
+[21:09:42] [Client thread/INFO]: SoundSystem Author: Paul Lamb, www.paulscode.com
