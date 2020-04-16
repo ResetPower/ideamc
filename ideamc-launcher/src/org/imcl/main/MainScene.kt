@@ -71,6 +71,8 @@ object MainScene {
                 val pwBox = JFXPasswordField()
                 add(pwBox, 1, 2)
                 add(loginButton.apply {
+                    buttonType = JFXButton.ButtonType.RAISED
+                    background = Background(BackgroundFill(Color.ALICEBLUE, null, null))
                     setOnAction {
                         if (userTextField.text.trim()==""||pwBox.text.trim()=="") {
                             val alert = Alert(Alert.AlertType.INFORMATION)
@@ -88,7 +90,6 @@ object MainScene {
                                 val out = FileOutputStream("imcl/properties/ideamc.properties")
                                 prop.store(out, "")
                                 out.close()
-
                                 val username = result[1]
                                 val uuid = result[2]
                                 val accessToken = result[3]
@@ -114,6 +115,8 @@ object MainScene {
                     }
                 }, 0, 3)
                 add(offlineButton.apply {
+                    buttonType = JFXButton.ButtonType.RAISED
+                    background = Background(BackgroundFill(Color.ALICEBLUE, null, null))
                     setOnAction {
                         if (userTextField.text.trim()=="") {
                             val alert = Alert(Alert.AlertType.INFORMATION)

@@ -1,5 +1,6 @@
 package org.imcl.constraints
 
+import javafx.scene.control.Alert
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.util.*
@@ -12,6 +13,13 @@ object Toolkit {
         prop.load(ins)
         ins.close()
         return prop.getProperty("language")
+    }
+    @JvmStatic
+    fun toast(message: String) {
+        val alert = Alert(Alert.AlertType.INFORMATION)
+        alert.title = "INFORMATION"
+        alert.contentText = message
+        alert.show()
     }
     @JvmStatic
     fun isLoggedIn() : Boolean {

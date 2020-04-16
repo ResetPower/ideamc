@@ -38,7 +38,7 @@ class YggdrasilAuthenticator(val username: String, val uuid: String, val accessT
                 return responseBuilder.toString()
             } catch (e: IOException) {
                 whenError()
-                throw e
+                return null
             }
         }
         @JvmStatic
