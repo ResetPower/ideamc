@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
     <orderEntry type="library" name="fastjson-1.2.68-ideamc-core" level="project" />
+    <orderEntry type="library" name="commons-io-2.6" level="project" />
   </component>
 </module>

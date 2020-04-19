@@ -4,19 +4,25 @@ import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
 import com.jfoenix.controls.*
 import javafx.geometry.HPos
+import javafx.geometry.Pos
 import javafx.scene.Scene
-import javafx.scene.control.*
+import javafx.scene.control.Label
+import javafx.scene.control.Tab
 import javafx.scene.image.Image
 import javafx.scene.layout.*
 import javafx.scene.paint.Color
 import javafx.stage.FileChooser
 import javafx.stage.Stage
 import org.imcl.constraints.Toolkit
+import org.imcl.constraints.VERSION_CODE
+import org.imcl.constraints.VERSION_NAME
 import org.imcl.core.LaunchOptions
 import org.imcl.core.Launcher
 import org.imcl.core.authentication.OfflineAuthenticator
 import org.imcl.core.authentication.YggdrasilAuthenticator
+import org.imcl.download.MinecraftDownloadScene
 import org.imcl.lang.Translator
+import org.imcl.loading.LoadingStage
 import org.imcl.main.MainScene
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
@@ -35,10 +41,14 @@ object LauncherScene {
         val profileList = JFXListView<Label>()
         var loadedProfiles = false
         val launcherProfiles = JSON.parseArray(File("imcl/launcher/launcher_profiles.json").readText())
+        var theScene = Scene(Label("Loading..."), 840.0, 502.0)
         fun BorderPane.prepareModsBorderPane() {
             val selected = profileList.selectionModel.selectedItem.text
             val modList = JFXListView<Label>()
             val modsFolder = File((launcherProfiles[profileList.selectionModel.selectedIndex] as JSONObject).getString("directory")+"/mods")
+            if (!modsFolder.exists()) {
+                modsFolder.mkdirs()
+            }
             top = GridPane().apply {
                 add(JFXButton(translator.get("remove")).apply {
                     buttonType = JFXButton.ButtonType.RAISED
@@ -114,19 +124,20 @@ object LauncherScene {
             }
             center = modList
             bottom = GridPane().apply {
-                add(Label("Selected Version: $selected"), 0, 0)
-                add(Label("Mods Folder: ${modsFolder.path}"), 0, 1)
+                add(Label("${translator.get("ver")}: $selected"), 0, 0)
+                add(Label("${translator.get("modsfolder")}: ${modsFolder.path}"), 0, 1)
             }
         }
         mainBorderPane.left = JFXListView<String>().apply {
-            items.add("News")
+            styleClass.add("mylistview")
+            items.add(translator.get("news"))
             items.add("Minecraft: Java Edition")
-            items.add("Kousaten: Java Edition")
-            items.add("Settings")
+            items.add(translator.get("settings"))
+            items.add(translator.get("about"))
             border = null
             selectionModel.selectedItemProperty().addListener { observerable, oldValue, newValue ->
                 when (newValue) {
-                    "News" -> { mainBorderPane.center = Label("News") }
+                    translator.get("news") -> { mainBorderPane.center = Label("News") }
                     "Minecraft: Java Edition" -> {
                         if (!loadedProfiles) {
                             val iterator = launcherProfiles.iterator()
@@ -147,11 +158,16 @@ object LauncherScene {
                             buttonType = JFXButton.ButtonType.RAISED
                             background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
                             setOnAction {
+                                this.isDisable = true
                                 val prof = launcherProfiles.getJSONObject(profileList.selectionModel.selectedIndex)
                                 if (userInformation is OfflineUserInformation) {
-                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username())))
+                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username()))) {
+                                        this.isDisable = false
+                                    }
                                 } else if (userInformation is YggdrasilUserInformation) {
-                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken())))
+                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken()))) {
+                                        this.isDisable = false
+                                    }
                                 }
                             }
                         }, 2, 2)
@@ -162,9 +178,9 @@ object LauncherScene {
                                 BackgroundSize.DEFAULT
                             )
                         )
-                        tabPane.tabs.addAll(Tab("Play").apply {
+                        tabPane.tabs.addAll(Tab(translator.get("play")).apply {
                             content = gridPane1
-                        }, Tab("Installations").apply {
+                        }, Tab(translator.get("installations")).apply {
                             val installations = GridPane()
                             installations.addRow(0, JFXButton(translator.get("add")).apply {
                                 buttonType = JFXButton.ButtonType.RAISED
@@ -253,30 +269,60 @@ object LauncherScene {
                             instBorderPane.top = installations
                             instBorderPane.center = profileList
                             content = instBorderPane
-                        }, Tab("Mods").apply {
+                        }, Tab(translator.get("mods")).apply {
                             content = modsBorderPane.apply {
                                 prepareModsBorderPane()
                             }
-                        }, Tab("Skin").apply {
+                        }, Tab(translator.get("skin")).apply {
                             if (userInformation is YggdrasilUserInformation) {
                                 content = Label("This feature is not supported now.")
                             } else {
                                 content = Label("Offline mode not support Skin. Please buy Minecraft.")
                             }
-                        }, Tab("Download").apply {
-                            content = Label("This feature is not supported now.")
+                        }, Tab(translator.get("download")).apply {
+                            content = VBox().apply {
+                                alignment = Pos.CENTER
+                                spacing = 10.0
+                                children.add(JFXButton("Minecraft").apply {
+                                    buttonType = JFXButton.ButtonType.RAISED
+                                    background = Background(BackgroundFill(Color.LIGHTGREEN, null, null))
+                                    setOnAction {
+                                        primaryStage.scene = MinecraftDownloadScene.get(translator, userInformation, primaryStage, theScene)
+                                    }
+                                })
+                                children.add(JFXButton("Forge").apply {
+                                    buttonType = JFXButton.ButtonType.RAISED
+                                    background = Background(BackgroundFill(Color.DARKGRAY, null, null))
+                                    setOnAction {
+                                        // TODO Download Forge
+                                    }
+                                })
+                                children.add(JFXButton("Optifine").apply {
+                                    buttonType = JFXButton.ButtonType.RAISED
+                                    background = Background(BackgroundFill(Color.NAVAJOWHITE, null, null))
+                                    setOnAction {
+                                        // TODO Download Optifine
+                                    }
+                                })
+                                children.add(JFXButton("Fabric").apply {
+                                    buttonType = JFXButton.ButtonType.RAISED
+                                    background = Background(BackgroundFill(Color.LIGHTCYAN, null, null))
+                                    setOnAction {
+                                        // TODO Download Fabric
+                                    }
+                                })
+                            }
                         })
                         mainBorderPane.center = tabPane
                     }
-                    "Kousaten: Java Edition" -> { mainBorderPane.center = Label("Kousaten: Java Edition") }
-                    "Settings" -> { mainBorderPane.center = GridPane().apply {
+                    translator.get("settings") -> { mainBorderPane.center = GridPane().apply {
                         add(Label(if (userInformation is OfflineUserInformation) userInformation.username()+" - Offline" else if (userInformation is YggdrasilUserInformation) userInformation.username()+" - Yggdrasil" else "Unknown User" ).apply {
                             GridPane.setHalignment(this, HPos.CENTER)
                         }, 0, 0)
                         add(Label("").apply {
                             GridPane.setHalignment(this, HPos.CENTER)
                         }, 0, 1)
-                        add(JFXButton("Log out").apply {
+                        add(JFXButton(translator.get("logout")).apply {
                             buttonType = JFXButton.ButtonType.RAISED
                             background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
                             setOnAction {
@@ -293,11 +339,14 @@ object LauncherScene {
                             GridPane.setHalignment(this, HPos.CENTER)
                         }, 0, 2)
                     } }
+                    translator.get("about") -> {
+                        mainBorderPane.center = Label("IDEA Minecraft Launcher\nDeveloper: ResetPower\nGitHub: https://github.com/resetpower/imcl\nVersion Name: $VERSION_NAME\nVersion Code: $VERSION_CODE\nOpen Source Software")
+                    }
                 }
             }
             selectionModel.select("Minecraft: Java Edition")
         }
-
-        return Scene(mainBorderPane, 840.0, 502.0)
+        theScene = Scene(mainBorderPane, 840.0, 502.0)
+        return theScene
     }
 }

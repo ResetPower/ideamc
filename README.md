@@ -21,5 +21,8 @@ Run out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## Dependencies
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)
+- [commons-io](https://github.com/apache/commons-io)
+## Special Thanks
+Special thanks to [BMCLAPI](https://bmclapidoc.bangbang93.com/)
 ## Developer
 ResetPower

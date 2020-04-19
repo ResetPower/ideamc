@@ -21,5 +21,6 @@ Kurado out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## Dependecoj
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)
+- [commons-io](https://github.com/apache/commons-io)
 ## Ellaboranto
 ResetPower

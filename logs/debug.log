@@ -1,0 +1,801 @@
+[1942020 18:22:10.972] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--username, Zhangsan, --version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --assetIndex, 1.15, --uuid, -1367960428, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release, --launchTarget, fmlclient, --fml.forgeVersion, 31.1.0, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20200122.131323]
+[1942020 18:22:10.976] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.0.0-milestone.4+67+b1a340b starting: java version 1.8.0_221 by Oracle Corporation
+[1942020 18:22:10.990] [main/DEBUG] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Found launch services [minecraft,testharness,fmlclient,fmlserver]
+[1942020 18:22:11.001] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : []
+[1942020 18:22:11.013] [main/DEBUG] [cpw.mods.modlauncher.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [eventbus,object_holder_definalize,runtime_enum_extender,accesstransformer,capability_inject_definalize,runtimedistcleaner]
+[1942020 18:22:11.036] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
+[1942020 18:22:11.060] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: []
+[1942020 18:22:11.084] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [fml]
+[1942020 18:22:11.084] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
+[1942020 18:22:11.085] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
+[1942020 18:22:11.085] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/]: Injecting tracing printstreams for STDOUT/STDERR.
+[1942020 18:22:11.088] [main/DEBUG] [net.minecraftforge.fml.loading.LauncherVersion/CORE]: Found FMLLauncher version 31.1
+[1942020 18:22:11.088] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML 31.1 loading
+[1942020 18:22:11.088] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found ModLauncher version : 5.0.0-milestone.4+67+b1a340b
+[1942020 18:22:11.088] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Initializing modjar URL handler
+[1942020 18:22:11.089] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found AccessTransformer version : 2.0.0-milestone.1+47+4a08f17
+[1942020 18:22:11.089] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found EventBus version : 2.0.0-milestone.1+57+de55078
+[1942020 18:22:11.090] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found Runtime Dist Cleaner
+[1942020 18:22:11.092] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found CoreMod version : 2.0.0-milestone.1+5+5b32e68
+[1942020 18:22:11.092] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package implementation version 2.0.0-milestone.1+7+a2eaa64
+[1942020 18:22:11.092] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package specification 3
+[1942020 18:22:11.183] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[1942020 18:22:11.184] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
+[1942020 18:22:11.185] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
+[1942020 18:22:11.201] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
+[1942020 18:22:11.202] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
+[1942020 18:22:11.202] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Setting up basic FML game directories
+[1942020 18:22:11.202] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing GAMEDIR directory : /Users/resetpower/Library/Application Support/minecraft
+[1942020 18:22:11.203] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path GAMEDIR is /Users/resetpower/Library/Application Support/minecraft
+[1942020 18:22:11.203] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing MODSDIR directory : /Users/resetpower/Library/Application Support/minecraft/mods
+[1942020 18:22:11.203] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path MODSDIR is /Users/resetpower/Library/Application Support/minecraft/mods
+[1942020 18:22:11.203] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing CONFIGDIR directory : /Users/resetpower/Library/Application Support/minecraft/config
+[1942020 18:22:11.203] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is /Users/resetpower/Library/Application Support/minecraft/config
+[1942020 18:22:11.203] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is /Users/resetpower/Library/Application Support/minecraft/config/fml.toml
+[1942020 18:22:11.203] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading configuration
+[1942020 18:22:11.243] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing default config directory directory : /Users/resetpower/Library/Application Support/minecraft/defaultconfigs
+[1942020 18:22:11.244] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing launch handler
+[1942020 18:22:11.244] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Using fmlclient as launch service
+[1942020 18:22:11.250] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Received command line version data  : MC Version: '1.15.2' MCP Version: '20200122.131323' Forge Version: '31.1.0' Forge group: 'net.minecraftforge'
+[1942020 18:22:11.251] [main/DEBUG] [net.minecraftforge.fml.loading.LibraryFinder/CORE]: Found JAR asm at path /Users/resetpower/Library/Application Support/minecraft/libraries/org/ow2/asm/asm/7.2/asm-7.2.jar
+[1942020 18:22:11.252] [main/DEBUG] [net.minecraftforge.fml.loading.LibraryFinder/CORE]: Found probable library path /Users/resetpower/Library/Application Support/minecraft/libraries
+[1942020 18:22:11.252] [main/DEBUG] [net.minecraftforge.fml.loading.LibraryFinder/CORE]: Found forge path /Users/resetpower/Library/Application Support/minecraft/libraries/net/minecraftforge/forge/1.15.2-31.1.0/forge-1.15.2-31.1.0-universal.jar is present
+[1942020 18:22:11.252] [main/DEBUG] [net.minecraftforge.fml.loading.LibraryFinder/CORE]: SRG MC at /Users/resetpower/Library/Application Support/minecraft/libraries/net/minecraft/client/1.15.2-20200122.131323/client-1.15.2-20200122.131323-srg.jar is present
+[1942020 18:22:11.252] [main/DEBUG] [net.minecraftforge.fml.loading.LibraryFinder/CORE]: MC Extras at /Users/resetpower/Library/Application Support/minecraft/libraries/net/minecraft/client/1.15.2/client-1.15.2-extra.jar is present
+[1942020 18:22:11.252] [main/DEBUG] [net.minecraftforge.fml.loading.LibraryFinder/CORE]: Forge patches at /Users/resetpower/Library/Application Support/minecraft/libraries/net/minecraftforge/forge/1.15.2-31.1.0/forge-1.15.2-31.1.0-client.jar is present
+[1942020 18:22:11.255] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found 0 language providers
+[1942020 18:22:11.256] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Adding forge as a language from /Users/resetpower/Library/Application Support/minecraft/libraries/net/minecraftforge/forge/1.15.2-31.1.0/forge-1.15.2-31.1.0-universal.jar
+[1942020 18:22:11.257] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Adding file:/Users/resetpower/Library/Application%20Support/minecraft/libraries/net/minecraftforge/forge/1.15.2-31.1.0/forge-1.15.2-31.1.0-universal.jar to languageloader classloader
+[1942020 18:22:11.287] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found 2 language providers
+[1942020 18:22:11.287] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider javafml, version 31.1
+[1942020 18:22:11.290] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1
+[1942020 18:22:11.292] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
+[1942020 18:22:11.292] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'srg'
+[1942020 18:22:11.293] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {}
+[1942020 18:22:11.293] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
+[1942020 18:22:11.293] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
+[1942020 18:22:11.293] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Initiating mod scan
+[1942020 18:22:11.315] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModListHandler/CORE]: Found mod coordinates from lists: []
+[1942020 18:22:11.328] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(maven libs:null),(exploded directory:null),(minecraft:null)
+[1942020 18:22:11.343] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /Users/resetpower/Library/Application Support/minecraft/mods/[1.14.4-1.15.2]CocoaInput-3.2.3.jar
+[1942020 18:22:11.367] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file [1.14.4-1.15.2]CocoaInput-3.2.3.jar with {cocoainput} mods - versions {3.2.3}
+[1942020 18:22:11.367] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file /Users/resetpower/Library/Application Support/minecraft/mods/[1.14.4-1.15.2]CocoaInput-3.2.3.jar with language javafml
+[1942020 18:22:11.389] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod transformers with Javascript path transformers.js
+[1942020 18:22:11.389] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod transformers.js
+[1942020 18:22:11.389] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /Users/resetpower/Library/Application Support/minecraft/mods/DurabilityViewer-1.15.2-forge31.1.30-1.7.jar
+[1942020 18:22:11.392] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file DurabilityViewer-1.15.2-forge31.1.30-1.7.jar with {durabilityviewer} mods - versions {NONE}
+[1942020 18:22:11.392] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file /Users/resetpower/Library/Application Support/minecraft/mods/DurabilityViewer-1.15.2-forge31.1.30-1.7.jar with language javafml
+[1942020 18:22:11.392] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /Users/resetpower/Library/Application Support/minecraft/mods/forgemod_VoxelMap-1.9.16_for_1.15.2.jar
+[1942020 18:22:11.394] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forgemod_VoxelMap-1.9.16_for_1.15.2.jar with {voxelmap} mods - versions {1.9.16}
+[1942020 18:22:11.394] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file /Users/resetpower/Library/Application Support/minecraft/mods/forgemod_VoxelMap-1.9.16_for_1.15.2.jar with language javafml
+[1942020 18:22:11.394] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod Transformer 1 Name with Javascript path transformer.js
+[1942020 18:22:11.394] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod transformer.js
+[1942020 18:22:11.394] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /Users/resetpower/Library/Application Support/minecraft/mods/FpsReducer-mc1.15.2-1.14.1.jar
+[1942020 18:22:11.395] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file FpsReducer-mc1.15.2-1.14.1.jar with {fpsreducer} mods - versions {mc1.15.2-1.14.1}
+[1942020 18:22:11.395] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file /Users/resetpower/Library/Application Support/minecraft/mods/FpsReducer-mc1.15.2-1.14.1.jar with language javafml
+[1942020 18:22:11.396] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /Users/resetpower/Library/Application Support/minecraft/mods/Hwyla-forge-1.10.8-B72_1.15.2.jar
+[1942020 18:22:11.397] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file Hwyla-forge-1.10.8-B72_1.15.2.jar with {waila} mods - versions {version}
+[1942020 18:22:11.397] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file /Users/resetpower/Library/Application Support/minecraft/mods/Hwyla-forge-1.10.8-B72_1.15.2.jar with language javafml
+[1942020 18:22:11.397] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /Users/resetpower/Library/Application Support/minecraft/mods/jei-1.15.2-6.0.0.2.jar
+[1942020 18:22:11.398] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file jei-1.15.2-6.0.0.2.jar with {jei} mods - versions {6.0.0.2}
+[1942020 18:22:11.398] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file /Users/resetpower/Library/Application Support/minecraft/mods/jei-1.15.2-6.0.0.2.jar with language javafml
+[1942020 18:22:11.398] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /Users/resetpower/Library/Application Support/minecraft/libraries/net/minecraftforge/forge/1.15.2-31.1.0/forge-1.15.2-31.1.0-universal.jar
+[1942020 18:22:11.399] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.15.2-31.1.0-universal.jar with {forge} mods - versions {31.1.0}
+[1942020 18:22:11.399] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file /Users/resetpower/Library/Application Support/minecraft/libraries/net/minecraftforge/forge/1.15.2-31.1.0/forge-1.15.2-31.1.0-universal.jar with language javafml
+[1942020 18:22:11.399] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod fieldtomethodtransformers with Javascript path META-INF/fieldtomethodtransformers.js
+[1942020 18:22:11.399] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod META-INF/fieldtomethodtransformers.js
+[1942020 18:22:11.399] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /Users/resetpower/Library/Application Support/minecraft/libraries/net/minecraftforge/forge/1.15.2-31.1.0/forge-1.15.2-31.1.0-client.jar
+[1942020 18:22:11.401] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.15.2-31.1.0-client.jar with {minecraft} mods - versions {1.15.2}
+[1942020 18:22:11.401] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file /Users/resetpower/Library/Application Support/minecraft/libraries/net/minecraftforge/forge/1.15.2-31.1.0/forge-1.15.2-31.1.0-client.jar with language minecraft
+[1942020 18:22:11.409] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 7 mandatory requirements
+[1942020 18:22:11.410] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 0 mandatory mod requirements missing
+[1942020 18:22:11.698] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
+[1942020 18:22:11.698] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
+[1942020 18:22:11.698] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
+[1942020 18:22:11.698] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading coremod transformers
+[1942020 18:22:11.699] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from transformer.js
+[1942020 18:22:11.886] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[1942020 18:22:11.886] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from META-INF/fieldtomethodtransformers.js
+[1942020 18:22:11.896] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[1942020 18:22:11.896] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from transformers.js
+[1942020 18:22:11.917] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[1942020 18:22:11.922] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@31611954 to Target : CLASS {Lnet/minecraft/client/renderer/WorldRenderer;} {} {V}
+[1942020 18:22:11.923] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@32fdec40 to Target : CLASS {Lnet/minecraft/potion/EffectInstance;} {} {V}
+[1942020 18:22:11.923] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@6813a331 to Target : CLASS {Lnet/minecraft/block/FlowingFluidBlock;} {} {V}
+[1942020 18:22:11.923] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@1bd81830 to Target : CLASS {Lnet/minecraft/item/BucketItem;} {} {V}
+[1942020 18:22:11.923] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@39ab59f8 to Target : CLASS {Lnet/minecraft/block/StairsBlock;} {} {V}
+[1942020 18:22:11.923] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@64e92d61 to Target : CLASS {Lnet/minecraft/block/FlowerPotBlock;} {} {V}
+[1942020 18:22:11.923] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@111610e6 to Target : CLASS {Lnet/minecraft/item/FishBucketItem;} {} {V}
+[1942020 18:22:11.923] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@4ad4936c to Target : CLASS {Lnet/minecraft/client/gui/widget/TextFieldWidget;} {} {V}
+[1942020 18:22:11.923] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@29d37757 to Target : CLASS {Lnet/minecraft/client/gui/screen/EditSignScreen;} {} {V}
+[1942020 18:22:11.923] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@4fcc529 to Target : CLASS {Lnet/minecraft/client/gui/screen/EditBookScreen;} {} {V}
+[1942020 18:22:11.924] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
+[1942020 18:22:11.932] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmlclient' with arguments [--version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --uuid, -1367960428, --username, Zhangsan, --assetIndex, 1.15, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release]
+[1942020 18:22:13.204] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Zhangsan
+[1942020 18:22:13.698] [Render thread/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/block/FlowingFluidBlock
+[1942020 18:22:13.731] [Render thread/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/block/StairsBlock
+[1942020 18:22:13.775] [Render thread/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/block/FlowerPotBlock
+[1942020 18:22:15.626] [Render thread/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/item/BucketItem
+[1942020 18:22:15.642] [Render thread/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/item/FishBucketItem
+[1942020 18:22:15.771] [Render thread/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/potion/EffectInstance
+[1942020 18:22:17.762] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.1 build 12
+[1942020 18:22:17.784] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+Possible reasons:
+	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
+	b) The classpath contains jar files of an older LWJGL version.
+Possible solutions:
+	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
+	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
+	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
+[1942020 18:22:17.803] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+Possible reasons:
+	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
+	b) The classpath contains jar files of an older LWJGL version.
+Possible solutions:
+	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
+	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
+	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
+[1942020 18:22:17.824] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+Possible reasons:
+	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
+	b) The classpath contains jar files of an older LWJGL version.
+Possible solutions:
+	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
+	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
+	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
+[1942020 18:22:18.049] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+Possible reasons:
+	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
+	b) The classpath contains jar files of an older LWJGL version.
+Possible solutions:
+	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
+	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
+	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
+[1942020 18:22:18.384] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+Possible reasons:
+	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
+	b) The classpath contains jar files of an older LWJGL version.
+Possible solutions:
+	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
+	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
+	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
+[1942020 18:22:18.554] [Render thread/DEBUG] [net.minecraftforge.fml.ForgeI18n/CORE]: Loading I18N data entries: 4533
+[1942020 18:22:18.754] [Render thread/DEBUG] [net.minecraftforge.fml.ModLoader/CORE]: Loading Network data for FML net version: FML2
+[1942020 18:22:18.769] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Using 12 threads for parallel mod-loading
+[1942020 18:22:18.773] [Render thread/DEBUG] [net.minecraftforge.fml.ModLoader/LOADING]: ModContainer is cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.785] [Render thread/DEBUG] [net.minecraftforge.fml.ModLoader/LOADING]: ModContainer is cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.788] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 - got cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.788] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for bre2el.fpsreducer.FpsReducer with classLoader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 & cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.798] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded modclass bre2el.fpsreducer.FpsReducer with cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.798] [Render thread/DEBUG] [net.minecraftforge.fml.ModLoader/LOADING]: ModContainer is cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.798] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 - got cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.798] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for com.mamiyaotaru.voxelmap.forgemod.ForgeModVoxelMap with classLoader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 & cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.807] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded modclass com.mamiyaotaru.voxelmap.forgemod.ForgeModVoxelMap with cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.807] [Render thread/DEBUG] [net.minecraftforge.fml.ModLoader/LOADING]: ModContainer is cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.808] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 - got cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.808] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod with classLoader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 & cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.819] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded modclass net.minecraftforge.common.ForgeMod with cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.819] [Render thread/DEBUG] [net.minecraftforge.fml.ModLoader/LOADING]: ModContainer is cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.819] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 - got cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.819] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for jp.axer.cocoainput.CocoaInput with classLoader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 & cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.820] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded modclass jp.axer.cocoainput.CocoaInput with cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.820] [Render thread/DEBUG] [net.minecraftforge.fml.ModLoader/LOADING]: ModContainer is cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.820] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 - got cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.820] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for mcp.mobius.waila.Waila with classLoader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 & cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.826] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded modclass mcp.mobius.waila.Waila with cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.826] [Render thread/DEBUG] [net.minecraftforge.fml.ModLoader/LOADING]: ModContainer is cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.826] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 - got cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.826] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for mezz.jei.JustEnoughItems with classLoader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 & cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.827] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded modclass mezz.jei.JustEnoughItems with cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.827] [Render thread/DEBUG] [net.minecraftforge.fml.ModLoader/LOADING]: ModContainer is cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.827] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 - got cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.828] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for de.guntram.mcmod.durabilityviewer.DurabilityViewer with classLoader cpw.mods.modlauncher.TransformingClassLoader@1d035be3 & cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.828] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded modclass de.guntram.mcmod.durabilityviewer.DurabilityViewer with cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.838] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching parallel event LifecycleEvent:CONSTRUCT
+[1942020 18:22:18.846] [modloading-worker-13/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loading mod instance jei of type mezz.jei.JustEnoughItems
+[1942020 18:22:18.846] [modloading-worker-11/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loading mod instance durabilityviewer of type de.guntram.mcmod.durabilityviewer.DurabilityViewer
+[1942020 18:22:18.846] [modloading-worker-15/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loading mod instance cocoainput of type jp.axer.cocoainput.CocoaInput
+[1942020 18:22:18.846] [modloading-worker-9/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loading mod instance waila of type mcp.mobius.waila.Waila
+[1942020 18:22:18.846] [modloading-worker-4/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loading mod instance fpsreducer of type bre2el.fpsreducer.FpsReducer
+[1942020 18:22:18.846] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loading mod instance forge of type net.minecraftforge.common.ForgeMod
+[1942020 18:22:18.846] [modloading-worker-2/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loading mod instance voxelmap of type com.mamiyaotaru.voxelmap.forgemod.ForgeModVoxelMap
+[1942020 18:22:18.847] [modloading-worker-6/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Forge Version package package net.minecraftforge.versions.forge, Forge, version 31.1 from cpw.mods.modlauncher.TransformingClassLoader@1d035be3
+[1942020 18:22:18.847] [modloading-worker-6/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge version 31.1.0
+[1942020 18:22:18.847] [modloading-worker-6/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge spec 31.1
+[1942020 18:22:18.847] [modloading-worker-6/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge group net.minecraftforge
+[1942020 18:22:18.854] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput has copied library to native directory.
+[1942020 18:22:18.857] [modloading-worker-6/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MC version information 1.15.2
+[1942020 18:22:18.857] [modloading-worker-6/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MCP version information 20200122.131323
+[1942020 18:22:18.857] [modloading-worker-6/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.1.0, for MC 1.15.2 with MCP 20200122.131323
+[1942020 18:22:18.857] [modloading-worker-6/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.1.0 Initialized
+[1942020 18:22:18.861] [modloading-worker-11/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded mod instance durabilityviewer of type de.guntram.mcmod.durabilityviewer.DurabilityViewer
+[1942020 18:22:18.861] [modloading-worker-13/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded mod instance jei of type mezz.jei.JustEnoughItems
+[1942020 18:22:18.862] [modloading-worker-13/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Injecting Automatic event subscribers for jei
+[1942020 18:22:18.862] [modloading-worker-11/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Injecting Automatic event subscribers for durabilityviewer
+[1942020 18:22:18.862] [modloading-worker-2/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded mod instance voxelmap of type com.mamiyaotaru.voxelmap.forgemod.ForgeModVoxelMap
+[1942020 18:22:18.862] [modloading-worker-2/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Injecting Automatic event subscribers for voxelmap
+[1942020 18:22:18.876] [modloading-worker-2/DEBUG] [net.minecraftforge.fml.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for voxelmap
+[1942020 18:22:18.876] [modloading-worker-11/DEBUG] [net.minecraftforge.fml.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for durabilityviewer
+[1942020 18:22:18.876] [modloading-worker-13/DEBUG] [net.minecraftforge.fml.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for jei
+[1942020 18:22:18.877] [modloading-worker-11/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Completed Automatic event subscribers for durabilityviewer
+[1942020 18:22:18.877] [modloading-worker-2/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Completed Automatic event subscribers for voxelmap
+[1942020 18:22:18.877] [modloading-worker-13/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Completed Automatic event subscribers for jei
+[1942020 18:22:18.911] [modloading-worker-15/INFO] [CocoaInput:ObjC/]: Libcocoainput was built on Feb 12 2020 03:01:48.
+[1942020 18:22:18.912] [modloading-worker-15/INFO] [CocoaInput:ObjC/]: CocoaInput is being initialized.Now running thread for modify GLFWview .
+[1942020 18:22:18.912] [modloading-worker-15/INFO] [CocoaInput:Java/]: DarwinController has been initialized.
+[1942020 18:22:18.913] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput is now using controller:class jp.axer.cocoainput.arch.darwin.DarwinController
+[1942020 18:22:18.913] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput has been initialized.
+[1942020 18:22:18.913] [modloading-worker-15/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded mod instance cocoainput of type jp.axer.cocoainput.CocoaInput
+[1942020 18:22:18.913] [modloading-worker-15/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Injecting Automatic event subscribers for cocoainput
+[1942020 18:22:18.913] [modloading-worker-15/DEBUG] [net.minecraftforge.fml.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for cocoainput
+[1942020 18:22:18.914] [modloading-worker-15/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Completed Automatic event subscribers for cocoainput
+[1942020 18:22:18.930] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-client.toml for forge tracking
+[1942020 18:22:18.930] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-server.toml for forge tracking
+[1942020 18:22:18.930] [modloading-worker-4/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file fpsreducer/fpsreducer-client.toml for fpsreducer tracking
+[1942020 18:22:18.933] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded mod instance forge of type net.minecraftforge.common.ForgeMod
+[1942020 18:22:18.933] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Injecting Automatic event subscribers for forge
+[1942020 18:22:18.933] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for forge
+[1942020 18:22:18.938] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.model.ModelDataManager to FORGE
+[1942020 18:22:18.939] [modloading-worker-4/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded mod instance fpsreducer of type bre2el.fpsreducer.FpsReducer
+[1942020 18:22:18.939] [modloading-worker-4/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Injecting Automatic event subscribers for fpsreducer
+[1942020 18:22:18.939] [modloading-worker-4/DEBUG] [net.minecraftforge.fml.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for fpsreducer
+[1942020 18:22:18.939] [modloading-worker-4/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Completed Automatic event subscribers for fpsreducer
+[1942020 18:22:19.046] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Completed Automatic event subscribers for forge
+[1942020 18:22:19.047] [modloading-worker-9/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Loaded mod instance waila of type mcp.mobius.waila.Waila
+[1942020 18:22:19.047] [modloading-worker-9/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Injecting Automatic event subscribers for waila
+[1942020 18:22:19.047] [modloading-worker-9/DEBUG] [net.minecraftforge.fml.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for waila
+[1942020 18:22:19.047] [modloading-worker-9/DEBUG] [net.minecraftforge.fml.AutomaticEventSubscriber/LOADING]: Auto-subscribing mcp.mobius.waila.overlay.WailaTickHandler to FORGE
+[1942020 18:22:19.062] [modloading-worker-9/DEBUG] [net.minecraftforge.fml.AutomaticEventSubscriber/LOADING]: Auto-subscribing mcp.mobius.waila.WailaClient to FORGE
+[1942020 18:22:19.106] [modloading-worker-9/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Completed Automatic event subscribers for waila
+[1942020 18:22:19.107] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:CREATE_REGISTRIES
+[1942020 18:22:19.108] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.NewRegistry
+[1942020 18:22:19.109] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.NewRegistry
+[1942020 18:22:19.109] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.NewRegistry
+[1942020 18:22:19.109] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.NewRegistry
+[1942020 18:22:19.109] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.NewRegistry
+[1942020 18:22:19.109] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.NewRegistry
+[1942020 18:22:19.109] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.NewRegistry
+[1942020 18:22:19.109] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.NewRegistry
+[1942020 18:22:19.109] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.NewRegistry
+[1942020 18:22:19.110] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.NewRegistry
+[1942020 18:22:19.110] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.NewRegistry
+[1942020 18:22:19.110] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.NewRegistry
+[1942020 18:22:19.110] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.NewRegistry
+[1942020 18:22:19.110] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.NewRegistry
+[1942020 18:22:19.164] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.165] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.165] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.165] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.165] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.165] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.165] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.165] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.165] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.166] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.166] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.166] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.166] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.166] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.166] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:block>
+[1942020 18:22:19.169] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.170] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:item>
+[1942020 18:22:19.172] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.172] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.172] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.172] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.172] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.172] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.172] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.173] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.173] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.173] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.173] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.173] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.173] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.173] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.173] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<forge:moddimensions>
+[1942020 18:22:19.173] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.173] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.174] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:activities>
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.175] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.176] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.176] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.176] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:biome>
+[1942020 18:22:19.176] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.176] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.176] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.176] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.177] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.177] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.177] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.177] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.177] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.177] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.177] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.177] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.177] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.177] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.177] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:biome_source_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.178] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:block_entity_type>
+[1942020 18:22:19.179] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.179] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.179] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.179] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.179] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.179] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.179] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.179] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.179] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.180] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.180] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.180] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.180] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.180] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.180] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:carver>
+[1942020 18:22:19.180] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.180] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.181] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:chunk_generator_type>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.182] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:chunk_status>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.183] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:dataserializers>
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.184] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:decorator>
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.185] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:enchantment>
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.186] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:entity_type>
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.187] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.188] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:feature>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.189] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:fluid>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.190] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:memory_module_type>
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.191] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:menu>
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.192] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:mob_effect>
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.193] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:motive>
+[1942020 18:22:19.194] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.195] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:particle_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.196] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:point_of_interest_type>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.197] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:potion>
+[1942020 18:22:19.198] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.198] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.198] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.198] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.198] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.198] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.279] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.279] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.279] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.279] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:recipe_serializer>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.280] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:schedule>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:sensor_type>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.281] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:sound_event>
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.282] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:stat_type>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.283] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:surface_builder>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching synchronous event LifecycleEvent:LOAD_REGISTRIES
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.284] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.285] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : RegistryEvent.Register<minecraft:villager_profession>
+[1942020 18:22:19.465] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:voxelmap for mod file /Users/resetpower/Library/Application Support/minecraft/mods/forgemod_VoxelMap-1.9.16_for_1.15.2.jar
+[1942020 18:22:19.466] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:durabilityviewer for mod file /Users/resetpower/Library/Application Support/minecraft/mods/DurabilityViewer-1.15.2-forge31.1.30-1.7.jar
+[1942020 18:22:19.466] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:fpsreducer for mod file /Users/resetpower/Library/Application Support/minecraft/mods/FpsReducer-mc1.15.2-1.14.1.jar
+[1942020 18:22:19.466] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:cocoainput for mod file /Users/resetpower/Library/Application Support/minecraft/mods/[1.14.4-1.15.2]CocoaInput-3.2.3.jar
+[1942020 18:22:19.466] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:waila for mod file /Users/resetpower/Library/Application Support/minecraft/mods/Hwyla-forge-1.10.8-B72_1.15.2.jar
+[1942020 18:22:19.466] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:forge for mod file /Users/resetpower/Library/Application Support/minecraft/libraries/net/minecraftforge/forge/1.15.2-31.1.0/forge-1.15.2-31.1.0-universal.jar
+[1942020 18:22:19.466] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:jei for mod file /Users/resetpower/Library/Application Support/minecraft/mods/jei-1.15.2-6.0.0.2.jar
+[1942020 18:22:19.483] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:voxelmap for mod file /Users/resetpower/Library/Application Support/minecraft/mods/forgemod_VoxelMap-1.9.16_for_1.15.2.jar
+[1942020 18:22:19.484] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:durabilityviewer for mod file /Users/resetpower/Library/Application Support/minecraft/mods/DurabilityViewer-1.15.2-forge31.1.30-1.7.jar
+[1942020 18:22:19.484] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:fpsreducer for mod file /Users/resetpower/Library/Application Support/minecraft/mods/FpsReducer-mc1.15.2-1.14.1.jar
+[1942020 18:22:19.484] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:cocoainput for mod file /Users/resetpower/Library/Application Support/minecraft/mods/[1.14.4-1.15.2]CocoaInput-3.2.3.jar
+[1942020 18:22:19.484] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:waila for mod file /Users/resetpower/Library/Application Support/minecraft/mods/Hwyla-forge-1.10.8-B72_1.15.2.jar
+[1942020 18:22:19.484] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:forge for mod file /Users/resetpower/Library/Application Support/minecraft/libraries/net/minecraftforge/forge/1.15.2-31.1.0/forge-1.15.2-31.1.0-universal.jar
+[1942020 18:22:19.485] [Render thread/DEBUG] [net.minecraftforge.fml.client.ClientModLoader/CORE]: Generating PackInfo named mod:jei for mod file /Users/resetpower/Library/Application Support/minecraft/mods/jei-1.15.2-6.0.0.2.jar
+[1942020 18:22:19.489] [Render thread/DEBUG] [net.minecraftforge.fml.ForgeI18n/CORE]: Loading I18N data entries: 0
+[1942020 18:22:20.168] [Render thread/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/client/renderer/WorldRenderer
+[1942020 18:22:20.812] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Mod Resources, Default, Depixel1.15.zip
+[1942020 18:22:20.995] [Thread-6/INFO] [CocoaInput:ObjC/]: Complete to modify GLFWView
+[1942020 18:22:22.468] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type CLIENT
+[1942020 18:22:22.468] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading config file type CLIENT at fpsreducer/fpsreducer-client.toml for fpsreducer
+[1942020 18:22:22.469] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for /Users/resetpower/Library/Application Support/minecraft/config/fpsreducer/fpsreducer-client.toml
+[1942020 18:22:22.472] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file /Users/resetpower/Library/Application Support/minecraft/config/fpsreducer/fpsreducer-client.toml
+[1942020 18:22:22.477] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file /Users/resetpower/Library/Application Support/minecraft/config/fpsreducer/fpsreducer-client.toml for changes
+[1942020 18:22:22.480] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading config file type CLIENT at forge-client.toml for forge
+[1942020 18:22:22.480] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for /Users/resetpower/Library/Application Support/minecraft/config/forge-client.toml
+[1942020 18:22:22.481] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file /Users/resetpower/Library/Application Support/minecraft/config/forge-client.toml
+[1942020 18:22:22.481] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file /Users/resetpower/Library/Application Support/minecraft/config/forge-client.toml for changes
+[1942020 18:22:22.482] [Server-Worker-6/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-client.toml
+[1942020 18:22:22.482] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type COMMON
+[1942020 18:22:22.483] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching parallel event LifecycleEvent:COMMON_SETUP
+[1942020 18:22:22.484] [modloading-worker-15/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : FMLCommonSetupEvent
+[1942020 18:22:22.484] [modloading-worker-11/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : FMLCommonSetupEvent
+[1942020 18:22:22.484] [modloading-worker-2/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : FMLCommonSetupEvent
+[1942020 18:22:22.484] [modloading-worker-9/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : FMLCommonSetupEvent
+[1942020 18:22:22.484] [modloading-worker-13/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : FMLCommonSetupEvent
+[1942020 18:22:22.484] [modloading-worker-13/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : FMLCommonSetupEvent
+[1942020 18:22:22.484] [modloading-worker-4/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : FMLCommonSetupEvent
+[1942020 18:22:22.484] [modloading-worker-11/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : FMLCommonSetupEvent
+[1942020 18:22:22.484] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : FMLCommonSetupEvent
+[1942020 18:22:22.491] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : FMLCommonSetupEvent
+[1942020 18:22:22.500] [modloading-worker-9/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : FMLCommonSetupEvent
+[1942020 18:22:22.504] [modloading-worker-15/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : FMLCommonSetupEvent
+[1942020 18:22:22.504] [modloading-worker-4/INFO] [STDOUT/]: [de.guntram.mcmod.durabilityviewer.DurabilityViewer:init:42]: on Init, confHandler is de.guntram.mcmod.durabilityviewer.handler.ConfigurationHandler@6ea0a6fb
+[1942020 18:22:22.520] [modloading-worker-4/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : FMLCommonSetupEvent
+[1942020 18:22:22.587] [modloading-worker-2/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : FMLCommonSetupEvent
+[1942020 18:22:22.587] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[1942020 18:22:22.587] [Server-Worker-6/DEBUG] [net.minecraftforge.fml.ModList/LOADING]: Dispatching parallel event LifecycleEvent:SIDED_SETUP
+[1942020 18:22:22.589] [modloading-worker-11/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid jei : FMLClientSetupEvent
+[1942020 18:22:22.589] [modloading-worker-2/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid voxelmap : FMLClientSetupEvent
+[1942020 18:22:22.589] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid cocoainput : FMLClientSetupEvent
+[1942020 18:22:22.589] [modloading-worker-15/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid fpsreducer : FMLClientSetupEvent
+[1942020 18:22:22.589] [modloading-worker-13/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid forge : FMLClientSetupEvent
+[1942020 18:22:22.589] [modloading-worker-4/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid durabilityviewer : FMLClientSetupEvent
+[1942020 18:22:22.589] [modloading-worker-4/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid durabilityviewer : FMLClientSetupEvent
+[1942020 18:22:22.589] [modloading-worker-6/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid cocoainput : FMLClientSetupEvent
+[1942020 18:22:22.589] [modloading-worker-13/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid forge : FMLClientSetupEvent
+[1942020 18:22:22.589] [modloading-worker-11/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid jei : FMLClientSetupEvent
+[1942020 18:22:22.589] [modloading-worker-9/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Firing event for modid waila : FMLClientSetupEvent
+[1942020 18:22:22.591] [modloading-worker-2/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid voxelmap : FMLClientSetupEvent
+[1942020 18:22:22.591] [modloading-worker-9/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid waila : FMLClientSetupEvent
+[1942020 18:22:22.604] [modloading-worker-15/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Fired event for modid fpsreducer : FMLClientSetupEvent
+[1942020 18:22:22.710] [Render thread/INFO] [STDOUT/]: [com.mamiyaotaru.voxelmap.Map:<init>:423]: CATEGORY ORDER IS 7
+[1942020 18:22:22.857] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x256 waypoints-atlas
+[1942020 18:22:22.904] [Render thread/DEBUG] [com.mamiyaotaru.voxelmap.util.ImageUtils/]: Exported png to: /Users/resetpower/ideaProjects/ideamc/waypoints_0.png
+[1942020 18:22:22.939] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x128 chooser-atlas
+[1942020 18:22:22.965] [Render thread/DEBUG] [com.mamiyaotaru.voxelmap.util.ImageUtils/]: Exported png to: /Users/resetpower/ideaProjects/ideamc/chooser_0.png
+[1942020 18:22:23.260] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 512x512 mobs-atlas
+[1942020 18:22:23.354] [Render thread/DEBUG] [com.mamiyaotaru.voxelmap.util.ImageUtils/]: Exported png to: /Users/resetpower/ideaProjects/ideamc/mobs_0.png
+[1942020 18:22:23.433] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 64x64 pings-atlas
+[1942020 18:22:23.436] [Render thread/DEBUG] [com.mamiyaotaru.voxelmap.util.ImageUtils/]: Exported png to: /Users/resetpower/ideaProjects/ideamc/pings_0.png
+[1942020 18:22:23.500] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[1942020 18:22:23.542] [Render thread/ERROR] [net.minecraft.client.Minecraft/]: Shutdown failure!
+java.lang.NullPointerException: null
+	at net.minecraft.client.renderer.model.ModelManager.close(ModelManager.java:102) ~[?:?]
+	at net.minecraft.client.Minecraft.close(Minecraft.java:853) ~[?:?]
+	at net.minecraft.client.Minecraft.func_71405_e(Minecraft.java:840) ~[?:?]
+	at net.minecraft.client.main.Main.main(SourceFile:218) ~[1.15.2-forge-31.1.0.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_221]
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:56) ~[forge-1.15.2-31.1.0.jar:31.1]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-5.0.0-milestone.4.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-5.0.0-milestone.4.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-5.0.0-milestone.4.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-5.0.0-milestone.4.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-5.0.0-milestone.4.jar:?]

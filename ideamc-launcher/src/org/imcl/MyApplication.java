@@ -3,6 +3,7 @@ package org.imcl;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
+import org.imcl.constraints.MenuBarLoader;
 import org.imcl.constraints.Toolkit;
 import org.imcl.core.authentication.YggdrasilAuthenticator;
 import org.imcl.exceptions.GlobalExceptionHandler;
@@ -21,6 +22,7 @@ public class MyApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         GlobalExceptionHandler.INSTANCE.init();
+        MenuBarLoader.load();
         primaryStage.setTitle("IDEA Minecraft Launcher");
         primaryStage.setOnCloseRequest(event -> Platform.exit());
         if (Toolkit.isLoggedIn()) {

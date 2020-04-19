@@ -21,5 +21,6 @@ IMCL是一个支持模组管理、游戏自定义、游戏下载和游戏扩展�
 ## 依赖
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)
+- [commons-io](https://github.com/apache/commons-io)
 ## 开发者
 ResetPower

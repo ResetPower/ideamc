@@ -2,14 +2,17 @@ package org.imcl.core
 
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
+import javafx.application.Platform
 import org.imcl.core.artifacts.ArtifactExtractor
+import org.imcl.core.bmclapi.toBMCLAPIUrl
+import org.imcl.core.download.DownloadManager
 import java.io.BufferedReader
 import java.io.File
 import java.io.InputStream
 import java.io.InputStreamReader
 
 object Launcher {
-    fun launch(launchOptions: LaunchOptions) {
+    fun launch(launchOptions: LaunchOptions, whenDone: () -> Unit = {}) {
         val dir = File("${launchOptions.dir}/versions/${launchOptions.version}")
         if (!dir.exists()) {
             System.err.println("[IMCL Core] Version not found")
@@ -21,10 +24,14 @@ object Launcher {
             return
         }
         val jsonObject = JSON.parseObject(json.readText())
-        //println(generateMacOSLaunchScript(launchOptions, jsonObject))
+
+        // println(generateMacOSLaunchScript(launchOptions, jsonObject))
 
         Thread {
             val p = Runtime.getRuntime().exec(arrayOf("sh", "-c", generateMacOSLaunchScript(launchOptions, jsonObject)))
+            Platform.runLater {
+                whenDone()
+            }
             val fis: InputStream = p.inputStream
             val isr = InputStreamReader(fis)
             val br = BufferedReader(isr)
@@ -64,6 +71,7 @@ object Launcher {
                         val nativeLibFile = File("${launchOptions.dir}/libraries/$path")
                         if (nativeLibFile.exists()) {
                             val macosNative = File("${launchOptions.dir}/libraries/${path.toString().removeSuffix(".jar")+"-natives-macos.jar"}")
+                            val osxNative = File("${launchOptions.dir}/libraries/${path.toString().removeSuffix(".jar")+"-natives-osx.jar"}")
                             if (macosNative.exists()) {
                                 val files = ArtifactExtractor.extract(macosNative)
                                 for (i in files) {
@@ -73,8 +81,8 @@ object Launcher {
                                     }
                                     f.writeBytes(i.second)
                                 }
-                            } else {
-                                val files = ArtifactExtractor.extract(nativeLibFile)
+                            } else if (osxNative.exists()) {
+                                val files = ArtifactExtractor.extract(osxNative)
                                 for (i in files) {
                                     val f = File("${nativeFolder.path}/${i.first}")
                                     if (!f.exists()) {
@@ -86,7 +94,8 @@ object Launcher {
                         }
                     } else {
                         val artifact = downloads.getJSONObject("artifact")
-                        val path = artifact.get("path")
+                        val path = artifact.getString("path")
+                        val file = File("${launchOptions.dir}/libraries/$path")
                         if (File("${launchOptions.dir}/libraries/$path").exists()) {
                             cpBuff.append("${launchOptions.dir}/libraries/$path:")
                         }
@@ -95,7 +104,8 @@ object Launcher {
                     val name = jsonObject.getString("name")
                     val nameSpl = name.split(":")
                     val path = "${nameSpl[0].replace(".", "/")}/${nameSpl[1]}/${nameSpl[2]}/${nameSpl[1]}-${nameSpl[2]}.jar"
-                    if (File("${launchOptions.dir}/libraries/$path").exists()) {
+                    val file = File("${launchOptions.dir}/libraries/$path")
+                    if (file.exists()) {
                         cpBuff.append("${launchOptions.dir}/libraries/$path:")
                     }
                 }
@@ -111,6 +121,7 @@ object Launcher {
                     val nativeLibFile = File("${launchOptions.dir}/libraries/$path")
                     if (nativeLibFile.exists()) {
                         val macosNative = File("${launchOptions.dir}/libraries/${path.toString().removeSuffix(".jar")+"-natives-macos.jar"}")
+                        val osxNative = File("${launchOptions.dir}/libraries/${path.toString().removeSuffix(".jar")+"-natives-osx.jar"}")
                         if (macosNative.exists()) {
                             val files = ArtifactExtractor.extract(macosNative)
                             for (i in files) {
@@ -120,8 +131,8 @@ object Launcher {
                                 }
                                 f.writeBytes(i.second)
                             }
-                        } else {
-                            val files = ArtifactExtractor.extract(nativeLibFile)
+                        } else if (osxNative.exists()) {
+                            val files = ArtifactExtractor.extract(osxNative)
                             for (i in files) {
                                 val f = File("${nativeFolder.path}/${i.first}")
                                 if (!f.exists()) {
@@ -134,7 +145,8 @@ object Launcher {
                 } else {
                     val artifact = downloads.getJSONObject("artifact")
                     val path = artifact.get("path")
-                    if (File("${launchOptions.dir}/libraries/$path").exists()) {
+                    val file = File("${launchOptions.dir}/libraries/$path")
+                    if (file.exists()) {
                         cpBuff.append("${launchOptions.dir}/libraries/$path:")
                     }
                 }
@@ -151,6 +163,7 @@ object Launcher {
                     val nativeLibFile = File("${launchOptions.dir}/libraries/$path")
                     if (nativeLibFile.exists()) {
                         val macosNative = File("${launchOptions.dir}/libraries/${path.toString().removeSuffix(".jar")+"-natives-macos.jar"}")
+                        val osxNative = File("${launchOptions.dir}/libraries/${path.toString().removeSuffix(".jar")+"-natives-osx.jar"}")
                         if (macosNative.exists()) {
                             val files = ArtifactExtractor.extract(macosNative)
                             for (i in files) {
@@ -160,8 +173,8 @@ object Launcher {
                                 }
                                 f.writeBytes(i.second)
                             }
-                        } else {
-                            val files = ArtifactExtractor.extract(nativeLibFile)
+                        } else if (osxNative.exists()) {
+                            val files = ArtifactExtractor.extract(osxNative)
                             for (i in files) {
                                 val f = File("${nativeFolder.path}/${i.first}")
                                 if (!f.exists()) {
@@ -174,7 +187,8 @@ object Launcher {
                 } else {
                     val artifact = downloads.getJSONObject("artifact")
                     val path = artifact.get("path")
-                    if (File("${launchOptions.dir}/libraries/$path").exists()) {
+                    val file = File("${launchOptions.dir}/libraries/$path")
+                    if (file.exists()) {
                         cpBuff.append("${launchOptions.dir}/libraries/$path:")
                     }
                 }
