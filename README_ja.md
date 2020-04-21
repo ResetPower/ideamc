@@ -7,7 +7,7 @@
 
 [Esperanto](README_eo.md)
 ## 紹介
-IMCLは、モジュール管理、ゲームのカスタマイズ、ゲームのダウンロード、ゲームの拡張（Forge、LiteLoader、Fabric、Optifine）のダウンロードなど、多くの機能をサポートする起動機です。
+IMCLは、モジュール管理、ゲームのカスタマイズなど、多くの機能をサポートする起動機です。
 ## 解説
 このプロジェクトは令和2年4月5日に始まりました。このソフトウェアは現在、非常に不安定な開発段階にあります。
 ## すぐに始め
@@ -17,9 +17,12 @@ IMCLは、モジュール管理、ゲームのカスタマイズ、ゲームの�
 - 起動機は現在Minecraftの公式フォルダーのみをサポートています
 - 起動機は現在ピュアバージョンとForge/Fabricバージョンのみをサポートています
 - 起動機は1.15.2と1.12.2でのみテストに成功しました
+- 起動機のダウンロード機能は現在非常に不安定です。簡単に使用しないでください！
 ## 頼り
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)
 - [commons-io](https://github.com/apache/commons-io)
+## 声明
+ダウンロードサービスは[BMCLAPI](https://bmclapidoc.bangbang93.com/)を使用します
 ## 開発者
 ResetPower
