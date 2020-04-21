@@ -1,411 +1,66 @@
-[10:55:37] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[10:55:37] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[10:55:37] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[10:55:37] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2847 for Minecraft 1.12.2 loading
-[10:55:37] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_221, running on Mac OS X:x86_64:10.14.6, installed at /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre
-[10:55:37] [main/WARN] [FML]: The coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin) is not signed!
-[10:55:37] [main/WARN] [FML]: The coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin) is not signed!
-[10:55:37] [main/INFO] [FML]: Searching /Users/resetpower/Minecraft/Jacaranda/mods for mods
-[10:55:37] [main/INFO] [FML]: Searching /Users/resetpower/Minecraft/Jacaranda/mods/1.12.2 for mods
-[10:55:37] [main/WARN] [FML]: Found FMLCorePluginContainsFMLMod marker in [\312\344\310\353\320\336\270\264forMAC-Linux]CocoaInput-[1.9-1.12.2]-3.1.5.jar. This is not recommended, @Mods should be in a separate jar from the coremod.
-[10:55:37] [main/WARN] [FML]: The coremod com.Axeryok.CocoaInput.CocoaInputCorePlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[10:55:37] [main/WARN] [FML]: The coremod CocoaInputCorePlugin (com.Axeryok.CocoaInput.CocoaInputCorePlugin) is not signed!
-[10:55:37] [main/WARN] [FML]: Found FMLCorePluginContainsFMLMod marker in [\316\357\300\355\322\364\320\247]Sound-Physics-1.12.2.jar. This is not recommended, @Mods should be in a separate jar from the coremod.
-[10:55:37] [main/WARN] [FML]: The coremod CoreModLoader (com.sonicether.soundphysics.CoreModLoader) is not signed!
-[10:55:37] [main/WARN] [FML]: Found FMLCorePluginContainsFMLMod marker in [\325\373\300\355]InventoryTweaks-1.63.jar. This is not recommended, @Mods should be in a separate jar from the coremod.
-[10:55:37] [main/WARN] [FML]: The coremod invtweaks.forge.asm.FMLPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[10:55:37] [main/WARN] [FML]: Found FMLCorePluginContainsFMLMod marker in [ｴ袮ｯﾔｿ]Charm-1.12.2-1.3.6.jar. This is not recommended, @Mods should be in a separate jar from the coremod.
-[10:55:37] [main/WARN] [FML]: The coremod svenhjol.charm.base.CharmLoadingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[10:55:37] [main/WARN] [FML]: The coremod CharmLoadingPlugin (svenhjol.charm.base.CharmLoadingPlugin) is not signed!
-[10:55:37] [main/INFO] [FML]: Loading tweaker optifine.OptiFineForgeTweaker from [ｸﾟﾇ衵ﾞｸｴ]OptiFine_1.12.2_HD_U_F5.jar
-[10:55:37] [main/WARN] [FML]: Found FMLCorePluginContainsFMLMod marker in [ｼｾｽﾚ]SereneSeasons-1.12.2-1.2.18-universal.jar. This is not recommended, @Mods should be in a separate jar from the coremod.
-[10:55:37] [main/WARN] [FML]: The coremod sereneseasons.asm.SSLoadingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[10:55:37] [main/WARN] [FML]: The coremod SSLoadingPlugin (sereneseasons.asm.SSLoadingPlugin) is not signed!
-[10:55:37] [main/WARN] [FML]: Found FMLCorePluginContainsFMLMod marker in [ｿ菫ﾋ]Quark-r1.6-178.jar. This is not recommended, @Mods should be in a separate jar from the coremod.
-[10:55:37] [main/WARN] [FML]: The coremod Quark Plugin (vazkii.quark.base.asm.LoadingPlugin) is not signed!
-[10:55:37] [main/WARN] [FML]: The coremod com.anotherera.core.AnotherCommonBugFix does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[10:55:37] [main/WARN] [FML]: The coremod AnotherCommonBugFix (com.anotherera.core.AnotherCommonBugFix) is not signed!
-[10:55:37] [main/WARN] [FML]: Found FMLCorePluginContainsFMLMod marker in [ﾐﾂﾌﾘﾐﾔ]future-mc-0.1.13.jar. This is not recommended, @Mods should be in a separate jar from the coremod.
-[10:55:37] [main/WARN] [FML]: The coremod FutureMC (thedarkcolour.futuremc.asm.CoreLoader) is not signed!
-[10:55:37] [main/INFO] [FML]: Loading tweaker guichaguri.betterfps.tweaker.BetterFpsTweaker from [ﾓﾎﾏｷﾓﾅｻｯ]BetterFps-1.4.8.jar
-[10:55:37] [main/WARN] [FML]: Found FMLCorePluginContainsFMLMod marker in [ﾔ葫ﾓﾇｰﾖﾃ]CTM-MC1.12.2-1.0.1.30.jar. This is not recommended, @Mods should be in a separate jar from the coremod.
-[10:55:37] [main/WARN] [FML]: The coremod team.chisel.ctm.client.asm.CTMCorePlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[10:55:37] [main/WARN] [FML]: The coremod CTMCorePlugin (team.chisel.ctm.client.asm.CTMCorePlugin) is not signed!
-[10:55:37] [main/WARN] [FML]: The coremod blusunrize.immersiveengineering.common.asm.IELoadingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[10:55:37] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[10:55:37] [main/INFO] [LaunchWrapper]: Loading tweak class name optifine.OptiFineForgeTweaker
-[10:55:37] [main/INFO] [LaunchWrapper]: Loading tweak class name guichaguri.betterfps.tweaker.BetterFpsTweaker
-[10:55:37] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[10:55:37] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[10:55:37] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[10:55:37] [main/INFO] [LaunchWrapper]: Calling tweak class optifine.OptiFineForgeTweaker
-[10:55:37] [main/INFO] [STDOUT]: [optifine.OptiFineForgeTweaker:dbg:56]: OptiFineForgeTweaker: acceptOptions
-[10:55:37] [main/INFO] [STDOUT]: [optifine.OptiFineForgeTweaker:dbg:56]: OptiFineForgeTweaker: injectIntoClassLoader
-[10:55:37] [main/INFO] [STDOUT]: [optifine.OptiFineClassTransformer:dbg:242]: OptiFine ClassTransformer
-[10:55:37] [main/INFO] [STDOUT]: [optifine.OptiFineClassTransformer:dbg:242]: OptiFine ZIP file: /Users/resetpower/Minecraft/Jacaranda/mods/[ｸﾟﾇ衵ﾞｸｴ]OptiFine_1.12.2_HD_U_F5.jar
-[10:55:37] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [FML]: Found valid fingerprint for Minecraft. Certificate fingerprint cd99959656f753dc28d863b46769f7f8fbaefcfc
-[10:55:44] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [STDOUT]: [com.anotherera.core.ACBFClassTransformer:init:53]: Another Common Bug Fix Load: forestry.core.inventory.ItemInventory classResource/ItemInventory.class
-[10:55:44] [main/INFO] [STDOUT]: [com.anotherera.core.ACBFClassTransformer:init:53]: Another Common Bug Fix Load: micdoodle8.mods.galacticraft.core.entities.EntityParachest classResource/EntityParachest.class
-[10:55:44] [main/INFO] [STDOUT]: [com.anotherera.core.ACBFClassTransformer:init:53]: Another Common Bug Fix Load: thaumcraft.api.crafting.ContainerProxy classResource/thaumcraft/api/crafting/ContainerProxy.class
-[10:55:44] [main/INFO] [STDOUT]: [com.anotherera.core.ACBFClassTransformer:init:53]: Another Common Bug Fix Load: thaumcraft.common.container.ContainerArcaneWorkbench classResource/thaumcraft/common/container/ContainerArcaneWorkbench.class
-[10:55:44] [main/INFO] [STDOUT]: [com.anotherera.core.ACBFClassTransformer:init:53]: Another Common Bug Fix Load: thaumcraft.common.tiles.crafting.TileArcaneWorkbench classResource/thaumcraft/common/tiles/crafting/TileArcaneWorkbench.class
-[10:55:44] [main/INFO] [STDOUT]: [com.anotherera.core.ACBFClassTransformer:init:53]: Another Common Bug Fix Load: mods.flammpfeil.slashblade.RecipeInstantRepair classResource/RecipeInstantRepair.class
-[10:55:44] [main/INFO] [STDOUT]: [com.anotherera.core.ACBFClassTransformer:init:53]: Another Common Bug Fix Load: ic2.core.ContainerBase classResource/ic2/core/ContainerBase.class
-[10:55:44] [main/INFO] [STDOUT]: [com.anotherera.core.ACBFClassTransformer:init:53]: Another Common Bug Fix Load: ic2.core.block.machine.container.ContainerIndustrialWorkbench classResource/ic2/core/block/machine/container/ContainerIndustrialWorkbench.class
-[10:55:44] [main/INFO] [STDOUT]: [com.anotherera.core.ACBFClassTransformer:init:53]: Another Common Bug Fix Load: ic2.core.block.machine.tileentity.TileEntityBatchCrafter$4 classResource/TileEntityBatchCrafter$4.class
-[10:55:44] [main/INFO] [STDOUT]: [com.anotherera.core.ACBFClassTransformer:init:53]: Another Common Bug Fix Load: forestry.core.utils.ItemStackUtil classResource/ItemStackUtil.class
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class guichaguri.betterfps.tweaker.BetterFpsTweaker
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[10:55:44] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[10:55:44] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[10:55:44] [main/INFO] [STDOUT]: [optifine.OptiFineForgeTweaker:dbg:56]: OptiFineForgeTweaker: getLaunchArguments
-[10:55:44] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[10:55:44] [main/INFO] [BetterFps]: Patching net.minecraft.client.Minecraft... (bib)
-[10:55:44] [main/INFO] [Quark ASM]: Transforming net.minecraft.entity.Entity
-[10:55:44] [main/INFO] [Quark ASM]: Applying Transformation to method (Names [move, func_70091_d] Descriptor (Lnet/minecraft/entity/MoverType;DDD)V)
-[10:55:44] [main/INFO] [Quark ASM]: Located Method, patching...
-[10:55:44] [main/INFO] [Quark ASM]: Patch result: true
-[10:55:44] [main/INFO] [Quark ASM]: Located Method, patching...
-[10:55:44] [main/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/entity/Entity.func_145775_I ()V
-[10:55:44] [main/INFO] [Quark ASM]: Patch result: true
-[10:55:44] [main/INFO] [Quark ASM]: Applying Transformation to method (Names [onEntityUpdate, func_70030_z] Descriptor ()V)
-[10:55:44] [main/INFO] [Quark ASM]: Located Method, patching...
-[10:55:44] [main/INFO] [Quark ASM]: Patch result: true
-[10:55:44] [main/INFO] [BetterFps]: Patching net.minecraft.client.entity.EntityPlayerSP... (bud)
-[10:55:44] [main/INFO] [Meson ASM]: Transforming EntityPlayer
-[10:55:44] [main/INFO] [Meson ASM]: Applying Transformation to method (Names [getArmorVisibility, func_82243_bO, cW] Descriptor ()F / ()F)
-[10:55:44] [main/INFO] [Meson ASM]: Located method, patching...
-[10:55:44] [main/INFO] [Meson ASM]: Located target IINC 1 1
-[10:55:44] [main/INFO] [Meson ASM]: Patch result: true
-[10:55:44] [main/INFO] [Quark ASM]: Transforming net.minecraft.client.gui.inventory.GuiContainer
-[10:55:44] [main/INFO] [Quark ASM]: Applying Transformation to method (Names [drawScreen, func_73863_a] Descriptor (IIF)V)
-[10:55:44] [main/INFO] [Quark ASM]: Located Method, patching...
-[10:55:44] [main/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/client/gui/inventory/GuiContainer.func_146979_b (II)V
-[10:55:44] [main/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [main/INFO] [Quark ASM]: Transforming net.minecraft.world.WorldServer
-[10:55:45] [main/INFO] [Quark ASM]: Applying Transformation to method (Names [areAllPlayersAsleep, func_73056_e] Descriptor ()Z)
-[10:55:45] [main/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [main/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [main/INFO] [Quark ASM]: Applying Transformation to method (Names [wakeAllPlayers, func_73053_d] Descriptor ()V)
-[10:55:45] [main/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [main/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [main/INFO] [STDOUT]: [team.chisel.ctm.client.asm.CTMTransformer:preTransform:230]: Transforming Class [net.minecraftforge.client.ForgeHooksClient], Method [getDamageModel]
-[10:55:45] [main/INFO] [STDOUT]: [team.chisel.ctm.client.asm.CTMTransformer:finishTransform:242]: Transforming net.minecraftforge.client.ForgeHooksClient Finished.
-[10:55:45] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: ResetPower
-[10:55:45] [Client thread/INFO] [BetterFps]: Patching net.minecraft.block.Block... (aow)
-[10:55:45] [Client thread/INFO] [STDOUT]: [team.chisel.ctm.client.asm.CTMTransformer:preTransform:230]: Transforming Class [net.minecraft.block.Block], Method [getExtendedState]
-[10:55:45] [Client thread/INFO] [STDOUT]: [team.chisel.ctm.client.asm.CTMTransformer:finishTransform:242]: Transforming net.minecraft.block.Block Finished.
-[10:55:45] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.enchantment.Enchantment
-[10:55:45] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [canApply, func_92089_a] Descriptor (Lnet/minecraft/item/ItemStack;)Z)
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located patch target node IRETURN
-[10:55:45] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.entity.item.EntityItem
-[10:55:45] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [onUpdate, func_70071_h_] Descriptor ()V)
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.item.ItemStack
-[10:55:45] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [getTextComponent, func_151000_E] Descriptor ()Lnet/minecraft/util/text/ITextComponent;)
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located patch target node ARETURN
-[10:55:45] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.block.BlockDynamicLiquid
-[10:55:45] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [isBlocked, func_176372_g] Descriptor (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)Z)
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located patch target node IRETURN
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located patch target node IRETURN
-[10:55:45] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [BetterFps]: Patching math utils with "RIVENS_HALF" algorithm
-[10:55:45] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.block.BlockPistonBase
-[10:55:45] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [canPush, func_185646_a] Descriptor (Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;ZLnet/minecraft/util/EnumFacing;)Z)
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/block/Block.hasTileEntity (Lnet/minecraft/block/state/IBlockState;)Z
-[10:55:45] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [doMove, func_176319_a] Descriptor (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;Z)Z)
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/block/state/BlockPistonStructureHelper.func_177254_c ()Ljava/util/List;
-[10:55:45] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [doMove, func_176319_a] Descriptor (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;Z)Z)
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKESPECIAL net/minecraft/block/state/BlockPistonStructureHelper.<init> (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;Z)V
-[10:55:45] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [checkForMove, func_176316_e] Descriptor (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;)V)
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKESPECIAL net/minecraft/block/state/BlockPistonStructureHelper.<init> (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/EnumFacing;Z)V
-[10:55:45] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.tileentity.TileEntityPiston
-[10:55:45] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [update, func_73660_a] Descriptor ()V)
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [clearPistonTileEntity, func_145866_f] Descriptor ()V)
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/world/World.func_180501_a (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;I)Z
-[10:55:45] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [update, func_73660_a] Descriptor ()V)
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:45] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/world/World.func_180501_a (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/IBlockState;I)Z
-[10:55:45] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [Meson ASM]: Transforming TileEntityFurnace
-[10:55:45] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [smeltItem, func_145949_j, o] Descriptor ()V / ()V)
-[10:55:45] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:45] [Client thread/INFO] [Meson ASM]: Located target ASTORE 2
-[10:55:45] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:45] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [isItemValidForSlot, func_94041_b, b] Descriptor (ILnet/minecraft/item/ItemStack;)Z / (ILaip;)Z)
-[10:55:45] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:45] [Client thread/INFO] [Meson ASM]: Located target ILOAD 1
-[10:55:45] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Meson ASM]: Transforming TileEntityBeacon
-[10:55:46] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [addEffectsToPlayers, func_146000_x, E] Descriptor ()V / ()V)
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located target ALOAD 9
-[10:55:46] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [BetterFps]: Patching net.minecraft.tileentity.TileEntityBeacon... (avh)
-[10:55:46] [Client thread/INFO] [Meson ASM]: Transforming EntityWither
-[10:55:46] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [canDestroyBlock, func_181033_a, a] Descriptor (Lnet/minecraft/block/Block;)Z / (Lnet/minecraft/block/Block;)Z)
-[10:55:46] [Client thread/INFO] [Meson ASM]: Failed to locate the method!
-[10:55:46] [Client thread/INFO] [BetterFps]: Patching net.minecraft.block.BlockHopper... (arl)
-[10:55:46] [Client thread/INFO] [BetterFps]: Patching net.minecraft.tileentity.TileEntityHopper... (avw)
-[10:55:46] [Client thread/INFO] [Meson ASM]: Transforming TileEntityShulkerBox
-[10:55:46] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [canInsertItem, func_180462_a, a] Descriptor (ILnet/minecraft/item/ItemStack;Lnet/minecraft/util/EnumFacing;)Z / (ILaip;Lnet/minecraft/util/EnumFacing;)Z)
-[10:55:46] [Client thread/INFO] [Meson ASM]: Failed to locate the method!
-[10:55:46] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.enchantment.EnchantmentDamage
-[10:55:46] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [canApply, func_92089_a] Descriptor (Lnet/minecraft/item/ItemStack;)Z)
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located patch target node IRETURN
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located patch target node IRETURN
-[10:55:46] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Meson ASM]: Transforming ItemToolMaterial
-[10:55:46] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [getMaxUses, func_77997_a, a] Descriptor ()I / ()I)
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located target GETFIELD ain$a.g : I
-[10:55:46] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [getEfficiency, func_77998_b, b] Descriptor ()F / ()F)
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located target GETFIELD ain$a.h : F
-[10:55:46] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [getAttackDamage, func_78000_c, c] Descriptor ()F / ()F)
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located target GETFIELD ain$a.i : F
-[10:55:46] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [getHarvestLevel, func_77996_d, d] Descriptor ()I / ()I)
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located target GETFIELD ain$a.f : I
-[10:55:46] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [getEnchantability, func_77995_e, e] Descriptor ()I / ()I)
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located target GETFIELD ain$a.j : I
-[10:55:46] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.entity.item.EntityMinecart
-[10:55:46] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [killMinecart, func_94095_a] Descriptor (Lnet/minecraft/util/DamageSource;)V)
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/entity/item/EntityMinecart.func_70099_a (Lnet/minecraft/item/ItemStack;F)Lnet/minecraft/entity/item/EntityItem;
-[10:55:46] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.entity.item.EntityBoat
-[10:55:46] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [attackEntityFrom, func_70097_a] Descriptor (Lnet/minecraft/util/DamageSource;F)Z)
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/entity/item/EntityBoat.func_145778_a (Lnet/minecraft/item/Item;IF)Lnet/minecraft/entity/item/EntityItem;
-[10:55:46] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.item.ItemBanner
-[10:55:46] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [appendHoverTextFromTileEntityTag, func_185054_a] Descriptor (Lnet/minecraft/item/ItemStack;Ljava/util/List;)V)
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located patch target node BIPUSH 6
-[10:55:46] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Meson ASM]: Transforming ItemChorusFruit
-[10:55:46] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [onItemUseFinish, func_77654_b, a] Descriptor (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack; / (Laip;Lamu;Lvp;)Laip;)
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:46] [Client thread/INFO] [Meson ASM]: Located target IFNE L0
-[10:55:46] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.entity.ai.EntityAITarget
-[10:55:46] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [isSuitableTarget, func_179445_a] Descriptor (Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/entity/EntityLivingBase;ZZ)Z)
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:46] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:46] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.item.crafting.RecipesBanners$RecipeAddPattern
-[10:55:46] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [matches, func_77569_a] Descriptor (Lnet/minecraft/inventory/InventoryCrafting;Lnet/minecraft/world/World;)Z)
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:46] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKESTATIC net/minecraft/tileentity/TileEntityBanner.func_175113_c (Lnet/minecraft/item/ItemStack;)I
-[10:55:46] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.inventory.ContainerMerchant
-[10:55:47] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [transferStackInSlot, func_82846_b] Descriptor (Lnet/minecraft/entity/player/EntityPlayer;I)Lnet/minecraft/item/ItemStack;)
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/inventory/ContainerMerchant.func_75135_a (Lnet/minecraft/item/ItemStack;IIZ)Z
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/inventory/ContainerMerchant.func_75135_a (Lnet/minecraft/item/ItemStack;IIZ)Z
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/inventory/ContainerMerchant.func_75135_a (Lnet/minecraft/item/ItemStack;IIZ)Z
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/inventory/ContainerMerchant.func_75135_a (Lnet/minecraft/item/ItemStack;IIZ)Z
-[10:55:47] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [Meson ASM]: Transforming ContainerFurnace
-[10:55:47] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [<init>, <init>, ] Descriptor (Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/inventory/IInventory;)V / (Laec;Ltv;)V)
-[10:55:47] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:47] [Client thread/INFO] [Meson ASM]: Located target NEW agr
-[10:55:47] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [<init>, <init>, ] Descriptor (Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/inventory/IInventory;)V / (Laec;Ltv;)V)
-[10:55:47] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:47] [Client thread/INFO] [Meson ASM]: Located target INVOKESPECIAL agr.<init> (Ltv;III)V
-[10:55:47] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [Config]: [OptiFine] *** Reflector Forge ***
-[10:55:47] [Client thread/INFO] [Config]: [OptiFine] (Reflector) Class not present: mods.betterfoliage.client.BetterFoliageClient
-[10:55:47] [Client thread/INFO] [BetterFps]: Patching net.minecraft.client.renderer.EntityRenderer... (buq)
-[10:55:47] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.client.renderer.EntityRenderer
-[10:55:47] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [renderWorldPass, func_175068_a] Descriptor (IFJ)V)
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/client/renderer/EntityRenderer.func_78479_a (FI)V
-[10:55:47] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [STDOUT]: [team.chisel.ctm.client.asm.CTMTransformer:preTransform:230]: Transforming Class [net.minecraft.client.renderer.texture.TextureAtlasSprite], Method [updateAnimationInterpolated]
-[10:55:47] [Client thread/INFO] [STDOUT]: [team.chisel.ctm.client.asm.CTMTransformer:finishTransform:242]: Transforming net.minecraft.client.renderer.texture.TextureAtlasSprite Finished.
-[10:55:47] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.util.DamageSource
-[10:55:47] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [causePlayerDamage, func_76365_a] Descriptor (Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/util/DamageSource;)
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:47] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [CocoaInput:Java]: Open classfile net.minecraft.network.NetHandlerPlayServer.
-[10:55:47] [Client thread/INFO] [CocoaInput:Java]: Found method:a and replace it with method:com.Axeryok.CocoaInput.CocoaInput.returnSameObject
-[10:55:47] [Client thread/INFO] [CocoaInput:Java]: Finish modify classfile net.minecraft.network.NetHandlerPlayServer.
-[10:55:47] [Client thread/INFO] [Meson ASM]: Transforming ContainerRepair
-[10:55:47] [Client thread/INFO] [Meson ASM]: Applying Transformation to method (Names [updateRepairOutput, func_82848_d, e] Descriptor ()V / ()V)
-[10:55:47] [Client thread/INFO] [Meson ASM]: Located method, patching...
-[10:55:47] [Client thread/INFO] [Meson ASM]: Located target ICONST_0
-[10:55:47] [Client thread/INFO] [Meson ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [STDOUT]: [team.chisel.ctm.client.asm.CTMTransformer:preTransform:230]: Transforming Class [net.minecraft.client.renderer.texture.TextureMap], Method [registerSprite]
-[10:55:47] [Client thread/INFO] [STDOUT]: [team.chisel.ctm.client.asm.CTMTransformer:finishTransform:242]: Transforming net.minecraft.client.renderer.texture.TextureMap Finished.
-[10:55:47] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.client.model.ModelBiped
-[10:55:47] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [setRotationAngles, func_78087_a] Descriptor (FFFFFFLnet/minecraft/entity/Entity;)V)
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located patch target node RETURN
-[10:55:47] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.client.renderer.RenderItem
-[10:55:47] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [renderItem, func_180454_a] Descriptor (Lnet/minecraft/item/ItemStack;Lnet/minecraft/client/renderer/block/model/IBakedModel;)V)
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:47] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [renderEffect, func_191966_a] Descriptor (Lnet/minecraft/client/renderer/block/model/IBakedModel;)V)
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located patch target node LDC -8372020
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located patch target node LDC -8372020
-[10:55:47] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [Quark ASM]: Transforming net.minecraftforge.client.model.pipeline.LightUtil
-[10:55:47] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [renderQuadColor, ] Descriptor (Lnet/minecraft/client/renderer/BufferBuilder;Lnet/minecraft/client/renderer/block/model/BakedQuad;I)V)
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:47] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.client.renderer.entity.RenderManager
-[10:55:47] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [renderEntity, func_188391_a] Descriptor (Lnet/minecraft/entity/Entity;DDDFFZ)V)
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEVIRTUAL net/minecraft/client/renderer/entity/Render.func_76986_a (Lnet/minecraft/entity/Entity;DDDFF)V
-[10:55:47] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.client.renderer.entity.Render
-[10:55:47] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [renderEntityOnFire, func_76977_a] Descriptor (Lnet/minecraft/entity/Entity;DDDF)V)
-[10:55:47] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:47] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:47] [Client thread/INFO] [Config]: [OptiFine] *** Reflector Vanilla ***
-[10:55:47] [Client thread/INFO] [BetterFps]: Patching net.minecraft.client.gui.GuiOptions... (ble)
-[10:55:48] [Client thread/INFO] [Quark ASM]: Transforming net.minecraft.client.renderer.entity.RenderBoat
-[10:55:48] [Client thread/INFO] [Quark ASM]: Applying Transformation to method (Names [doRender, func_188300_b] Descriptor (Lnet/minecraft/entity/item/EntityBoat;DDDFF)V)
-[10:55:48] [Client thread/INFO] [Quark ASM]: Located Method, patching...
-[10:55:48] [Client thread/INFO] [Quark ASM]: Located patch target node INVOKEINTERFACE net/minecraft/client/model/IMultipassModel.func_187054_b (Lnet/minecraft/entity/Entity;FFFFFF)V
-[10:55:48] [Client thread/INFO] [Quark ASM]: Patch result: true
-[10:55:48] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
-[10:55:48] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.2
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] 
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] OptiFine_1.12.2_HD_U_F5
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] Build: 20191204-141934
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] OS: Mac OS X (x86_64) version 10.14.6
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] Java: 1.8.0_221, Oracle Corporation
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] VM: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] LWJGL: 2.9.2
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] OpenGL: AMD Radeon Pro 555X OpenGL Engine, version 2.1 ATI-2.11.21, ATI Technologies Inc.
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] OpenGL Version: 2.1.0
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] Maximum texture size: 16384x16384
-[10:55:48] [VersionCheck/INFO] [Config]: [OptiFine] Checking for new version
-[10:55:48] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] OpenGL Version: 2.1 ATI-2.11.21
-[10:55:48] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Vendor:  ATI Technologies Inc.
-[10:55:48] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Renderer: AMD Radeon Pro 555X OpenGL Engine
-[10:55:48] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Capabilities:  2.0  2.1  -  -  - 
-[10:55:48] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_DRAW_BUFFERS: 8
-[10:55:48] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_COLOR_ATTACHMENTS_EXT: 8
-[10:55:48] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] GL_MAX_TEXTURE_IMAGE_UNITS: 16
-[10:55:48] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Load shaders configuration.
-[10:55:48] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] Save shaders configuration.
-[10:55:48] [Client thread/INFO] [net.optifine.shaders.SMCLog]: [Shaders] No shaderpack loaded.
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] [Shaders] Delayed loading of block mappings after resources are loaded
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] [Shaders] Delayed loading of item mappings after resources are loaded
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] [Shaders] Delayed loading of entity mappings after resources are loaded
-[10:55:48] [Client thread/INFO] [Config]: [OptiFine] VboRegions not supported, missing: OpenGL 1.3, ARB_copy_buffer
-[10:55:48] [Client thread/INFO] [FML]: Forge Mod Loader has detected optifine OptiFine_1.12.2_HD_U_F5, enabling compatibility features
-[10:55:48] [Client thread/INFO] [FML]: -- System Details --
-Details:
-	Minecraft Version: 1.12.2
-	Operating System: Mac OS X (x86_64) version 10.14.6
-	Java Version: 1.8.0_221, Oracle Corporation
-	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 493479736 bytes (470 MB) / 888143872 bytes (847 MB) up to 4772593664 bytes (4551 MB)
-	JVM Flags: 1 total; -Xmx5G
-	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
-	FML: 
-	Loaded coremods (and transformers): 
-CharmLoadingPlugin ([ｴ袮ｯﾔｿ]Charm-1.12.2-1.3.6.jar)
-  svenhjol.charm.base.CharmClassTransformer
-AnotherCommonBugFix ([ﾍｨﾓﾃBugﾐﾞｸｴ]AnotherCommonBugFix-1.0.7-1.12.2.jar)
-  com.anotherera.core.ACBFClassTransformer
-SSLoadingPlugin ([ｼｾｽﾚ]SereneSeasons-1.12.2-1.2.18-universal.jar)
-  sereneseasons.asm.transformer.EntityRendererTransformer
-  sereneseasons.asm.transformer.WorldTransformer
-CTMCorePlugin ([ﾔ葫ﾓﾇｰﾖﾃ]CTM-MC1.12.2-1.0.1.30.jar)
-  team.chisel.ctm.client.asm.CTMTransformer
-CoreModLoader ([\316\357\300\355\322\364\320\247]Sound-Physics-1.12.2.jar)
-  com.sonicether.soundphysics.CoreModInjector
-CocoaInputCorePlugin ([\312\344\310\353\320\336\270\264forMAC-Linux]CocoaInput-[1.9-1.12.2]-3.1.5.jar)
-  com.Axeryok.CocoaInput.CocoaInputTransformer
-Quark Plugin ([ｿ菫ﾋ]Quark-r1.6-178.jar)
-  vazkii.quark.base.asm.ClassTransformer
-IELoadingPlugin (ImmersiveEngineering-core-0.12-92.jar)
-  blusunrize.immersiveengineering.common.asm.IEClassTransformer
-Inventory Tweaks Coremod ([\325\373\300\355]InventoryTweaks-1.63.jar)
-  invtweaks.forge.asm.ContainerTransformer
-FutureMC ([ﾐﾂﾌﾘﾐﾔ]future-mc-0.1.13.jar)
-  thedarkcolour.futuremc.asm.CoreTransformer
-	GL info: ' Vendor: 'ATI Technologies Inc.' Version: '2.1 ATI-2.11.21' Renderer: 'AMD Radeon Pro 555X OpenGL Engine'
-[10:55:48] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2847 Initialized
-[10:55:48] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
-[10:55:48] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
-[10:55:48] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
-[10:55:48] [Client thread/INFO] [FML]: Searching /Users/resetpower/Minecraft/Jacaranda/mods for mods
-[10:55:48] [Client thread/INFO] [FML]: Searching /Users/resetpower/Minecraft/Jacaranda/mods/1.12.2 for mods
-[10:55:48] [VersionCheck/INFO] [Config]: [OptiFine] Version found: D3
-[10:55:49] [Client thread/INFO] [FML]: Disabling mod soundphysics it is server side only.
-[10:55:49] [Client thread/WARN] [FML]: Mod ironchest is missing the required element 'version' and a version.properties file could not be found. Falling back to metadata version 1.12.2-7.0.67.844
-[10:55:49] [Client thread/WARN] [FML]: Mod patchouli is missing the required element 'version' and a version.properties file could not be found. Falling back to metadata version 1.0-20
-[10:55:50] [Client thread/INFO] [FML]: Forge Mod Loader has identified 69 mods to load
-[10:55:50] [Client thread/INFO] [FML]: FML has found a non-mod file [\312\344\310\353\320\336\270\264forMAC-Linux]CocoaInput-[1.9-1.12.2]-3.1.5.jar in your mods directory. It will now be injected into your classpath. This could severe stability issues, it should be removed if possible.
-[10:55:50] [Client thread/INFO] [FML]: FML has found a non-mod file [ﾃｱﾗﾓ]Hats-4.0.1.jar in your mods directory. It will now be injected into your classpath. This could severe stability issues, it should be removed if possible.
-[10:55:50] [Client thread/INFO] [FML]: FML has found a non-mod file MathParser.org-mXparser-4.0.0.jar in your mods directory. It will now be injected into your classpath. This could severe stability issues, it should be removed if possible.
-[10:55:50] [Client thread/INFO] [FML]: FML has found a non-mod file core-3.6.0.jar in your mods directory. It will now be injected into your classpath. This could severe stability issues, it should be removed if possible.
-[10:55:50] [Client thread/INFO] [FML]: FML has found a non-mod file json-3.6.0.jar in your mods directory. It will now be injected into your classpath. This could severe stability issues, it should be removed if possible.
-[10:55:50] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, CocoaInput, anothercommonbugfix, futuremccore, inventorypets, dynamictreesbop, dynamictreesphc, dynamictrees, conarm, tinkertoolleveling, astikorcarts, soundphysics, inventorytweaks, jei, carryon, immersivetech, immersivepetroleum, charm, allmusic, netherex, libraryex, netheriteold, mobends, worleycaves, harvestcraft, hatchery, ironchest, mts, mtsofficialpack, harvest, levelup2, sereneseasons, cfm, recipehandler, buildcraftcompat, buildcraftbuilders, buildcraftcore, buildcraftenergy, buildcraftfactory, buildcraftlib, buildcraftrobotics, buildcraftsilicon, buildcrafttransport, mantle, tconstruct, quark, autoreglib, journeymap, touhou_little_maid, biomesoplenty, patchouli, minecraftfuture, neat, texfix, chisel, ctm, waila, wawla, sit, i18nmod, ambientsounds, craftstudioapi, snowrealmagic, immersiveengineering, structurize, minecolonies] at CLIENT
-[10:55:50] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, CocoaInput, anothercommonbugfix, futuremccore, inventorypets, dynamictreesbop, dynamictreesphc, dynamictrees, conarm, tinkertoolleveling, astikorcarts, soundphysics, inventorytweaks, jei, carryon, immersivetech, immersivepetroleum, charm, allmusic, netherex, libraryex, netheriteold, mobends, worleycaves, harvestcraft, hatchery, ironchest, mts, mtsofficialpack, harvest, levelup2, sereneseasons, cfm, recipehandler, buildcraftcompat, buildcraftbuilders, buildcraftcore, buildcraftenergy, buildcraftfactory, buildcraftlib, buildcraftrobotics, buildcraftsilicon, buildcrafttransport, mantle, tconstruct, quark, autoreglib, journeymap, touhou_little_maid, biomesoplenty, patchouli, minecraftfuture, neat, texfix, chisel, ctm, waila, wawla, sit, i18nmod, ambientsounds, craftstudioapi, snowrealmagic, immersiveengineering, structurize, minecolonies] at SERVER
-[10:55:51] [Client thread/INFO] [Pulsar-tconstruct]: Skipping Pulse chiselsandbitsIntegration; missing dependency: chiselsandbits
-[10:55:51] [Client thread/INFO] [Pulsar-tconstruct]: Skipping Pulse craftingtweaksIntegration; missing dependency: craftingtweaks
-[10:55:51] [Client thread/INFO] [Pulsar-tconstruct]: Skipping Pulse theoneprobeIntegration; missing dependency: theoneprobe
-[10:55:51] [Client thread/INFO] [tconstruct]: Preparing to take over the world
-[10:55:52] [Thread-3/INFO] [FML]: Using alternative sync timing : 200 frames of Display.update took 3656995626 nanos
-[10:55:56] [Client thread/INFO] [i18nmod]: 检测到网络不可用，跳过下载阶段
-[10:55:57] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: BetterFps, Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Inventory Pets, FMLFileResourcePack:Dynamic Trees BOP, FMLFileResourcePack:Dynamic Trees PHC, FMLFileResourcePack:Dynamic Trees, FMLFileResourcePack:Construct's Armory, FMLFileResourcePack:Tinkers Tool Leveling, FMLFileResourcePack:AstikorCarts, FMLFileResourcePack:Sound Physics, FMLFileResourcePack:Inventory Tweaks, FMLFileResourcePack:Just Enough Items, FMLFileResourcePack:Carry On, FMLFileResourcePack:Immersive Technology, FMLFileResourcePack:Immersive Petroleum, FMLFileResourcePack:Charm, FMLFileResourcePack:ALLMUSIC, FMLFileResourcePack:NetherEx, FMLFileResourcePack:LibraryEx, FMLFileResourcePack:NetheriteOld, FMLFileResourcePack:Mo' Bends, FMLFileResourcePack:Worley's Caves, FMLFileResourcePack:Pam's HarvestCraft, FMLFileResourcePack:Hatchery, FMLFileResourcePack:Iron Chest, FMLFileResourcePack:Immersive Vehicles (formerly MTS), FMLFileResourcePack:MTS Official Vehicle Pack, FMLFileResourcePack:Harvest, FMLFileResourcePack:Level Up! Reloaded, FMLFileResourcePack:Serene Seasons, FMLFileResourcePack:MrCrayfish's Furniture Mod, FMLFileResourcePack:NoMoreRecipeConflict, FMLFileResourcePack:BuildCraft Compat, FMLFileResourcePack:BuildCraft Builders, FMLFileResourcePack:BuildCraft, FMLFileResourcePack:BuildCraft Energy, FMLFileResourcePack:BuildCraft Factory, FMLFileResourcePack:BuildCraft Lib, FMLFileResourcePack:BuildCraft Robotics, FMLFileResourcePack:BuildCraft Silicon, FMLFileResourcePack:BuildCraft Transport, FMLFileResourcePack:Mantle, FMLFileResourcePack:Tinkers' Construct, FMLFileResourcePack:Quark, FMLFileResourcePack:AutoRegLib, FMLFileResourcePack:JourneyMap, FMLFileResourcePack:Touhou Little Maid, FMLFileResourcePack:Biomes O' Plenty, FMLFileResourcePack:Patchouli, FMLFileResourcePack:Future MC, FMLFileResourcePack:Neat, FMLFileResourcePack:TextureFix, FMLFileResourcePack:Chisel, FMLFileResourcePack:CTM, FMLFileResourcePack:Waila, FMLFileResourcePack:What Are We Looking At, FMLFileResourcePack:Sit, FMLFileResourcePack:I18n Update Mod, FMLFileResourcePack:AmbientSounds, FMLFileResourcePack:CraftStudio API, FMLFileResourcePack:Snow! Real Magic!, FMLFileResourcePack:Immersive Engineering, FMLFileResourcePack:Structurize, FMLFileResourcePack:MineColonies, Minecraft-Mod-Language-Modpack.zip
-[10:55:57] [Client thread/WARN] [net.minecraft.client.resources.AbstractResourcePack]: ResourcePack: ignored non-lowercase namespace: alchemicalwizardryBooks in /Users/resetpower/Minecraft/Jacaranda/resourcepacks/Minecraft-Mod-Language-Modpack.zip
-[10:55:57] [Client thread/WARN] [net.minecraft.client.resources.AbstractResourcePack]: ResourcePack: ignored non-lowercase namespace: alchemicalwizardryBooks in /Users/resetpower/Minecraft/Jacaranda/resourcepacks/Minecraft-Mod-Language-Modpack.zip
-[10:55:57] [Client thread/WARN] [net.minecraft.client.resources.AbstractResourcePack]: ResourcePack: ignored non-lowercase namespace: alchemicalwizardryBooks in /Users/resetpower/Minecraft/Jacaranda/resourcepacks/Minecraft-Mod-Language-Modpack.zip
-[10:55:57] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
-[10:55:57] [Client thread/INFO] [FML]: Found 1586 ObjectHolder annotations
-[10:55:57] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
-[10:55:57] [Client thread/INFO] [FML]: Found 2 ItemStackHolder annotations
-[10:55:58] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
-[10:55:58] [Forge Version Check/INFO] [forge.VersionCheck]: [carryon] Starting version check at https://gist.githubusercontent.com/Tschipp/dccadee7c90d7a34e6e76a35d9d6fa2e/raw/
-[10:55:58] [Client thread/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `species_tile_entity`, expected `dynamictrees`. This could be a intended override, but in most cases indicates a broken mod.
-[10:55:58] [Client thread/WARN] [FML]: Potentially Dangerous alternative prefix `minecraft` for name `bonsai_tile_entity`, expected `dynamictrees`. This could be a intended override, but in most cases indicates a broken mod.
+[14:09:46] [Render thread/INFO]: Setting user: ResetPower
+[14:09:48] [Render thread/WARN]: Skipping bad option: textBackgroundOpacity:
+[14:09:48] [Render thread/INFO]: Backend library: LWJGL version 3.2.1 build 12
+[14:09:48] [Render thread/INFO]: [STDERR]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+Possible reasons:
+	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
+	b) The classpath contains jar files of an older LWJGL version.
+Possible solutions:
+	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
+	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
+	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
+[14:09:48] [Render thread/INFO]: [STDERR]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+Possible reasons:
+	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
+	b) The classpath contains jar files of an older LWJGL version.
+Possible solutions:
+	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
+	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
+	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
+[14:09:48] [Render thread/INFO]: [STDERR]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+Possible reasons:
+	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
+	b) The classpath contains jar files of an older LWJGL version.
+Possible solutions:
+	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
+	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
+	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
+[14:09:49] [Render thread/INFO]: [STDERR]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+Possible reasons:
+	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
+	b) The classpath contains jar files of an older LWJGL version.
+Possible solutions:
+	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
+	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
+	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
+[14:09:49] [Render thread/INFO]: [STDERR]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+Possible reasons:
+	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
+	b) The classpath contains jar files of an older LWJGL version.
+Possible solutions:
+	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
+	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
+	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
+[14:09:49] [Render thread/WARN]: Removed resource pack mod_resources from options because it doesn't seem to exist anymore
+[14:09:50] [Render thread/INFO]: Reloading ResourceManager: Default, Depixel1.15.zip
+[14:09:54] [Render thread/INFO]: [STDERR]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+Possible reasons:
+	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
+	b) The classpath contains jar files of an older LWJGL version.
+Possible solutions:
+	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
+	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
+	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
+[14:09:54] [Render thread/INFO]: OpenAL initialized.
+[14:09:54] [Render thread/INFO]: Sound engine started
+[14:09:54] [Render thread/INFO]: Created: 1024x4096x4 minecraft:textures/atlas/blocks.png-atlas
+[14:09:54] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/signs.png-atlas
+[14:09:54] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[14:09:54] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[14:09:54] [Render thread/INFO]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
+[14:09:54] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
+[14:09:54] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[14:09:55] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
+[14:09:55] [Render thread/INFO]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
+[14:09:55] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
+[14:10:32] [Render thread/INFO]: Stopping!

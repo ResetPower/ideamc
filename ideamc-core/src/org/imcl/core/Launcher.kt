@@ -39,7 +39,7 @@ object Launcher {
     }
     fun generateMacOSLaunchScript(launchOptions: LaunchOptions, jsonObject: JSONObject) : String {
         var isXStartOnFirstThread = !jsonObject.containsKey("minecraftArguments")
-        val sb = StringBuffer("/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/bin/java ${if (isXStartOnFirstThread) "-XstartOnFirstThread" else ""} ${launchOptions.jvmArgs} -Djava.library.path=\"${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}-natives\" ")
+        val sb = StringBuffer("java ${if (isXStartOnFirstThread) "-XstartOnFirstThread" else ""} ${launchOptions.jvmArgs} -Djava.library.path=\"${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}-natives\" ")
         var inheritsFrom: String? = null
         var inheritsObject: JSONObject? = null
         if (jsonObject.containsKey("inheritsFrom")) {
