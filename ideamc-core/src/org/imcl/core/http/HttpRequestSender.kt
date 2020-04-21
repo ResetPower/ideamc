@@ -9,7 +9,7 @@ import java.nio.charset.Charset
 
 object HttpRequestSender {
     @JvmStatic
-    fun post(spec: String, param: String, whenError: () -> Unit): String {
+    fun post(spec: String, param: String, whenError: () -> Unit): String? {
         var responseBuilder: StringBuilder? = null
         var reader: BufferedReader? = null
         var wr: OutputStreamWriter? = null
@@ -34,7 +34,7 @@ object HttpRequestSender {
             return responseBuilder.toString()
         } catch (e: IOException) {
             whenError()
-            throw NullPointerException()
+            return null
         }
     }
     @JvmStatic

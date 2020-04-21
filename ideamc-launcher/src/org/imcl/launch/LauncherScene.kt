@@ -6,6 +6,7 @@ import com.jfoenix.controls.*
 import javafx.geometry.HPos
 import javafx.geometry.Pos
 import javafx.scene.Scene
+import javafx.scene.control.Hyperlink
 import javafx.scene.control.Label
 import javafx.scene.control.Tab
 import javafx.scene.image.Image
@@ -21,8 +22,8 @@ import org.imcl.core.Launcher
 import org.imcl.core.authentication.OfflineAuthenticator
 import org.imcl.core.authentication.YggdrasilAuthenticator
 import org.imcl.download.MinecraftDownloadScene
+import org.imcl.introductions.FolderSeparateIntroduction
 import org.imcl.lang.Translator
-import org.imcl.loading.LoadingStage
 import org.imcl.main.MainScene
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
@@ -45,7 +46,12 @@ object LauncherScene {
         fun BorderPane.prepareModsBorderPane() {
             val selected = profileList.selectionModel.selectedItem.text
             val modList = JFXListView<Label>()
-            val modsFolder = File((launcherProfiles[profileList.selectionModel.selectedIndex] as JSONObject).getString("directory")+"/mods")
+            val modsFolder = File((launcherProfiles[profileList.selectionModel.selectedIndex] as JSONObject).let {
+                if (it.getString("res-game-directory-separate")=="true") {
+                    return@let it.getString("game-directory")+"/mods"
+                }
+                return@let it.getString("directory")+"/mods"
+            })
             if (!modsFolder.exists()) {
                 modsFolder.mkdirs()
             }
@@ -160,12 +166,21 @@ object LauncherScene {
                             setOnAction {
                                 this.isDisable = true
                                 val prof = launcherProfiles.getJSONObject(profileList.selectionModel.selectedIndex)
+                                val autoConnectServer = prof.getString("auto-connect-server")
+                                val autoConnectServerSplit = autoConnectServer.split(":")
+                                val port = if (autoConnectServerSplit.size==1) {
+                                    "25565"
+                                } else {
+                                    autoConnectServerSplit[1]
+                                }
+                                val width = prof.getString("width")
+                                val height = prof.getString("height")
                                 if (userInformation is OfflineUserInformation) {
-                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username()))) {
+                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username()), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
                                         this.isDisable = false
                                     }
                                 } else if (userInformation is YggdrasilUserInformation) {
-                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken()))) {
+                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken()), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
                                         this.isDisable = false
                                     }
                                 }
@@ -203,7 +218,7 @@ object LauncherScene {
                                         add(JFXButton(translator.get("add")).apply {
                                             setOnAction {
                                                 val nm = nameField.text
-                                                launcherProfiles.add(JSONObject(mapOf(Pair("name", nm), Pair("version", verField.text), Pair("directory", dirField.text))))
+                                                launcherProfiles.add(JSONObject(mapOf(Pair("name", nm), Pair("version", verField.text), Pair("directory", dirField.text), Pair("width", "auto"), Pair("height", "auto"), Pair("jvm-args", "-Xmx2G"), Pair("auto-connect", "false"), Pair("auto-connect-server", "true"), Pair("res-game-directory-separate", "false"), Pair("game-directory", "none"))))
                                                 File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
                                                 profileList.items.add(Label(nm))
                                                 secondStage.close()
@@ -230,32 +245,88 @@ object LauncherScene {
                                     val theIndex = profileList.selectionModel.selectedIndex
                                     val theObj = launcherProfiles[theIndex] as JSONObject
                                     secondStage.scene = Scene(GridPane().apply {
-                                        addColumn( 0, Label(translator.get("edit")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")))
+                                        addColumn( 0, Label(translator.get("edit")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")), Label("Folder Separate"), Label("game-dir"))
                                         val nameField = JFXTextField()
                                         val verField = JFXTextField()
                                         val dirField = JFXTextField()
+                                        val resGameDirectorySeparateBox = JFXCheckBox()
+                                        val gameDirField = JFXTextField()
                                         nameField.text = theObj.getString("name")
                                         verField.text = theObj.getString("version")
                                         dirField.text = theObj.getString("directory")
+                                        resGameDirectorySeparateBox.isSelected = theObj.getString("res-game-directory-separate")=="true"
+                                        gameDirField.text = theObj.getString("game-directory")
                                         add(nameField, 1, 1)
                                         add(verField, 1, 2)
                                         add(dirField, 1, 3)
+                                        add(resGameDirectorySeparateBox, 1, 4)
+                                        add(Hyperlink("What is this?").apply {
+                                            setOnAction {
+                                                FolderSeparateIntroduction().show()
+                                            }
+                                        }, 2, 4)
+                                        add(gameDirField, 1, 5)
+                                        add(Label("If you don't want split folder, please keep it 'none'"), 1, 6)
                                         add(JFXButton(translator.get("cancel")).apply {
                                             setOnAction {
                                                 secondStage.close()
                                             }
-                                        }, 0, 5)
+                                        }, 0, 7)
                                         add(JFXButton(translator.get("edit")).apply {
                                             setOnAction {
-                                                val nm = nameField.text
                                                 theObj.set("name", nameField.text)
                                                 theObj.set("versions", verField.text)
                                                 theObj.set("directory", dirField.text)
+                                                theObj.set("res-game-directory-separate", resGameDirectorySeparateBox.isSelected.toString())
+                                                theObj.set("game-directory", gameDirField.text)
                                                 profileList.items[theIndex].text = nameField.text
                                                 File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
                                                 secondStage.close()
                                             }
-                                        }, 1, 5)
+                                        }, 1, 7)
+                                    }, 600.0, 251.0)
+                                    secondStage.show()
+                                }
+                            }, JFXButton(translator.get("customizing")).apply {
+                                buttonType = JFXButton.ButtonType.RAISED
+                                background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                                setOnAction {
+                                    val secondStage = Stage()
+                                    val theIndex = profileList.selectionModel.selectedIndex
+                                    val theObj = launcherProfiles[theIndex] as JSONObject
+                                    secondStage.scene = Scene(GridPane().apply {
+                                        addColumn( 0, Label(translator.get("customizing")), Label(translator.get("width")), Label(translator.get("height")), Label(translator.get("jvm-args")), Label(translator.get("auto-connect")), Label(translator.get("auto-connect-server")))
+                                        val widthField = JFXTextField()
+                                        val heightField = JFXTextField()
+                                        val jvmArgsField = JFXTextField()
+                                        val autoConnectBox = JFXCheckBox()
+                                        val autoConnectServerField = JFXTextField()
+                                        widthField.text = theObj.getString("width")
+                                        heightField.text = theObj.getString("height")
+                                        jvmArgsField.text = theObj.getString("jvm-args")
+                                        autoConnectBox.isSelected = theObj.getString("auto-connect")=="true"
+                                        autoConnectServerField.text = theObj.getString("auto-connect-server")
+                                        add(widthField, 1, 1)
+                                        add(heightField, 1, 2)
+                                        add(jvmArgsField, 1, 3)
+                                        add(autoConnectBox, 1, 4)
+                                        add(autoConnectServerField, 1, 5)
+                                        add(JFXButton(translator.get("cancel")).apply {
+                                            setOnAction {
+                                                secondStage.close()
+                                            }
+                                        }, 0, 7)
+                                        add(JFXButton(translator.get("edit")).apply {
+                                            setOnAction {
+                                                theObj.set("width", widthField.text)
+                                                theObj.set("height", heightField.text)
+                                                theObj.set("jvm-args", jvmArgsField.text)
+                                                theObj.set("auto-connect", autoConnectBox.isSelected.toString())
+                                                theObj.set("auto-connect-server", autoConnectServerField.text)
+                                                File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
+                                                secondStage.close()
+                                            }
+                                        }, 1, 7)
                                     }, 420.0, 251.0)
                                     secondStage.show()
                                 }
