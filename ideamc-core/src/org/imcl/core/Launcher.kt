@@ -4,6 +4,9 @@ import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
 import javafx.application.Platform
 import org.imcl.core.artifacts.ArtifactExtractor
+import org.imcl.core.log.Log
+import org.imcl.core.ostool.OS
+import org.imcl.core.ostool.OSTool
 import java.io.BufferedReader
 import java.io.File
 import java.io.InputStream
@@ -13,18 +16,34 @@ object Launcher {
     fun launch(launchOptions: LaunchOptions, whenDone: () -> Unit = {}) {
         val dir = File("${launchOptions.dir}/versions/${launchOptions.version}")
         if (!dir.exists()) {
-            System.err.println("[IMCL Core] Version not found")
+            Log.e("Version not found")
             return
         }
         val json = File("${dir.path}/${launchOptions.version}.json")
         if (!json.exists()) {
-            System.err.println("[IMCL Core] JSON not found")
+            Log.e("JSON not found")
             return
         }
         val jsonObject = JSON.parseObject(json.readText())
 
+        Log.i("Looking for OS!")
+        val os = OSTool.getOS()
+        Log.i("Found OS! $os!")
+
+        if (os==OS.Linux) {
+            whenDone()
+            Log.e("Linux is not supported!")
+            return
+        } else if (os==OS.Unknown) {
+            whenDone()
+            Log.e("Unknown OS is not supported!")
+            return
+        }
+
         Thread {
-            val p = Runtime.getRuntime().exec(arrayOf("sh", "-c", generateMacOSLaunchScript(launchOptions, jsonObject)))
+            Log.i("Generating $os Launch Script!")
+            val p = Runtime.getRuntime().exec(arrayOf("sh", "-c", generateLaunchScript(launchOptions, jsonObject, os)))
+            Log.i("Launching Minecraft!")
             val fis: InputStream = p.inputStream
             val isr = InputStreamReader(fis)
             val br = BufferedReader(isr)
@@ -37,9 +56,9 @@ object Launcher {
             }
         }.start()
     }
-    fun generateMacOSLaunchScript(launchOptions: LaunchOptions, jsonObject: JSONObject) : String {
-        var isXStartOnFirstThread = !jsonObject.containsKey("minecraftArguments")
-        val sb = StringBuffer("java ${if (isXStartOnFirstThread) "-XstartOnFirstThread" else ""} ${launchOptions.jvmArgs} -Djava.library.path=\"${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}-natives\" ")
+    fun generateLaunchScript(launchOptions: LaunchOptions, jsonObject: JSONObject, os: OS) : String {
+        var isHigherThan1_13 = !jsonObject.containsKey("minecraftArguments")
+        val sb = StringBuffer(LauncherTool.genInitiallyLaunchScript(os, isHigherThan1_13, launchOptions))
         var inheritsFrom: String? = null
         var inheritsObject: JSONObject? = null
         if (jsonObject.containsKey("inheritsFrom")) {
@@ -260,7 +279,7 @@ object Launcher {
                 }
             }
         }
-        if (isXStartOnFirstThread) {
+        if (isHigherThan1_13) {
             cpBuff.append("${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}.jar")
         } else {
             if (inheritsFrom!=null) {

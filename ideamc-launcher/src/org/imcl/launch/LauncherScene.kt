@@ -38,6 +38,13 @@ object LauncherScene {
     @JvmStatic
     fun get(translator: Translator, userInformation: UserInformation, primaryStage: Stage) : Scene {
         val mainBorderPane = BorderPane()
+        mainBorderPane.background = Background(
+            BackgroundImage(
+                Image("file://"+File("imcl/res/bg.png").absolutePath, 840.0, 502.5, false, true),
+                BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+                BackgroundSize.DEFAULT
+            )
+        )
         val modsBorderPane = BorderPane()
         val profileList = JFXListView<Label>()
         var loadedProfiles = false
@@ -134,7 +141,8 @@ object LauncherScene {
                 add(Label("${translator.get("modsfolder")}: ${modsFolder.path}"), 0, 1)
             }
         }
-        mainBorderPane.left = JFXListView<String>().apply {
+        val mainListView = JFXListView<String>().apply {
+            background = Background.EMPTY
             styleClass.add("mylistview")
             items.add(translator.get("news"))
             items.add("Minecraft: Java Edition")
@@ -186,13 +194,6 @@ object LauncherScene {
                                 }
                             }
                         }, 2, 2)
-                        gridPane1.background = Background(
-                            BackgroundImage(
-                                Image("file://"+File("imcl/res/bg.png").absolutePath, 840.0, 502.5, false, true),
-                                BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
-                                BackgroundSize.DEFAULT
-                            )
-                        )
                         tabPane.tabs.addAll(Tab(translator.get("play")).apply {
                             content = gridPane1
                         }, Tab(translator.get("installations")).apply {
@@ -417,6 +418,7 @@ object LauncherScene {
             }
             selectionModel.select("Minecraft: Java Edition")
         }
+        mainBorderPane.left = mainListView
         theScene = Scene(mainBorderPane, 840.0, 502.0)
         return theScene
     }
