@@ -1,11 +1,14 @@
-[2142020 20:59:22.934] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--username, ResetPower, --version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --assetIndex, 1.15, --uuid, d9876a2d14694b86859d902f267067d6, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release, --launchTarget, fmlclient, --fml.forgeVersion, 31.1.0, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20200122.131323]
-[2142020 20:59:22.936] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.0.0-milestone.4+67+b1a340b starting: java version 1.8.0_221 by Oracle Corporation
-[2142020 20:59:23.117] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
-[2142020 20:59:23.967] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmlclient' with arguments [--version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --uuid, d9876a2d14694b86859d902f267067d6, --username, ResetPower, --assetIndex, 1.15, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release]
-[2142020 20:59:25.371] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: ResetPower
-[2142020 20:59:30.005] [Render thread/WARN] [net.minecraft.client.GameSettings/]: Skipping bad option: textBackgroundOpacity:
-[2142020 20:59:30.023] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.1 build 12
-[2142020 20:59:30.046] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+[224月2020 15:16:18.119] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--username, ZS, --version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --assetIndex, 1.15, --uuid, 2873, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release, --launchTarget, fmlclient, --fml.forgeVersion, 31.1.0, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20200122.131323]
+[224月2020 15:16:18.122] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.0.0-milestone.4+67+b1a340b starting: java version 12.0.2 by Oracle Corporation
+[224月2020 15:16:18.291] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[224月2020 15:16:18.590] [main/INFO] [STDERR/]: [jdk.nashorn.api.scripting.NashornScriptEngine:<init>:143]: Warning: Nashorn engine is planned to be removed from a future JDK release
+[224月2020 15:16:18.696] [main/INFO] [STDERR/]: [jdk.nashorn.api.scripting.NashornScriptEngine:<init>:143]: Warning: Nashorn engine is planned to be removed from a future JDK release
+[224月2020 15:16:18.701] [main/INFO] [STDERR/]: [jdk.nashorn.api.scripting.NashornScriptEngine:<init>:143]: Warning: Nashorn engine is planned to be removed from a future JDK release
+[224月2020 15:16:19.275] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmlclient' with arguments [--version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --uuid, 2873, --username, ZS, --assetIndex, 1.15, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release]
+[224月2020 15:16:20.399] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: ZS
+[224月2020 15:16:24.843] [Render thread/WARN] [net.minecraft.client.GameSettings/]: Skipping bad option: textBackgroundOpacity:
+[224月2020 15:16:24.857] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.1 build 12
+[224月2020 15:16:24.881] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
 Possible reasons:
 	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
 	b) The classpath contains jar files of an older LWJGL version.
@@ -13,7 +16,7 @@ Possible solutions:
 	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
 	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
 	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2142020 20:59:30.062] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+[224月2020 15:16:24.901] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
 Possible reasons:
 	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
 	b) The classpath contains jar files of an older LWJGL version.
@@ -21,7 +24,7 @@ Possible solutions:
 	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
 	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
 	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2142020 20:59:30.090] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+[224月2020 15:16:24.933] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
 Possible reasons:
 	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
 	b) The classpath contains jar files of an older LWJGL version.
@@ -29,7 +32,7 @@ Possible solutions:
 	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
 	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
 	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2142020 20:59:30.308] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+[224月2020 15:16:25.117] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
 Possible reasons:
 	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
 	b) The classpath contains jar files of an older LWJGL version.
@@ -37,7 +40,7 @@ Possible solutions:
 	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
 	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
 	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2142020 20:59:30.709] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+[224月2020 15:16:25.366] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
 Possible reasons:
 	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
 	b) The classpath contains jar files of an older LWJGL version.
@@ -45,200 +48,89 @@ Possible solutions:
 	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
 	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
 	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2142020 20:59:31.226] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput has copied library to native directory.
-[2142020 20:59:31.234] [modloading-worker-13/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.1.0, for MC 1.15.2 with MCP 20200122.131323
-[2142020 20:59:31.234] [modloading-worker-13/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.1.0 Initialized
-[2142020 20:59:31.320] [modloading-worker-15/INFO] [CocoaInput:ObjC/]: Libcocoainput was built on Feb 12 2020 03:01:48.
-[2142020 20:59:31.320] [modloading-worker-15/INFO] [CocoaInput:ObjC/]: CocoaInput is being initialized.Now running thread for modify GLFWview .
-[2142020 20:59:31.321] [modloading-worker-15/INFO] [CocoaInput:Java/]: DarwinController has been initialized.
-[2142020 20:59:31.321] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput is now using controller:class jp.axer.cocoainput.arch.darwin.DarwinController
-[2142020 20:59:31.321] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput has been initialized.
-[2142020 20:59:33.393] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources, Depixel1.15.zip
-[2142020 20:59:33.662] [Thread-6/INFO] [CocoaInput:ObjC/]: Complete to modify GLFWView
-[2142020 20:59:35.221] [modloading-worker-4/INFO] [STDOUT/]: [de.guntram.mcmod.durabilityviewer.DurabilityViewer:init:42]: on Init, confHandler is de.guntram.mcmod.durabilityviewer.handler.ConfigurationHandler@71fdff27
-[2142020 20:59:35.311] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[2142020 20:59:35.472] [Render thread/INFO] [STDOUT/]: [com.mamiyaotaru.voxelmap.Map:<init>:423]: CATEGORY ORDER IS 7
-[2142020 20:59:35.625] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x256 waypoints-atlas
-[2142020 20:59:35.713] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x128 chooser-atlas
-[2142020 20:59:36.101] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 512x512 mobs-atlas
-[2142020 20:59:36.209] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 64x64 pings-atlas
-[2142020 20:59:37.323] [modloading-worker-9/INFO] [Waila/]: Registered plugin at mcp.mobius.waila.addons.minecraft.PluginMinecraft
-[2142020 20:59:37.575] [Render thread/WARN] [net.minecraft.client.GameSettings/]: Skipping bad option: textBackgroundOpacity:
-[2142020 20:59:37.634] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
-Possible reasons:
-	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
-	b) The classpath contains jar files of an older LWJGL version.
-Possible solutions:
-	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
-	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
-	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2142020 20:59:37.718] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
-[2142020 20:59:37.721] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
-[2142020 20:59:37.866] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
-[2142020 20:59:37.867] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x2048x4 minecraft:textures/atlas/blocks.png-atlas
-[2142020 20:59:37.880] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[2142020 20:59:37.880] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[2142020 20:59:37.883] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[2142020 20:59:37.885] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
-[2142020 20:59:37.886] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
-[2142020 20:59:37.887] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[2142020 20:59:38.294] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
-[2142020 20:59:38.296] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
-[2142020 20:59:38.297] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
-[2142020 20:59:39.143] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 31.1.0 Target: null
-[2142020 21:01:06.061] [Render thread/WARN] [net.minecraft.client.gui.screen.MultiplayerScreen/]: Unable to start LAN server detection: Can't assign requested address
-[2142020 21:01:07.840] [Render thread/INFO] [net.minecraft.client.gui.screen.ConnectingScreen/]: Connecting to play.craft.moe, 25565
-[2142020 21:01:07.918] [Server Connector #1/ERROR] [net.minecraft.client.gui.screen.ConnectingScreen/]: Couldn't connect to server
-java.net.UnknownHostException: play.craft.moe: nodename nor servname provided, or not known
-	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:1.8.0_221]
-	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:929) ~[?:1.8.0_221]
-	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1324) ~[?:1.8.0_221]
-	at java.net.InetAddress.getAllByName0(InetAddress.java:1277) ~[?:1.8.0_221]
-	at java.net.InetAddress.getAllByName(InetAddress.java:1193) ~[?:1.8.0_221]
-	at java.net.InetAddress.getAllByName(InetAddress.java:1127) ~[?:1.8.0_221]
-	at java.net.InetAddress.getByName(InetAddress.java:1077) ~[?:1.8.0_221]
-	at net.minecraft.client.gui.screen.ConnectingScreen$1.run(SourceFile:65) [?:?]
-[2142020 21:01:09.950] [Render thread/WARN] [net.minecraft.client.gui.screen.MultiplayerScreen/]: Unable to start LAN server detection: Can't assign requested address
-[2142020 21:01:10.951] [Render thread/WARN] [net.minecraft.client.gui.screen.MultiplayerScreen/]: Unable to start LAN server detection: Can't assign requested address
-[2142020 21:01:12.751] [Render thread/INFO] [net.minecraft.client.gui.screen.ConnectingScreen/]: Connecting to gateway.craft.moe., 25565
-[2142020 21:01:24.505] [Netty Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a vanilla server. Catching up missing behaviour.
-[2142020 21:01:25.491] [Render thread/ERROR] [net.minecraftforge.fml.network.simple.IndexedMessageCodec/SIMPLENET]: Received empty payload on channel fml:handshake
-[2142020 21:01:25.550] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Starting JEI...
-[2142020 21:01:25.665] [Render thread/ERROR] [mezz.jei.plugins.vanilla.anvil.AnvilRecipeMaker/]: Failed to create repair recipes.
-java.lang.IllegalArgumentException: rightInputs must not be empty.
-	at mezz.jei.util.ErrorUtil.checkNotEmpty(ErrorUtil.java:211) ~[?:6.0.0.2]
-	at mezz.jei.plugins.vanilla.VanillaRecipeFactory.createAnvilRecipe(VanillaRecipeFactory.java:29) ~[?:6.0.0.2]
-	at mezz.jei.plugins.vanilla.VanillaRecipeFactory.createAnvilRecipe(VanillaRecipeFactory.java:18) ~[?:6.0.0.2]
-	at mezz.jei.plugins.vanilla.anvil.AnvilRecipeMaker.getRepairRecipes(AnvilRecipeMaker.java:198) ~[?:6.0.0.2]
-	at mezz.jei.plugins.vanilla.anvil.AnvilRecipeMaker.getAnvilRecipes(AnvilRecipeMaker.java:44) ~[?:6.0.0.2]
-	at mezz.jei.plugins.vanilla.VanillaPlugin.registerRecipes(VanillaPlugin.java:190) ~[?:6.0.0.2]
-	at mezz.jei.load.PluginLoader.lambda$new$4(PluginLoader.java:117) ~[?:6.0.0.2]
-	at mezz.jei.load.PluginCaller.callOnPlugins(PluginCaller.java:26) ~[?:6.0.0.2]
-	at mezz.jei.load.PluginLoader.<init>(PluginLoader.java:117) ~[?:6.0.0.2]
-	at mezz.jei.startup.JeiStarter.start(JeiStarter.java:71) ~[?:6.0.0.2]
-	at mezz.jei.startup.ClientLifecycleHandler.onRecipesLoaded(ClientLifecycleHandler.java:127) ~[?:6.0.0.2]
-	at mezz.jei.startup.ClientLifecycleHandler.lambda$new$2(ClientLifecycleHandler.java:104) ~[?:6.0.0.2]
-	at net.minecraftforge.eventbus.EventBus.doCastFilter(EventBus.java:212) ~[eventbus-2.0.0-milestone.1-service.jar:?]
-	at net.minecraftforge.eventbus.EventBus.lambda$addListener$11(EventBus.java:204) ~[eventbus-2.0.0-milestone.1-service.jar:?]
-	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:258) ~[eventbus-2.0.0-milestone.1-service.jar:?]
-	at net.minecraftforge.client.ForgeHooksClient.onRecipesUpdated(ForgeHooksClient.java:759) ~[?:?]
-	at net.minecraft.client.network.play.ClientPlayNetHandler.func_199525_a(ClientPlayNetHandler.java:1291) ~[?:?]
-	at net.minecraft.network.play.server.SUpdateRecipesPacket.func_148833_a(SourceFile:27) ~[?:?]
-	at net.minecraft.network.play.server.SUpdateRecipesPacket.func_148833_a(SourceFile:15) ~[?:?]
-	at net.minecraft.network.PacketThreadUtil.func_225383_a(SourceFile:21) ~[?:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(SourceFile:144) ~[?:?]
-	at net.minecraft.util.concurrent.RecursiveEventLoop.func_213166_h(SourceFile:23) ~[?:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(SourceFile:118) ~[?:?]
-	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213160_bf(SourceFile:103) ~[?:?]
-	at net.minecraft.client.Minecraft.func_195542_b(Minecraft.java:898) ~[?:?]
-	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:554) ~[?:?]
-	at net.minecraft.client.main.Main.main(SourceFile:204) ~[1.15.2-forge-31.1.0.jar:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_221]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_221]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_221]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_221]
-	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:56) ~[forge-1.15.2-31.1.0.jar:31.1]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-5.0.0-milestone.4.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-5.0.0-milestone.4.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-5.0.0-milestone.4.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-5.0.0-milestone.4.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-5.0.0-milestone.4.jar:?]
-[2142020 21:01:25.703] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient list...
-[2142020 21:01:25.706] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient list took 2.788 ms
-[2142020 21:01:25.706] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient filter...
-[2142020 21:01:26.080] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building ingredient filter took 374.7 ms
-[2142020 21:01:26.081] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building bookmarks...
-[2142020 21:01:26.082] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building bookmarks took 950.4 μs
-[2142020 21:01:26.082] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building recipe registry...
-[2142020 21:01:26.109] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building recipe registry took 27.17 ms
-[2142020 21:01:26.115] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building runtime...
-[2142020 21:01:26.138] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Building runtime took 22.83 ms
-[2142020 21:01:26.161] [Render thread/INFO] [mezz.jei.util.LoggedTimer/]: Starting JEI took 610.4 ms
-[2142020 21:01:26.188] [Render thread/INFO] [STDOUT/]: [com.mamiyaotaru.voxelmap.forgemod.WorldIDPacket:encode:24]: encoding id packet
-[2142020 21:01:28.816] [Voxelmap WorldMap Calculation Thread 1/INFO] [STDOUT/]: [com.mamiyaotaru.voxelmap.WaypointManager:setSubworldName:424]: New world name: v3
-[2142020 21:01:28.884] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] 检测到新世界: v3. 如果检测不正确,请在多世界选项中重新选择.
-[2142020 21:01:29.443] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 560 advancements
-[2142020 21:01:29.449] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] >> かわいい ResetPower AtomWorld 来啦喵~
-[2142020 21:01:29.449] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] 你没有新的邮件
-[2142020 21:01:31.094] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] 欢迎回来毛线物语，かわいい ResetPower AtomWorld！
-[2142020 21:01:31.094] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] 当前世界时间 92年7月30日 17:52 | 在线玩家数量 48 | 你的钱包余额 卷6,432.85
-[2142020 21:01:31.094] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] 新玩家请阅读 www.craft.moe/get-started 。插件帮助请查阅 www.craft.moe/help 。
-[2142020 21:01:31.094] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] 如果你喜欢这里，请使用评分或提升卡支持毛线 -> www.mcbbs.net/thread-551395-1-1.html
-[2142020 21:01:35.735] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 说实话我喜欢警喷
-[2142020 21:01:40.208] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 第二发稍微控下枪
-[2142020 21:01:41.387] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <かわいい ResetPower AtomWorld> 大家好
-[2142020 21:01:46.523] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <かわいい ResetPower AtomWorld> 我现在正在直播
-[2142020 21:01:47.292] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 来不
-[2142020 21:01:47.729] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <かわいい ResetPower AtomWorld> =-=
-[2142020 21:01:48.118] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> 匪喷就是FIVE
-[2142020 21:01:48.627] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 我要开了
-[2142020 21:01:55.145] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <かわいい ResetPower AtomWorld> lbpc是不是在看我直播qwq
-[2142020 21:01:58.333] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <雪落白堤 lbpc2333 绫波蓝白> 是
-[2142020 21:02:00.170] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] >> 冰克洛|[海王星】 YUEHUARUSHUANG 月华如霜[边陲】 来啦喵~
-[2142020 21:02:00.644] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 来不了在挖沙(
-[2142020 21:02:12.648] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 匪喷是什么玩意
-[2142020 21:02:17.911] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <雪落白堤 lbpc2333 绫波蓝白> 看看我的小店？
-[2142020 21:02:18.530] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 我还不如拿把格洛克点
-[2142020 21:02:37.232] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] *Dandelion2002 §ICHEATER 回来了.
-[2142020 21:02:46.281] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 一看就是冲点容易怂的
-[2142020 21:02:50.804] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 进攻爱便秘的
-[2142020 21:02:54.767] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [天喵商城] 新商品 偷瞄.jpg *26 上架！使用 /hm 浏览并购买。
-[2142020 21:03:13.025] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 冲出去 一枪头
-[2142020 21:03:15.031] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> +900
-[2142020 21:03:18.040] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 好像就只有小镇我不会便秘
-[2142020 21:03:25.659] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 都是直接丢道具第一个上的
-[2142020 21:03:27.262] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 杀一个血赚
-[2142020 21:03:29.266] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 然后都是我死
-[2142020 21:03:31.872] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] debi_debiru取得了进度[热腾腾的]
-[2142020 21:03:32.897] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 杀两个赚飞
-[2142020 21:03:36.241] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> 进攻小镇天选位置直接两颗闪香蕉道
-[2142020 21:03:45.984] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> 后面队友来个车位火
-[2142020 21:03:57.667] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> 木桶火
-[2142020 21:04:01.809] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 讲道理我不喜欢打香蕉道
-[2142020 21:04:07.128] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 我都是慢慢摸的
-[2142020 21:04:10.820] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <冰克洛 piaopiao233 企业:实现小康中> 。。
-[2142020 21:04:15.034] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 一个雷飞过来全员-50
-[2142020 21:04:24.223] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> 进攻慢慢摸有点难受
-[2142020 21:04:38.396] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] << BINGZHICHEN 跑掉喵~
-[2142020 21:04:39.061] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 没道具的话我都是先慢慢拉看花盆位
-[2142020 21:04:43.359] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] << Big_WhiteDragon 跑掉喵~
-[2142020 21:04:43.999] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 然后再看头顶那箱子
-[2142020 21:04:49.068] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] << [冰森要塞] EnergyMC 跑掉喵~
-[2142020 21:04:50.153] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 最后拉过去看棺材
-[2142020 21:04:53.249] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] *雪落白堤 Kwtide 天书 回来了.
-[2142020 21:04:59.381] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> 小镇没有道具机及其难受
-[2142020 21:05:07.908] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 为什么不起道具为什么不起道具为什么不起道具
-[2142020 21:05:15.525] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] >> [冰森要塞] EnergyMC 来啦喵~
-[2142020 21:05:19.168] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> eco没钱eco没钱eco没钱
-[2142020 21:05:29.176] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> eco还怂eco还怂eco还怂
-[2142020 21:05:36.020] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <[永远亭] debi_debiru 德比鲁> 你们不去试试valorant吗
-[2142020 21:05:40.581] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> eco不敢打还玩啥
-[2142020 21:05:42.232] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 保格洛克保格洛克保格洛克
-[2142020 21:05:42.647] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] *一家之主 SCienceVessel_ 全自动上海人 暂时离开了.
-[2142020 21:05:53.747] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <かわいい ResetPower AtomWorld> = =
-[2142020 21:05:55.388] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 8行
-[2142020 21:05:58.753] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 那玩意一看就8星
-[2142020 21:06:01.050] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] *EchoLake_ 回来了.
-[2142020 21:06:13.171] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 不听不听
-[2142020 21:06:17.158] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 拼接融合怪
-[2142020 21:06:17.243] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> 就很烦海豹短刀一直在掉价
-[2142020 21:06:21.278] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> eco全甲沙鹰
-[2142020 21:06:22.485] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> 卖
-[2142020 21:06:30.419] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> 草
-[2142020 21:06:46.926] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 拳头老想搞花里胡哨的
-[2142020 21:06:50.103] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 就不适合做fps
-[2142020 21:06:58.650] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] << 雪落白堤 Kwtide 天书 跑掉喵~
-[2142020 21:06:58.668] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] *冰克洛 pop_ray 胡夢卜甜菜汤 回来了.
-[2142020 21:06:59.527] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> ECO警全体起雷中路炸匪口
-[2142020 21:07:01.164] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] *dsan推人 Kinomotomoyo 桜 知 狐 暂时离开了.
-[2142020 21:07:03.201] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] *『冷云雪晶』 Muriya_Tensei 碧蓝港区 回来了.
-[2142020 21:07:21.915] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 做点策略型游戏挺好
-[2142020 21:07:38.921] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 然后手雷弹到前面队友头
-[2142020 21:07:42.739] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> 草
-[2142020 21:07:53.317] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <柚子厨 wzszy9 格里芬> 一下炸五个
-[2142020 21:08:01.815] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] >> 矢泽妮可 NicoYazawa_ 来啦喵~
-[2142020 21:08:02.741] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [vx] <白水 Wwater_> 画面感太强了
-[2142020 21:08:09.604] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <[白给岛] CAST25278> 无情 你来辣
-[2142020 21:08:13.629] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 炸，都可以炸
-[2142020 21:08:32.643] [Render thread/INFO] [net.minecraft.client.gui.NewChatGui/]: [CHAT] [v3] <‖◈[‡۞‡]◈‖ ToastBrand ‖◈[‡۞‡]◈‖> 我走了
-[2142020 21:08:35.871] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[224月2020 15:16:25.643] [Render thread/ERROR] [net.minecraftforge.eventbus.EventBus/EVENTBUS]: Failed to resolve handler for "net.minecraftforge.fml.network.simple.SimpleChannel$$Lambda$2275/0x00000008019e6840@b332eda"
+[224月2020 15:16:25.655] [Render thread/INFO] [STDOUT/]: [net.minecraft.util.registry.Bootstrap:func_179870_a:103]: ---- Minecraft Crash Report ----
+// Why is it breaking :(
+
+Time: 2020/04/22 15:16
+Description: Initializing game
+
+java.lang.ExceptionInInitializerError: null
+	at net.minecraftforge.fml.ModLoader.<init>(ModLoader.java:121) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.ModLoader.get(ModLoader.java:146) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$begin$2(ClientModLoader.java:97) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:113) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader.begin(ClientModLoader.java:97) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:393) ~[?:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(SourceFile:166) ~[1.15.2-forge-31.1.0.jar:?] {re:classloading}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:567) ~[?:?] {}
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:56) ~[forge-1.15.2-31.1.0.jar:31.1] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-5.0.0-milestone.4.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-5.0.0-milestone.4.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-5.0.0-milestone.4.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-5.0.0-milestone.4.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-5.0.0-milestone.4.jar:?] {}
+Caused by: java.lang.IllegalStateException: Failed to resolve consumer event type: net.minecraftforge.fml.network.simple.SimpleChannel$$Lambda$2275/0x00000008019e6840@b332eda
+	at net.minecraftforge.eventbus.EventBus.addListener(EventBus.java:194) ~[eventbus-2.0.0-milestone.1-service.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.addListener(EventBus.java:161) ~[eventbus-2.0.0-milestone.1-service.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.addListener(EventBus.java:156) ~[eventbus-2.0.0-milestone.1-service.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.addListener(EventBus.java:151) ~[eventbus-2.0.0-milestone.1-service.jar:?] {}
+	at net.minecraftforge.fml.network.NetworkInstance.addListener(NetworkInstance.java:65) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.network.simple.SimpleChannel.<init>(SimpleChannel.java:56) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.network.simple.SimpleChannel.<init>(SimpleChannel.java:49) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.network.NetworkRegistry$ChannelBuilder.simpleChannel(NetworkRegistry.java:409) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.network.NetworkInitialization.getHandshakeChannel(NetworkInitialization.java:38) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.network.FMLNetworkConstants.<clinit>(FMLNetworkConstants.java:48) ~[?:?] {re:classloading}
+	... 17 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.minecraftforge.fml.ModLoader.<init>(ModLoader.java:121)
+	at net.minecraftforge.fml.ModLoader.get(ModLoader.java:146)
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$begin$2(ClientModLoader.java:97)
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:113)
+	at net.minecraftforge.fml.client.ClientModLoader.begin(ClientModLoader.java:97)
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:393)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.main.Main.main(SourceFile:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:56)
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72)
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81)
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.15.2
+	Minecraft Version ID: 1.15.2
+	Operating System: Mac OS X (x86_64) version 10.14.6
+	Java Version: 12.0.2, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 292485744 bytes (278 MB) / 1070596096 bytes (1021 MB) up to 2147483648 bytes (2048 MB)
+	CPUs: 12
+	JVM Flags: 1 total; -Xmx2G
+	Launched Version: 1.15.2-forge-31.1.0
+	Backend library: LWJGL version 3.2.1 build 12
+	Backend API: AMD Radeon Pro 555X OpenGL Engine GL version 2.1 ATI-2.11.21, ATI Technologies Inc.
+	GL Caps: Using framebuffer using ARB_framebuffer_object extension
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	CPU: 12x Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+[224月2020 15:16:25.658] [Render thread/INFO] [STDOUT/]: [net.minecraft.util.registry.Bootstrap:func_179870_a:103]: #@!@# Game crashed! Crash report saved to: #@!@# /Users/resetpower/Library/Application Support/minecraft/crash-reports/crash-2020-04-22_15.16.25-client.txt

@@ -11,6 +11,7 @@ import java.io.BufferedReader
 import java.io.File
 import java.io.InputStream
 import java.io.InputStreamReader
+import java.lang.Exception
 
 object Launcher {
     fun launch(launchOptions: LaunchOptions, whenDone: () -> Unit = {}) {
@@ -39,11 +40,15 @@ object Launcher {
             Log.e("Unknown OS is not supported!")
             return
         }
-
         Thread {
             Log.i("Generating $os Launch Script!")
-            val p = Runtime.getRuntime().exec(arrayOf("sh", "-c", generateLaunchScript(launchOptions, jsonObject, os)))
-            Log.i("Launching Minecraft!")
+            val p = if (os==OS.MacOS||os==OS.Linux) {
+                Runtime.getRuntime().exec(arrayOf("sh", "-c", generateLaunchScript(launchOptions, jsonObject, os)))
+            } else if (os==OS.Windows||os==OS.Windows10) {
+                Runtime.getRuntime().exec(arrayOf(generateLaunchScript(launchOptions, jsonObject, os)))
+            } else {
+                Runtime.getRuntime().exec(arrayOf(generateLaunchScript(launchOptions, jsonObject, os)))
+            }
             val fis: InputStream = p.inputStream
             val isr = InputStreamReader(fis)
             val br = BufferedReader(isr)
@@ -51,14 +56,26 @@ object Launcher {
             Platform.runLater {
                 whenDone()
             }
+            Log.i("Launching Minecraft!")
             while (br.readLine().also { line = it } != null) {
                 println(line)
             }
         }.start()
     }
+    fun genInitiallyLaunchScript(os: OS, isHigherThan1_13: Boolean, launchOptions: LaunchOptions) : String {
+        return if (os==OS.MacOS) {
+            "${launchOptions.javaPath} ${if (isHigherThan1_13) "-XstartOnFirstThread" else ""} ${launchOptions.jvmArgs} -Djava.library.path=\"${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}-natives\" "
+        } else if (os==OS.Windows10) {
+            "${launchOptions.javaPath} ${if (isHigherThan1_13) "-XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Dos.name=\"Windows 10\" -Dos.version=10.0" else ""} ${launchOptions.jvmArgs} -Djava.library.path=\"${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}-natives\" "
+        } else if (os==OS.Windows) {
+            "${launchOptions.javaPath} ${if (isHigherThan1_13) "-XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump" else ""} ${launchOptions.jvmArgs} -Djava.library.path=\"${launchOptions.dir}/versions/${launchOptions.version}/${launchOptions.version}-natives\" "
+        } else {
+            throw Exception("Not supported OS: $os")
+        }
+    }
     fun generateLaunchScript(launchOptions: LaunchOptions, jsonObject: JSONObject, os: OS) : String {
         var isHigherThan1_13 = !jsonObject.containsKey("minecraftArguments")
-        val sb = StringBuffer(LauncherTool.genInitiallyLaunchScript(os, isHigherThan1_13, launchOptions))
+        val sb = StringBuffer(genInitiallyLaunchScript(os, isHigherThan1_13, launchOptions))
         var inheritsFrom: String? = null
         var inheritsObject: JSONObject? = null
         if (jsonObject.containsKey("inheritsFrom")) {

@@ -22,6 +22,25 @@ object Toolkit {
         alert.show()
     }
     @JvmStatic
+    fun getJavaPath() : String {
+        val ins = FileInputStream("imcl/properties/ideamc.properties")
+        val prop = Properties()
+        prop.load(ins)
+        ins.close()
+        return prop.getProperty("javapath")
+    }
+    @JvmStatic
+    fun setJavaPath(javaPath: String) {
+        val ins = FileInputStream("imcl/properties/ideamc.properties")
+        val prop = Properties()
+        prop.load(ins)
+        ins.close()
+        prop.setProperty("javapath", javaPath)
+        val out = FileOutputStream("imcl/properties/ideamc.properties")
+        prop.store(out, "")
+        out.close()
+    }
+    @JvmStatic
     fun isLoggedIn() : Boolean {
         val ins = FileInputStream("imcl/properties/ideamc.properties")
         val prop = Properties()

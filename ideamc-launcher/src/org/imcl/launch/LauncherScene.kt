@@ -12,6 +12,7 @@ import javafx.scene.control.Tab
 import javafx.scene.image.Image
 import javafx.scene.layout.*
 import javafx.scene.paint.Color
+import javafx.scene.text.Font
 import javafx.stage.FileChooser
 import javafx.stage.Stage
 import org.imcl.constraints.Toolkit
@@ -51,94 +52,105 @@ object LauncherScene {
         val launcherProfiles = JSON.parseArray(File("imcl/launcher/launcher_profiles.json").readText())
         var theScene = Scene(Label("Loading..."), 840.0, 502.0)
         fun BorderPane.prepareModsBorderPane() {
-            val selected = profileList.selectionModel.selectedItem.text
-            val modList = JFXListView<Label>()
-            val modsFolder = File((launcherProfiles[profileList.selectionModel.selectedIndex] as JSONObject).let {
-                if (it.getString("res-game-directory-separate")=="true") {
-                    return@let it.getString("game-directory")+"/mods"
+            val selectedItem = profileList.selectionModel.selectedItem
+            if (selectedItem==null) {
+                center = Label("Profile not selected")
+            } else {
+                val selected = selectedItem.text
+                val modList = JFXListView<Label>()
+                val modsFolder = File((launcherProfiles[profileList.selectionModel.selectedIndex] as JSONObject).let {
+                    if (it.getString("res-game-directory-separate")=="true") {
+                        return@let it.getString("game-directory")+"/mods"
+                    }
+                    return@let it.getString("directory")+"/mods"
+                })
+                if (!modsFolder.exists()) {
+                    modsFolder.mkdirs()
                 }
-                return@let it.getString("directory")+"/mods"
-            })
-            if (!modsFolder.exists()) {
-                modsFolder.mkdirs()
-            }
-            top = GridPane().apply {
-                add(JFXButton(translator.get("remove")).apply {
-                    buttonType = JFXButton.ButtonType.RAISED
-                    background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
-                    setOnAction {
-                        val theIndex = modList.selectionModel.selectedIndex
-                        val i = File("${modsFolder.path}/${modList.items[theIndex].text}")
-                        modList.items.removeAt(theIndex)
-                        if (i.exists()) {
-                            i.delete()
+                top = GridPane().apply {
+                    add(JFXButton(translator.get("remove")).apply {
+                        buttonType = JFXButton.ButtonType.RAISED
+                        background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                        setOnAction {
+                            val theIndex = modList.selectionModel.selectedIndex
+                            val i = File("${modsFolder.path}/${modList.items[theIndex].text}")
+                            modList.items.removeAt(theIndex)
+                            if (i.exists()) {
+                                i.delete()
+                            }
                         }
-                    }
-                }, 0, 2)
-                add(JFXButton(translator.get("add")).apply {
-                    buttonType = JFXButton.ButtonType.RAISED
-                    background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
-                    setOnAction {
-                        val fc = FileChooser()
-                        fc.selectedExtensionFilter = FileChooser.ExtensionFilter("Jar File (*.jar)", ".jar")
-                        val result = fc.showOpenDialog(primaryStage)
-                        if (result!=null) {
-                            val nomo = result.name
-                            modList.items.add(Label(nomo))
-                            Files.copy(result.toPath(), FileOutputStream("${modsFolder.path}/$nomo"))
+                    }, 0, 2)
+                    add(JFXButton(translator.get("add")).apply {
+                        buttonType = JFXButton.ButtonType.RAISED
+                        background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                        setOnAction {
+                            val fc = FileChooser()
+                            fc.selectedExtensionFilter = FileChooser.ExtensionFilter("Jar File (*.jar)", ".jar")
+                            val result = fc.showOpenDialog(primaryStage)
+                            if (result!=null) {
+                                val nomo = result.name
+                                modList.items.add(Label(nomo))
+                                Files.copy(result.toPath(), FileOutputStream("${modsFolder.path}/$nomo"))
+                            }
                         }
-                    }
-                }, 1, 2)
-                add(JFXButton(translator.get("refresh")).apply {
-                    buttonType = JFXButton.ButtonType.RAISED
-                    background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
-                    setOnAction {
-                        prepareModsBorderPane()
-                    }
-                }, 2, 2)
-                add(JFXButton(translator.get("enable")).apply {
-                    buttonType = JFXButton.ButtonType.RAISED
-                    background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
-                    setOnAction {
-                        val theIndex = modList.selectionModel.selectedIndex
-                        val i = File("${modsFolder.path}/${modList.items[theIndex].text}")
-                        if (i.name.toLowerCase().endsWith(".jar")) {
-                            Toolkit.toast("This mod has been enabled.")
-                        } else {
-                            i.renameTo(File("${modsFolder.path}/${modList.items[theIndex].text.removeSuffix(".disable")}"))
-                            modList.items[theIndex].text = modList.items[theIndex].text.removeSuffix(".disable")
+                    }, 1, 2)
+                    add(JFXButton(translator.get("refresh")).apply {
+                        buttonType = JFXButton.ButtonType.RAISED
+                        background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                        setOnAction {
+                            prepareModsBorderPane()
                         }
-                    }
-                }, 3, 2)
-                add(JFXButton(translator.get("disable")).apply {
-                    buttonType = JFXButton.ButtonType.RAISED
-                    background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
-                    setOnAction {
-                        val theIndex = modList.selectionModel.selectedIndex
-                        val i = File("${modsFolder.path}/${modList.items[theIndex].text}")
-                        if (i.name.toLowerCase().endsWith(".jar.disable")) {
-                            Toolkit.toast("This mod has been disabled.")
-                        } else {
-                            i.renameTo(File("${modsFolder.path}/${modList.items[theIndex].text}.disable"))
-                            modList.items[theIndex].text = modList.items[theIndex].text+".disable"
+                    }, 2, 2)
+                    add(JFXButton(translator.get("enable")).apply {
+                        buttonType = JFXButton.ButtonType.RAISED
+                        background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                        setOnAction {
+                            val theIndex = modList.selectionModel.selectedIndex
+                            val i = File("${modsFolder.path}/${modList.items[theIndex].text}")
+                            if (i.name.toLowerCase().endsWith(".jar")) {
+                                Toolkit.toast("This mod has been enabled.")
+                            } else {
+                                i.renameTo(File("${modsFolder.path}/${modList.items[theIndex].text.removeSuffix(".disable")}"))
+                                modList.items[theIndex].text = modList.items[theIndex].text.removeSuffix(".disable")
+                            }
                         }
-                    }
-                }, 4, 2)
-            }
-            val mods = modsFolder.listFiles { dir, name ->
-                if (name.toLowerCase().endsWith(".jar")||name.toLowerCase().endsWith(".jar.disable")) {
-                    val mod = File("${dir.path}/$name")
-                    return@listFiles !mod.isDirectory
+                    }, 3, 2)
+                    add(JFXButton(translator.get("disable")).apply {
+                        buttonType = JFXButton.ButtonType.RAISED
+                        background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                        setOnAction {
+                            val theIndex = modList.selectionModel.selectedIndex
+                            val i = File("${modsFolder.path}/${modList.items[theIndex].text}")
+                            if (i.name.toLowerCase().endsWith(".jar.disable")) {
+                                Toolkit.toast("This mod has been disabled.")
+                            } else {
+                                i.renameTo(File("${modsFolder.path}/${modList.items[theIndex].text}.disable"))
+                                modList.items[theIndex].text = modList.items[theIndex].text+".disable"
+                            }
+                        }
+                    }, 4, 2)
                 }
-                return@listFiles false
-            }
-            for (i in mods) {
-                modList.items.add(Label(i.name))
-            }
-            center = modList
-            bottom = GridPane().apply {
-                add(Label("${translator.get("ver")}: $selected"), 0, 0)
-                add(Label("${translator.get("modsfolder")}: ${modsFolder.path}"), 0, 1)
+                val mods = modsFolder.listFiles { dir, name ->
+                    if (name.toLowerCase().endsWith(".jar")||name.toLowerCase().endsWith(".jar.disable")) {
+                        val mod = File("${dir.path}/$name")
+                        return@listFiles !mod.isDirectory
+                    }
+                    return@listFiles false
+                }
+                if (mods!=null) {
+                    for (i in mods) {
+                        modList.items.add(Label(i.name))
+                    }
+                }
+                center = modList
+                bottom = GridPane().apply {
+                    add(Label("${translator.get("ver")}: $selected").apply {
+                        background = Background(BackgroundFill(Color.WHITE, null, null))
+                    }, 0, 0)
+                    add(Label("${translator.get("modsfolder")}: ${modsFolder.path}").apply {
+                        background = Background(BackgroundFill(Color.WHITE, null, null))
+                    }, 0, 1)
+                }
             }
         }
         val mainListView = JFXListView<String>().apply {
@@ -184,11 +196,11 @@ object LauncherScene {
                                 val width = prof.getString("width")
                                 val height = prof.getString("height")
                                 if (userInformation is OfflineUserInformation) {
-                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username()), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
+                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username()), Toolkit.getJavaPath(), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
                                         this.isDisable = false
                                     }
                                 } else if (userInformation is YggdrasilUserInformation) {
-                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken()), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
+                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken()), Toolkit.getJavaPath(), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
                                         this.isDisable = false
                                     }
                                 }
@@ -276,7 +288,7 @@ object LauncherScene {
                                         add(JFXButton(translator.get("edit")).apply {
                                             setOnAction {
                                                 theObj.set("name", nameField.text)
-                                                theObj.set("versions", verField.text)
+                                                theObj.set("version", verField.text)
                                                 theObj.set("directory", dirField.text)
                                                 theObj.set("res-game-directory-separate", resGameDirectorySeparateBox.isSelected.toString())
                                                 theObj.set("game-directory", gameDirField.text)
@@ -410,6 +422,19 @@ object LauncherScene {
                             }
                             GridPane.setHalignment(this, HPos.CENTER)
                         }, 0, 2)
+                        add(Label("").apply {
+                            GridPane.setHalignment(this, HPos.CENTER)
+                        }, 0, 3)
+                        val javaPathField = JFXTextField(Toolkit.getJavaPath())
+                        add(Label("Java Path"), 0, 4)
+                        add(javaPathField, 1, 4)
+                        add(JFXButton("Save").apply {
+                            buttonType = JFXButton.ButtonType.RAISED
+                            background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                            setOnAction {
+                                Toolkit.setJavaPath(javaPathField.text)
+                            }
+                        }, 2, 4)
                     } }
                     translator.get("about") -> {
                         mainBorderPane.center = Label("IDEA Minecraft Launcher\nDeveloper: ResetPower\nGitHub: https://github.com/resetpower/imcl\nVersion Name: $VERSION_NAME\nVersion Code: $VERSION_CODE\nOpen Source Software")
