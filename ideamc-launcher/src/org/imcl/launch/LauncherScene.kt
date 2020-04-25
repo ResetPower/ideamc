@@ -9,10 +9,11 @@ import javafx.scene.Scene
 import javafx.scene.control.Hyperlink
 import javafx.scene.control.Label
 import javafx.scene.control.Tab
+import javafx.scene.effect.GaussianBlur
 import javafx.scene.image.Image
+import javafx.scene.image.ImageView
 import javafx.scene.layout.*
 import javafx.scene.paint.Color
-import javafx.scene.text.Font
 import javafx.stage.FileChooser
 import javafx.stage.Stage
 import org.imcl.constraints.Toolkit
@@ -39,13 +40,13 @@ object LauncherScene {
     @JvmStatic
     fun get(translator: Translator, userInformation: UserInformation, primaryStage: Stage) : Scene {
         val mainBorderPane = BorderPane()
-        mainBorderPane.background = Background(
+        /*mainBorderPane.background = Background(
             BackgroundImage(
                 Image("file://"+File("imcl/res/bg.png").absolutePath, 840.0, 502.5, false, true),
                 BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
                 BackgroundSize.DEFAULT
             )
-        )
+        )*/
         val modsBorderPane = BorderPane()
         val profileList = JFXListView<Label>()
         var loadedProfiles = false
@@ -153,253 +154,256 @@ object LauncherScene {
                 }
             }
         }
-        val mainListView = JFXListView<String>().apply {
-            background = Background.EMPTY
-            styleClass.add("mylistview")
-            items.add(translator.get("news"))
-            items.add("Minecraft: Java Edition")
-            items.add(translator.get("settings"))
-            items.add(translator.get("about"))
-            border = null
-            selectionModel.selectedItemProperty().addListener { observerable, oldValue, newValue ->
-                when (newValue) {
-                    translator.get("news") -> { mainBorderPane.center = Label("News") }
-                    "Minecraft: Java Edition" -> {
-                        if (!loadedProfiles) {
-                            val iterator = launcherProfiles.iterator()
-                            while (iterator.hasNext()) {
-                                val obj = JSON.toJSON(iterator.next()) as JSONObject
-                                val nomo = obj.getString("name")
-                                profileList.items.add(Label(nomo))
-                            }
-                            profileList.selectionModel.selectFirst()
-                            loadedProfiles = true
-                        }
+        fun setMinecraftJavaEditionPane() {
+            if (!loadedProfiles) {
+                val iterator = launcherProfiles.iterator()
+                while (iterator.hasNext()) {
+                    val obj = JSON.toJSON(iterator.next()) as JSONObject
+                    val nomo = obj.getString("name")
+                    profileList.items.add(Label(nomo))
+                }
+                profileList.selectionModel.selectFirst()
+                loadedProfiles = true
+            }
 
-                        val tabPane = JFXTabPane()
-                        val gridPane1 = GridPane()
-                        gridPane1.hgap = 10.0
-                        gridPane1.vgap = 10.0
-                        gridPane1.add(JFXButton(translator.get("launch")).apply {
-                            buttonType = JFXButton.ButtonType.RAISED
-                            background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
-                            setOnAction {
-                                this.isDisable = true
-                                val prof = launcherProfiles.getJSONObject(profileList.selectionModel.selectedIndex)
-                                val autoConnectServer = prof.getString("auto-connect-server")
-                                val autoConnectServerSplit = autoConnectServer.split(":")
-                                val port = if (autoConnectServerSplit.size==1) {
-                                    "25565"
-                                } else {
-                                    autoConnectServerSplit[1]
-                                }
-                                val width = prof.getString("width")
-                                val height = prof.getString("height")
-                                if (userInformation is OfflineUserInformation) {
-                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username()), Toolkit.getJavaPath(), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
-                                        this.isDisable = false
-                                    }
-                                } else if (userInformation is YggdrasilUserInformation) {
-                                    Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken()), Toolkit.getJavaPath(), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
-                                        this.isDisable = false
-                                    }
-                                }
-                            }
-                        }, 2, 2)
-                        tabPane.tabs.addAll(Tab(translator.get("play")).apply {
-                            content = gridPane1
-                        }, Tab(translator.get("installations")).apply {
-                            val installations = GridPane()
-                            installations.addRow(0, JFXButton(translator.get("add")).apply {
-                                buttonType = JFXButton.ButtonType.RAISED
-                                background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
-                                setOnAction {
-                                    val secondStage = Stage()
-                                    secondStage.scene = Scene(GridPane().apply {
-                                        addColumn( 0, Label(translator.get("newprofile")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")))
-                                        val nameField = JFXTextField()
-                                        val verField = JFXTextField()
-                                        val dirField = JFXTextField()
-                                        add(nameField, 1, 1)
-                                        add(verField, 1, 2)
-                                        add(dirField, 1, 3)
-                                        add(JFXButton(translator.get("cancel")).apply {
-                                            setOnAction {
-                                                secondStage.close()
-                                            }
-                                        }, 0, 5)
-                                        add(JFXButton(translator.get("add")).apply {
-                                            setOnAction {
-                                                val nm = nameField.text
-                                                launcherProfiles.add(JSONObject(mapOf(Pair("name", nm), Pair("version", verField.text), Pair("directory", dirField.text), Pair("width", "auto"), Pair("height", "auto"), Pair("jvm-args", "-Xmx2G"), Pair("auto-connect", "false"), Pair("auto-connect-server", "true"), Pair("res-game-directory-separate", "false"), Pair("game-directory", "none"))))
-                                                File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
-                                                profileList.items.add(Label(nm))
-                                                secondStage.close()
-                                            }
-                                        }, 1, 5)
-                                    }, 420.0, 251.0)
-                                    secondStage.show()
-                                }
-                            }, JFXButton(translator.get("remove")).apply {
-                                buttonType = JFXButton.ButtonType.RAISED
-                                background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
-                                setOnAction {
-                                    val theIndex = profileList.selectionModel.selectedIndex
-                                    val theObj = launcherProfiles[theIndex]
-                                    launcherProfiles.remove(theObj)
-                                    File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
-                                    profileList.items.removeAt(theIndex)
-                                }
-                            }, JFXButton(translator.get("edit")).apply {
-                                buttonType = JFXButton.ButtonType.RAISED
-                                background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
-                                setOnAction {
-                                    val secondStage = Stage()
-                                    val theIndex = profileList.selectionModel.selectedIndex
-                                    val theObj = launcherProfiles[theIndex] as JSONObject
-                                    secondStage.scene = Scene(GridPane().apply {
-                                        addColumn( 0, Label(translator.get("edit")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")), Label("Folder Separate"), Label("game-dir"))
-                                        val nameField = JFXTextField()
-                                        val verField = JFXTextField()
-                                        val dirField = JFXTextField()
-                                        val resGameDirectorySeparateBox = JFXCheckBox()
-                                        val gameDirField = JFXTextField()
-                                        nameField.text = theObj.getString("name")
-                                        verField.text = theObj.getString("version")
-                                        dirField.text = theObj.getString("directory")
-                                        resGameDirectorySeparateBox.isSelected = theObj.getString("res-game-directory-separate")=="true"
-                                        gameDirField.text = theObj.getString("game-directory")
-                                        add(nameField, 1, 1)
-                                        add(verField, 1, 2)
-                                        add(dirField, 1, 3)
-                                        add(resGameDirectorySeparateBox, 1, 4)
-                                        add(Hyperlink("What is this?").apply {
-                                            setOnAction {
-                                                FolderSeparateIntroduction().show()
-                                            }
-                                        }, 2, 4)
-                                        add(gameDirField, 1, 5)
-                                        add(Label("If you don't want split folder, please keep it 'none'"), 1, 6)
-                                        add(JFXButton(translator.get("cancel")).apply {
-                                            setOnAction {
-                                                secondStage.close()
-                                            }
-                                        }, 0, 7)
-                                        add(JFXButton(translator.get("edit")).apply {
-                                            setOnAction {
-                                                theObj.set("name", nameField.text)
-                                                theObj.set("version", verField.text)
-                                                theObj.set("directory", dirField.text)
-                                                theObj.set("res-game-directory-separate", resGameDirectorySeparateBox.isSelected.toString())
-                                                theObj.set("game-directory", gameDirField.text)
-                                                profileList.items[theIndex].text = nameField.text
-                                                File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
-                                                secondStage.close()
-                                            }
-                                        }, 1, 7)
-                                    }, 600.0, 251.0)
-                                    secondStage.show()
-                                }
-                            }, JFXButton(translator.get("customizing")).apply {
-                                buttonType = JFXButton.ButtonType.RAISED
-                                background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
-                                setOnAction {
-                                    val secondStage = Stage()
-                                    val theIndex = profileList.selectionModel.selectedIndex
-                                    val theObj = launcherProfiles[theIndex] as JSONObject
-                                    secondStage.scene = Scene(GridPane().apply {
-                                        addColumn( 0, Label(translator.get("customizing")), Label(translator.get("width")), Label(translator.get("height")), Label(translator.get("jvm-args")), Label(translator.get("auto-connect")), Label(translator.get("auto-connect-server")))
-                                        val widthField = JFXTextField()
-                                        val heightField = JFXTextField()
-                                        val jvmArgsField = JFXTextField()
-                                        val autoConnectBox = JFXCheckBox()
-                                        val autoConnectServerField = JFXTextField()
-                                        widthField.text = theObj.getString("width")
-                                        heightField.text = theObj.getString("height")
-                                        jvmArgsField.text = theObj.getString("jvm-args")
-                                        autoConnectBox.isSelected = theObj.getString("auto-connect")=="true"
-                                        autoConnectServerField.text = theObj.getString("auto-connect-server")
-                                        add(widthField, 1, 1)
-                                        add(heightField, 1, 2)
-                                        add(jvmArgsField, 1, 3)
-                                        add(autoConnectBox, 1, 4)
-                                        add(autoConnectServerField, 1, 5)
-                                        add(JFXButton(translator.get("cancel")).apply {
-                                            setOnAction {
-                                                secondStage.close()
-                                            }
-                                        }, 0, 7)
-                                        add(JFXButton(translator.get("edit")).apply {
-                                            setOnAction {
-                                                theObj.set("width", widthField.text)
-                                                theObj.set("height", heightField.text)
-                                                theObj.set("jvm-args", jvmArgsField.text)
-                                                theObj.set("auto-connect", autoConnectBox.isSelected.toString())
-                                                theObj.set("auto-connect-server", autoConnectServerField.text)
-                                                File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
-                                                secondStage.close()
-                                            }
-                                        }, 1, 7)
-                                    }, 420.0, 251.0)
-                                    secondStage.show()
-                                }
-                            })
-                            profileList.selectionModel.selectedItemProperty().addListener { observable, oldValue, newValue ->
-                                modsBorderPane.apply {
-                                    prepareModsBorderPane()
-                                }
-                            }
-                            val instBorderPane = BorderPane()
-                            instBorderPane.top = installations
-                            instBorderPane.center = profileList
-                            content = instBorderPane
-                        }, Tab(translator.get("mods")).apply {
-                            content = modsBorderPane.apply {
-                                prepareModsBorderPane()
-                            }
-                        }, Tab(translator.get("skin")).apply {
-                            if (userInformation is YggdrasilUserInformation) {
-                                content = Label("This feature is not supported now.")
-                            } else {
-                                content = Label("Offline mode not support Skin. Please buy Minecraft.")
-                            }
-                        }, Tab(translator.get("download")).apply {
-                            content = VBox().apply {
-                                alignment = Pos.CENTER
-                                spacing = 10.0
-                                children.add(JFXButton("Minecraft").apply {
-                                    buttonType = JFXButton.ButtonType.RAISED
-                                    background = Background(BackgroundFill(Color.LIGHTGREEN, null, null))
-                                    setOnAction {
-                                        primaryStage.scene = MinecraftDownloadScene.get(translator, userInformation, primaryStage, theScene)
-                                    }
-                                })
-                                children.add(JFXButton("Forge").apply {
-                                    buttonType = JFXButton.ButtonType.RAISED
-                                    background = Background(BackgroundFill(Color.DARKGRAY, null, null))
-                                    setOnAction {
-                                        // TODO Download Forge
-                                    }
-                                })
-                                children.add(JFXButton("Optifine").apply {
-                                    buttonType = JFXButton.ButtonType.RAISED
-                                    background = Background(BackgroundFill(Color.NAVAJOWHITE, null, null))
-                                    setOnAction {
-                                        // TODO Download Optifine
-                                    }
-                                })
-                                children.add(JFXButton("Fabric").apply {
-                                    buttonType = JFXButton.ButtonType.RAISED
-                                    background = Background(BackgroundFill(Color.LIGHTCYAN, null, null))
-                                    setOnAction {
-                                        // TODO Download Fabric
-                                    }
-                                })
-                            }
-                        })
-                        mainBorderPane.center = tabPane
+            val tabPane = JFXTabPane()
+            val gridPane1 = GridPane()
+            gridPane1.hgap = 10.0
+            gridPane1.vgap = 10.0
+            gridPane1.add(JFXButton(translator.get("launch")).apply {
+                buttonType = JFXButton.ButtonType.RAISED
+                background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                setOnAction {
+                    this.isDisable = true
+                    val prof = launcherProfiles.getJSONObject(profileList.selectionModel.selectedIndex)
+                    val autoConnectServer = prof.getString("auto-connect-server")
+                    val autoConnectServerSplit = autoConnectServer.split(":")
+                    val port = if (autoConnectServerSplit.size==1) {
+                        "25565"
+                    } else {
+                        autoConnectServerSplit[1]
                     }
-                    translator.get("settings") -> { mainBorderPane.center = GridPane().apply {
+                    val width = prof.getString("width")
+                    val height = prof.getString("height")
+                    if (userInformation is OfflineUserInformation) {
+                        Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username()), Toolkit.getJavaPath(), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
+                            this.isDisable = false
+                        }
+                    } else if (userInformation is YggdrasilUserInformation) {
+                        Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken()), Toolkit.getJavaPath(), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
+                            this.isDisable = false
+                        }
+                    }
+                }
+            }, 2, 2)
+            tabPane.tabs.addAll(Tab(translator.get("play")).apply {
+                content = gridPane1
+            }, Tab(translator.get("installations")).apply {
+                val installations = GridPane()
+                installations.addRow(0, JFXButton(translator.get("add")).apply {
+                    buttonType = JFXButton.ButtonType.RAISED
+                    background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                    setOnAction {
+                        val secondStage = Stage()
+                        secondStage.scene = Scene(GridPane().apply {
+                            addColumn( 0, Label(translator.get("newprofile")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")))
+                            val nameField = JFXTextField()
+                            val verField = JFXTextField()
+                            val dirField = JFXTextField()
+                            add(nameField, 1, 1)
+                            add(verField, 1, 2)
+                            add(dirField, 1, 3)
+                            add(JFXButton(translator.get("cancel")).apply {
+                                setOnAction {
+                                    secondStage.close()
+                                }
+                            }, 0, 5)
+                            add(JFXButton(translator.get("add")).apply {
+                                setOnAction {
+                                    val nm = nameField.text
+                                    launcherProfiles.add(JSONObject(mapOf(Pair("name", nm), Pair("version", verField.text), Pair("directory", dirField.text), Pair("width", "auto"), Pair("height", "auto"), Pair("jvm-args", "-Xmx2G"), Pair("auto-connect", "false"), Pair("auto-connect-server", "true"), Pair("res-game-directory-separate", "false"), Pair("game-directory", "none"))))
+                                    File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
+                                    profileList.items.add(Label(nm))
+                                    secondStage.close()
+                                }
+                            }, 1, 5)
+                        }, 420.0, 251.0)
+                        secondStage.show()
+                    }
+                }, JFXButton(translator.get("remove")).apply {
+                    buttonType = JFXButton.ButtonType.RAISED
+                    background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                    setOnAction {
+                        val theIndex = profileList.selectionModel.selectedIndex
+                        val theObj = launcherProfiles[theIndex]
+                        launcherProfiles.remove(theObj)
+                        File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
+                        profileList.items.removeAt(theIndex)
+                    }
+                }, JFXButton(translator.get("edit")).apply {
+                    buttonType = JFXButton.ButtonType.RAISED
+                    background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                    setOnAction {
+                        val secondStage = Stage()
+                        val theIndex = profileList.selectionModel.selectedIndex
+                        val theObj = launcherProfiles[theIndex] as JSONObject
+                        secondStage.scene = Scene(GridPane().apply {
+                            addColumn( 0, Label(translator.get("edit")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")), Label("Folder Separate"), Label("game-dir"))
+                            val nameField = JFXTextField()
+                            val verField = JFXTextField()
+                            val dirField = JFXTextField()
+                            val resGameDirectorySeparateBox = JFXCheckBox()
+                            val gameDirField = JFXTextField()
+                            nameField.text = theObj.getString("name")
+                            verField.text = theObj.getString("version")
+                            dirField.text = theObj.getString("directory")
+                            resGameDirectorySeparateBox.isSelected = theObj.getString("res-game-directory-separate")=="true"
+                            gameDirField.text = theObj.getString("game-directory")
+                            add(nameField, 1, 1)
+                            add(verField, 1, 2)
+                            add(dirField, 1, 3)
+                            add(resGameDirectorySeparateBox, 1, 4)
+                            add(Hyperlink("What is this?").apply {
+                                setOnAction {
+                                    FolderSeparateIntroduction().show()
+                                }
+                            }, 2, 4)
+                            add(gameDirField, 1, 5)
+                            add(Label("If you don't want split folder, please keep it 'none'"), 1, 6)
+                            add(JFXButton(translator.get("cancel")).apply {
+                                setOnAction {
+                                    secondStage.close()
+                                }
+                            }, 0, 7)
+                            add(JFXButton(translator.get("edit")).apply {
+                                setOnAction {
+                                    theObj.set("name", nameField.text)
+                                    theObj.set("version", verField.text)
+                                    theObj.set("directory", dirField.text)
+                                    theObj.set("res-game-directory-separate", resGameDirectorySeparateBox.isSelected.toString())
+                                    theObj.set("game-directory", gameDirField.text)
+                                    profileList.items[theIndex].text = nameField.text
+                                    File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
+                                    secondStage.close()
+                                }
+                            }, 1, 7)
+                        }, 600.0, 251.0)
+                        secondStage.show()
+                    }
+                }, JFXButton(translator.get("customizing")).apply {
+                    buttonType = JFXButton.ButtonType.RAISED
+                    background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                    setOnAction {
+                        val secondStage = Stage()
+                        val theIndex = profileList.selectionModel.selectedIndex
+                        val theObj = launcherProfiles[theIndex] as JSONObject
+                        secondStage.scene = Scene(GridPane().apply {
+                            addColumn( 0, Label(translator.get("customizing")), Label(translator.get("width")), Label(translator.get("height")), Label(translator.get("jvm-args")), Label(translator.get("auto-connect")), Label(translator.get("auto-connect-server")))
+                            val widthField = JFXTextField()
+                            val heightField = JFXTextField()
+                            val jvmArgsField = JFXTextField()
+                            val autoConnectBox = JFXCheckBox()
+                            val autoConnectServerField = JFXTextField()
+                            widthField.text = theObj.getString("width")
+                            heightField.text = theObj.getString("height")
+                            jvmArgsField.text = theObj.getString("jvm-args")
+                            autoConnectBox.isSelected = theObj.getString("auto-connect")=="true"
+                            autoConnectServerField.text = theObj.getString("auto-connect-server")
+                            add(widthField, 1, 1)
+                            add(heightField, 1, 2)
+                            add(jvmArgsField, 1, 3)
+                            add(autoConnectBox, 1, 4)
+                            add(autoConnectServerField, 1, 5)
+                            add(JFXButton(translator.get("cancel")).apply {
+                                setOnAction {
+                                    secondStage.close()
+                                }
+                            }, 0, 7)
+                            add(JFXButton(translator.get("edit")).apply {
+                                setOnAction {
+                                    theObj.set("width", widthField.text)
+                                    theObj.set("height", heightField.text)
+                                    theObj.set("jvm-args", jvmArgsField.text)
+                                    theObj.set("auto-connect", autoConnectBox.isSelected.toString())
+                                    theObj.set("auto-connect-server", autoConnectServerField.text)
+                                    File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
+                                    secondStage.close()
+                                }
+                            }, 1, 7)
+                        }, 420.0, 251.0)
+                        secondStage.show()
+                    }
+                })
+                profileList.selectionModel.selectedItemProperty().addListener { observable, oldValue, newValue ->
+                    modsBorderPane.apply {
+                        prepareModsBorderPane()
+                    }
+                }
+                val instBorderPane = BorderPane()
+                instBorderPane.top = installations
+                instBorderPane.center = profileList
+                content = instBorderPane
+            }, Tab(translator.get("mods")).apply {
+                content = modsBorderPane.apply {
+                    prepareModsBorderPane()
+                }
+            }, Tab(translator.get("skin")).apply {
+                if (userInformation is YggdrasilUserInformation) {
+                    content = Label("This feature is not supported now.")
+                } else {
+                    content = Label("Offline mode not support Skin. Please buy Minecraft.")
+                }
+            }, Tab(translator.get("download")).apply {
+                content = VBox().apply {
+                    alignment = Pos.CENTER
+                    spacing = 10.0
+                    children.add(JFXButton("Minecraft").apply {
+                        buttonType = JFXButton.ButtonType.RAISED
+                        background = Background(BackgroundFill(Color.LIGHTGREEN, null, null))
+                        setOnAction {
+                            primaryStage.scene = MinecraftDownloadScene.get(translator, userInformation, primaryStage, theScene)
+                        }
+                    })
+                    children.add(JFXButton("Forge").apply {
+                        buttonType = JFXButton.ButtonType.RAISED
+                        background = Background(BackgroundFill(Color.DARKGRAY, null, null))
+                        setOnAction {
+                            // TODO Download Forge
+                        }
+                    })
+                    children.add(JFXButton("Optifine").apply {
+                        buttonType = JFXButton.ButtonType.RAISED
+                        background = Background(BackgroundFill(Color.NAVAJOWHITE, null, null))
+                        setOnAction {
+                            // TODO Download Optifine
+                        }
+                    })
+                    children.add(JFXButton("Fabric").apply {
+                        buttonType = JFXButton.ButtonType.RAISED
+                        background = Background(BackgroundFill(Color.LIGHTCYAN, null, null))
+                        setOnAction {
+                            // TODO Download Fabric
+                        }
+                    })
+                }
+            })
+            mainBorderPane.center = tabPane
+        }
+        val mainListView = VBox().apply {
+            style = "-fx-background-color:#ffffff55"
+            children.add(JFXButton(translator.get("news")).apply {
+                setOnAction {
+                    mainBorderPane.center = Label("News")
+                }
+            })
+            children.add(JFXButton("Minecraft: Java Edition").apply {
+                setOnAction {
+                    setMinecraftJavaEditionPane()
+                }
+            })
+            children.add(JFXButton(translator.get("settings")).apply {
+                setOnAction {
+                    mainBorderPane.center = GridPane().apply {
                         add(Label(if (userInformation is OfflineUserInformation) userInformation.username()+" - Offline" else if (userInformation is YggdrasilUserInformation) userInformation.username()+" - Yggdrasil" else "Unknown User" ).apply {
                             GridPane.setHalignment(this, HPos.CENTER)
                         }, 0, 0)
@@ -435,16 +439,23 @@ object LauncherScene {
                                 Toolkit.setJavaPath(javaPathField.text)
                             }
                         }, 2, 4)
-                    } }
-                    translator.get("about") -> {
-                        mainBorderPane.center = Label("IDEA Minecraft Launcher\nDeveloper: ResetPower\nGitHub: https://github.com/resetpower/imcl\nVersion Name: $VERSION_NAME\nVersion Code: $VERSION_CODE\nOpen Source Software")
                     }
                 }
-            }
-            selectionModel.select("Minecraft: Java Edition")
+            })
+            children.add(JFXButton(translator.get("about")).apply {
+                setOnAction {
+                    mainBorderPane.center = Label("IDEA Minecraft Launcher\nDeveloper: ResetPower\nGitHub: https://github.com/resetpower/imcl\nVersion Name: $VERSION_NAME\nVersion Code: $VERSION_CODE\nOpen Source Software")
+                }
+            })
         }
         mainBorderPane.left = mainListView
-        theScene = Scene(mainBorderPane, 840.0, 502.0)
+        setMinecraftJavaEditionPane()
+        theScene = Scene(AnchorPane().apply {
+            children.add(ImageView(Image("file://"+File("imcl/res/bg.png").absolutePath, 840.0, 502.5, false, true)))
+            children.add(mainBorderPane.apply {
+                setPrefSize(840.0, 502.5)
+            })
+        }, 840.0, 502.0)
         return theScene
     }
 }

@@ -1,11 +1,11 @@
 package org.imcl.toolkit
 
-import java.io.File
+import java.io.Reader
 
-class MyProperties(val file: File) {
+class MyProperties(private val reader: Reader) {
     val map = HashMap<String, String>()
     init {
-        for (i in file.readLines()) {
+        for (i in reader.readLines()) {
             if (i.trim()!=""&&(!i.startsWith("#"))) {
                 val spl = i.split("=")
                 map.put(spl[0], spl[1])

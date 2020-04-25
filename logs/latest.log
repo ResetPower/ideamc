@@ -1,11 +1,10 @@
-[2242020 15:14:28.263] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--username, Zhangsan, --version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --assetIndex, 1.15, --uuid, -1367960428, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release, --launchTarget, fmlclient, --fml.forgeVersion, 31.1.0, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20200122.131323]
-[2242020 15:14:28.266] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.0.0-milestone.4+67+b1a340b starting: java version 1.8.0_221 by Oracle Corporation
-[2242020 15:14:28.429] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
-[2242020 15:14:29.230] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmlclient' with arguments [--version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --uuid, -1367960428, --username, Zhangsan, --assetIndex, 1.15, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release]
-[2242020 15:14:30.570] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Zhangsan
-[2242020 15:14:35.281] [Render thread/WARN] [net.minecraft.client.GameSettings/]: Skipping bad option: textBackgroundOpacity:
-[2242020 15:14:35.299] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.1 build 12
-[2242020 15:14:35.326] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+[2442020 11:02:57.301] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--username, zs, --version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --assetIndex, 1.15, --uuid, 3897, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release, --launchTarget, fmlclient, --fml.forgeVersion, 31.1.0, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20200122.131323]
+[2442020 11:02:57.307] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.0.0-milestone.4+67+b1a340b starting: java version 1.8.0_221 by Oracle Corporation
+[2442020 11:02:57.556] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[2442020 11:02:58.703] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmlclient' with arguments [--version, 1.15.2-forge-31.1.0, --gameDir, /Users/resetpower/Library/Application Support/minecraft, --assetsDir, /Users/resetpower/Library/Application Support/minecraft/assets, --uuid, 3897, --username, zs, --assetIndex, 1.15, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang, --versionType, release]
+[2442020 11:03:00.611] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: zs
+[2442020 11:03:06.903] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.1 build 12
+[2442020 11:03:06.932] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
 Possible reasons:
 	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
 	b) The classpath contains jar files of an older LWJGL version.
@@ -13,7 +12,7 @@ Possible solutions:
 	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
 	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
 	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2242020 15:14:35.341] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+[2442020 11:03:06.966] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
 Possible reasons:
 	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
 	b) The classpath contains jar files of an older LWJGL version.
@@ -21,7 +20,7 @@ Possible solutions:
 	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
 	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
 	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2242020 15:14:35.382] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+[2442020 11:03:07.002] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
 Possible reasons:
 	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
 	b) The classpath contains jar files of an older LWJGL version.
@@ -29,7 +28,7 @@ Possible solutions:
 	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
 	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
 	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2242020 15:14:35.640] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+[2442020 11:03:07.406] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
 Possible reasons:
 	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
 	b) The classpath contains jar files of an older LWJGL version.
@@ -37,7 +36,7 @@ Possible solutions:
 	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
 	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
 	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2242020 15:14:36.032] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+[2442020 11:03:07.967] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
 Possible reasons:
 	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
 	b) The classpath contains jar files of an older LWJGL version.
@@ -45,26 +44,25 @@ Possible solutions:
 	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
 	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
 	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2242020 15:14:36.533] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput has copied library to native directory.
-[2242020 15:14:36.539] [modloading-worker-13/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.1.0, for MC 1.15.2 with MCP 20200122.131323
-[2242020 15:14:36.542] [modloading-worker-13/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.1.0 Initialized
-[2242020 15:14:36.693] [modloading-worker-15/INFO] [CocoaInput:ObjC/]: Libcocoainput was built on Feb 12 2020 03:01:48.
-[2242020 15:14:36.694] [modloading-worker-15/INFO] [CocoaInput:ObjC/]: CocoaInput is being initialized.Now running thread for modify GLFWview .
-[2242020 15:14:36.694] [modloading-worker-15/INFO] [CocoaInput:Java/]: DarwinController has been initialized.
-[2242020 15:14:36.694] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput is now using controller:class jp.axer.cocoainput.arch.darwin.DarwinController
-[2242020 15:14:36.695] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput has been initialized.
-[2242020 15:14:38.699] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources, Depixel1.15.zip
-[2242020 15:14:38.952] [Thread-6/INFO] [CocoaInput:ObjC/]: Complete to modify GLFWView
-[2242020 15:14:40.696] [modloading-worker-4/INFO] [STDOUT/]: [de.guntram.mcmod.durabilityviewer.DurabilityViewer:init:42]: on Init, confHandler is de.guntram.mcmod.durabilityviewer.handler.ConfigurationHandler@3fb09a1d
-[2242020 15:14:40.786] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[2242020 15:14:40.939] [Render thread/INFO] [STDOUT/]: [com.mamiyaotaru.voxelmap.Map:<init>:423]: CATEGORY ORDER IS 7
-[2242020 15:14:41.104] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x256 waypoints-atlas
-[2242020 15:14:41.264] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x128 chooser-atlas
-[2242020 15:14:41.587] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 512x512 mobs-atlas
-[2242020 15:14:41.699] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 64x64 pings-atlas
-[2242020 15:14:42.614] [modloading-worker-9/INFO] [Waila/]: Registered plugin at mcp.mobius.waila.addons.minecraft.PluginMinecraft
-[2242020 15:14:42.868] [Render thread/WARN] [net.minecraft.client.GameSettings/]: Skipping bad option: textBackgroundOpacity:
-[2242020 15:14:42.929] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
+[2442020 11:03:08.711] [modloading-worker-13/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.1.0, for MC 1.15.2 with MCP 20200122.131323
+[2442020 11:03:08.712] [modloading-worker-13/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.1.0 Initialized
+[2442020 11:03:08.713] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput has copied library to native directory.
+[2442020 11:03:08.818] [modloading-worker-15/INFO] [CocoaInput:ObjC/]: Libcocoainput was built on Feb 12 2020 03:01:48.
+[2442020 11:03:08.818] [modloading-worker-15/INFO] [CocoaInput:ObjC/]: CocoaInput is being initialized.Now running thread for modify GLFWview .
+[2442020 11:03:08.819] [modloading-worker-15/INFO] [CocoaInput:Java/]: DarwinController has been initialized.
+[2442020 11:03:08.819] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput is now using controller:class jp.axer.cocoainput.arch.darwin.DarwinController
+[2442020 11:03:08.820] [modloading-worker-15/INFO] [CocoaInput:Java/]: CocoaInput has been initialized.
+[2442020 11:03:11.801] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources, Depixel1.15.zip
+[2442020 11:03:15.062] [modloading-worker-4/INFO] [STDOUT/]: [de.guntram.mcmod.durabilityviewer.DurabilityViewer:init:42]: on Init, confHandler is de.guntram.mcmod.durabilityviewer.handler.ConfigurationHandler@17c4efe9
+[2442020 11:03:15.185] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[2442020 11:03:15.432] [Render thread/INFO] [STDOUT/]: [com.mamiyaotaru.voxelmap.Map:<init>:423]: CATEGORY ORDER IS 7
+[2442020 11:03:15.760] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x256 waypoints-atlas
+[2442020 11:03:15.925] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 256x128 chooser-atlas
+[2442020 11:03:16.694] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 512x512 mobs-atlas
+[2442020 11:03:16.761] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 31.1.0 Target: null
+[2442020 11:03:16.891] [Render thread/INFO] [com.mamiyaotaru.voxelmap.textures.TextureAtlas/]: Created: 64x64 pings-atlas
+[2442020 11:03:18.775] [modloading-worker-9/INFO] [Waila/]: Registered plugin at mcp.mobius.waila.addons.minecraft.PluginMinecraft
+[2442020 11:03:19.283] [Render thread/INFO] [STDERR/]: [org.lwjgl.system.Library:checkHash:467]: [LWJGL] [ERROR] Incompatible Java and native library versions detected.
 Possible reasons:
 	a) -Djava.library.path is set to a folder containing shared libraries of an older LWJGL version.
 	b) The classpath contains jar files of an older LWJGL version.
@@ -72,20 +70,18 @@ Possible solutions:
 	a) Make sure to not set -Djava.library.path (it is not needed for developing with LWJGL 3) or make
 	   sure the folder it points to contains the shared libraries of the correct LWJGL version.
 	b) Check the classpath and make sure to only have jar files of the same LWJGL version in it.
-[2242020 15:14:42.982] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 31.1.0 Target: null
-[2242020 15:14:43.008] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
-[2242020 15:14:43.011] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
-[2242020 15:14:43.177] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
-[2242020 15:14:43.178] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x2048x4 minecraft:textures/atlas/blocks.png-atlas
-[2242020 15:14:43.191] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[2242020 15:14:43.191] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[2242020 15:14:43.193] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[2242020 15:14:43.196] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
-[2242020 15:14:43.197] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
-[2242020 15:14:43.198] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[2242020 15:14:43.596] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
-[2242020 15:14:43.597] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
-[2242020 15:14:43.598] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
-[2242020 15:14:48.784] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[2242020 15:15:12.692] [Render thread/WARN] [net.minecraft.client.gui.screen.MultiplayerScreen/]: Unable to start LAN server detection: Can't assign requested address
-[2242020 15:15:31.892] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[2442020 11:03:19.456] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[2442020 11:03:19.460] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[2442020 11:03:19.707] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
+[2442020 11:03:19.708] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x2048x4 minecraft:textures/atlas/blocks.png-atlas
+[2442020 11:03:19.727] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[2442020 11:03:19.728] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[2442020 11:03:19.732] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[2442020 11:03:19.736] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/chest.png-atlas
+[2442020 11:03:19.737] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/beds.png-atlas
+[2442020 11:03:19.740] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[2442020 11:03:21.107] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x0 minecraft:textures/atlas/particles.png-atlas
+[2442020 11:03:21.111] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x0 minecraft:textures/atlas/paintings.png-atlas
+[2442020 11:03:21.112] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/mob_effects.png-atlas
+[2442020 11:03:23.437] [Thread-9/INFO] [CocoaInput:ObjC/]: Complete to modify GLFWView
+[2442020 11:03:24.713] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
