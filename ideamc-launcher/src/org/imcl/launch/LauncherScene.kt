@@ -219,7 +219,7 @@ object LauncherScene {
                             add(JFXButton(translator.get("add")).apply {
                                 setOnAction {
                                     val nm = nameField.text
-                                    launcherProfiles.add(JSONObject(mapOf(Pair("name", nm), Pair("version", verField.text), Pair("directory", dirField.text), Pair("width", "auto"), Pair("height", "auto"), Pair("jvm-args", ""), Pair("auto-connect", "false"), Pair("auto-connect-server", "true"), Pair("res-game-directory-separate", "false"), Pair("game-directory", "none"))))
+                                    launcherProfiles.add(JSONObject(mapOf(Pair("name", nm), Pair("version", verField.text), Pair("directory", dirField.text), Pair("width", "auto"), Pair("height", "auto"), Pair("jvm-args", ""), Pair("auto-connect", "false"), Pair("auto-connect-server", "none"), Pair("res-game-directory-separate", "false"), Pair("game-directory", "none"))))
                                     File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
                                     profileList.items.add(Label(nm))
                                     secondStage.close()

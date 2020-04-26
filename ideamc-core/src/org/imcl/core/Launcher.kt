@@ -406,14 +406,10 @@ object Launcher {
                 }
             }
         }
-        if (isHigherThan1_13) {
-            cpBuff.append("${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}.jar")
+        if (inheritsFrom!=null) {
+            cpBuff.append("${launchOptions.dir}${separator}versions${separator}$inheritsFrom${separator}$inheritsFrom.jar")
         } else {
-            if (inheritsFrom!=null) {
-                cpBuff.append("${launchOptions.dir}${separator}versions${separator}$inheritsFrom${separator}$inheritsFrom.jar")
-            } else {
-                cpBuff.append("${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}.jar")
-            }
+            cpBuff.append("${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}.jar")
         }
         sb.append("${cpBuff.removeSuffix(if (os==OS.Windows||os==OS.Windows10) ";" else ":")}\" ")
         sb.append(jsonObject.get("mainClass"))

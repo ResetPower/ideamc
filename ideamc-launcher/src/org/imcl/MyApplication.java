@@ -7,6 +7,7 @@ import org.imcl.constraints.MenuBarLoader;
 import org.imcl.constraints.Toolkit;
 import org.imcl.core.authentication.YggdrasilAuthenticator;
 import org.imcl.exceptions.GlobalExceptionHandler;
+import org.imcl.files.FileChecker;
 import org.imcl.lang.Translator;
 import org.imcl.launch.LauncherScene;
 import org.imcl.main.MainScene;
@@ -22,6 +23,7 @@ public class MyApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         GlobalExceptionHandler.INSTANCE.init();
+        FileChecker.INSTANCE.check();
         MenuBarLoader.load();
         primaryStage.setTitle("IDEA Minecraft Launcher");
         primaryStage.setOnCloseRequest(event -> Platform.exit());
