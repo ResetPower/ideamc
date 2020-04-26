@@ -43,12 +43,18 @@ object Launcher {
         }
         Thread {
             Log.i("Generating $os Launch Script!")
-            val p = if (os==OS.MacOS||os==OS.Linux) {
-                Runtime.getRuntime().exec(arrayOf("sh", "-c", generateLaunchScript(launchOptions, jsonObject, os)), null, File(launchOptions.dir))
-            } else if (os==OS.Windows||os==OS.Windows10) {
-                Runtime.getRuntime().exec(arrayOf(generateLaunchScript(launchOptions, jsonObject, os)), null, File(launchOptions.dir))
+            val cmd = if (jsonObject.containsKey("patches")) {
+                generateLaunchScript(launchOptions, jsonObject.getJSONArray("patches").getJSONObject(0), os)
             } else {
-                Runtime.getRuntime().exec(arrayOf(generateLaunchScript(launchOptions, jsonObject, os)), null, File(launchOptions.dir))
+                generateLaunchScript(launchOptions, jsonObject, os)
+            }
+            Log.i("Generated Launch Script\n$cmd")
+            val p = if (os==OS.MacOS||os==OS.Linux) {
+                Runtime.getRuntime().exec(arrayOf("sh", "-c", cmd), null, File(launchOptions.dir))
+            } else if (os==OS.Windows||os==OS.Windows10) {
+                Runtime.getRuntime().exec(arrayOf("cmd.exe", "/C", cmd), null, File(launchOptions.dir))
+            } else {
+                Runtime.getRuntime().exec(arrayOf(cmd), null, File(launchOptions.dir))
             }
             val fis: InputStream = p.inputStream
             val isr = InputStreamReader(fis)
@@ -67,9 +73,9 @@ object Launcher {
         return if (os==OS.MacOS) {
             "\"${launchOptions.javaPath}\" ${if (isHigherThan1_13) "-XstartOnFirstThread" else ""} ${launchOptions.jvmArgs} -Djava.library.path=\"${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}-natives\" "
         } else if (os==OS.Windows10) {
-            "\"${launchOptions.javaPath}\" ${if (isHigherThan1_13) "-XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump \"-Dos.name=Windows 10\" -Dos.version=10.0" else ""} ${launchOptions.jvmArgs} \"-Djava.library.path=${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}-natives\" "
+            "\"${launchOptions.javaPath}\" -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump \"-Dos.name=Windows 10\" -Dos.version=10.0 ${launchOptions.jvmArgs} \"-Djava.library.path=${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}-natives\" "
         } else if (os==OS.Windows) {
-            "\"${launchOptions.javaPath}\" ${if (isHigherThan1_13) "-XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump" else ""} ${launchOptions.jvmArgs} \"-Djava.library.path=${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}-natives\" "
+            "\"${launchOptions.javaPath}\" -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump ${launchOptions.jvmArgs} \"-Djava.library.path=${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}-natives\" "
         } else {
             throw Exception("Not supported OS: $os")
         }

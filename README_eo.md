@@ -14,7 +14,7 @@ La projekto komenciĝis la 5an de aprilo 2020. Ĉi tiu programaro estas nuntempe
 Kurado out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## Atenton
 - La lanĉisto nun nur subtenas macOS
-- La lanĉisto nun nur subtenas la oficialan Minecraft-dosierujon
+- La lanĉisto nun nur subtenas la oficialan Minecraft-dosierujon kaj HMCL dosierujon
 - La lanĉisto nuntempe nur subtenas la puran version kaj Forge/Fabric version
 - La lanĉisto nur sukcese testis en 1.15.2 kaj 1.12.2
 - La malŝarĝa funkcio de la lanĉilo estas nuntempe tre malstabila, bonvolu ne uzi ĝin facile!

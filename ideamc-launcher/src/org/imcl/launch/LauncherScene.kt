@@ -9,11 +9,11 @@ import javafx.scene.Scene
 import javafx.scene.control.Hyperlink
 import javafx.scene.control.Label
 import javafx.scene.control.Tab
-import javafx.scene.effect.GaussianBlur
 import javafx.scene.image.Image
 import javafx.scene.image.ImageView
 import javafx.scene.layout.*
 import javafx.scene.paint.Color
+import javafx.scene.text.Font
 import javafx.stage.FileChooser
 import javafx.stage.Stage
 import org.imcl.constraints.Toolkit
@@ -23,6 +23,7 @@ import org.imcl.core.LaunchOptions
 import org.imcl.core.Launcher
 import org.imcl.core.authentication.OfflineAuthenticator
 import org.imcl.core.authentication.YggdrasilAuthenticator
+import org.imcl.core.http.HttpRequestSender
 import org.imcl.download.MinecraftDownloadScene
 import org.imcl.introductions.FolderSeparateIntroduction
 import org.imcl.lang.Translator
@@ -167,10 +168,7 @@ object LauncherScene {
             }
 
             val tabPane = JFXTabPane()
-            val gridPane1 = GridPane()
-            gridPane1.hgap = 10.0
-            gridPane1.vgap = 10.0
-            gridPane1.add(JFXButton(translator.get("launch")).apply {
+            val launchBtn = JFXButton(translator.get("launch")).apply {
                 buttonType = JFXButton.ButtonType.RAISED
                 background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
                 setOnAction {
@@ -195,9 +193,9 @@ object LauncherScene {
                         }
                     }
                 }
-            }, 2, 2)
+            }
             tabPane.tabs.addAll(Tab(translator.get("play")).apply {
-                content = gridPane1
+                content = launchBtn
             }, Tab(translator.get("installations")).apply {
                 val installations = GridPane()
                 installations.addRow(0, JFXButton(translator.get("add")).apply {
@@ -221,7 +219,7 @@ object LauncherScene {
                             add(JFXButton(translator.get("add")).apply {
                                 setOnAction {
                                     val nm = nameField.text
-                                    launcherProfiles.add(JSONObject(mapOf(Pair("name", nm), Pair("version", verField.text), Pair("directory", dirField.text), Pair("width", "auto"), Pair("height", "auto"), Pair("jvm-args", "-Xmx2G"), Pair("auto-connect", "false"), Pair("auto-connect-server", "true"), Pair("res-game-directory-separate", "false"), Pair("game-directory", "none"))))
+                                    launcherProfiles.add(JSONObject(mapOf(Pair("name", nm), Pair("version", verField.text), Pair("directory", dirField.text), Pair("width", "auto"), Pair("height", "auto"), Pair("jvm-args", ""), Pair("auto-connect", "false"), Pair("auto-connect-server", "true"), Pair("res-game-directory-separate", "false"), Pair("game-directory", "none"))))
                                     File("imcl/launcher/launcher_profiles.json").writeText(launcherProfiles.toJSONString())
                                     profileList.items.add(Label(nm))
                                     secondStage.close()
@@ -349,7 +347,32 @@ object LauncherScene {
                 }
             }, Tab(translator.get("skin")).apply {
                 if (userInformation is YggdrasilUserInformation) {
-                    content = Label("This feature is not supported now.")
+                    var con = true
+                    val result = HttpRequestSender.get("https://sessionserver.mojang.com/session/minecraft/profile/${userInformation.uuid}") {
+                        content = Label("It's look like something wrong. Please restart IMCL and retry.")
+                        con = false
+                    }
+                    if (con) {
+                        val str = JSON.parseObject(result).getJSONArray("properties").getJSONObject(0).getString("value")
+                        val decodedObj = JSON.parseObject(String(Base64.getDecoder().decode(str)))
+                        val url = decodedObj.getJSONObject("textures").getJSONObject("SKIN").getString("url")
+                        content = BorderPane().apply {
+                            top = HBox().apply {
+                                children.addAll(JFXButton("Change Skin").apply {
+                                    buttonType = JFXButton.ButtonType.RAISED
+                                    background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                                    setOnAction {
+                                    }
+                                }, JFXButton("Reset Skin").apply {
+                                    buttonType = JFXButton.ButtonType.RAISED
+                                    background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                                    setOnAction {
+                                    }
+                                })
+                            }
+                            center = ImageView(url)
+                        }
+                    }
                 } else {
                     content = Label("Offline mode not support Skin. Please buy Minecraft.")
                 }
@@ -392,24 +415,25 @@ object LauncherScene {
         val mainListView = VBox().apply {
             style = "-fx-background-color:#ffffff55"
             children.add(JFXButton(translator.get("news")).apply {
+                setPrefSize(160.0, 20.0)
                 setOnAction {
                     mainBorderPane.center = Label("News")
                 }
             })
             children.add(JFXButton("Minecraft: Java Edition").apply {
+                setPrefSize(160.0, 20.0)
                 setOnAction {
                     setMinecraftJavaEditionPane()
                 }
             })
             children.add(JFXButton(translator.get("settings")).apply {
+                setPrefSize(160.0, 20.0)
                 setOnAction {
                     mainBorderPane.center = GridPane().apply {
                         add(Label(if (userInformation is OfflineUserInformation) userInformation.username()+" - Offline" else if (userInformation is YggdrasilUserInformation) userInformation.username()+" - Yggdrasil" else "Unknown User" ).apply {
                             GridPane.setHalignment(this, HPos.CENTER)
+                            font = Font.font(15.0)
                         }, 0, 0)
-                        add(Label("").apply {
-                            GridPane.setHalignment(this, HPos.CENTER)
-                        }, 0, 1)
                         add(JFXButton(translator.get("logout")).apply {
                             buttonType = JFXButton.ButtonType.RAISED
                             background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
@@ -425,7 +449,7 @@ object LauncherScene {
                                 out.close()
                             }
                             GridPane.setHalignment(this, HPos.CENTER)
-                        }, 0, 2)
+                        }, 1, 0)
                         add(Label("").apply {
                             GridPane.setHalignment(this, HPos.CENTER)
                         }, 0, 3)
@@ -443,6 +467,7 @@ object LauncherScene {
                 }
             })
             children.add(JFXButton(translator.get("about")).apply {
+                setPrefSize(160.0, 20.0)
                 setOnAction {
                     mainBorderPane.center = Label("IDEA Minecraft Launcher\nDeveloper: ResetPower\nGitHub: https://github.com/resetpower/imcl\nVersion Name: $VERSION_NAME\nVersion Code: $VERSION_CODE\nOpen Source Software")
                 }

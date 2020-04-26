@@ -20,7 +20,6 @@ import org.imcl.lang.Translator
 import org.imcl.launch.LauncherScene
 import org.imcl.constraints.Toolkit
 import org.imcl.core.authentication.YggdrasilAuthenticator
-import org.imcl.toolkit.MyProperties
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
 import org.imcl.users.YggdrasilUserInformation
@@ -152,10 +151,10 @@ object MainScene {
                 BorderPane.setMargin(this, Insets(250.0, 0.0, 0.0, 0.0))
             }
             left = Label("").apply {
-                BorderPane.setMargin(this, Insets(0.0, 250.0, 0.0, 0.0))
+                BorderPane.setMargin(this, Insets(0.0, 220.0, 0.0, 0.0))
             }
             right = Label("").apply {
-                BorderPane.setMargin(this, Insets(0.0, 0.0, 0.0, 250.0))
+                BorderPane.setMargin(this, Insets(0.0, 0.0, 0.0, 220.0))
             }
         }, 840.0, 502.0)
         return scene

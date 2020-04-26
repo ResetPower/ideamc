@@ -9,7 +9,7 @@ import java.nio.charset.Charset
 
 object HttpRequestSender {
     @JvmStatic
-    fun post(spec: String, param: String, whenError: () -> Unit): String? {
+    fun post(spec: String, param: String, head: Pair<String, String> = Pair("Content-Type", "application/json"), whenError: () -> Unit): String? {
         var responseBuilder: StringBuilder? = null
         var reader: BufferedReader? = null
         var wr: OutputStreamWriter? = null
@@ -17,7 +17,7 @@ object HttpRequestSender {
         try {
             url = URL(spec)
             val conn: HttpURLConnection = url.openConnection() as HttpURLConnection
-            conn.setRequestProperty("Content-Type", "application/json")
+            conn.setRequestProperty(head.first, head.second)
             conn.doOutput = true
             conn.connectTimeout = 1000 * 5
             wr = OutputStreamWriter(conn.outputStream)
