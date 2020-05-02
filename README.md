@@ -13,11 +13,8 @@ The project started on Apr 5, 2020, CST. This software is in a very unstable dev
 ## Quick start
 Run out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## Notice
-- The launcher supports only macOS now
 - The launcher supports only the official Minecraft folder and HMCL folder now
 - The launcher supports only pure version and Forge/Fabric version
-- The launcher only successfully tested in 1.15.2 and 1.12.2
-- The download function of the launcher is currently very unstable, please do not use it easily!
 ## Dependencies
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)

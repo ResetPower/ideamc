@@ -13,11 +13,8 @@ IMCLは、モジュール管理、ゲームのカスタマイズなど、多く�
 ## すぐに始め
 実行 out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## 注目
-- 起動機は現在macOSのみをサポートしています
 - 起動機は現在Minecraftの公式フォルダーとHMCLフォルダーのみをサポートています
 - 起動機は現在ピュアバージョンとForge/Fabricバージョンのみをサポートています
-- 起動機は1.15.2と1.12.2でのみテストに成功しました
-- 起動機のダウンロード機能は現在非常に不安定です。簡単に使用しないでください！
 ## 頼り
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)

@@ -71,8 +71,6 @@ object HttpRequestSender {
             val conn = url.openConnection() as HttpURLConnection
             //设置超时间为3秒
             conn.connectTimeout = 3 * 1000
-            //防止屏蔽程序抓取而返回403错误
-            conn.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)")
             //得到输入流
             val inputStream: InputStream = conn.inputStream
             res = readInputStream(inputStream)

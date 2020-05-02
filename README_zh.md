@@ -13,11 +13,8 @@ IMCL是一个支持模组管理、游戏自定义等许多功能的启动器
 ## 快速上手
 运行 out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 ## 注意
-- 这个启动器目前仅支持macOS
 - 这个启动器目前仅支持Minecraft官方文件夹和HMCL的文件夹
 - 这个启动器目前仅支持纯净版和Forge/Fabric版
-- 启动器只在1.15.2和1.12.2测试成功
-- 启动器的下载功能目前非常不稳定，请勿轻易使用！
 ## 依赖
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)

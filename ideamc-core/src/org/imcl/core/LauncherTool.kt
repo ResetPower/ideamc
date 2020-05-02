@@ -121,7 +121,7 @@ object LauncherTool {
                             f.writeBytes(i.second)
                         }
                     }
-                } else {
+                } else if (os==OS.Windows||os==OS.Windows10) {
                     if (classifiers.containsKey("natives-windows")) {
                         val fi = File(
                             "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}" + classifiers.getJSONObject(
@@ -148,7 +148,9 @@ object LauncherTool {
                             }
                             f.writeBytes(i.second)
                         }
-                    } else if (classifiers.containsKey("natives-linux")) {
+                    }
+                } else {
+                    if (classifiers.containsKey("natives-linux")) {
                         val fi = File(
                             "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}" + classifiers.getJSONObject(
                                 "natives-linux"
@@ -217,6 +219,18 @@ object LauncherTool {
             val file =
                 File("${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}$path")
             if (file.exists()) {
+                buff.append("${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}$path${if (os == OS.Windows || os == OS.Windows10) ";" else ":"}")
+            } else {
+                val progress = VBox().apply {
+                    children.addAll(Label("Downloading ${file.name}"), JFXProgressBar())
+                }
+                Platform.runLater {
+                    launchOptions.loader.children.add(progress)
+                }
+                DownloadManager.download(jsonObject.getString("url"), file)
+                Platform.runLater {
+                    launchOptions.loader.children.remove(progress)
+                }
                 buff.append("${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}$path${if (os == OS.Windows || os == OS.Windows10) ";" else ":"}")
             }
         }
