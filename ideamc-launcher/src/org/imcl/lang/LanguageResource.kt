@@ -57,7 +57,8 @@ object LanguageResource {
         Pair("height", "Height"),
         Pair("jvm-args", "JVM Arguments"),
         Pair("auto-connect", "Auto connect to server"),
-        Pair("auto-connect-server", "Server address to connect")
+        Pair("auto-connect-server", "Server address to connect"),
+        Pair("launching", "Launching")
     )
     @JvmStatic
     fun esperantoResource() = mapOf(
@@ -105,7 +106,8 @@ object LanguageResource {
         Pair("height", "Alteco"),
         Pair("jvm-args", "JVM Parametro"),
         Pair("auto-connect", "Aŭtomate konekti al la servilo"),
-        Pair("auto-connect-server", "Aŭtomate konektita servila adreso")
+        Pair("auto-connect-server", "Aŭtomate konektita servila adreso"),
+        Pair("launching", "Lanĉo")
     )
     @JvmStatic
     fun japaneseResource() = mapOf(
@@ -153,7 +155,8 @@ object LanguageResource {
         Pair("height", "高さ"),
         Pair("jvm-args", "JVMパラメータ"),
         Pair("auto-connect", "自動的にサーバーに接続"),
-        Pair("auto-connect-server", "自動的に接続されたサーバーアドレス")
+        Pair("auto-connect-server", "自動的に接続されたサーバーアドレス"),
+        Pair("launching", "起動しています")
     )
     @JvmStatic
     fun chineseSimplifiedResource() = mapOf(
@@ -201,7 +204,8 @@ object LanguageResource {
         Pair("height", "高"),
         Pair("jvm-args", "JVM参数"),
         Pair("auto-connect", "是否自动连接服务器"),
-        Pair("auto-connect-server", "自动连接的服务器地址")
+        Pair("auto-connect-server", "自动连接的服务器地址"),
+        Pair("launching", "正在启动中")
     )
     @JvmStatic
     fun chineseTraditionalResource() = mapOf(
@@ -249,6 +253,7 @@ object LanguageResource {
         Pair("height", "高"),
         Pair("jvm-args", "JVM參數"),
         Pair("auto-connect", "是否自動連結服務器"),
-        Pair("auto-connect-server", "自動連結的服務器地址")
+        Pair("auto-connect-server", "自動連結的服務器地址"),
+        Pair("launching", "正在啟動中")
     )
 }

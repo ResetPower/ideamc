@@ -50,7 +50,7 @@ object MinecraftDownloadScene {
                         }
                     })
                 }
-                if (obj.getString("type")=="old_alpha"&&old) {
+                if ((obj.getString("type")=="old_alpha"||obj.getString("type")=="old_beta")&&old) {
                     gameList.children.add(JFXButton(obj.getString("id")).apply {
                         setOnAction {
                             primaryStage.scene = MinecraftInstallerScene.get(translator, primaryStage, theScene, ver, obj)

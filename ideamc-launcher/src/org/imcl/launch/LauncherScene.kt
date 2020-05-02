@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
 import com.jfoenix.controls.*
 import javafx.geometry.HPos
+import javafx.geometry.Insets
 import javafx.geometry.Pos
 import javafx.scene.Scene
 import javafx.scene.control.Hyperlink
@@ -31,15 +32,18 @@ import org.imcl.main.MainScene
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
 import org.imcl.users.YggdrasilUserInformation
+import java.awt.Desktop
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
+import java.net.URI
 import java.nio.file.Files
 import java.util.*
 
 object LauncherScene {
     @JvmStatic
     fun get(translator: Translator, userInformation: UserInformation, primaryStage: Stage) : Scene {
+        val deepStackPane = StackPane()
         val mainBorderPane = BorderPane()
         /*mainBorderPane.background = Background(
             BackgroundImage(
@@ -171,6 +175,7 @@ object LauncherScene {
             val launchBtn = JFXButton(translator.get("launch")).apply {
                 buttonType = JFXButton.ButtonType.RAISED
                 background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                setPrefSize(90.0, 35.0)
                 setOnAction {
                     this.isDisable = true
                     val prof = launcherProfiles.getJSONObject(profileList.selectionModel.selectedIndex)
@@ -183,19 +188,47 @@ object LauncherScene {
                     }
                     val width = prof.getString("width")
                     val height = prof.getString("height")
-                    if (userInformation is OfflineUserInformation) {
-                        Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), OfflineAuthenticator(userInformation.username()), Toolkit.getJavaPath(), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
+                    val launchProgress = JFXDialog()
+                    launchProgress.dialogContainer = deepStackPane
+                    val box = VBox().apply {
+                        children.addAll(VBox().apply {
+                            children.addAll(Label(translator.get("launching")), JFXProgressBar())
+                        })
+                    }
+                    launchProgress.content = box
+                    launchProgress.isOverlayClose = false
+                    launchProgress.show()
+                    try {
+                        Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"),
+                            if (userInformation is YggdrasilUserInformation) YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken()) else OfflineAuthenticator(userInformation.username())
+                            , Toolkit.getJavaPath(), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}",
+                            gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"), loader = box)) {
                             this.isDisable = false
+                            launchProgress.close()
                         }
-                    } else if (userInformation is YggdrasilUserInformation) {
-                        Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"), YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken()), Toolkit.getJavaPath(), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}", gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"))) {
-                            this.isDisable = false
-                        }
+                    } catch (e: Exception) {
+                        launchProgress.close()
+                        val errDial = JFXDialog(deepStackPane, Label("\nAn error occurred in launching Minecraft: \n${e.message}\n"), JFXDialog.DialogTransition.CENTER)
+                        errDial.show()
                     }
                 }
             }
             tabPane.tabs.addAll(Tab(translator.get("play")).apply {
-                content = launchBtn
+                content = BorderPane().apply {
+                    bottom = HBox().apply {
+                        padding = Insets(10.0)
+                        background = Background(BackgroundFill(Color(1.0, 1.0, 1.0, 0.5), null, null))
+                        alignment = Pos.CENTER
+                        spacing = 10.0
+                        children.addAll(
+                            launchBtn,
+                            Label("").apply {
+                                prefWidth = 200.0
+                            },
+                            Label(if (userInformation is OfflineUserInformation) userInformation.username else if (userInformation is YggdrasilUserInformation) userInformation.username else "Error")
+                        )
+                    }
+                }
             }, Tab(translator.get("installations")).apply {
                 val installations = GridPane()
                 installations.addRow(0, JFXButton(translator.get("add")).apply {
@@ -412,21 +445,27 @@ object LauncherScene {
             })
             mainBorderPane.center = tabPane
         }
+        val newsBtn = JFXButton(translator.get("news"))
+        val mcBtn = JFXButton("Minecraft: Java Edition")
+        val setBtn = JFXButton(translator.get("settings"))
+        val aboutBtn = JFXButton(translator.get("about"))
+        val feedbackBtn = JFXButton("Send Feedback")
+        val selBg = Background(BackgroundFill(Color(0.1, 0.1, 0.1, 0.5), null, null))
         val mainListView = VBox().apply {
             style = "-fx-background-color:#ffffff55"
-            children.add(JFXButton(translator.get("news")).apply {
+            children.add(newsBtn.apply {
                 setPrefSize(160.0, 20.0)
                 setOnAction {
                     mainBorderPane.center = Label("News")
                 }
             })
-            children.add(JFXButton("Minecraft: Java Edition").apply {
+            children.add(mcBtn.apply {
                 setPrefSize(160.0, 20.0)
                 setOnAction {
                     setMinecraftJavaEditionPane()
                 }
             })
-            children.add(JFXButton(translator.get("settings")).apply {
+            children.add(setBtn.apply {
                 setPrefSize(160.0, 20.0)
                 setOnAction {
                     mainBorderPane.center = GridPane().apply {
@@ -466,19 +505,83 @@ object LauncherScene {
                     }
                 }
             })
-            children.add(JFXButton(translator.get("about")).apply {
+            children.add(aboutBtn.apply {
                 setPrefSize(160.0, 20.0)
                 setOnAction {
-                    mainBorderPane.center = Label("IDEA Minecraft Launcher\nDeveloper: ResetPower\nGitHub: https://github.com/resetpower/imcl\nVersion Name: $VERSION_NAME\nVersion Code: $VERSION_CODE\nOpen Source Software")
+                    mainBorderPane.center = BorderPane().apply {
+                        top = Label("")
+                        bottom = Label("")
+                        left = Label("")
+                        right = Label("")
+                        BorderPane.setMargin(this, Insets(100.0, 100.0, 150.0, 100.0))
+                        center = VBox().apply {
+                            background = Background(BackgroundFill(Color(1.0, 1.0, 1.0, 0.5), null, null))
+                            children.addAll(
+                                Label("IDEA Minecraft Launcher"),
+                                Label("Developer: ResetPower"),
+                                HBox().apply {
+                                    children.addAll(
+                                        Label("GitHub: "),
+                                        Hyperlink("https://github.com/resetpower/imcl").apply {
+                                            setOnAction {
+                                                val desktop = Desktop.getDesktop()
+                                                if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
+                                                    val uri = URI(text)
+                                                    desktop.browse(uri)
+                                                }
+                                            }
+                                        }
+                                    )
+                                },
+                                Label("Version Name: $VERSION_NAME"),
+                                Label("Version Code: $VERSION_CODE"),
+                                Label("Open Source Software")
+                            )
+                        }
+                    }
+                }
+            })
+            children.add(feedbackBtn.apply {
+                setPrefSize(160.0, 20.0)
+                setOnAction {
+                    mainBorderPane.center = BorderPane().apply {
+                        top = Label("")
+                        bottom = Label("")
+                        left = Label("")
+                        right = Label("")
+                        BorderPane.setMargin(this, Insets(100.0, 100.0, 150.0, 100.0))
+                        center = VBox().apply {
+                            background = Background(BackgroundFill(Color(1.0, 1.0, 1.0, 0.5), null, null))
+                            children.addAll(
+                                HBox().apply {
+                                    children.addAll(
+                                        Label("GitHub Issues: "),
+                                        Hyperlink("https://github.com/resetpower/imcl/issues").apply {
+                                            setOnAction {
+                                                val desktop = Desktop.getDesktop()
+                                                if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
+                                                    val uri = URI(text)
+                                                    desktop.browse(uri)
+                                                }
+                                            }
+                                        }
+                                    )
+                                },
+                                Label("Email: lingxian0874@163.com")
+                            )
+                        }
+                    }
                 }
             })
         }
         mainBorderPane.left = mainListView
         setMinecraftJavaEditionPane()
-        theScene = Scene(AnchorPane().apply {
-            children.add(ImageView(Image("file://"+File("imcl/res/bg.png").absolutePath, 840.0, 502.5, false, true)))
-            children.add(mainBorderPane.apply {
-                setPrefSize(840.0, 502.5)
+        theScene = Scene(deepStackPane.apply {
+            children.add(AnchorPane().apply {
+                children.add(ImageView(Image(MainScene::class.java.getResourceAsStream("/org/imcl/bg/bg.png"), 840.0, 502.5, false, true)))
+                children.add(mainBorderPane.apply {
+                    setPrefSize(840.0, 502.5)
+                })
             })
         }, 840.0, 502.0)
         return theScene

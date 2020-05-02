@@ -1,3 +1,5 @@
 package org.imcl.users
 
-interface UserInformation
+interface UserInformation {
+    fun username(): String
+}

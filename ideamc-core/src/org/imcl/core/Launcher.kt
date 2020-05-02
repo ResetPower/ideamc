@@ -3,6 +3,7 @@ package org.imcl.core
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
 import javafx.application.Platform
+import org.imcl.core.exceptions.LauncherCoreException
 import org.imcl.core.log.Log
 import org.imcl.core.ostool.OS
 import org.imcl.core.ostool.OSTool
@@ -17,12 +18,13 @@ object Launcher {
     fun launch(launchOptions: LaunchOptions, whenDone: () -> Unit = {}) {
         val dir = File("${launchOptions.dir}${separator}versions${separator}${launchOptions.version}")
         if (!dir.exists()) {
-            Log.e("Version not found")
-            return
+            Log.e("Version not found.")
+            throw LauncherCoreException("Version not found.")
         }
         val json = File("${dir.path}${separator}${launchOptions.version}.json")
         if (!json.exists()) {
             Log.e("JSON not found")
+            throw LauncherCoreException("JSON not found.")
             return
         }
         val jsonObject = JSON.parseObject(json.readText())
@@ -31,13 +33,10 @@ object Launcher {
         val os = OSTool.getOS()
         Log.i("Found OS! $os!")
 
-        if (os==OS.Linux) {
-            whenDone()
-            Log.e("Linux is not supported!")
-            return
-        } else if (os==OS.Unknown) {
+        if (os==OS.Unknown) {
             whenDone()
             Log.e("Unknown OS is not supported!")
+            throw LauncherCoreException("Unknown OS is not supported!")
             return
         }
         Thread {
@@ -47,7 +46,15 @@ object Launcher {
             } else {
                 generateLaunchScript(launchOptions, jsonObject, os)
             }
-            Log.i("Generated Launch Script\n$cmd")
+            var c = cmd.indexOf("--accessToken")+14
+            var end = c
+            while (true) {
+                if (cmd[end]==' ') {
+                    break
+                }
+                end++
+            }
+            Log.i("Generated Launch Script\n${cmd.replace(cmd.substring(c, end), "*****")}")
             val p = if (os==OS.MacOS||os==OS.Linux) {
                 Runtime.getRuntime().exec(arrayOf("sh", "-c", cmd), null, File(launchOptions.dir))
             } else if (os==OS.Windows||os==OS.Windows10) {
@@ -59,22 +66,28 @@ object Launcher {
             val isr = InputStreamReader(fis)
             val br = BufferedReader(isr)
             var line: String? = null
-            Platform.runLater {
-                whenDone()
-            }
+            var flag = false
             Log.i("Launching Minecraft!")
             while (br.readLine().also { line = it } != null) {
                 println(line)
+                if (!flag) {
+                    flag = true
+                    Platform.runLater {
+                        whenDone()
+                    }
+                }
             }
         }.start()
     }
     fun genInitiallyLaunchScript(os: OS, isHigherThan1_13: Boolean, launchOptions: LaunchOptions) : String {
         return if (os==OS.MacOS) {
-            "\"${launchOptions.javaPath}\" ${if (isHigherThan1_13) "-XstartOnFirstThread" else ""} ${launchOptions.jvmArgs} -Djava.library.path=\"${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}-natives\" "
+            "\"${launchOptions.javaPath}\"${if (isHigherThan1_13) " -XstartOnFirstThread" else ""} ${launchOptions.jvmArgs} -Djava.library.path=\"${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}-natives\" "
         } else if (os==OS.Windows10) {
             "\"${launchOptions.javaPath}\" -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump ${launchOptions.jvmArgs} \"-Djava.library.path=${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}-natives\" "
         } else if (os==OS.Windows) {
             "\"${launchOptions.javaPath}\" -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump ${launchOptions.jvmArgs} \"-Djava.library.path=${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}-natives\" "
+        } else if (os==OS.Linux) {
+            "\"${launchOptions.javaPath}\" ${launchOptions.jvmArgs} -Djava.library.path=\"${launchOptions.dir}${separator}versions${separator}${launchOptions.version}${separator}${launchOptions.version}-natives\" "
         } else {
             throw Exception("Not supported OS: $os")
         }

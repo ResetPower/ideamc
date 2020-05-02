@@ -3,7 +3,13 @@ package org.imcl.core
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONArray
 import com.alibaba.fastjson.JSONObject
+import com.jfoenix.controls.JFXProgressBar
+import javafx.application.Platform
+import javafx.scene.control.Label
+import javafx.scene.layout.VBox
 import org.imcl.core.artifacts.ArtifactExtractor
+import org.imcl.core.bmclapi.toBMCLAPIUrl
+import org.imcl.core.download.DownloadManager
 import org.imcl.core.ostool.OS
 import java.io.File
 
@@ -31,23 +37,25 @@ object LauncherTool {
         val iterator = libraries.iterator()
         while (iterator.hasNext()) {
             val jsonObject = JSON.toJSON(iterator.next()) as JSONObject
+            var con = true
             if (jsonObject.containsKey("rules")) {
                 val rules = jsonObject.getJSONArray("rules")
                 val iterator = rules.iterator()
                 while (iterator.hasNext()) {
                     val r = iterator.next() as JSONObject
                     if (r.getString("action") == "disallow") {
-                        val rOS = r.getString("os")
+                        val rOS = r.getJSONObject("os").getString("name")
                         if (os==OS.MacOS&&(rOS=="macos"||rOS=="osx")) {
+                            con = false
                         } else if ((os==OS.Windows||os==OS.Windows10)&&rOS=="windows") {
-                        } else {
-                            genCpImplImpl(launchOptions, nativeFolder, os, buff, jsonObject)
+                            con = false
+                        } else if (os==OS.Linux&&rOS=="linux") {
+                            con = false
                         }
-                    } else {
-                        genCpImplImpl(launchOptions, nativeFolder, os, buff, jsonObject)
                     }
                 }
-            } else {
+            }
+            if (con) {
                 genCpImplImpl(launchOptions, nativeFolder, os, buff, jsonObject)
             }
         }
@@ -58,110 +66,113 @@ object LauncherTool {
         if (jsonObject.containsKey("downloads")) {
             val downloads = jsonObject.getJSONObject("downloads")
             if (downloads.containsKey("classifiers")) {
-                if (downloads.containsKey("artifact")) {
-                    val artifact = downloads.getJSONObject("artifact")
-                    val path = artifact.getString("path")
-                    val nativeLibFile =
-                        File("${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}$path")
-                    if (nativeLibFile.exists()) {
-                        if (os == OS.MacOS) {
-                            val macosNative = File(
-                                "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}${path.toString()
-                                    .removeSuffix(".jar") + "-natives-macos.jar"}"
-                            )
-                            val osxNative = File(
-                                "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}${path.toString()
-                                    .removeSuffix(".jar") + "-natives-osx.jar"}"
-                            )
-                            if (macosNative.exists()) {
-                                val files = ArtifactExtractor.extract(macosNative)
-                                for (i in files) {
-                                    val f =
-                                        File("${nativeFolder.path}${Launcher.separator}${i.first}")
-                                    if (!f.exists()) {
-                                        f.createNewFile()
-                                    }
-                                    f.writeBytes(i.second)
-                                }
-                            } else if (osxNative.exists()) {
-                                val files = ArtifactExtractor.extract(osxNative)
-                                for (i in files) {
-                                    val f =
-                                        File("${nativeFolder.path}${Launcher.separator}${i.first}")
-                                    if (!f.exists()) {
-                                        f.createNewFile()
-                                    }
-                                    f.writeBytes(i.second)
-                                }
+                val classifiers = downloads.getJSONObject("classifiers")
+                if (os == OS.MacOS) {
+                    if (classifiers.containsKey("natives-osx")) {
+                        val fi = File(
+                            "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}" + classifiers.getJSONObject(
+                                "natives-osx"
+                            ).getString("path")
+                        )
+                        if (!fi.exists()) {
+                            val progress = VBox().apply {
+                                children.addAll(Label("Downloading ${fi.name}"), JFXProgressBar())
                             }
-                        } else {
-                            val windowsNative = File(
-                                "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}${path.toString()
-                                    .removeSuffix(".jar") + "-natives-windows.jar"}"
-                            )
-                            if (windowsNative.exists()) {
-                                val files = ArtifactExtractor.extract(windowsNative)
-                                for (i in files) {
-                                    val f =
-                                        File("${nativeFolder.path}${Launcher.separator}${i.first}")
-                                    if (!f.exists()) {
-                                        f.createNewFile()
-                                    }
-                                    f.writeBytes(i.second)
-                                }
+                            Platform.runLater {
+                                launchOptions.loader.children.add(progress)
                             }
+                            DownloadManager.download(classifiers.getJSONObject("natives-osx").getString("url").toBMCLAPIUrl(), fi)
+                            Platform.runLater {
+                                launchOptions.loader.children.remove(progress)
+                            }
+                        }
+                        val files = ArtifactExtractor.extract(fi)
+                        for (i in files) {
+                            val f = File("${nativeFolder.path}${Launcher.separator}${i.first}")
+                            if (!f.exists()) {
+                                f.createNewFile()
+                            }
+                            f.writeBytes(i.second)
+                        }
+                    } else if (classifiers.containsKey("natives-macos")) {
+                        val fi = File(
+                            "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}" + classifiers.getJSONObject(
+                                "natives-macos"
+                            ).getString("path")
+                        )
+                        if (!fi.exists()) {
+                            val progress = VBox().apply {
+                                children.addAll(Label("Downloading ${fi.name}"), JFXProgressBar())
+                            }
+                            Platform.runLater {
+                                launchOptions.loader.children.add(progress)
+                            }
+                            DownloadManager.download(classifiers.getJSONObject("natives-macos").getString("url").toBMCLAPIUrl(), fi)
+                            Platform.runLater {
+                                launchOptions.loader.children.remove(progress)
+                            }
+                        }
+                        val files = ArtifactExtractor.extract(fi)
+                        for (i in files) {
+                            val f = File("${nativeFolder.path}${Launcher.separator}${i.first}")
+                            if (!f.exists()) {
+                                f.createNewFile()
+                            }
+                            f.writeBytes(i.second)
                         }
                     }
                 } else {
-                    val classifiers = downloads.getJSONObject("classifiers")
-                    if (os == OS.MacOS) {
-                        if (classifiers.containsKey("natives-osx")) {
-                            val files = ArtifactExtractor.extract(
-                                File(
-                                    "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}" + classifiers.getJSONObject(
-                                        "natives-osx"
-                                    ).getString("path")
-                                )
-                            )
-                            for (i in files) {
-                                val f = File("${nativeFolder.path}${Launcher.separator}${i.first}")
-                                if (!f.exists()) {
-                                    f.createNewFile()
-                                }
-                                f.writeBytes(i.second)
+                    if (classifiers.containsKey("natives-windows")) {
+                        val fi = File(
+                            "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}" + classifiers.getJSONObject(
+                                "natives-windows"
+                            ).getString("path")
+                        )
+                        if (!fi.exists()) {
+                            val progress = VBox().apply {
+                                children.addAll(Label("Downloading ${fi.name}"), JFXProgressBar())
                             }
-                        } else if (classifiers.containsKey("natives-macos")) {
-                            val files = ArtifactExtractor.extract(
-                                File(
-                                    "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}" + classifiers.getJSONObject(
-                                        "natives-macos"
-                                    ).getString("path")
-                                )
-                            )
-                            for (i in files) {
-                                val f = File("${nativeFolder.path}${Launcher.separator}${i.first}")
-                                if (!f.exists()) {
-                                    f.createNewFile()
-                                }
-                                f.writeBytes(i.second)
+                            Platform.runLater {
+                                launchOptions.loader.children.add(progress)
+                            }
+                            DownloadManager.download(classifiers.getJSONObject("natives-windows").getString("url").toBMCLAPIUrl(), fi)
+                            Platform.runLater {
+                                launchOptions.loader.children.remove(progress)
                             }
                         }
-                    } else {
-                        if (classifiers.containsKey("natives-windows")) {
-                            val files = ArtifactExtractor.extract(
-                                File(
-                                    "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}" + classifiers.getJSONObject(
-                                        "natives-windows"
-                                    ).getString("path")
-                                )
-                            )
-                            for (i in files) {
-                                val f = File("${nativeFolder.path}${Launcher.separator}${i.first}")
-                                if (!f.exists()) {
-                                    f.createNewFile()
-                                }
-                                f.writeBytes(i.second)
+                        val files = ArtifactExtractor.extract(fi)
+                        for (i in files) {
+                            val f = File("${nativeFolder.path}${Launcher.separator}${i.first}")
+                            if (!f.exists()) {
+                                f.createNewFile()
                             }
+                            f.writeBytes(i.second)
+                        }
+                    } else if (classifiers.containsKey("natives-linux")) {
+                        val fi = File(
+                            "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}" + classifiers.getJSONObject(
+                                "natives-linux"
+                            ).getString("path")
+                        )
+                        if (!fi.exists()) {
+                            val progress = VBox().apply {
+                                children.addAll(Label("Downloading ${fi.name}"), JFXProgressBar())
+                            }
+                            Platform.runLater {
+                                launchOptions.loader.children.add(progress)
+                            }
+                            DownloadManager.download(classifiers.getJSONObject("natives-linux").getString("url").toBMCLAPIUrl(), fi)
+                            Platform.runLater {
+                                launchOptions.loader.children.remove(progress)
+                            }
+                        }
+                        val files = ArtifactExtractor.extract(fi)
+                        for (i in files) {
+                            val f = File("${nativeFolder.path}${Launcher.separator}${i.first}")
+                            if (!f.exists()) {
+                                f.createNewFile()
+                            }
+                            f.writeBytes(i.second)
                         }
                     }
                 }
@@ -171,6 +182,23 @@ object LauncherTool {
                 val file =
                     File("${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}$path")
                 if (file.exists()) {
+                    buff.append(
+                        "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}${path.replace(
+                            "/",
+                            Launcher.separator
+                        )}${if (os == OS.Windows || os == OS.Windows10) ";" else ":"}"
+                    )
+                } else {
+                    val progress = VBox().apply {
+                        children.addAll(Label("Downloading ${file.name}"), JFXProgressBar())
+                    }
+                    Platform.runLater {
+                        launchOptions.loader.children.add(progress)
+                    }
+                    DownloadManager.download(artifact.getString("url"), file)
+                    Platform.runLater {
+                        launchOptions.loader.children.remove(progress)
+                    }
                     buff.append(
                         "${launchOptions.dir}${Launcher.separator}libraries${Launcher.separator}${path.replace(
                             "/",

@@ -21,9 +21,7 @@ import org.imcl.launch.LauncherScene
 import org.imcl.constraints.Toolkit
 import org.imcl.core.authentication.YggdrasilAuthenticator
 import org.imcl.users.OfflineUserInformation
-import org.imcl.users.UserInformation
 import org.imcl.users.YggdrasilUserInformation
-import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.util.*
@@ -39,7 +37,7 @@ object MainScene {
         val scene = Scene(BorderPane().apply {
             var translator = updateLanguage()
             background = Background(BackgroundImage(
-                Image("file://"+ File("imcl/res/bg.png").absolutePath, 840.0, 502.5, false, true),
+                Image(MainScene::class.java.getResourceAsStream("/org/imcl/bg/bg.png"), 840.0, 502.5, false, true),
                 BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
                 BackgroundSize.DEFAULT
             ))
