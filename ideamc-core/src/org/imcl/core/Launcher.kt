@@ -19,12 +19,12 @@ object Launcher {
         val dir = File("${launchOptions.dir}${separator}versions${separator}${launchOptions.version}")
         if (!dir.exists()) {
             Log.e("Version not found.")
-            throw LauncherCoreException("Version not found.")
+            throw LauncherCoreException("Version directory not found: ${dir.path}")
         }
         val json = File("${dir.path}${separator}${launchOptions.version}.json")
         if (!json.exists()) {
             Log.e("JSON not found")
-            throw LauncherCoreException("JSON not found.")
+            throw LauncherCoreException("JSON not found: ${json.path}")
             return
         }
         val jsonObject = JSON.parseObject(json.readText())

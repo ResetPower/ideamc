@@ -36,7 +36,7 @@ object FileChecker {
         if (!proPro.exists()) {
             proPro.writeText("""
                 javapath=java
-                isLoggedIn=true
+                isLoggedIn=false
                 language=english
             """.trimIndent())
         }

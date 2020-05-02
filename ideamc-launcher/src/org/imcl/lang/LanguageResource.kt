@@ -58,7 +58,9 @@ object LanguageResource {
         Pair("jvm-args", "JVM Arguments"),
         Pair("auto-connect", "Auto connect to server"),
         Pair("auto-connect-server", "Server address to connect"),
-        Pair("launching", "Launching")
+        Pair("launching", "Launching"),
+        Pair("whatisthis", "What is this?"),
+        Pair("folderseparate", "Folder Separate")
     )
     @JvmStatic
     fun esperantoResource() = mapOf(
@@ -107,7 +109,9 @@ object LanguageResource {
         Pair("jvm-args", "JVM Parametro"),
         Pair("auto-connect", "Aŭtomate konekti al la servilo"),
         Pair("auto-connect-server", "Aŭtomate konektita servila adreso"),
-        Pair("launching", "Lanĉo")
+        Pair("launching", "Lanĉo"),
+        Pair("whatisthis", "Kio estas ĉi tio?"),
+        Pair("folderseparate", "Dosierujo aparta")
     )
     @JvmStatic
     fun japaneseResource() = mapOf(
@@ -156,7 +160,9 @@ object LanguageResource {
         Pair("jvm-args", "JVMパラメータ"),
         Pair("auto-connect", "自動的にサーバーに接続"),
         Pair("auto-connect-server", "自動的に接続されたサーバーアドレス"),
-        Pair("launching", "起動しています")
+        Pair("launching", "起動しています"),
+        Pair("whatisthis", "これは何ですか"),
+        Pair("folderseparate", "フォルダを分割")
     )
     @JvmStatic
     fun chineseSimplifiedResource() = mapOf(
@@ -205,7 +211,9 @@ object LanguageResource {
         Pair("jvm-args", "JVM参数"),
         Pair("auto-connect", "是否自动连接服务器"),
         Pair("auto-connect-server", "自动连接的服务器地址"),
-        Pair("launching", "正在启动中")
+        Pair("launching", "正在启动中"),
+        Pair("whatisthis", "这是什么？"),
+        Pair("folderseparate", "文件夹分离")
     )
     @JvmStatic
     fun chineseTraditionalResource() = mapOf(
@@ -254,6 +262,8 @@ object LanguageResource {
         Pair("jvm-args", "JVM參數"),
         Pair("auto-connect", "是否自動連結服務器"),
         Pair("auto-connect-server", "自動連結的服務器地址"),
-        Pair("launching", "正在啟動中")
+        Pair("launching", "正在啟動中"),
+        Pair("whatisthis", "這是什麼？"),
+        Pair("folderseparate", "文件夾分離")
     )
 }

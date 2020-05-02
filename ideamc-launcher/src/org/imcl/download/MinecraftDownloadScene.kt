@@ -22,10 +22,10 @@ import java.awt.Desktop
 import java.net.URI
 
 object MinecraftDownloadScene {
-    fun get(translator: Translator, userInformation: UserInformation, primaryStage: Stage, sourceScene: Scene) : Scene {
+    fun get(translator: Translator, userInformation: UserInformation, primaryStage: Stage, sourceScene: Scene, allVer: String) : Scene {
         val borderPane = BorderPane()
         val gameList = VBox()
-        val versions = JSON.parseObject(GameDownloader.getAllVersions()).getJSONArray("versions")
+        val versions = JSON.parseObject(allVer).getJSONArray("versions")
         var rel = true
         var sna = false
         var old = false

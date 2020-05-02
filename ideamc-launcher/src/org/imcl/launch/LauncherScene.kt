@@ -3,6 +3,7 @@ package org.imcl.launch
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
 import com.jfoenix.controls.*
+import javafx.application.Platform
 import javafx.geometry.HPos
 import javafx.geometry.Insets
 import javafx.geometry.Pos
@@ -24,6 +25,7 @@ import org.imcl.core.LaunchOptions
 import org.imcl.core.Launcher
 import org.imcl.core.authentication.OfflineAuthenticator
 import org.imcl.core.authentication.YggdrasilAuthenticator
+import org.imcl.core.download.GameDownloader
 import org.imcl.core.http.HttpRequestSender
 import org.imcl.download.MinecraftDownloadScene
 import org.imcl.introductions.FolderSeparateIntroduction
@@ -205,11 +207,13 @@ object LauncherScene {
                             gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"), loader = box)) {
                             this.isDisable = false
                             launchProgress.close()
+                            primaryStage.isIconified = true
                         }
                     } catch (e: Exception) {
                         launchProgress.close()
-                        val errDial = JFXDialog(deepStackPane, Label("\nAn error occurred in launching Minecraft: \n${e.message}\n"), JFXDialog.DialogTransition.CENTER)
+                        val errDial = JFXDialog(deepStackPane, Label("\nAn error occurred in launching Minecraft: \n${e.message}\n\n"), JFXDialog.DialogTransition.CENTER)
                         errDial.show()
+                        this.isDisable = false
                     }
                 }
             }
@@ -279,7 +283,7 @@ object LauncherScene {
                         val theIndex = profileList.selectionModel.selectedIndex
                         val theObj = launcherProfiles[theIndex] as JSONObject
                         secondStage.scene = Scene(GridPane().apply {
-                            addColumn( 0, Label(translator.get("edit")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")), Label("Folder Separate"), Label("game-dir"))
+                            addColumn( 0, Label(translator.get("edit")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")), Label(translator.get("folderseparate")), Label("game-dir"))
                             val nameField = JFXTextField()
                             val verField = JFXTextField()
                             val dirField = JFXTextField()
@@ -294,7 +298,7 @@ object LauncherScene {
                             add(verField, 1, 2)
                             add(dirField, 1, 3)
                             add(resGameDirectorySeparateBox, 1, 4)
-                            add(Hyperlink("What is this?").apply {
+                            add(Hyperlink(translator.get("whatisthis")).apply {
                                 setOnAction {
                                     FolderSeparateIntroduction().show()
                                 }
@@ -417,7 +421,18 @@ object LauncherScene {
                         buttonType = JFXButton.ButtonType.RAISED
                         background = Background(BackgroundFill(Color.LIGHTGREEN, null, null))
                         setOnAction {
-                            primaryStage.scene = MinecraftDownloadScene.get(translator, userInformation, primaryStage, theScene)
+                            val progress = JFXDialog(deepStackPane, VBox().apply {
+                                children.addAll(Label("Loading..."), JFXProgressBar())
+                            }, JFXDialog.DialogTransition.CENTER)
+                            progress.isOverlayClose = false
+                            progress.show()
+                            Thread {
+                                val allVer = GameDownloader.getAllVersions()
+                                Platform.runLater {
+                                    progress.close()
+                                    primaryStage.scene = MinecraftDownloadScene.get(translator, userInformation, primaryStage, theScene, allVer)
+                                }
+                            }.start()
                         }
                     })
                     children.add(JFXButton("Forge").apply {
@@ -449,7 +464,6 @@ object LauncherScene {
         val mcBtn = JFXButton("Minecraft: Java Edition")
         val setBtn = JFXButton(translator.get("settings"))
         val aboutBtn = JFXButton(translator.get("about"))
-        val feedbackBtn = JFXButton("Send Feedback")
         val selBg = Background(BackgroundFill(Color(0.1, 0.1, 0.1, 0.5), null, null))
         val mainListView = VBox().apply {
             style = "-fx-background-color:#ffffff55"
@@ -535,24 +549,7 @@ object LauncherScene {
                                 },
                                 Label("Version Name: $VERSION_NAME"),
                                 Label("Version Code: $VERSION_CODE"),
-                                Label("Open Source Software")
-                            )
-                        }
-                    }
-                }
-            })
-            children.add(feedbackBtn.apply {
-                setPrefSize(160.0, 20.0)
-                setOnAction {
-                    mainBorderPane.center = BorderPane().apply {
-                        top = Label("")
-                        bottom = Label("")
-                        left = Label("")
-                        right = Label("")
-                        BorderPane.setMargin(this, Insets(100.0, 100.0, 150.0, 100.0))
-                        center = VBox().apply {
-                            background = Background(BackgroundFill(Color(1.0, 1.0, 1.0, 0.5), null, null))
-                            children.addAll(
+                                Label("Open Source Software"),
                                 HBox().apply {
                                     children.addAll(
                                         Label("GitHub Issues: "),
