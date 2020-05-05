@@ -40,9 +40,10 @@ object FileChecker {
                 language=english
             """.trimIndent())
         }
-        val resDir = File("imcl/res")
-        if (!resDir.exists()) {
-            resDir.mkdirs()
+        val cacheDir = File("imcl/cache")
+        if (!cacheDir.exists()) {
+            cacheDir.mkdirs()
         }
+
     }
 }

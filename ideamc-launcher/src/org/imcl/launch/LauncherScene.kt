@@ -18,6 +18,9 @@ import javafx.scene.paint.Color
 import javafx.scene.text.Font
 import javafx.stage.FileChooser
 import javafx.stage.Stage
+import org.imcl.bg.GlobalBackgroundImageController
+import org.imcl.color.GlobalThemeColorController
+import org.imcl.color.LeftListOpacityController
 import org.imcl.constraints.Toolkit
 import org.imcl.constraints.VERSION_CODE
 import org.imcl.constraints.VERSION_NAME
@@ -27,6 +30,7 @@ import org.imcl.core.authentication.OfflineAuthenticator
 import org.imcl.core.authentication.YggdrasilAuthenticator
 import org.imcl.core.download.GameDownloader
 import org.imcl.core.http.HttpRequestSender
+import org.imcl.download.ForgeDownloadScene
 import org.imcl.download.MinecraftDownloadScene
 import org.imcl.introductions.FolderSeparateIntroduction
 import org.imcl.lang.Translator
@@ -221,13 +225,15 @@ object LauncherScene {
                 content = BorderPane().apply {
                     bottom = HBox().apply {
                         padding = Insets(10.0)
-                        background = Background(BackgroundFill(Color(1.0, 1.0, 1.0, 0.5), null, null))
+                        style = "-fx-background-color:darkgray"
+                        opacity = 0.8
                         alignment = Pos.CENTER
                         spacing = 10.0
                         children.addAll(
                             launchBtn,
                             Label("").apply {
                                 prefWidth = 200.0
+                                textFill = Color.WHITE
                             },
                             Label(if (userInformation is OfflineUserInformation) userInformation.username else if (userInformation is YggdrasilUserInformation) userInformation.username else "Error")
                         )
@@ -283,7 +289,7 @@ object LauncherScene {
                         val theIndex = profileList.selectionModel.selectedIndex
                         val theObj = launcherProfiles[theIndex] as JSONObject
                         secondStage.scene = Scene(GridPane().apply {
-                            addColumn( 0, Label(translator.get("edit")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")), Label(translator.get("folderseparate")), Label("game-dir"))
+                            addColumn( 0, Label(translator.get("edit")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")), Label(translator.get("folderseparate")), Label(translator.get("gamedir")))
                             val nameField = JFXTextField()
                             val verField = JFXTextField()
                             val dirField = JFXTextField()
@@ -439,14 +445,7 @@ object LauncherScene {
                         buttonType = JFXButton.ButtonType.RAISED
                         background = Background(BackgroundFill(Color.DARKGRAY, null, null))
                         setOnAction {
-                            // TODO Download Forge
-                        }
-                    })
-                    children.add(JFXButton("Optifine").apply {
-                        buttonType = JFXButton.ButtonType.RAISED
-                        background = Background(BackgroundFill(Color.NAVAJOWHITE, null, null))
-                        setOnAction {
-                            // TODO Download Optifine
+                            primaryStage.scene = ForgeDownloadScene.get(translator, primaryStage, theScene, launcherProfiles)
                         }
                     })
                     children.add(JFXButton("Fabric").apply {
@@ -456,31 +455,55 @@ object LauncherScene {
                             // TODO Download Fabric
                         }
                     })
+                    children.add(JFXButton("Optifine").apply {
+                        buttonType = JFXButton.ButtonType.RAISED
+                        background = Background(BackgroundFill(Color.NAVAJOWHITE, null, null))
+                        setOnAction {
+                            // TODO Download Optifine
+                        }
+                    })
                 }
             })
             mainBorderPane.center = tabPane
         }
         val newsBtn = JFXButton(translator.get("news"))
-        val mcBtn = JFXButton("Minecraft: Java Edition")
+        val mcBtn = JFXButton("Minecraft")
         val setBtn = JFXButton(translator.get("settings"))
         val aboutBtn = JFXButton(translator.get("about"))
         val selBg = Background(BackgroundFill(Color(0.1, 0.1, 0.1, 0.5), null, null))
         val mainListView = VBox().apply {
-            style = "-fx-background-color:#ffffff55"
+            style = "-fx-background-color:#${GlobalThemeColorController.getFromConfig().toString().removePrefix("0x").removeSuffix("ff")}${Toolkit.getHex(LeftListOpacityController.getFromConfig())}"
+            var ctext = "${GlobalThemeColorController.getFromConfig().toString().removePrefix("0x").removeSuffix("ff")}"
+            GlobalThemeColorController.register {
+                style = "-fx-background-color:#${it.toString().removePrefix("0x").removeSuffix("ff")}${Toolkit.getHex(LeftListOpacityController.getFromConfig())}"
+                ctext = it.toString().removePrefix("0x").removeSuffix("ff")
+            }
+            LeftListOpacityController.register {
+                style = "-fx-background-color:#$ctext${Toolkit.getHex(it)}"
+            }
+            children.add(Label(""))
             children.add(newsBtn.apply {
+                isFocusTraversable = false
                 setPrefSize(160.0, 20.0)
+                font = Font.font(15.0)
                 setOnAction {
                     mainBorderPane.center = Label("News")
                 }
             })
+            children.add(Label(""))
             children.add(mcBtn.apply {
+                isFocusTraversable = false
                 setPrefSize(160.0, 20.0)
+                font = Font.font(15.0)
                 setOnAction {
                     setMinecraftJavaEditionPane()
                 }
             })
+            children.add(Label(""))
             children.add(setBtn.apply {
+                isFocusTraversable = false
                 setPrefSize(160.0, 20.0)
+                font = Font.font(15.0)
                 setOnAction {
                     mainBorderPane.center = GridPane().apply {
                         add(Label(if (userInformation is OfflineUserInformation) userInformation.username()+" - Offline" else if (userInformation is YggdrasilUserInformation) userInformation.username()+" - Yggdrasil" else "Unknown User" ).apply {
@@ -509,18 +532,56 @@ object LauncherScene {
                         val javaPathField = JFXTextField(Toolkit.getJavaPath())
                         add(Label("Java Path"), 0, 4)
                         add(javaPathField, 1, 4)
-                        add(JFXButton("Save").apply {
+                        add(JFXButton(translator.get("save")).apply {
                             buttonType = JFXButton.ButtonType.RAISED
                             background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
                             setOnAction {
                                 Toolkit.setJavaPath(javaPathField.text)
                             }
                         }, 2, 4)
+                        add(Label(""), 0, 5)
+                        add(Label(translator.get("themecolor")), 0, 6)
+                        add(JFXColorPicker(GlobalThemeColorController.getFromConfig()).apply {
+                            valueProperty().addListener { _ ->
+                                val valu = value
+                                GlobalThemeColorController.saveToConfig(valu)
+                                GlobalThemeColorController.updateThemeColor(valu)
+                            }
+                        }, 1, 6)
+                        add(Label(""), 0, 7)
+                        add(Label(translator.get("lefttabopacity")), 0, 8)
+                        add(JFXSlider().apply {
+                            value = LeftListOpacityController.getFromConfig()/2.5
+                            valueProperty().addListener { _ ->
+                                val valu = value
+                                LeftListOpacityController.saveToConfig((valu*2.6).toInt())
+                                LeftListOpacityController.updateLeftListOpacity((valu*2.6).toInt())
+                            }
+                        }, 1, 8)
+                        add(Label(translator.get("numberhighandopacityhigh")), 0, 9)
+                        add(Label(""), 0, 10)
+                        add(Label(translator.get("backgroundimage")), 0, 11)
+                        val bgIField = JFXTextField().apply {
+                            text = GlobalBackgroundImageController.getFromConfig()
+                        }
+                        add(bgIField, 1, 11)
+                        add(JFXButton(translator.get("save")).apply {
+                            buttonType = JFXButton.ButtonType.RAISED
+                            background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+                            setOnAction {
+                                GlobalBackgroundImageController.saveToConfig(bgIField.text)
+                                GlobalBackgroundImageController.updateBackgroundImage(bgIField.text)
+                            }
+                        }, 2, 11)
+                        add(Label(translator.get("usedefaultpleasekeepnone")), 0, 12)
                     }
                 }
             })
+            children.add(Label(""))
             children.add(aboutBtn.apply {
+                isFocusTraversable = false
                 setPrefSize(160.0, 20.0)
+                font = Font.font(15.0)
                 setOnAction {
                     mainBorderPane.center = BorderPane().apply {
                         top = Label("")
@@ -532,7 +593,6 @@ object LauncherScene {
                             background = Background(BackgroundFill(Color(1.0, 1.0, 1.0, 0.5), null, null))
                             children.addAll(
                                 Label("IDEA Minecraft Launcher"),
-                                Label("Developer: ResetPower"),
                                 HBox().apply {
                                     children.addAll(
                                         Label("GitHub: "),
@@ -547,12 +607,25 @@ object LauncherScene {
                                         }
                                     )
                                 },
-                                Label("Version Name: $VERSION_NAME"),
-                                Label("Version Code: $VERSION_CODE"),
-                                Label("Open Source Software"),
                                 HBox().apply {
                                     children.addAll(
-                                        Label("GitHub Issues: "),
+                                        Label("Gitee: "),
+                                        Hyperlink("https://gitee.com/resetpower/imcl").apply {
+                                            setOnAction {
+                                                val desktop = Desktop.getDesktop()
+                                                if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
+                                                    val uri = URI(text)
+                                                    desktop.browse(uri)
+                                                }
+                                            }
+                                        }
+                                    )
+                                },
+                                Label("${translator.get("versionname")}: $VERSION_NAME"),
+                                Label("${translator.get("versioncode")}: $VERSION_CODE"),
+                                HBox().apply {
+                                    children.addAll(
+                                        Label("${translator.get("submiterroratgithub")}"),
                                         Hyperlink("https://github.com/resetpower/imcl/issues").apply {
                                             setOnAction {
                                                 val desktop = Desktop.getDesktop()
@@ -564,7 +637,49 @@ object LauncherScene {
                                         }
                                     )
                                 },
-                                Label("Email: lingxian0874@163.com")
+                                HBox().apply {
+                                    children.addAll(
+                                        Label("${translator.get("submiterroratgitee")}"),
+                                        Hyperlink("https://gitee.com/resetpower/imcl/issues").apply {
+                                            setOnAction {
+                                                val desktop = Desktop.getDesktop()
+                                                if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
+                                                    val uri = URI(text)
+                                                    desktop.browse(uri)
+                                                }
+                                            }
+                                        }
+                                    )
+                                },
+                                HBox().apply {
+                                    children.addAll(
+                                        Label("${translator.get("seewikiatgithub")}"),
+                                        Hyperlink("https://github.com/resetpower/imcl/wiki").apply {
+                                            setOnAction {
+                                                val desktop = Desktop.getDesktop()
+                                                if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
+                                                    val uri = URI(text)
+                                                    desktop.browse(uri)
+                                                }
+                                            }
+                                        }
+                                    )
+                                },
+                                HBox().apply {
+                                    children.addAll(
+                                        Label("${translator.get("seewikiatgitee")}"),
+                                        Hyperlink("https://gitee.com/resetpower/imcl/wiki").apply {
+                                            setOnAction {
+                                                val desktop = Desktop.getDesktop()
+                                                if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
+                                                    val uri = URI(text)
+                                                    desktop.browse(uri)
+                                                }
+                                            }
+                                        }
+                                    )
+                                },
+                                Label("${translator.get("opensourcesoftware")}")
                             )
                         }
                     }
@@ -575,10 +690,14 @@ object LauncherScene {
         setMinecraftJavaEditionPane()
         theScene = Scene(deepStackPane.apply {
             children.add(AnchorPane().apply {
-                children.add(ImageView(Image(MainScene::class.java.getResourceAsStream("/org/imcl/bg/bg.png"), 840.0, 502.5, false, true)))
+                val bg = GlobalBackgroundImageController.getFromConfig()
+                children.add(ImageView(Image(if (bg=="") MainScene::class.java.getResourceAsStream("/org/imcl/bg/bg.png") else FileInputStream(bg), 840.0, 502.5, false, true)))
                 children.add(mainBorderPane.apply {
                     setPrefSize(840.0, 502.5)
                 })
+                GlobalBackgroundImageController.register {
+                    children[0] = ImageView(Image(if (it=="") MainScene::class.java.getResourceAsStream("/org/imcl/bg/bg.png") else FileInputStream(it), 840.0, 502.5, false, true))
+                }
             })
         }, 840.0, 502.0)
         return theScene

@@ -81,4 +81,9 @@ object Toolkit {
             else -> "unknown"
         }
     }
+    @JvmStatic
+    fun getHex(int: Int): String {
+        val hex = Integer.toHexString(int)
+        return if (hex.length==1) "0$hex" else hex
+    }
 }

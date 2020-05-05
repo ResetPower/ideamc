@@ -60,7 +60,22 @@ object LanguageResource {
         Pair("auto-connect-server", "Server address to connect"),
         Pair("launching", "Launching"),
         Pair("whatisthis", "What is this?"),
-        Pair("folderseparate", "Folder Separate")
+        Pair("folderseparate", "Folder Separate"),
+        Pair("gamedir", "Game Directory"),
+        Pair("thisversionisntpure", "This version isn't pure"),
+        Pair("themecolor", "Theme Color"),
+        Pair("backgroundimage", "Background Image Path"),
+        Pair("save", "Save"),
+        Pair("usedefaultpleasekeepnone", "Use default please keep blank"),
+        Pair("lefttabopacity", "Left Tab Opacity"),
+        Pair("numberhighandopacityhigh", "The higher the transparency, the more opaque"),
+        Pair("versionname", "Version Name"),
+        Pair("versioncode", "Version Code"),
+        Pair("opensourcesoftware", "Open Source Software"),
+        Pair("submiterroratgithub", "Submit Error at GitHub"),
+        Pair("submiterroratgitee", "Submit Error at Gitee"),
+        Pair("seewikiatgithub", "See Wiki at GitHub"),
+        Pair("seewikiatgitee", "See Wiki at Gitee")
     )
     @JvmStatic
     fun esperantoResource() = mapOf(
@@ -111,7 +126,22 @@ object LanguageResource {
         Pair("auto-connect-server", "Aŭtomate konektita servila adreso"),
         Pair("launching", "Lanĉo"),
         Pair("whatisthis", "Kio estas ĉi tio?"),
-        Pair("folderseparate", "Dosierujo aparta")
+        Pair("folderseparate", "Dosierujo aparta"),
+        Pair("gamedir", "Luddosierujo"),
+        Pair("thisversionisntpure", "Ĉi tiu versio ne estas pura"),
+        Pair("themecolor", "Temo Koloro"),
+        Pair("backgroundimage", "Fonbildo Pado"),
+        Pair("save", "Savi"),
+        Pair("usedefaultpleasekeepnone", "Uzi defaŭlte bonvolu lasi malplena"),
+        Pair("lefttabopacity", "Maldekstra Tabtransparado"),
+        Pair("numberhighandopacityhigh", "Ju pli alta estas la travidebleco, des pli opaka"),
+        Pair("versionname", "Versia Nomo"),
+        Pair("versioncode", "Versia Kodo"),
+        Pair("opensourcesoftware", "Malferma fonta programaro"),
+        Pair("submiterroratgithub", "Afiŝu erarojn sur GitHub"),
+        Pair("submiterroratgitee", "Afiŝu erarojn sur Gitee"),
+        Pair("seewikiatgithub", "Rigardu Vikion ĉe GitHub"),
+        Pair("seewikiatgitee", "Rigardu Vikion ĉe Gitee")
     )
     @JvmStatic
     fun japaneseResource() = mapOf(
@@ -162,7 +192,22 @@ object LanguageResource {
         Pair("auto-connect-server", "自動的に接続されたサーバーアドレス"),
         Pair("launching", "起動しています"),
         Pair("whatisthis", "これは何ですか"),
-        Pair("folderseparate", "フォルダを分割")
+        Pair("folderseparate", "フォルダを分割"),
+        Pair("gamedir", "ゲームフォルダ"),
+        Pair("thisversionisntpure", "このバージョンはピュアじゃないです"),
+        Pair("themecolor", "テーマ色"),
+        Pair("backgroundimage", "背景画像パス"),
+        Pair("save", "保存"),
+        Pair("usedefaultpleasekeepnone", "デフォルトを使用して空白のままにしてください"),
+        Pair("lefttabopacity", "左タブの透明度"),
+        Pair("numberhighandopacityhigh", "透明度が高いほど、不透明度が高くなります"),
+        Pair("versionname", "バージョン名"),
+        Pair("versioncode", "バージョンコード"),
+        Pair("opensourcesoftware", "オープンソースソフトウェア"),
+        Pair("submiterroratgithub", "GitHubでエラーをリポート"),
+        Pair("submiterroratgitee", "Giteeでエラーをリポート"),
+        Pair("seewikiatgithub", "GitHubでウィキを見る"),
+        Pair("seewikiatgitee", "Giteeでウィキを見る")
     )
     @JvmStatic
     fun chineseSimplifiedResource() = mapOf(
@@ -213,7 +258,22 @@ object LanguageResource {
         Pair("auto-connect-server", "自动连接的服务器地址"),
         Pair("launching", "正在启动中"),
         Pair("whatisthis", "这是什么？"),
-        Pair("folderseparate", "文件夹分离")
+        Pair("folderseparate", "文件夹分离"),
+        Pair("gamedir", "游戏文件夹"),
+        Pair("thisversionisntpure", "这个版本不是纯净版"),
+        Pair("themecolor", "主题色"),
+        Pair("backgroundimage", "背景图片路径"),
+        Pair("save", "保存"),
+        Pair("usedefaultpleasekeepnone", "使用默认请留空"),
+        Pair("lefttabopacity", "左侧选项卡透明度"),
+        Pair("numberhighandopacityhigh", "透明度越高越不透明"),
+        Pair("versionname", "版本名"),
+        Pair("versioncode", "版本代码"),
+        Pair("opensourcesoftware", "开源软件"),
+        Pair("submiterroratgithub", "在GitHub上报错误"),
+        Pair("submiterroratgitee", "在Gitee上报错误"),
+        Pair("seewikiatgithub", "在GitHub查看Wiki"),
+        Pair("seewikiatgitee", "在Gitee查看Wiki")
     )
     @JvmStatic
     fun chineseTraditionalResource() = mapOf(
@@ -264,6 +324,21 @@ object LanguageResource {
         Pair("auto-connect-server", "自動連結的服務器地址"),
         Pair("launching", "正在啟動中"),
         Pair("whatisthis", "這是什麼？"),
-        Pair("folderseparate", "文件夾分離")
+        Pair("folderseparate", "文件夾分離"),
+        Pair("gamedir", "遊戲文件夾"),
+        Pair("thisversionisntpure", "這個版本不是純淨版"),
+        Pair("themecolor", "主題色"),
+        Pair("backgroundimage", "背景圖片路徑"),
+        Pair("save", "保存"),
+        Pair("usedefaultpleasekeepnone", "使用默認請留空"),
+        Pair("lefttabopacity", "左側選項卡透明度"),
+        Pair("numberhighandopacityhigh", "透明度越高越不透明"),
+        Pair("versionname", "版本名"),
+        Pair("versioncode", "版本代碼"),
+        Pair("opensourcesoftware", "開源軟件"),
+        Pair("submiterroratgithub", "在GitHub上報錯誤"),
+        Pair("submiterroratgitee", "在Gitee上報錯誤"),
+        Pair("seewikiatgithub", "在GitHub查看Wiki"),
+        Pair("seewikiatgitee", "在Gitee查看Wiki")
     )
 }
