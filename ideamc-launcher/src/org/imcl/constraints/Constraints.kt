@@ -1,5 +1,5 @@
 package org.imcl.constraints
 
-val VERSION_NAME = "Alpha 0.0.2"
+const val VERSION_NAME = "Alpha 0.1.0"
 
-val VERSION_CODE = 2
+const val VERSION_CODE = 3
