@@ -75,7 +75,22 @@ object LanguageResource {
         Pair("submiterroratgithub", "Submit Error at GitHub"),
         Pair("submiterroratgitee", "Submit Error at Gitee"),
         Pair("seewikiatgithub", "See Wiki at GitHub"),
-        Pair("seewikiatgitee", "See Wiki at Gitee")
+        Pair("seewikiatgitee", "See Wiki at Gitee"),
+        Pair("plugin", "Plugin"),
+        Pair("enabled", "Enabled"),
+        Pair("disabled", "Disabled"),
+        Pair("official", "Official"),
+        Pair("downloadsrc", "Download Source"),
+        Pair("forge", "Forge's operation requires income. If you have time, please go to the Forge official website to download and watch the advertisements to increase revenue for the Forge team."),
+        Pair("downloading", "Downloading"),
+        Pair("installing", "Installing"),
+        Pair("source", "Source"),
+        Pair("loading", "Loading"),
+        Pair("offlinemodenotsupport", "Offline mode not support it, Please buy Minecraft."),
+        Pair("previous", "Previous"),
+        Pair("next", "Next"),
+        Pair("profilenotselected", "Profile not selected"),
+        Pair("language", "Language")
     )
     @JvmStatic
     fun esperantoResource() = mapOf(
@@ -141,7 +156,22 @@ object LanguageResource {
         Pair("submiterroratgithub", "Afiŝu erarojn sur GitHub"),
         Pair("submiterroratgitee", "Afiŝu erarojn sur Gitee"),
         Pair("seewikiatgithub", "Rigardu Vikion ĉe GitHub"),
-        Pair("seewikiatgitee", "Rigardu Vikion ĉe Gitee")
+        Pair("seewikiatgitee", "Rigardu Vikion ĉe Gitee"),
+        Pair("plugin", "Kromaĵo"),
+        Pair("enabled", "Ebligita"),
+        Pair("disabled", "Malebligita"),
+        Pair("official", "Oficiala"),
+        Pair("downloadsrc", "Elŝuta Fonto"),
+        Pair("forge", "La operacio de Forge postulas enspezon. Se vi havas tempon, bonvolu iri al la oficiala retejo de Forge por elŝuti kaj spekti la reklamojn por pliigi enspezon por la Forge-teamo."),
+        Pair("downloading", "Elŝutante"),
+        Pair("installing", "Instali"),
+        Pair("source", "Fonto"),
+        Pair("loading", "Ŝarĝante"),
+        Pair("offlinemodenotsupport", "Ĉi tiu funkcio ne estas subtenata en senkonekta reĝimo, Bonvolu aĉeti Minecraft."),
+        Pair("previous", "Antaŭa"),
+        Pair("next", "Sekva"),
+        Pair("profilenotselected", "Profilo ne elektita"),
+        Pair("language", "Lingvo")
     )
     @JvmStatic
     fun japaneseResource() = mapOf(
@@ -207,7 +237,22 @@ object LanguageResource {
         Pair("submiterroratgithub", "GitHubでエラーをリポート"),
         Pair("submiterroratgitee", "Giteeでエラーをリポート"),
         Pair("seewikiatgithub", "GitHubでウィキを見る"),
-        Pair("seewikiatgitee", "Giteeでウィキを見る")
+        Pair("seewikiatgitee", "Giteeでウィキを見る"),
+        Pair("plugin", "プラグイン"),
+        Pair("enabled", "有効"),
+        Pair("disabled", "無効"),
+        Pair("official", "公式"),
+        Pair("downloadsrc", "ダウンロード出典"),
+        Pair("forge", "Forgeの運営には収入が必要です。 時間がある場合は、Forge公式Webサイトにアクセスして、Forgeチームの収入を増やすための広告をダウンロードして視聴してください。"),
+        Pair("downloading", "ダウンロード中"),
+        Pair("installing", "インストール中"),
+        Pair("source", "出典"),
+        Pair("loading", "読み込み中"),
+        Pair("offlinemodenotsupport", "この機能はオフラインモードではサポートされていません。Minecraftを購入してください"),
+        Pair("previous", "前"),
+        Pair("next", "次"),
+        Pair("profilenotselected", "構成が選択されていません"),
+        Pair("language", "言語")
     )
     @JvmStatic
     fun chineseSimplifiedResource() = mapOf(
@@ -273,7 +318,22 @@ object LanguageResource {
         Pair("submiterroratgithub", "在GitHub上报错误"),
         Pair("submiterroratgitee", "在Gitee上报错误"),
         Pair("seewikiatgithub", "在GitHub查看Wiki"),
-        Pair("seewikiatgitee", "在Gitee查看Wiki")
+        Pair("seewikiatgitee", "在Gitee查看Wiki"),
+        Pair("plugin", "插件"),
+        Pair("enabled", "已启用"),
+        Pair("disabled", "已禁用"),
+        Pair("official", "官方"),
+        Pair("downloadsrc", "下载源"),
+        Pair("forge", "Forge的运行需要收入。如果您有时间请去Forge官网下载并观看广告为Forge团队增加收益。"),
+        Pair("downloading", "下载中"),
+        Pair("installing", "安装中"),
+        Pair("source", "来源"),
+        Pair("loading", "加载中"),
+        Pair("offlinemodenotsupport", "离线模式不支持此功能，请购买Minecraft"),
+        Pair("previous", "上一步"),
+        Pair("next", "下一步"),
+        Pair("profilenotselected", "没有选择任何配置"),
+        Pair("language", "语言")
     )
     @JvmStatic
     fun chineseTraditionalResource() = mapOf(
@@ -339,6 +399,21 @@ object LanguageResource {
         Pair("submiterroratgithub", "在GitHub上報錯誤"),
         Pair("submiterroratgitee", "在Gitee上報錯誤"),
         Pair("seewikiatgithub", "在GitHub查看Wiki"),
-        Pair("seewikiatgitee", "在Gitee查看Wiki")
+        Pair("seewikiatgitee", "在Gitee查看Wiki"),
+        Pair("plugin", "插件"),
+        Pair("enabled", "已啟用"),
+        Pair("disabled", "已禁用"),
+        Pair("official", "官方"),
+        Pair("downloadsrc", "下載源"),
+        Pair("forge", "Forge的運行需要收入。如果您有時間請去Forge官網下載並收看廣告為Forge團隊增加收益。"),
+        Pair("downloading", "下載中"),
+        Pair("installing", "安裝中"),
+        Pair("source", "來源"),
+        Pair("loading", "加載中"),
+        Pair("offlinemodenotsupport", "離線模式不支持此功能，請購買Minecraft"),
+        Pair("previous", "上一步"),
+        Pair("next", "下一步"),
+        Pair("profilenotselected", "沒有選擇任何配置"),
+        Pair("language", "語言")
     )
 }

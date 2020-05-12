@@ -2,6 +2,7 @@ package org.imcl.core.http
 
 import java.io.*
 import java.net.HttpURLConnection
+import java.net.MalformedURLException
 import java.net.URL
 import java.net.URLConnection
 import java.nio.charset.Charset
@@ -89,5 +90,39 @@ object HttpRequestSender {
         }
         bos.close()
         return String(bos.toByteArray(), Charset.forName("utf-8"))
+    }
+    @JvmStatic
+    fun put(spec: String, param: String, head: Pair<String, String> = Pair("Content-Type", "application/json"), whenError: () -> Unit) {
+        var url = URL(spec)
+        var httpURLConnection: HttpURLConnection? = null
+        var dataOutputStream: DataOutputStream? = null
+        try {
+            httpURLConnection = url.openConnection() as HttpURLConnection
+            httpURLConnection.setRequestProperty(head.first, head.second)
+            httpURLConnection.requestMethod = "PUT"
+            httpURLConnection.doInput = true
+            httpURLConnection.doOutput = true
+            dataOutputStream = DataOutputStream(httpURLConnection.outputStream)
+            dataOutputStream.write(param.toByteArray())
+        } catch (e: Exception) {
+            whenError()
+        } finally {
+            dataOutputStream?.close()
+            httpURLConnection?.disconnect()
+        }
+    }
+    @JvmStatic
+    fun delete(spec: String, head: Pair<String, String> = Pair("Content-Type", "application/json"), whenError: () -> Unit) {
+        var url = URL(spec)
+        var httpURLConnection: HttpURLConnection? = null
+        try {
+            httpURLConnection = url.openConnection() as HttpURLConnection
+            httpURLConnection.setRequestProperty(head.first, head.second)
+            httpURLConnection.requestMethod = "DELETE"
+        } catch (e: Exception) {
+            whenError()
+        } finally {
+            httpURLConnection?.disconnect()
+        }
     }
 }

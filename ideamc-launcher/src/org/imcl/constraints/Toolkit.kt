@@ -1,18 +1,22 @@
 package org.imcl.constraints
 
+import com.alibaba.fastjson.JSON
+import com.alibaba.fastjson.JSONObject
 import javafx.scene.control.Alert
+import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.util.*
 
 object Toolkit {
+    lateinit var obj: JSONObject
+    @JvmStatic
+    fun init() {
+        obj = JSON.parseObject(File("imcl.json").readText())
+    }
     @JvmStatic
     fun getCurrentLanguage() : String {
-        val ins = FileInputStream("imcl/properties/ideamc.properties")
-        val prop = Properties()
-        prop.load(ins)
-        ins.close()
-        return prop.getProperty("language")
+        return obj.getJSONObject("settings").getString("language")
     }
     @JvmStatic
     fun toast(message: String) {
@@ -23,41 +27,21 @@ object Toolkit {
     }
     @JvmStatic
     fun getJavaPath() : String {
-        val ins = FileInputStream("imcl/properties/ideamc.properties")
-        val prop = Properties()
-        prop.load(ins)
-        ins.close()
-        return prop.getProperty("javapath")
+        return obj.getJSONObject("settings").getString("javapath")
     }
     @JvmStatic
     fun setJavaPath(javaPath: String) {
-        val ins = FileInputStream("imcl/properties/ideamc.properties")
-        val prop = Properties()
-        prop.load(ins)
-        ins.close()
-        prop.setProperty("javapath", javaPath)
-        val out = FileOutputStream("imcl/properties/ideamc.properties")
-        prop.store(out, "")
-        out.close()
+        obj.getJSONObject("settings").put("javapath", javaPath)
+        save()
     }
     @JvmStatic
     fun isLoggedIn() : Boolean {
-        val ins = FileInputStream("imcl/properties/ideamc.properties")
-        val prop = Properties()
-        prop.load(ins)
-        ins.close()
-        return prop.getProperty("isLoggedIn")=="true"
+        return obj.getJSONObject("settings").getString("isLoggedIn")=="true"
     }
     @JvmStatic
     fun updateLanguage(language: String) {
-        val ins = FileInputStream("imcl/properties/ideamc.properties")
-        val prop = Properties()
-        prop.load(ins)
-        ins.close()
-        prop.setProperty("language", language)
-        val out = FileOutputStream("imcl/properties/ideamc.properties")
-        prop.store(out, "")
-        out.close()
+        obj.getJSONObject("settings").put("language", language)
+        save()
     }
     @JvmStatic
     fun getLanguageEnglishName(language: String) : String {
@@ -82,8 +66,14 @@ object Toolkit {
         }
     }
     @JvmStatic
+    fun getPluginsFolder() = File("plugins")
+    @JvmStatic
     fun getHex(int: Int): String {
         val hex = Integer.toHexString(int)
         return if (hex.length==1) "0$hex" else hex
+    }
+    @JvmStatic
+    fun save() {
+        File("imcl.json").writeText(obj.toJSONString())
     }
 }

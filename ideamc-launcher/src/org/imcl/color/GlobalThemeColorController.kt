@@ -1,41 +1,37 @@
 package org.imcl.color
 
 import javafx.scene.paint.Color
-import java.io.FileInputStream
-import java.io.FileOutputStream
+import org.imcl.constraints.Toolkit
+import org.imcl.constraints.logger
 import java.util.*
 
 object GlobalThemeColorController {
     private val events = Vector<(color: Color) -> Unit>()
     @JvmStatic
     fun register(event: (color: Color) -> Unit) {
+        logger.info("New event registered. Event@${events.size}")
         events.add(event)
     }
     @JvmStatic
     fun saveToConfig(color: Color) {
-        val properties = Properties()
-        val `in` = FileInputStream("imcl/properties/ideamc.properties")
-        properties.load(`in`)
-        `in`.close()
-        properties.setProperty("themeColor", color.toString())
-        val out = FileOutputStream("imcl/properties/ideamc.properties")
-        properties.store(out, "")
-        out.close()
+        logger.info("Saving theme color to config: $color")
+        Toolkit.obj.getJSONObject("settings").put("themeColor", color.toString())
+        Toolkit.save()
     }
     @JvmStatic
     fun getFromConfig() : Color {
-        val properties = Properties()
-        val `in` = FileInputStream("imcl/properties/ideamc.properties")
-        properties.load(`in`)
-        `in`.close()
+        val properties = Toolkit.obj.getJSONObject("settings")
         if (!properties.containsKey("themeColor")) {
             saveToConfig(Color.WHITE)
             return Color.WHITE
         }
-        return Color.web(properties.getProperty("themeColor"))
+        val ret = properties.getString("themeColor")
+        logger.info("Saving theme color to config: $ret")
+        return Color.web(ret)
     }
     @JvmStatic
     fun updateThemeColor(color: Color) {
+        logger.info("Theme color updated, running all events")
         for (i in events) {
             i(color)
         }

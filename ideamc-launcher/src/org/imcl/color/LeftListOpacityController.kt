@@ -1,40 +1,36 @@
 package org.imcl.color
 
-import java.io.FileInputStream
-import java.io.FileOutputStream
+import org.imcl.constraints.Toolkit
+import org.imcl.constraints.logger
 import java.util.*
 
 object LeftListOpacityController {
     private val events = Vector<(int: Int) -> Unit>()
     @JvmStatic
     fun register(event: (int: Int) -> Unit) {
+        logger.info("New event registered. Event@${events.size}")
         events.add(event)
     }
     @JvmStatic
     fun saveToConfig(int: Int) {
-        val properties = Properties()
-        val `in` = FileInputStream("imcl/properties/ideamc.properties")
-        properties.load(`in`)
-        `in`.close()
-        properties.setProperty("leftListOpacity", (if (int>255) 255 else int).toString())
-        val out = FileOutputStream("imcl/properties/ideamc.properties")
-        properties.store(out, "")
-        out.close()
+        logger.info("Saving left list opacity to config: $int")
+        Toolkit.obj.getJSONObject("settings").put("leftListOpacity", int.toString())
+        Toolkit.save()
     }
     @JvmStatic
     fun getFromConfig() : Int {
-        val properties = Properties()
-        val `in` = FileInputStream("imcl/properties/ideamc.properties")
-        properties.load(`in`)
-        `in`.close()
+        val properties = Toolkit.obj.getJSONObject("settings")
         if (!properties.containsKey("leftListOpacity")) {
             saveToConfig(200)
             return 200
         }
-        return Integer.parseInt(properties.getProperty("leftListOpacity"))
+        val ret = properties.getString("leftListOpacity")
+        logger.info("Getting left list opacity from config: $ret")
+        return Integer.parseInt(ret)
     }
     @JvmStatic
     fun updateLeftListOpacity(int: Int) {
+        logger.info("Left list opacity updated, running all events")
         for (i in events) {
             i(if (int>255) 255 else int)
         }

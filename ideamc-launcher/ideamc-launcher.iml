@@ -12,5 +12,17 @@
     <orderEntry type="library" name="commons-io-2.6" level="project" />
     <orderEntry type="library" name="fastjson-1.2.68" level="project" />
     <orderEntry type="library" name="jfoenix-8.0.8" level="project" />
+    <orderEntry type="library" name="log4j-api-2.13.2" level="project" />
+    <orderEntry type="library" name="log4j-core-2.13.2" level="project" />
+    <orderEntry type="library" name="snakeyaml-1.9" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../out/artifacts/ideamc_platform_api_jar/ideamc-platform-api.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

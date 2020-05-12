@@ -19,6 +19,9 @@ Kurado out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)
 - [commons-io](https://github.com/apache/commons-io)
+- [DialogBuilder](https://github.com/Stars-One/DialogBuilder)
+- [log4j](https://github.com/apache/log4j)
+- [snakeyaml](https://github.com/asomov/snakeyaml)
 ## Deklaro
 Nia elŝuta servo uzas [BMCLAPI](https://bmclapidoc.bangbang93.com/)
 ## Ellaboranto

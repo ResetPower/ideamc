@@ -5,9 +5,11 @@ import javafx.scene.Scene
 import javafx.scene.control.Label
 import javafx.scene.control.Tab
 import javafx.stage.Stage
+import org.imcl.constraints.logger
 
 class FolderSeparateIntroduction : Stage() {
     init {
+        logger.info("Generating FolderSeparateIntroduction")
         scene = Scene(JFXTabPane().apply {
             tabs.addAll(Tab("简体中文").apply {
                 content = Label("""

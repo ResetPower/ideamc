@@ -1,41 +1,36 @@
 package org.imcl.bg
 
-import javafx.scene.paint.Color
-import java.io.FileInputStream
-import java.io.FileOutputStream
+import org.imcl.constraints.Toolkit
+import org.imcl.constraints.logger
 import java.util.*
 
 object GlobalBackgroundImageController {
     private val events = Vector<(string: String) -> Unit>()
     @JvmStatic
     fun register(event: (string: String) -> Unit) {
+        logger.info("New event registered. Event@${events.size}")
         events.add(event)
     }
     @JvmStatic
     fun saveToConfig(string: String) {
-        val properties = Properties()
-        val `in` = FileInputStream("imcl/properties/ideamc.properties")
-        properties.load(`in`)
-        `in`.close()
-        properties.setProperty("backgroundImage", string)
-        val out = FileOutputStream("imcl/properties/ideamc.properties")
-        properties.store(out, "")
-        out.close()
+        logger.info("Saving background image to config: $string")
+        Toolkit.obj.getJSONObject("settings").put("backgroundImage", string)
+        Toolkit.save()
     }
     @JvmStatic
     fun getFromConfig() : String {
-        val properties = Properties()
-        val `in` = FileInputStream("imcl/properties/ideamc.properties")
-        properties.load(`in`)
-        `in`.close()
+        val properties = Toolkit.obj.getJSONObject("settings")
         if (!properties.containsKey("backgroundImage")) {
             saveToConfig("")
             return ""
         }
-        return properties.getProperty("backgroundImage")
+        val ret = properties.getString("backgroundImage")
+        logger.info("Getting background image from config: $ret")
+        return ret
     }
     @JvmStatic
     fun updateBackgroundImage(string: String) {
+        logger.info("Background image updated, running all events")
         for (i in events) {
             i(string)
         }

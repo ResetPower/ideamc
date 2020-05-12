@@ -1,49 +1,41 @@
 package org.imcl.files
 
+import org.imcl.constraints.logger
 import java.io.File
 
 object FileChecker {
+    @JvmStatic
     fun check() {
-        val imclDir = File("imcl")
-        if (!imclDir.exists()) {
-            imclDir.mkdirs()
-        }
-        val accDir = File("imcl/account")
-        if (!accDir.exists()) {
-            accDir.mkdirs()
-        }
-        val accFile = File("imcl/account/acinf.text")
-        if (!accFile.exists()) {
-            accFile.writeText("""
-                accessToken=none
-                uuid=none
-                username=none
+        logger.info("Checking imcl.json")
+        val imclJson = File("imcl.json")
+        if (!imclJson.exists()) {
+            logger.info("imcl.json not exists, creating file")
+            imclJson.writeText("""
+                {
+                    "account": {
+                        "username": "none",
+                        "uuid": "none",
+                        "accessToken": "none"
+                    },
+                    "profiles": [],
+                    "settings": {
+                        "isLoggedIn": "false",
+                        "language": "english",
+                        "javapath": "java",
+                        "downloadSrc": "bmclapi"
+                    }
+                }
             """.trimIndent())
+        } else {
+            logger.info("imcl.json exists")
         }
-        val lauDir = File("imcl/launcher")
-        if (!lauDir.exists()) {
-            lauDir.mkdirs()
+        logger.info("Checking plugins folder")
+        val pluginsFolder = File("plugins")
+        if (!pluginsFolder.exists()) {
+            logger.info("plugins folder not exists, creating folder")
+            pluginsFolder.mkdirs()
+        } else {
+            logger.info("plugins folder exists")
         }
-        val lauPro = File("imcl/launcher/launcher_profiles.json")
-        if (!lauPro.exists()) {
-            lauPro.writeText("[]")
-        }
-        val proDir = File("imcl/properties")
-        if (!proDir.exists()) {
-            proDir.mkdirs()
-        }
-        val proPro = File("imcl/properties/ideamc.properties")
-        if (!proPro.exists()) {
-            proPro.writeText("""
-                javapath=java
-                isLoggedIn=false
-                language=english
-            """.trimIndent())
-        }
-        val cacheDir = File("imcl/cache")
-        if (!cacheDir.exists()) {
-            cacheDir.mkdirs()
-        }
-
     }
 }

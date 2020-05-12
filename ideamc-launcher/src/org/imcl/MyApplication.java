@@ -1,71 +1,78 @@
 package org.imcl;
 
+import com.alibaba.fastjson.JSONObject;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.stage.Stage;
-import org.imcl.constraints.MenuBarLoader;
+import org.apache.logging.log4j.Logger;
+import org.imcl.constraints.ConstraintsKt;
 import org.imcl.constraints.Toolkit;
 import org.imcl.core.authentication.YggdrasilAuthenticator;
-import org.imcl.exceptions.GlobalExceptionHandler;
 import org.imcl.files.FileChecker;
 import org.imcl.lang.Translator;
+import org.imcl.launch.LaunchSceneState;
 import org.imcl.launch.LauncherScene;
 import org.imcl.main.MainScene;
+import org.imcl.plugin.PluginLoader;
 import org.imcl.users.OfflineUserInformation;
 import org.imcl.users.YggdrasilUserInformation;
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.util.Properties;
+import javax.swing.JFrame;
 
 public class MyApplication extends Application {
-
+    public static JFrame loader;
     @Override
     public void start(Stage primaryStage) throws Exception {
-        GlobalExceptionHandler.INSTANCE.init();
-        FileChecker.INSTANCE.check();
-        MenuBarLoader.load();
+        org.imcl.constraints.ConstraintsKt.initLogger();
+        org.imcl.core.constraints.ConstraintsKt.initLogger();
+        Logger logger = ConstraintsKt.getLogger();
+        primaryStage.setResizable(false);
+        logger.info("Checking file");
+        FileChecker.check();
+        logger.info("Initializing Window");
+        Toolkit.init();
         primaryStage.setTitle("IDEA Minecraft Launcher");
-        primaryStage.setOnCloseRequest(event -> Platform.exit());
+        primaryStage.setOnCloseRequest(event -> System.exit(0));
+        PluginLoader.preLoad();
         if (Toolkit.isLoggedIn()) {
-            FileInputStream fis = new FileInputStream("imcl/account/acinf.text");
-            Properties prop = new Properties();
-            prop.load(fis);
-            fis.close();
-            if (prop.getProperty("uuid").trim().equals("none")) {
-                primaryStage.setScene(LauncherScene.get(new Translator(Toolkit.getCurrentLanguage()), new OfflineUserInformation(prop.getProperty("username")), primaryStage));
+            logger.info("Is logged in, using default account");
+            JSONObject account = Toolkit.obj.getJSONObject("account");
+            if (account.getString("uuid").trim().equals("none")) {
+                logger.info("Offline account. Player name: "+account.getString("username"));
+                primaryStage.setScene(LauncherScene.get(new Translator(Toolkit.getCurrentLanguage()), new OfflineUserInformation(account.getString("username")), primaryStage, LaunchSceneState.DEFAULT));
             } else {
-                if (YggdrasilAuthenticator.validate(prop.getProperty("accessToken"))) {
-                    primaryStage.setScene(LauncherScene.get(new Translator(Toolkit.getCurrentLanguage()), new YggdrasilUserInformation(prop.getProperty("username"), prop.getProperty("uuid"), prop.getProperty("accessToken")), primaryStage));
+                logger.info("Online account. Player name: "+account.getString("username"));
+                if (YggdrasilAuthenticator.validate(account.getString("accessToken"))) {
+                    logger.info("Validate access. Logging in");
+                    primaryStage.setScene(LauncherScene.get(new Translator(Toolkit.getCurrentLanguage()), new YggdrasilUserInformation(account.getString("username"), account.getString("uuid"), account.getString("accessToken")), primaryStage, LaunchSceneState.DEFAULT));
                 } else {
+                    logger.info("Validate not access, refreshing");
                     final String newToken;
                     try {
-                        newToken = YggdrasilAuthenticator.refresh(prop.getProperty("accessToken"));
-                        prop.setProperty("accessToken", newToken);
-                        primaryStage.setScene(LauncherScene.get(new Translator(Toolkit.getCurrentLanguage()), new YggdrasilUserInformation(prop.getProperty("username"), prop.getProperty("uuid"), newToken), primaryStage));
+                        logger.info("Refresh accessToken successful. Logging in");
+                        newToken = YggdrasilAuthenticator.refresh(account.getString("accessToken"));
+                        account.put("accessToken", newToken);
+                        primaryStage.setScene(LauncherScene.get(new Translator(Toolkit.getCurrentLanguage()), new YggdrasilUserInformation(account.getString("username"), account.getString("uuid"), newToken), primaryStage, LaunchSceneState.DEFAULT));
                     } catch (Exception e) {
-                        FileInputStream ins = new FileInputStream("imcl/properties/ideamc.properties");
-                        Properties p = new Properties();
-                        p.load(ins);
-                        ins.close();
-                        p.setProperty("isLoggedIn", "true");
-                        FileOutputStream out = new FileOutputStream("imcl/properties/ideamc.properties");
-                        p.store(out, "");
-                        out.close();
+                        logger.info("Unable to refresh accessToken, go to login page");
+                        JSONObject settings = Toolkit.obj.getJSONObject("settings");
+                        settings.put("isLoggedIn", "false");
+                        Toolkit.save();
                         primaryStage.setScene(MainScene.get(primaryStage));
                     }
                 }
             }
-            FileOutputStream out = new FileOutputStream("imcl/account/acinf.text");
-            prop.store(out, "");
-            out.close();
+            Toolkit.save();
         } else {
+            logger.info("Not logged in, go to login page");
             primaryStage.setScene(MainScene.get(primaryStage));
         }
+        logger.info("Load done. Ending splash screen");
+        Thread.sleep(100L);
+        loader.setVisible(false);
         primaryStage.show();
+        logger.info("Splash screen ended. primaryStage showed");
     }
-
     public static void main(String[] args) {
+        loader = new IMCLLoader().show();
         launch(args);
     }
 }

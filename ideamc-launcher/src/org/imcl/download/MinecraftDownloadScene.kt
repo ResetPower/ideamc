@@ -4,10 +4,7 @@ import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject
 import com.jfoenix.controls.JFXButton
 import com.jfoenix.controls.JFXCheckBox
-import com.jfoenix.controls.JFXListView
-import com.jfoenix.controls.JFXScrollPane
 import javafx.geometry.Insets
-import javafx.geometry.Pos
 import javafx.scene.Scene
 import javafx.scene.control.Hyperlink
 import javafx.scene.control.Label
@@ -15,7 +12,7 @@ import javafx.scene.control.ScrollPane
 import javafx.scene.layout.*
 import javafx.scene.text.Font
 import javafx.stage.Stage
-import org.imcl.core.download.GameDownloader
+import org.imcl.constraints.logger
 import org.imcl.lang.Translator
 import org.imcl.users.UserInformation
 import java.awt.Desktop
@@ -31,6 +28,7 @@ object MinecraftDownloadScene {
         var old = false
         var theScene = Scene(Label("Loading..."), 840.0, 502.0)
         fun refreshGameList() {
+            logger.info("Refreshing game list")
             val iterator = versions.iterator()
             gameList.children.clear()
             while (iterator.hasNext()) {
@@ -39,6 +37,7 @@ object MinecraftDownloadScene {
                 if (obj.getString("type")=="release"&&rel) {
                     gameList.children.add(JFXButton(ver).apply {
                         setOnAction {
+                            logger.info("Turning to MinecraftInstallerScene: $ver")
                             primaryStage.scene = MinecraftInstallerScene.get(translator, primaryStage, theScene, ver, obj)
                         }
                     })
@@ -46,6 +45,7 @@ object MinecraftDownloadScene {
                 if (obj.getString("type")=="snapshot"&&sna) {
                     gameList.children.add(JFXButton(obj.getString("id")).apply {
                         setOnAction {
+                            logger.info("Turning to MinecraftInstallerScene: $ver")
                             primaryStage.scene = MinecraftInstallerScene.get(translator, primaryStage, theScene, ver, obj)
                         }
                     })
@@ -53,28 +53,33 @@ object MinecraftDownloadScene {
                 if ((obj.getString("type")=="old_alpha"||obj.getString("type")=="old_beta")&&old) {
                     gameList.children.add(JFXButton(obj.getString("id")).apply {
                         setOnAction {
+                            logger.info("Turning to MinecraftInstallerScene: $ver")
                             primaryStage.scene = MinecraftInstallerScene.get(translator, primaryStage, theScene, ver, obj)
                         }
                     })
                 }
             }
+            logger.info("Refreshing game list done")
         }
         refreshGameList()
         val releaseBox = JFXCheckBox(translator.get("release")).apply {
             isSelected = true
             selectedProperty().addListener { _ ->
+                logger.info("Clicked release box")
                 rel = isSelected
                 refreshGameList()
             }
         }
         val snapshotBox = JFXCheckBox(translator.get("snapshot")).apply {
             selectedProperty().addListener { _ ->
+                logger.info("Clicked snapshot box")
                 sna = isSelected
                 refreshGameList()
             }
         }
         val oldBox = JFXCheckBox(translator.get("old")).apply {
             selectedProperty().addListener { _ ->
+                logger.info("Clicked old box")
                 old = isSelected
                 refreshGameList()
             }
@@ -85,6 +90,7 @@ object MinecraftDownloadScene {
                 children.addAll(JFXButton("←").apply {
                     buttonType = JFXButton.ButtonType.RAISED
                     setOnAction {
+                        logger.info("Backing to LauncherScene")
                         primaryStage.scene = sourceScene
                     }
                 }, Label("Minecraft ${translator.get("download")}").apply {
@@ -103,6 +109,7 @@ object MinecraftDownloadScene {
             children.addAll(Label(translator.get("bmclapi")), HBox().apply {
                 children.addAll(Label(translator.get("clickit")), Hyperlink("https://afdian.net/@bangbang93").apply {
                     setOnAction {
+                        logger.info("Clicked link to https://afdian.net/@bangbang93")
                         val desktop = Desktop.getDesktop()
                         if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
                             val uri = URI(text)

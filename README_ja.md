@@ -19,6 +19,9 @@ IMCLは、モジュール管理、ゲームのカスタマイズなど、多く�
 - [Fastjson](https://github.com/alibaba/fastjson)
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)
 - [commons-io](https://github.com/apache/commons-io)
+- [DialogBuilder](https://github.com/Stars-One/DialogBuilder)
+- [log4j](https://github.com/apache/log4j)
+- [snakeyaml](https://github.com/asomov/snakeyaml)
 ## 声明
 ダウンロードサービスは[BMCLAPI](https://bmclapidoc.bangbang93.com/)を使用します
 ## 開発者

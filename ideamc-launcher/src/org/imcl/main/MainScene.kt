@@ -8,7 +8,8 @@ import javafx.collections.FXCollections
 import javafx.geometry.Insets
 import javafx.geometry.Pos
 import javafx.scene.Scene
-import javafx.scene.control.*
+import javafx.scene.control.Alert
+import javafx.scene.control.Label
 import javafx.scene.image.Image
 import javafx.scene.layout.*
 import javafx.scene.paint.Color
@@ -16,16 +17,14 @@ import javafx.scene.text.Font
 import javafx.scene.text.FontWeight
 import javafx.scene.text.Text
 import javafx.stage.Stage
+import org.imcl.constraints.Toolkit
+import org.imcl.constraints.logger
+import org.imcl.core.authentication.YggdrasilAuthenticator
+import org.imcl.core.network.NetworkState
 import org.imcl.lang.Translator
 import org.imcl.launch.LauncherScene
-import org.imcl.constraints.Toolkit
-import org.imcl.core.authentication.YggdrasilAuthenticator
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.YggdrasilUserInformation
-import java.io.FileInputStream
-import java.io.FileOutputStream
-import java.util.*
-
 
 object MainScene {
     val emailLabel = Label("Email or username")
@@ -34,8 +33,10 @@ object MainScene {
     val offlineButton = JFXButton("Offline")
     @JvmStatic
     fun get(primaryStage: Stage) : Scene {
+        logger.info("Initializing MainScene (login page)")
         val scene = Scene(BorderPane().apply {
             var translator = updateLanguage()
+            logger.info("Getting language: ${translator.languageName}")
             background = Background(BackgroundImage(
                 Image(MainScene::class.java.getResourceAsStream("/org/imcl/bg/bg.png"), 840.0, 502.5, false, true),
                 BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
@@ -45,6 +46,7 @@ object MainScene {
             top = JFXComboBox(list).apply {
                 selectionModel.select(Toolkit.getLanguageNameInThatLanguage(translator.languageName))
                 selectionModel.selectedIndexProperty().addListener { observable, oldValue, newValue ->
+                    logger.info("Updating language, old: ${Toolkit.getLanguageEnglishName(list.get(oldValue as Int))}, new: ${Toolkit.getLanguageEnglishName(list.get(newValue as Int))}")
                     Toolkit.updateLanguage(Toolkit.getLanguageEnglishName(list.get(newValue as Int)))
                     translator = Translator(Toolkit.getCurrentLanguage())
                     updateLanguage()
@@ -71,42 +73,44 @@ object MainScene {
                     buttonType = JFXButton.ButtonType.RAISED
                     background = Background(BackgroundFill(Color.ALICEBLUE, null, null))
                     setOnAction {
+                        logger.info("Login button clicked")
                         if (userTextField.text.trim()==""||pwBox.text.trim()=="") {
+                            logger.info("Username or password not input")
                             val alert = Alert(Alert.AlertType.INFORMATION)
                             alert.title = "Username or password not input"
                             alert.contentText = "Username or password not input"
                             alert.showAndWait()
                         } else {
+                            logger.info("Authenticating")
                             val result = YggdrasilAuthenticator.authenticate(userTextField.text, pwBox.text).split(" ")
                             if (result[0]=="true") {
-                                val ins = FileInputStream("imcl/properties/ideamc.properties")
-                                val prop = Properties()
-                                prop.load(ins)
-                                ins.close()
-                                prop.setProperty("isLoggedIn", "true")
-                                val out = FileOutputStream("imcl/properties/ideamc.properties")
-                                prop.store(out, "")
-                                out.close()
+                                logger.info("Authentication successful")
+                                Toolkit.obj.getJSONObject("settings").put("isLoggedIn", "true")
+                                val acinf = Toolkit.obj.getJSONObject("account")
                                 val username = result[1]
                                 val uuid = result[2]
                                 val accessToken = result[3]
-                                val acinfIns = FileInputStream("imcl/account/acinf.text")
-                                val acinf = Properties()
-                                acinf.load(acinfIns)
-                                acinfIns.close()
-                                acinf.setProperty("username", username)
-                                acinf.setProperty("uuid", uuid)
-                                acinf.setProperty("accessToken", accessToken)
-                                val acinfOut = FileOutputStream("imcl/account/acinf.text")
-                                acinf.store(acinfOut, "")
-                                acinfOut.close()
-
+                                acinf.put("username", username)
+                                acinf.put("uuid", uuid)
+                                acinf.put("accessToken", accessToken)
+                                Toolkit.save()
                                 primaryStage.scene = LauncherScene.get(translator, YggdrasilUserInformation(username, uuid, accessToken), primaryStage)
                             } else {
-                                val alert = Alert(Alert.AlertType.INFORMATION)
-                                alert.title = "Password Error"
-                                alert.contentText = "Password Error"
-                                alert.show()
+                                logger.info("Unable to authenticate")
+                                logger.info("Checking network state")
+                                if (NetworkState.isConnectedToInternet()) {
+                                    logger.info("Network normal. Password error.")
+                                    val alert = Alert(Alert.AlertType.INFORMATION)
+                                    alert.title = "Password Error"
+                                    alert.contentText = "Password Error"
+                                    alert.show()
+                                } else {
+                                    logger.info("Network bad. Network error.")
+                                    val alert = Alert(Alert.AlertType.INFORMATION)
+                                    alert.title = "Network Error"
+                                    alert.contentText = "Network Error"
+                                    alert.show()
+                                }
                             }
                         }
                     }
@@ -115,31 +119,21 @@ object MainScene {
                     buttonType = JFXButton.ButtonType.RAISED
                     background = Background(BackgroundFill(Color.ALICEBLUE, null, null))
                     setOnAction {
+                        logger.info("Offline button clicked")
                         if (userTextField.text.trim()=="") {
+                            logger.info("Username not input")
                             val alert = Alert(Alert.AlertType.INFORMATION)
                             alert.title = "Username not set"
                             alert.contentText = "Username not set"
                             alert.showAndWait()
                         } else {
-                            val ins = FileInputStream("imcl/properties/ideamc.properties")
-                            val prop = Properties()
-                            prop.load(ins)
-                            ins.close()
-                            prop.setProperty("isLoggedIn", "true")
-                            val out = FileOutputStream("imcl/properties/ideamc.properties")
-                            prop.store(out, "")
-                            out.close()
-
-                            val acinfIns = FileInputStream("imcl/account/acinf.text")
-                            val acinf = Properties()
-                            acinf.load(acinfIns)
-                            acinfIns.close()
-                            acinf.setProperty("username", userTextField.text)
-                            acinf.setProperty("uuid", "none")
-                            acinf.setProperty("accessToken", "none")
-                            val acinfOut = FileOutputStream("imcl/account/acinf.text")
-                            acinf.store(acinfOut, "")
-                            acinfOut.close()
+                            logger.info("Logging in. Writing \"isLoggedIn: true\" to imcl.json")
+                            Toolkit.obj.getJSONObject("settings").put("isLoggedIn", "true")
+                            val acinf = Toolkit.obj.getJSONObject("account")
+                            acinf.put("username", userTextField.text)
+                            acinf.put("uuid", "none")
+                            acinf.put("accessToken", "none")
+                            Toolkit.save()
                             primaryStage.scene = LauncherScene.get(translator, OfflineUserInformation(userTextField.text), primaryStage)
                         }
                     }

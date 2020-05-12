@@ -1,0 +1,1093 @@
+2020-05-12 at 13:13:04 CST INFO  org.imcl.MyApplication 27 start - Checking file
+2020-05-12 at 13:13:04 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:13:04 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:13:04 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:13:04 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:13:04 CST INFO  org.imcl.MyApplication 29 start - Initializing Window
+2020-05-12 at 13:13:04 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:13:04 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:13:04 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:13:04 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:13:04 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:13:04 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:13:04 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:13:04 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:13:04 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:13:04 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:13:04 CST INFO  org.imcl.MyApplication 35 start - Is logged in, using default account
+2020-05-12 at 13:13:04 CST INFO  org.imcl.MyApplication 38 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:13:04 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:13:04 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:13:04 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:13:04 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:13:04 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:13:04 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:13:04 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:13:04 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:13:04 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:13:04 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:13:04 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:13:04 CST INFO  org.imcl.MyApplication 67 start - Load done. Ending splash screen
+2020-05-12 at 13:13:04 CST INFO  org.imcl.MyApplication 70 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:14:27 CST INFO  org.imcl.MyApplication 26 start - Checking file
+2020-05-12 at 13:14:27 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:14:27 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:14:27 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:14:27 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:14:27 CST INFO  org.imcl.MyApplication 28 start - Initializing Window
+2020-05-12 at 13:14:27 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:14:27 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:14:27 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:14:27 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:14:27 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:14:27 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:14:27 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:14:27 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:14:27 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:14:27 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:14:27 CST INFO  org.imcl.MyApplication 34 start - Is logged in, using default account
+2020-05-12 at 13:14:27 CST INFO  org.imcl.MyApplication 37 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:14:27 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:14:27 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:14:27 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:14:27 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:14:27 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:14:27 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:14:27 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:14:27 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:14:27 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:14:27 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:14:27 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:14:27 CST INFO  org.imcl.MyApplication 66 start - Load done. Ending splash screen
+2020-05-12 at 13:14:28 CST INFO  org.imcl.MyApplication 69 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:17:22 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:17:22 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:17:22 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:17:22 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:17:22 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:17:22 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:17:22 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:17:22 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:17:22 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:17:22 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:17:22 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:17:22 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:17:22 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:17:22 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:17:22 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:17:22 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:17:22 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:17:22 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:17:22 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:17:22 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:17:22 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:17:22 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:17:22 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:17:22 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:17:22 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:17:22 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:17:22 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:17:22 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:17:22 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:17:22 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:17:23 CST INFO  org.imcl.MyApplication 71 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:18:09 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:18:09 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:18:09 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:18:09 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:18:09 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:18:09 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:18:09 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:18:09 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:18:09 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:18:09 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:18:09 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:18:09 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:18:09 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:18:09 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:18:09 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:18:09 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:18:09 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:18:09 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:18:09 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:18:09 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:18:09 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:18:09 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:18:09 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:18:09 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:18:09 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:18:09 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:18:09 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:18:09 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:18:09 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:18:09 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:18:09 CST INFO  org.imcl.MyApplication 71 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:18:35 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:18:35 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:18:35 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:18:35 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:18:35 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:18:35 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:18:35 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:18:35 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:18:35 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:18:35 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:18:35 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:18:35 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:18:35 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:18:35 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:18:35 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:18:35 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:18:35 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:18:35 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:18:35 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:18:36 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:18:36 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:18:36 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:18:36 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:18:36 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:18:36 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:18:36 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:18:36 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:18:36 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:18:36 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:18:36 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:18:41 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:19:01 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:19:01 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:19:01 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:19:01 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:19:01 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:19:01 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:19:01 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:19:01 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:19:01 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:19:01 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:19:01 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:19:01 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:19:01 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:19:01 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:19:01 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:19:01 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:19:01 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:19:01 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:19:01 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:19:01 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:19:01 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:19:01 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:19:01 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:19:01 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:19:01 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:19:01 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:19:01 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:19:01 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:19:01 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:19:01 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:19:07 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:20:30 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:20:30 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:20:30 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:20:30 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:20:30 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:20:30 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:20:30 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:20:30 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:20:30 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:20:30 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:20:30 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:20:30 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:20:30 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:20:30 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:20:30 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:20:30 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:20:30 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:20:30 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:20:30 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:20:30 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:20:30 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:20:30 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:20:30 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:20:30 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:20:30 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:20:30 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:20:30 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:20:30 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:20:30 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:20:30 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:20:36 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:20:52 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:20:52 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:20:52 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:20:52 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:20:52 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:20:52 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:20:52 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:20:52 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:20:52 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:20:52 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:20:52 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:20:52 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:20:52 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:20:52 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:20:52 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:20:52 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:20:52 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:20:52 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:20:52 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:20:53 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:20:53 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:20:53 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:20:53 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:20:53 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:20:53 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:20:53 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:20:53 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:20:53 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:20:53 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:20:53 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:20:58 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:24:32 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:24:32 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:24:32 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:24:32 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:24:32 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:24:32 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:24:32 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:24:32 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:24:32 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:24:32 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:24:32 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:24:32 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:24:32 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:24:32 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:24:32 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:24:32 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:24:32 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:24:32 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:24:32 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:24:32 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:24:32 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:24:32 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:24:32 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:24:32 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:24:32 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:24:32 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:24:32 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:24:32 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:24:32 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:24:32 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:25:12 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:25:12 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:25:12 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:25:12 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:25:12 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:25:12 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:25:12 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:25:12 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:25:12 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:25:12 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:25:12 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:25:12 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:25:12 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:25:12 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:25:12 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:25:12 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:25:12 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:25:12 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:25:12 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:25:12 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:25:12 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:25:12 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:25:12 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:25:12 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:25:12 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:25:12 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:25:12 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:25:12 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:25:12 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:25:12 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:25:13 CST INFO  org.imcl.MyApplication 71 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:25:26 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Installations
+2020-05-12 at 13:26:16 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:26:16 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:26:16 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:26:16 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:26:16 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:26:16 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:26:16 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:26:16 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:26:16 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:26:16 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:26:16 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:26:16 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:26:16 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:26:16 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:26:16 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:26:16 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:26:16 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:26:16 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:26:16 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:26:16 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:26:16 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:26:16 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:26:16 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:26:16 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:26:16 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:26:16 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:26:16 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:26:17 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:26:17 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:26:17 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:26:59 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:26:59 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:26:59 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:26:59 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:26:59 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:26:59 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:26:59 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:26:59 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:26:59 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:26:59 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:26:59 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:26:59 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:26:59 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:26:59 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:26:59 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:26:59 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:26:59 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:26:59 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:26:59 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:27:00 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:27:00 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:27:00 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:27:00 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:27:00 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:27:00 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:27:00 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:27:00 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:27:00 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:27:00 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:27:00 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:27:19 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:27:19 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:27:19 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:27:19 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:27:19 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:27:19 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:27:20 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:27:20 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:27:20 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:27:20 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:27:20 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:27:20 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:27:20 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:27:20 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:27:20 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:27:20 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:27:20 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:27:20 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:27:20 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:27:20 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:27:20 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:27:20 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:27:20 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:27:20 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:27:20 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:27:20 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:27:20 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:27:20 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:27:20 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:27:20 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:28:22 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:28:22 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:28:22 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:28:22 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:28:22 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:28:22 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:28:22 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:28:22 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:28:22 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:28:22 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:28:22 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:28:22 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:28:22 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:28:22 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:28:22 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:28:22 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:28:22 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:28:22 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:28:22 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:28:22 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:28:22 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:28:22 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:28:22 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:28:22 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:28:22 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:28:22 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:28:22 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:28:22 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:28:22 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:28:22 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:29:01 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:29:01 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:29:01 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:29:01 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:29:01 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:29:01 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:29:01 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:29:01 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:29:01 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:29:01 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:29:01 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:29:01 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:29:01 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:29:01 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:29:01 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:29:01 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:29:01 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:29:01 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:29:01 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:29:01 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:29:01 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:29:01 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:29:01 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:29:01 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:29:01 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:29:01 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:29:02 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:29:02 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:29:02 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:29:02 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:29:02 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:29:10 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Installations
+2020-05-12 at 13:29:10 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Mods
+2020-05-12 at 13:32:12 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:32:12 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:32:12 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:32:12 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:32:12 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:32:12 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:32:12 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:32:12 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:32:12 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:32:12 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:32:12 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:32:12 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:32:12 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:32:12 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:32:12 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:32:12 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:32:12 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:32:12 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:32:12 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:32:12 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:32:12 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:32:12 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:32:12 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:32:12 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:32:12 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:32:12 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:32:12 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:32:12 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:32:12 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:32:12 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:32:12 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:34:54 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:34:54 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:34:54 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:34:54 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:34:54 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:34:54 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:34:54 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:34:54 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:34:54 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:34:54 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:34:54 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:34:54 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:34:54 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:34:54 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:34:54 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:34:54 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:34:54 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:34:54 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:34:54 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:34:54 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:34:54 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:34:54 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:34:54 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:34:54 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:34:54 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:34:54 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:34:54 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:34:54 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:34:54 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:34:54 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:34:55 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:36:17 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:36:17 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:36:17 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:36:17 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:36:17 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:36:17 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:36:17 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:36:17 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:36:17 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:36:17 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:36:17 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:36:17 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:36:17 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:36:17 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:36:17 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:36:17 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:36:17 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:36:17 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:36:17 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:36:18 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:36:18 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:36:18 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:36:18 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:36:18 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:36:18 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:36:18 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:36:18 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:36:18 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:36:18 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:36:18 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:36:18 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 13:47:36 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 13:47:36 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 13:47:36 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 13:47:36 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 13:47:36 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 13:47:36 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 13:47:36 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 13:47:36 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 13:47:36 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 13:47:36 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 13:47:36 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 13:47:36 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 13:47:36 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 13:47:36 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 13:47:36 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 13:47:36 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 13:47:36 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 13:47:36 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 13:47:36 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 13:47:36 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 13:47:36 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 13:47:36 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 13:47:36 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 13:47:36 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 13:47:36 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 13:47:36 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 13:47:36 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 13:47:36 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 13:47:36 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 13:47:36 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 13:47:37 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:07:10 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:07:10 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:07:10 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:07:10 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:07:10 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:07:10 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:07:10 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 14:07:10 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:07:10 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 14:07:10 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:07:10 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:07:10 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:07:10 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:07:10 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:07:10 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:07:10 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 14:07:10 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:07:10 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:07:10 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:07:10 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:07:10 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:07:10 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:07:10 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:07:10 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:07:10 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:07:10 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 14:07:10 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:07:10 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:07:11 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:07:11 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:07:11 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:07:32 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:07:32 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:07:32 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:07:32 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:07:32 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:07:32 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:07:32 CST INFO  org.imcl.plugin.PluginLoader 20 preLoad - Loading plugins...
+2020-05-12 at 14:07:32 CST INFO  org.imcl.plugin.PluginLoader 23 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:07:32 CST INFO  org.imcl.plugin.PluginLoader 33 load - Looking for plugin.yml
+2020-05-12 at 14:07:32 CST INFO  org.imcl.plugin.PluginLoader 40 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:07:32 CST INFO  org.imcl.plugin.PluginLoader 44 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:07:32 CST INFO  org.imcl.plugin.PluginLoader 46 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:07:32 CST INFO  org.imcl.plugin.PluginLoader 48 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:07:32 CST INFO  org.imcl.plugin.PluginLoader 50 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:07:32 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:07:32 CST INFO  org.imcl.plugin.PluginLoader 27 preLoad - All plugins loaded
+2020-05-12 at 14:07:32 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:07:32 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:07:32 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:07:32 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:07:32 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:07:32 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:07:32 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:07:32 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:07:32 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:07:32 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 14:07:32 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:07:32 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:07:32 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:07:32 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:07:33 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:07:36 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 567 handle - Turning to name page
+2020-05-12 at 14:07:36 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 569 handle - Turned to name page
+2020-05-12 at 14:08:48 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:08:48 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:08:48 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:08:48 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:08:48 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:08:48 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:08:48 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in plugins ...
+2020-05-12 at 14:08:48 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:08:48 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:08:48 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:08:48 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:08:48 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:08:48 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:08:48 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:08:48 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:08:48 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:08:48 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:08:48 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:08:48 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:08:48 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:08:48 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:08:48 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:08:48 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:08:48 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:08:48 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:08:48 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 14:08:48 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:08:48 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:08:48 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:08:48 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:08:49 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:09:13 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:09:13 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:09:13 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:09:13 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:09:13 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:09:13 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:09:14 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:09:14 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:09:14 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:09:14 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:09:14 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:09:14 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:09:14 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:09:14 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:09:14 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:09:14 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:09:14 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:09:14 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:09:14 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:09:14 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:09:14 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:09:14 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:09:14 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:09:14 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:09:14 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:09:14 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 14:09:14 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:09:14 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:09:14 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:09:14 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:09:14 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:13:05 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:13:05 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:13:05 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:13:05 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:13:05 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:13:05 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:13:05 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:13:05 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:13:05 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:13:05 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:13:05 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:13:05 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:13:05 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:13:05 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:13:05 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:13:05 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:13:05 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:13:05 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:13:05 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:13:05 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:13:05 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:13:05 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:13:05 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:13:05 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:13:05 CST INFO  org.imcl.launch.LauncherScene 559 get - Finding plugins' pages
+2020-05-12 at 14:13:05 CST INFO  org.imcl.launch.LauncherScene 561 get - Adding page name
+2020-05-12 at 14:13:05 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:13:05 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:13:05 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:13:05 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:13:06 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:18:21 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:18:21 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:18:21 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:18:21 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:18:21 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:18:21 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:18:21 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:18:21 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:18:21 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:18:21 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:18:21 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:18:21 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:18:21 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:18:21 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:18:21 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:18:21 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:18:21 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:18:21 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:18:21 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:18:21 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:18:21 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:18:21 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:18:21 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:18:21 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:18:21 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:18:21 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 14:18:21 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:18:21 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:18:22 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:18:22 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:18:22 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:18:24 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Installations
+2020-05-12 at 14:18:25 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Mods
+2020-05-12 at 14:18:26 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:18:49 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:18:49 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:18:49 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:18:49 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:18:49 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:18:49 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:18:49 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:18:49 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:18:49 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:18:49 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:18:49 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:18:49 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:18:49 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:18:49 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:18:49 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:18:49 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:18:49 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:18:49 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:18:49 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:18:49 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:18:49 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:18:49 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:18:49 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:18:49 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:18:49 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:18:49 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page name
+2020-05-12 at 14:18:49 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:18:49 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:18:49 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:18:49 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:18:50 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:19:32 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:19:32 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:19:32 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:19:32 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:19:32 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:19:32 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:19:32 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:19:32 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:19:32 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:19:32 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:19:32 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:19:32 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:19:32 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:19:32 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:19:32 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:19:32 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:19:32 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:19:32 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:19:32 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:19:32 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:19:32 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:19:32 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:19:32 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:19:32 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:19:32 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:19:32 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page 插件
+2020-05-12 at 14:19:32 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:19:32 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:19:32 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:19:32 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:19:33 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:19:35 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 567 handle - Turning to 插件 page
+2020-05-12 at 14:19:35 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 569 handle - Turned to 插件 page
+2020-05-12 at 14:20:01 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$3 542 handle - Turning to settings page
+2020-05-12 at 14:20:01 CST INFO  org.imcl.launch.SettingsFragment 27 get - Generating SettingsFragment
+2020-05-12 at 14:20:01 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:20:01 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:20:01 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:20:01 CST INFO  org.imcl.download.GlobalDownloadSourceManager 23 getFromConfig - Getting download source from config: bmclapi
+2020-05-12 at 14:20:01 CST INFO  org.imcl.download.GlobalDownloadSourceManager 23 getFromConfig - Getting download source from config: bmclapi
+2020-05-12 at 14:20:01 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$3 544 handle - Turned to settings page
+2020-05-12 at 14:20:02 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$1 521 handle - Turning to news page
+2020-05-12 at 14:20:02 CST INFO  org.imcl.launch.NewsFragment 20 get - Generating NewsFragment
+2020-05-12 at 14:20:02 CST INFO  org.imcl.launch.NewsFragment$get$1$2 33 run - Loading news from https://authentication.x-speed.cc/mcbbsNews/
+2020-05-12 at 14:20:04 CST INFO  org.imcl.launch.NewsFragment$get$1$2 35 run - News loading done
+2020-05-12 at 14:20:05 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$2 531 handle - Turning to Minecraft page
+2020-05-12 at 14:20:05 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:20:05 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$2 533 handle - Turned to Minecraft page
+2020-05-12 at 14:20:14 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 567 handle - Turning to 插件 page
+2020-05-12 at 14:20:14 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 569 handle - Turned to 插件 page
+2020-05-12 at 14:23:44 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:23:44 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:23:44 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:23:44 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:23:44 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:23:44 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:23:44 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:23:44 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:23:44 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:23:44 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:23:44 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:23:44 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:23:44 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: 用于实现IMCL插件功能的基础性插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:23:44 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:23:44 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:23:44 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:23:44 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:23:44 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:23:44 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:23:44 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:23:44 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:23:44 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:23:44 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:23:44 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:23:44 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:23:44 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page 插件
+2020-05-12 at 14:23:44 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:23:44 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:23:44 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:23:44 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:23:45 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:23:47 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 567 handle - Turning to 插件 page
+2020-05-12 at 14:23:47 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 569 handle - Turned to 插件 page
+2020-05-12 at 14:25:57 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:25:57 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:25:57 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:25:57 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:25:57 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:25:57 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:25:57 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:25:57 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:25:57 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:25:57 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:25:57 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:25:57 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:25:57 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: 用于实现IMCL插件管理功能的基础插件，版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:25:57 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:25:57 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:25:57 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:25:57 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:25:57 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:25:57 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:25:57 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:25:57 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:25:57 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:25:57 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:25:57 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:25:57 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:25:57 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page 插件
+2020-05-12 at 14:25:57 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:25:57 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:25:57 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:25:57 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:25:58 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:25:59 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 567 handle - Turning to 插件 page
+2020-05-12 at 14:25:59 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 569 handle - Turned to 插件 page
+2020-05-12 at 14:36:54 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$2 531 handle - Turning to Minecraft page
+2020-05-12 at 14:36:54 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:36:54 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$2 533 handle - Turned to Minecraft page
+2020-05-12 at 14:36:55 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$4 553 handle - Turning to about page
+2020-05-12 at 14:36:55 CST INFO  org.imcl.launch.AboutFragment 18 get - Generating AboutFragment
+2020-05-12 at 14:36:55 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$4 555 handle - Turned to about page
+2020-05-12 at 14:36:56 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 567 handle - Turning to 插件 page
+2020-05-12 at 14:36:56 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 569 handle - Turned to 插件 page
+2020-05-12 at 14:41:10 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:41:10 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:41:10 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:41:10 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:41:10 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:41:10 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:41:10 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:41:10 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:41:10 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:41:10 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:41:10 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:41:10 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:41:10 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: ideamc-basis是IMCL的基础插件之一，支持插件管理与插件信息查看功能，该插件的版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:41:10 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:41:10 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:41:10 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:41:10 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:41:10 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:41:10 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:41:10 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:41:10 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:41:10 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:41:10 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:41:10 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:41:10 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:41:10 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page 插件
+2020-05-12 at 14:41:10 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:41:10 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:41:10 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:41:10 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:41:11 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:41:12 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 567 handle - Turning to 插件 page
+2020-05-12 at 14:41:12 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 569 handle - Turned to 插件 page
+2020-05-12 at 14:44:40 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:44:40 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:44:40 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:44:40 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:44:40 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:44:40 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:44:40 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:44:40 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:44:40 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:44:40 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:44:40 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:44:40 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:44:40 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: ideamc-basis是IMCL的基础插件之一，支持插件管理与插件信息查看功能，该插件的版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:44:40 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:44:40 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:44:40 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:44:40 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:44:40 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:44:40 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:44:40 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:44:40 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:44:40 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:44:40 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:44:40 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:44:40 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:44:40 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page 插件
+2020-05-12 at 14:44:40 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:44:40 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:44:40 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:44:40 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:44:41 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:44:43 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 567 handle - Turning to 插件 page
+2020-05-12 at 14:44:43 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 569 handle - Turned to 插件 page
+2020-05-12 at 14:47:17 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:47:17 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:47:17 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:47:17 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:47:17 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:47:17 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:47:17 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:47:17 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:47:17 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:47:17 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:47:17 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:47:17 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:47:17 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: ideamc-basis是IMCL的基础插件之一，支持插件管理与插件信息查看功能，该插件的版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:47:17 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:47:17 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:47:17 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:47:17 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:47:17 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:47:17 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:47:17 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:47:17 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:47:17 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:47:17 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:47:17 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:47:17 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:47:17 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page 插件
+2020-05-12 at 14:47:17 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:47:17 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:47:44 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:47:44 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:47:44 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:47:44 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:47:44 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:47:44 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:47:44 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:47:44 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:47:44 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:47:44 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:47:44 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:47:44 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:47:44 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: ideamc-basis是IMCL的基础插件之一 支持插件管理与插件信息查看功能 该插件的版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:47:44 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:47:44 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:47:44 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:47:44 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:47:44 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:47:44 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:47:44 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:47:44 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:47:44 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:47:44 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:47:44 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:47:44 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:47:44 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page 插件
+2020-05-12 at 14:47:44 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:47:44 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:47:45 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:47:45 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:47:45 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:47:51 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 567 handle - Turning to 插件 page
+2020-05-12 at 14:47:51 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 569 handle - Turned to 插件 page
+2020-05-12 at 14:49:21 CST INFO  org.imcl.MyApplication 28 start - Checking file
+2020-05-12 at 14:49:21 CST INFO  org.imcl.files.FileChecker 9 check - Checking imcl.json
+2020-05-12 at 14:49:21 CST INFO  org.imcl.files.FileChecker 30 check - imcl.json exists
+2020-05-12 at 14:49:21 CST INFO  org.imcl.files.FileChecker 32 check - Checking plugins folder
+2020-05-12 at 14:49:21 CST INFO  org.imcl.files.FileChecker 38 check - plugins folder exists
+2020-05-12 at 14:49:21 CST INFO  org.imcl.MyApplication 30 start - Initializing Window
+2020-05-12 at 14:49:21 CST INFO  org.imcl.plugin.PluginLoader 21 preLoad - Loading plugins in /Users/resetpower/ideaProjects/ideamc/plugins ...
+2020-05-12 at 14:49:21 CST INFO  org.imcl.plugin.PluginLoader 24 preLoad - Loading plugin file: ideamc-basis.jar
+2020-05-12 at 14:49:21 CST INFO  org.imcl.plugin.PluginLoader 34 load - Looking for plugin.yml
+2020-05-12 at 14:49:21 CST INFO  org.imcl.plugin.PluginLoader 41 load - Successfully found plugin.yml, parsing...
+2020-05-12 at 14:49:21 CST INFO  org.imcl.plugin.PluginLoader 45 load - Plugin Name: ideamc-basis
+2020-05-12 at 14:49:21 CST INFO  org.imcl.plugin.PluginLoader 47 load - ideamc-basis's version: a0.2.0
+2020-05-12 at 14:49:21 CST INFO  org.imcl.plugin.PluginLoader 49 load - ideamc-basis's description: ideamc-basis是IMCL的基础插件之一 支持插件管理与插件信息查看功能 该插件的版本号随IMCL版本号的变化而变化。
+2020-05-12 at 14:49:21 CST INFO  org.imcl.plugin.PluginLoader 51 load - ideamc-basis's main: org.imcl.basis.MyPlugin
+2020-05-12 at 14:49:21 CST INFO  org.imcl.platform.Plugin 9 onLoad - Loading Plugin ideamc-basis
+2020-05-12 at 14:49:21 CST INFO  org.imcl.plugin.PluginLoader 28 preLoad - All plugins loaded
+2020-05-12 at 14:49:21 CST INFO  org.imcl.MyApplication 36 start - Is logged in, using default account
+2020-05-12 at 14:49:21 CST INFO  org.imcl.MyApplication 39 start - Offline account. Player name: ResetPower
+2020-05-12 at 14:49:21 CST INFO  org.imcl.launch.LauncherScene 51 get - Initializing LauncherScene
+2020-05-12 at 14:49:21 CST INFO  org.imcl.color.GlobalThemeColorController 29 getFromConfig - Saving theme color to config: 0x4a8895ff
+2020-05-12 at 14:49:21 CST INFO  org.imcl.color.LeftListOpacityController 28 getFromConfig - Getting left list opacity from config: 78
+2020-05-12 at 14:49:21 CST INFO  org.imcl.launch.LauncherScene 500 get - Generating main list view. ThemeColor: 4a8895, Opacity: 4e
+2020-05-12 at 14:49:21 CST INFO  org.imcl.color.GlobalThemeColorController 12 register - New event registered. Event@0
+2020-05-12 at 14:49:21 CST INFO  org.imcl.color.LeftListOpacityController 11 register - New event registered. Event@0
+2020-05-12 at 14:49:21 CST INFO  org.imcl.launch.LauncherScene 558 get - Finding plugins' pages
+2020-05-12 at 14:49:21 CST INFO  org.imcl.launch.LauncherScene 560 get - Adding page 插件
+2020-05-12 at 14:49:21 CST INFO  org.imcl.launch.LauncherScene$get$2$1 173 changed - Changing MinecraftPane's tab to Play
+2020-05-12 at 14:49:21 CST INFO  org.imcl.bg.GlobalBackgroundImageController 28 getFromConfig - Getting background image from config: 
+2020-05-12 at 14:49:21 CST INFO  org.imcl.bg.GlobalBackgroundImageController 11 register - New event registered. Event@0
+2020-05-12 at 14:49:21 CST INFO  org.imcl.MyApplication 68 start - Load done. Ending splash screen
+2020-05-12 at 14:49:21 CST INFO  org.imcl.MyApplication 72 start - Splash screen ended. primaryStage showed
+2020-05-12 at 14:49:24 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 567 handle - Turning to 插件 page
+2020-05-12 at 14:49:24 CST INFO  org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5 569 handle - Turned to 插件 page
