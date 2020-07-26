@@ -16,11 +16,13 @@ import org.imcl.color.LeftListOpacityController
 import org.imcl.constraints.Toolkit
 import org.imcl.constraints.logger
 import org.imcl.download.GlobalDownloadSourceManager
+import org.imcl.lang.Translator
 import org.imcl.main.MainScene
+import org.imcl.updating.UpdateChecker.check
+import org.imcl.updating.UpdateChecker.showUpdater
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
 import org.imcl.users.YggdrasilUserInformation
-import org.imcl.lang.Translator
 
 object SettingsFragment {
     fun get(translator: Translator, userInformation: UserInformation, primaryStage: Stage) = GridPane().apply {
@@ -124,5 +126,23 @@ object SettingsFragment {
                 primaryStage.scene = LauncherScene.get(Translator(Toolkit.getCurrentLanguage()), userInformation, primaryStage, state = LaunchSceneState.SETTINGS)
             }
         }, 1, 16)
+        add(Label(""), 0, 17)
+        add(JFXButton(translator.get("checkupdate")).apply {
+            buttonType = JFXButton.ButtonType.RAISED
+            background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
+            setOnAction {
+                var isLatest = true
+                try {
+                    isLatest = check()
+                } catch (e: Exception) {
+                    logger.warn("Network bad state, failed to check update.")
+                }
+                if (!isLatest) {
+                    showUpdater(translator)
+                } else {
+                    Toolkit.toast(translator.get("youarenowlatestversion"))
+                }
+            }
+        }, 1, 18)
     }
 }

@@ -1,7 +1,5 @@
 package org.imcl.users
 
-class YggdrasilUserInformation(val username: String, val uuid: String, val accessToken: String) : UserInformation {
+class YggdrasilUserInformation(var username: String, var uuid: String, var accessToken: String, var email: String) : UserInformation {
     override fun username() = username
-    fun uuid() = uuid
-    fun accessToken() = accessToken
 }

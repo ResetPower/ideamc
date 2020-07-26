@@ -7,7 +7,10 @@ import javafx.application.Platform
 import javafx.geometry.Insets
 import javafx.geometry.Pos
 import javafx.scene.Scene
-import javafx.scene.control.*
+import javafx.scene.control.Alert
+import javafx.scene.control.Hyperlink
+import javafx.scene.control.Label
+import javafx.scene.control.Tab
 import javafx.scene.image.Image
 import javafx.scene.image.ImageView
 import javafx.scene.layout.*
@@ -25,23 +28,32 @@ import org.imcl.core.LaunchOptions
 import org.imcl.core.Launcher
 import org.imcl.core.authentication.OfflineAuthenticator
 import org.imcl.core.authentication.YggdrasilAuthenticator
+import org.imcl.core.authentication.YggdrasilAuthenticator.Companion.refresh
+import org.imcl.core.authentication.YggdrasilAuthenticator.Companion.validate
 import org.imcl.core.download.GameDownloader
 import org.imcl.core.http.HttpRequestSender
+import org.imcl.core.network.NetworkState
 import org.imcl.download.ForgeDownloadScene
 import org.imcl.download.MinecraftDownloadScene
+import org.imcl.installation.InstallationScene
+import org.imcl.installation.InstallationSceneType
 import org.imcl.introductions.FolderSeparateIntroduction
 import org.imcl.lang.Translator
 import org.imcl.main.MainScene
+import org.imcl.main.MainScene.get
+import org.imcl.platform.function.IMCLPage
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
 import org.imcl.users.YggdrasilUserInformation
-import org.imcl.platform.function.IMCLPage
 import wan.dormsystem.utils.DialogBuilder
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.nio.file.Files
 import java.util.*
+import kotlin.collections.isNotEmpty
+import kotlin.collections.mapOf
+import kotlin.collections.set
 
 object LauncherScene {
     @JvmStatic
@@ -185,6 +197,50 @@ object LauncherScene {
                 setPrefSize(90.0, 35.0)
                 setOnAction {
                     this.isDisable = true
+                    if (userInformation is YggdrasilUserInformation) {
+                        logger.info("Online account. Player name: " + userInformation.username)
+                        if (validate(userInformation.accessToken)) {
+                            logger.info("Validate access. Going to launch progress...")
+                        } else {
+                            logger.info("Validate not access, refreshing")
+                            val newToken: String
+                            try {
+                                logger.info("Refreshing accessToken...")
+                                newToken = refresh(userInformation.accessToken)
+                                userInformation.accessToken = newToken
+                                logger.info("Refresh successfully. Going to launch progress...")
+                            } catch (e: java.lang.Exception) {
+                                logger.info("Unable to refresh accessToken, opening re-logging in dialog...")
+                                DialogBuilder(this).setTitle(translator.get("pleaseinputyourpassword")).setMessage("Email: ${userInformation.email}").setTextFieldText {
+                                    val result = YggdrasilAuthenticator.authenticate(userInformation.email, it).split(" ")
+                                    if (result[0]=="true") {
+                                        logger.info("Authentication successful")
+                                        Toolkit.obj.getJSONObject("settings").put("isLoggedIn", "true")
+                                        val accessToken = result[3]
+                                        userInformation.accessToken = accessToken
+                                        Toolkit.obj.getJSONObject("account").put("accessToken", accessToken)
+                                        Toolkit.save()
+                                    } else {
+                                        logger.info("Unable to authenticate")
+                                        logger.info("Checking network state")
+                                        if (NetworkState.isConnectedToInternet()) {
+                                            logger.info("Network normal. Password error.")
+                                            val alert = Alert(Alert.AlertType.INFORMATION)
+                                            alert.title = translator.get("passworderror")
+                                            alert.contentText = translator.get("passworderror")
+                                            alert.show()
+                                        } else {
+                                            logger.info("Network bad. Network error.")
+                                            val alert = Alert(Alert.AlertType.INFORMATION)
+                                            alert.title = translator.get("networkerror")
+                                            alert.contentText = translator.get("networkerror")
+                                            alert.show()
+                                        }
+                                    }
+                                }.setPositiveBtn(translator.get("login")).create()
+                            }
+                        }
+                    }
                     val prof = launcherProfiles.getJSONObject(profileList.selectionModel.selectedIndex)
                     val autoConnectServer = prof.getString("auto-connect-server")
                     val autoConnectServerSplit = autoConnectServer.split(":")
@@ -218,12 +274,12 @@ object LauncherScene {
                             }
                         }
                         Launcher.launch(LaunchOptions(prof.getString("directory"), prof.getString("version"),
-                            if (userInformation is YggdrasilUserInformation) YggdrasilAuthenticator(userInformation.username(), userInformation.uuid(), userInformation.accessToken()) else OfflineAuthenticator(userInformation.username())
+                            if (userInformation is YggdrasilUserInformation) YggdrasilAuthenticator(userInformation.username(), userInformation.uuid, userInformation.accessToken) else OfflineAuthenticator(userInformation.username())
                             , Toolkit.getJavaPath(), jvmArgs = prof.getString("jvm-args"), minecraftArgs = "${if (width!="auto") "--width $width" else "" } ${if (height!="auto") "--height $height" else "" } ${if (prof.getString("auto-connect")=="true") "--server $autoConnectServer --port $port" else ""}",
                             gameDirectory = if (prof.getString("game-directory")=="none") null else prof.getString("game-directory"), loader = box, ver = VERSION_NAME), whenDone = whenDone, whenFinish = whenFinish)
                     } catch (e: Exception) {
                         launchProgress.close()
-                        val errDial = JFXDialog(deepStackPane, Label("\nAn error occurred in launching Minecraft: \n${e.message}\n\n"), JFXDialog.DialogTransition.CENTER)
+                        val errDial = JFXDialog(deepStackPane, Label("\n${translator.get("anerroroccurredinlaunching")}: \n${e.message}\n\n"), JFXDialog.DialogTransition.CENTER)
                         errDial.show()
                         this.isDisable = false
                     }
@@ -253,31 +309,7 @@ object LauncherScene {
                     buttonType = JFXButton.ButtonType.RAISED
                     background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
                     setOnAction {
-                        val secondStage = Stage()
-                        secondStage.scene = Scene(GridPane().apply {
-                            addColumn( 0, Label(translator.get("newprofile")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")))
-                            val nameField = JFXTextField()
-                            val verField = JFXTextField()
-                            val dirField = JFXTextField()
-                            add(nameField, 1, 1)
-                            add(verField, 1, 2)
-                            add(dirField, 1, 3)
-                            add(JFXButton(translator.get("cancel")).apply {
-                                setOnAction {
-                                    secondStage.close()
-                                }
-                            }, 0, 5)
-                            add(JFXButton(translator.get("add")).apply {
-                                setOnAction {
-                                    val nm = nameField.text
-                                    launcherProfiles.add(JSONObject(mapOf(Pair("name", nm), Pair("version", verField.text), Pair("directory", dirField.text), Pair("width", "auto"), Pair("height", "auto"), Pair("jvm-args", ""), Pair("auto-connect", "false"), Pair("auto-connect-server", "none"), Pair("res-game-directory-separate", "false"), Pair("game-directory", "none"))))
-                                    Toolkit.save()
-                                    profileList.items.add(Label(nm))
-                                    secondStage.close()
-                                }
-                            }, 1, 5)
-                        }, 420.0, 251.0)
-                        secondStage.show()
+                        primaryStage.scene = InstallationScene.get(InstallationSceneType.NEW, translator, theScene, primaryStage, launcherProfiles = launcherProfiles, profileList = profileList)
                     }
                 }, JFXButton(translator.get("remove")).apply {
                     buttonType = JFXButton.ButtonType.RAISED
@@ -293,94 +325,17 @@ object LauncherScene {
                     buttonType = JFXButton.ButtonType.RAISED
                     background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
                     setOnAction {
-                        val secondStage = Stage()
                         val theIndex = profileList.selectionModel.selectedIndex
                         val theObj = launcherProfiles[theIndex] as JSONObject
-                        secondStage.scene = Scene(GridPane().apply {
-                            addColumn( 0, Label(translator.get("edit")), Label(translator.get("name")), Label(translator.get("ver")), Label(translator.get("dir")), Label(translator.get("folderseparate")), Label(translator.get("gamedir")))
-                            val nameField = JFXTextField()
-                            val verField = JFXTextField()
-                            val dirField = JFXTextField()
-                            val resGameDirectorySeparateBox = JFXCheckBox()
-                            val gameDirField = JFXTextField()
-                            nameField.text = theObj.getString("name")
-                            verField.text = theObj.getString("version")
-                            dirField.text = theObj.getString("directory")
-                            resGameDirectorySeparateBox.isSelected = theObj.getString("res-game-directory-separate")=="true"
-                            gameDirField.text = theObj.getString("game-directory")
-                            add(nameField, 1, 1)
-                            add(verField, 1, 2)
-                            add(dirField, 1, 3)
-                            add(resGameDirectorySeparateBox, 1, 4)
-                            add(Hyperlink(translator.get("whatisthis")).apply {
-                                setOnAction {
-                                    FolderSeparateIntroduction().show()
-                                }
-                            }, 2, 4)
-                            add(gameDirField, 1, 5)
-                            add(Label("If you don't want split folder, please keep it 'none'"), 1, 6)
-                            add(JFXButton(translator.get("cancel")).apply {
-                                setOnAction {
-                                    secondStage.close()
-                                }
-                            }, 0, 7)
-                            add(JFXButton(translator.get("edit")).apply {
-                                setOnAction {
-                                    theObj.set("name", nameField.text)
-                                    theObj.set("version", verField.text)
-                                    theObj.set("directory", dirField.text)
-                                    theObj.set("res-game-directory-separate", resGameDirectorySeparateBox.isSelected.toString())
-                                    theObj.set("game-directory", gameDirField.text)
-                                    profileList.items[theIndex].text = nameField.text
-                                    Toolkit.save()
-                                    secondStage.close()
-                                }
-                            }, 1, 7)
-                        }, 600.0, 251.0)
-                        secondStage.show()
+                        primaryStage.scene = InstallationScene.get(InstallationSceneType.EDIT, translator, theScene, primaryStage, profileList = profileList, theIndex = theIndex, theObj = theObj)
                     }
                 }, JFXButton(translator.get("customizing")).apply {
                     buttonType = JFXButton.ButtonType.RAISED
                     background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
                     setOnAction {
-                        val secondStage = Stage()
                         val theIndex = profileList.selectionModel.selectedIndex
                         val theObj = launcherProfiles[theIndex] as JSONObject
-                        secondStage.scene = Scene(GridPane().apply {
-                            addColumn( 0, Label(translator.get("customizing")), Label(translator.get("width")), Label(translator.get("height")), Label(translator.get("jvm-args")), Label(translator.get("auto-connect")), Label(translator.get("auto-connect-server")))
-                            val widthField = JFXTextField()
-                            val heightField = JFXTextField()
-                            val jvmArgsField = JFXTextField()
-                            val autoConnectBox = JFXCheckBox()
-                            val autoConnectServerField = JFXTextField()
-                            widthField.text = theObj.getString("width")
-                            heightField.text = theObj.getString("height")
-                            jvmArgsField.text = theObj.getString("jvm-args")
-                            autoConnectBox.isSelected = theObj.getString("auto-connect")=="true"
-                            autoConnectServerField.text = theObj.getString("auto-connect-server")
-                            add(widthField, 1, 1)
-                            add(heightField, 1, 2)
-                            add(jvmArgsField, 1, 3)
-                            add(autoConnectBox, 1, 4)
-                            add(autoConnectServerField, 1, 5)
-                            add(JFXButton(translator.get("cancel")).apply {
-                                setOnAction {
-                                    secondStage.close()
-                                }
-                            }, 0, 7)
-                            add(JFXButton(translator.get("edit")).apply {
-                                setOnAction {
-                                    theObj.set("width", widthField.text)
-                                    theObj.set("height", heightField.text)
-                                    theObj.set("jvm-args", jvmArgsField.text)
-                                    theObj.set("auto-connect", autoConnectBox.isSelected.toString())
-                                    theObj.set("auto-connect-server", autoConnectServerField.text)
-                                    Toolkit.save()
-                                    secondStage.close()
-                                }
-                            }, 1, 7)
-                        }, 420.0, 251.0)
-                        secondStage.show()
+                        primaryStage.scene = InstallationScene.get(InstallationSceneType.CUSTOM, translator, theScene, primaryStage, profileList = profileList, theIndex = theIndex, theObj = theObj)
                     }
                 })
                 profileList.selectionModel.selectedItemProperty().addListener { observable, oldValue, newValue ->
@@ -400,7 +355,7 @@ object LauncherScene {
                 if (userInformation is YggdrasilUserInformation) {
                     var con = true
                     val result = HttpRequestSender.get("https://sessionserver.mojang.com/session/minecraft/profile/${userInformation.uuid}") {
-                        content = Label("It's look like something wrong. Please restart IMCL and retry.")
+                        content = Label(translator.get("somethingwrong"))
                         con = false
                     }
                     if (con) {
@@ -409,14 +364,14 @@ object LauncherScene {
                         content = borderPane
                         borderPane.apply {
                             top = HBox().apply {
-                                children.addAll(JFXButton("Reset Skin").apply {
+                                children.addAll(JFXButton(translator.get("resetskin")).apply {
                                     buttonType = JFXButton.ButtonType.RAISED
                                     background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
                                     setOnAction {
-                                        DialogBuilder(this).setTitle("Tip").setMessage("Do you really want to reset you skin?").setNegativeBtn("No").setPositiveBtn("Yes") {
+                                        DialogBuilder(this).setTitle("Tip").setMessage(translator.get("doyoureallywanttoresetskin")).setNegativeBtn("No").setPositiveBtn("Yes") {
                                             HttpRequestSender.delete("https://api.mojang.com/user/profile/${userInformation.uuid}/skin", head = Pair("Authorization", "Bearer ${userInformation.accessToken}")) {
                                                 val alert = Alert(Alert.AlertType.ERROR)
-                                                alert.contentText = "Error occurred in Reseting Skin."
+                                                alert.contentText = translator.get("erroroccurredinresetingskin")
                                                 alert.show()
                                             }
                                         }.create()
@@ -430,7 +385,7 @@ object LauncherScene {
                             val url = decodedObj.getJSONObject("textures").getJSONObject("SKIN").getString("url")
                             borderPane.center = ImageView(url)
                         } else {
-                            borderPane.center = Label("No skin now.")
+                            borderPane.center = Label(translator.get("noskinnow"))
                         }
                     }
                 } else {
@@ -448,7 +403,7 @@ object LauncherScene {
                         setOnAction {
                             logger.info("Turning to MinecraftDownloadScene")
                             val progress = JFXDialog(deepStackPane, VBox().apply {
-                                children.addAll(Label("Loading..."), JFXProgressBar())
+                                children.addAll(Label("${translator.get("loading")}..."), JFXProgressBar())
                             }, JFXDialog.DialogTransition.CENTER)
                             progress.isOverlayClose = false
                             progress.show()

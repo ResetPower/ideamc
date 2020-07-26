@@ -75,36 +75,15 @@ object Launcher {
             var line: String? = null
             var flag = false
             logger.info("Launching Minecraft!")
-            val lines = Vector<String>()
             while (br.readLine().also { line = it } != null) {
                 println(line)
-                lines.add(line)
                 if (!flag) {
                     flag = true
-                    Platform.runLater {
-                        whenDone()
-                    }
-                }
-            }
-            if (!lines.lastElement().endsWith(" [Render thread/INFO]: Stopping!")) {
-                Platform.runLater {
-                    val alert = Alert(Alert.AlertType.CONFIRMATION)
-                    alert.headerText = "Game looks abnormally exited, do you want to read the log?"
-                    val optional = alert.showAndWait()
-                    if (optional.get()== ButtonType.OK) {
-                        val alert = Alert(Alert.AlertType.INFORMATION)
-                        alert.headerText = ""
-                        alert.graphic = ScrollPane(VBox().apply {
-                            for (i in lines) {
-                                children.add(Label(i))
-                            }
-                        })
-                        alert.show()
-                    }
+                    Platform.runLater(whenDone)
                 }
             }
             logger.info("Game finished")
-            whenFinish()
+            Platform.runLater(whenFinish)
         }.start()
     }
     fun genInitiallyLaunchScript(os: OS, isHigherThan1_13: Boolean, launchOptions: LaunchOptions) : String {

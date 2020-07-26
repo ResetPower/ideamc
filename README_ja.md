@@ -6,6 +6,8 @@
 [简体中文](README_zh.md)
 
 [Esperanto](README_eo.md)
+## Jenkins
+Jenkinsサーバーは[こちら](http://ci.kousaten.top/)です
 ## 紹介
 IMCLは、モジュール管理、ゲームのカスタマイズなど、多くの機能をサポートする起動機です。
 ## 解説

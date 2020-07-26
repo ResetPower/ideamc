@@ -6,6 +6,8 @@ A simple Minecraft launcher
 [日本語](README_ja.md)
 
 [Esperanto](README_eo.md)
+## Jenkins
+The Jenkins server is on [here](http://ci.kousaten.top/)
 ## Introduction
 IMCL is a Minecraft launcher which supports Mod managment, game customizing and so on.
 ## Explanation

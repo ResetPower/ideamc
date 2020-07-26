@@ -6,6 +6,8 @@ Simpla Minecraft lanĉilo
 [简体中文](README_zh.md)
 
 [日本語](README_ja.md)
+## Jenkins
+The Jenkins server is on [here](http://ci.kousaten.top/)
 ## Enkonduko
 IMCL estas Minecraft-lanzilo, kiu subtenas Moduladministrado, ludokutimo ktp.
 ## Komentario

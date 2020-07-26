@@ -77,8 +77,8 @@ object MainScene {
                         if (userTextField.text.trim()==""||pwBox.text.trim()=="") {
                             logger.info("Username or password not input")
                             val alert = Alert(Alert.AlertType.INFORMATION)
-                            alert.title = "Username or password not input"
-                            alert.contentText = "Username or password not input"
+                            alert.title = translator.get("usernameorpasswordnotinput")
+                            alert.contentText = translator.get("usernameorpasswordnotinput")
                             alert.showAndWait()
                         } else {
                             logger.info("Authenticating")
@@ -93,22 +93,23 @@ object MainScene {
                                 acinf.put("username", username)
                                 acinf.put("uuid", uuid)
                                 acinf.put("accessToken", accessToken)
+                                acinf.put("email", userTextField.text)
                                 Toolkit.save()
-                                primaryStage.scene = LauncherScene.get(translator, YggdrasilUserInformation(username, uuid, accessToken), primaryStage)
+                                primaryStage.scene = LauncherScene.get(translator, YggdrasilUserInformation(username, uuid, accessToken, userTextField.text), primaryStage)
                             } else {
                                 logger.info("Unable to authenticate")
                                 logger.info("Checking network state")
                                 if (NetworkState.isConnectedToInternet()) {
                                     logger.info("Network normal. Password error.")
                                     val alert = Alert(Alert.AlertType.INFORMATION)
-                                    alert.title = "Password Error"
-                                    alert.contentText = "Password Error"
+                                    alert.title = translator.get("passworderror")
+                                    alert.contentText = translator.get("passworderror")
                                     alert.show()
                                 } else {
                                     logger.info("Network bad. Network error.")
                                     val alert = Alert(Alert.AlertType.INFORMATION)
-                                    alert.title = "Network Error"
-                                    alert.contentText = "Network Error"
+                                    alert.title = translator.get("networkerror")
+                                    alert.contentText = translator.get("networkerror")
                                     alert.show()
                                 }
                             }
@@ -123,8 +124,8 @@ object MainScene {
                         if (userTextField.text.trim()=="") {
                             logger.info("Username not input")
                             val alert = Alert(Alert.AlertType.INFORMATION)
-                            alert.title = "Username not set"
-                            alert.contentText = "Username not set"
+                            alert.title = translator.get("usernamenotinput")
+                            alert.contentText = translator.get("usernamenotinput")
                             alert.showAndWait()
                         } else {
                             logger.info("Logging in. Writing \"isLoggedIn: true\" to imcl.json")

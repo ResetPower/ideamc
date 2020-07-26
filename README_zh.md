@@ -6,6 +6,8 @@
 [日本語](README_ja.md)
 
 [Esperanto](README_eo.md)
+## Jenkins
+Jenkins构建服务器在 [这里](http://ci.kousaten.top/)
 ## 介绍
 IMCL是一个支持模组管理、游戏自定义等许多功能的启动器
 ## 说明

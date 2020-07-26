@@ -25,7 +25,6 @@ object LanguageResource {
         Pair("launch", "Launch"),
         Pair("username", "Username"),
         Pair("pleaseinputyourusername", "Please input your username"),
-        Pair("newprofile", "New Profile"),
         Pair("name", "Name"),
         Pair("ver", "Version"),
         Pair("dir", "Directory"),
@@ -90,7 +89,25 @@ object LanguageResource {
         Pair("previous", "Previous"),
         Pair("next", "Next"),
         Pair("profilenotselected", "Profile not selected"),
-        Pair("language", "Language")
+        Pair("language", "Language"),
+        Pair("passworderror", "Password Error"),
+        Pair("networkerror", "Internet Error"),
+        Pair("usernameorpasswordnotinput", "Username or password not input"),
+        Pair("usernamenotinput", "Username not input"),
+        Pair("pleaseinputyourpassword", "Please input you password"),
+        Pair("anerroroccurredinlaunching", "An error occurred in launching Minecraft"),
+        Pair("somethingwrong", "It's look like something wrong. Please restart IMCL and retry"),
+        Pair("erroroccurredinresetingskin", "Error occurred in Reseting Skin"),
+        Pair("noskinnow", "No skin now"),
+        Pair("newversion", "New version"),
+        Pair("newversionisavailable", "New version is available! Download it at github or gitee (See 'about' page)"),
+        Pair("youarenowlatestversion", "You are now the latest version"),
+        Pair("checkupdate", "Check Update"),
+        Pair("resetskin", "Reset Skin"),
+        Pair("doyoureallywanttoresetskin", "Do you really want to reset skin?"),
+        Pair("newinstallation", "New Installation"),
+        Pair("editinstallation", "Edit Installation"),
+        Pair("custominstallation", "Custom Installation")
     )
     @JvmStatic
     fun esperantoResource() = mapOf(
@@ -106,7 +123,6 @@ object LanguageResource {
         Pair("launch", "Lanĉu"),
         Pair("username", "Uzantnomo"),
         Pair("pleaseinputyourusername", "Bonvolu enmeti vian uzantnomon"),
-        Pair("newprofile", "Nova Profilo"),
         Pair("name", "Nomo"),
         Pair("ver", "Versio"),
         Pair("dir", "Pado"),
@@ -171,7 +187,25 @@ object LanguageResource {
         Pair("previous", "Antaŭa"),
         Pair("next", "Sekva"),
         Pair("profilenotselected", "Profilo ne elektita"),
-        Pair("language", "Lingvo")
+        Pair("language", "Lingvo"),
+        Pair("passworderror", "Erara pasvorto"),
+        Pair("networkerror", "La reto ne estas konektita"),
+        Pair("usernameorpasswordnotinput", "Uzantnomo aŭ pasvorto ne estas enigita"),
+        Pair("usernamenotinput", "Uzantnomo ne estas enirita"),
+        Pair("pleaseinputyourpassword", "Bonvolu tajpi vian pasvorton"),
+        Pair("anerroroccurredinlaunching", "Eraro okazis startinte Minecraft"),
+        Pair("somethingwrong", "Ŝajnas esti problemo, bonvolu rekomenci IMCL kaj provu denove"),
+        Pair("erroroccurredinresetingskin", "Io iris malbone dum restarigo de la haŭto"),
+        Pair("noskinnow", "Neniu haŭto ankoraŭ"),
+        Pair("newversion", "Nova versio"),
+        Pair("newversionisavailable", "Nova versio haveblas! Elŝutu ĝin ĉe github aŭ gitee (Vidu 'pri' paĝo)"),
+        Pair("youarenowlatestversion", "Vi nun estas la plej nova versio"),
+        Pair("checkupdate", "Kontrolu Ĝisdatigojn"),
+        Pair("resetskin", "Restarigi haŭton"),
+        Pair("doyoureallywanttoresetskin", "Ĉu vi vere volas restarigi haŭton?"),
+        Pair("newinstallation", "Nova Instalado"),
+        Pair("editinstallation", "Redakti Instaladon"),
+        Pair("custominstallation", "Propra Instalo")
     )
     @JvmStatic
     fun japaneseResource() = mapOf(
@@ -187,7 +221,6 @@ object LanguageResource {
         Pair("launch", "起動"),
         Pair("username", "ユーザー名"),
         Pair("pleaseinputyourusername", "ユーザー名を入力してください"),
-        Pair("newprofile", "新しいプロファイル"),
         Pair("name", "名前"),
         Pair("ver", "バージョン"),
         Pair("dir", "パス"),
@@ -252,7 +285,25 @@ object LanguageResource {
         Pair("previous", "前"),
         Pair("next", "次"),
         Pair("profilenotselected", "構成が選択されていません"),
-        Pair("language", "言語")
+        Pair("language", "言語"),
+        Pair("passworderror", "間違ったパスワード"),
+        Pair("networkerror", "間違ったネットワーク"),
+        Pair("usernameorpasswordnotinput", "ユーザー名またはパスワードを入力されていません"),
+        Pair("usernamenotinput", "ユーザー名を入力されていません"),
+        Pair("pleaseinputyourpassword", "パスワードを入力してください"),
+        Pair("anerroroccurredinlaunching", "Minecraftを起動中にエラーを発生しました"),
+        Pair("somethingwrong", "問題があるようです。IMCLを再起動して、もう一度お試しください"),
+        Pair("erroroccurredinresetingskin", "皮膚をリセット中にエラーを発生しました"),
+        Pair("noskinnow", "現在、皮膚はまだありません"),
+        Pair("newversion", "新しいバージョン"),
+        Pair("newversionisavailable", "新しいバージョンが利用可能です！ githubまたはgiteeでダウンロードします（「について」ページを参照）"),
+        Pair("youarenowlatestversion", "あなたは現在最新バージョンです"),
+        Pair("checkupdate", "更新状況を確認して"),
+        Pair("resetskin", "皮膚をリセット"),
+        Pair("doyoureallywanttoresetskin", "本当に皮膚をリセットしますか？"),
+        Pair("newinstallation", "新規構成"),
+        Pair("editinstallation", "構成を編集"),
+        Pair("custominstallation", "構成をカスタマイズ")
     )
     @JvmStatic
     fun chineseSimplifiedResource() = mapOf(
@@ -268,7 +319,6 @@ object LanguageResource {
         Pair("launch", "启动"),
         Pair("username", "用户名"),
         Pair("pleaseinputyourusername", "请输入你的用户名"),
-        Pair("newprofile", "新档案"),
         Pair("name", "名称"),
         Pair("ver", "版本"),
         Pair("dir", "路径"),
@@ -333,7 +383,25 @@ object LanguageResource {
         Pair("previous", "上一步"),
         Pair("next", "下一步"),
         Pair("profilenotselected", "没有选择任何配置"),
-        Pair("language", "语言")
+        Pair("language", "语言"),
+        Pair("passworderror", "密码错误"),
+        Pair("networkerror", "网络未连接"),
+        Pair("usernameorpasswordnotinput", "用户名或密码未输入"),
+        Pair("usernamenotinput", "用户名未输入"),
+        Pair("pleaseinputyourpassword", "请输入你的密码"),
+        Pair("anerroroccurredinlaunching", "启动Minecraft中出了点问题"),
+        Pair("somethingwrong", "看起来出了点问题。请重启IMCL并重试"),
+        Pair("erroroccurredinresetingskin", "重置皮肤中出了点问题"),
+        Pair("noskinnow", "目前暂时还没有皮肤"),
+        Pair("newversion", "新版本"),
+        Pair("newversionisavailable", "有新版本可用！ 在Github或Gitee下载吧（查看「关于」页）"),
+        Pair("youarenowlatestversion", "您现在已经是最新版本了！"),
+        Pair("checkupdate", "检查更新"),
+        Pair("resetskin", "重置皮肤"),
+        Pair("doyoureallywanttoresetskin", "您真的想要重置皮肤吗？"),
+        Pair("newinstallation", "新配置"),
+        Pair("editinstallation", "编辑配置"),
+        Pair("custominstallation", "自定义配置")
     )
     @JvmStatic
     fun chineseTraditionalResource() = mapOf(
@@ -349,7 +417,6 @@ object LanguageResource {
         Pair("launch", "啟動"),
         Pair("username", "用戶名"),
         Pair("pleaseinputyourusername", "請輸入你的用戶名"),
-        Pair("newprofile", "新檔案"),
         Pair("name", "名稱"),
         Pair("ver", "版本"),
         Pair("dir", "路徑"),
@@ -414,6 +481,24 @@ object LanguageResource {
         Pair("previous", "上一步"),
         Pair("next", "下一步"),
         Pair("profilenotselected", "沒有選擇任何配置"),
-        Pair("language", "語言")
+        Pair("language", "語言"),
+        Pair("passworderror", "密碼錯誤"),
+        Pair("networkerror", "網絡未連結"),
+        Pair("usernameorpasswordnotinput", "用戶名或密碼未輸入"),
+        Pair("usernamenotinput", "用戶名未輸入"),
+        Pair("pleaseinputyourpassword", "請輸入您的密碼"),
+        Pair("anerroroccurredinlaunching", "啟動Minecraft中出了點問題"),
+        Pair("somethingwrong", "看起來出了點問題。請重啓IMCL並重試"),
+        Pair("erroroccurredinresetingskin", "重置皮膚中出了點問題"),
+        Pair("noskinnow", "目前暫時還沒有皮膚"),
+        Pair("newversion", "新版本"),
+        Pair("newversionisavailable", "有新版本可用！ 在Github或Gitee下載吧（查看「關於」頁）"),
+        Pair("youarenowlatestversion", "您現在已經是最新版本了！"),
+        Pair("checkupdate", "檢查更新"),
+        Pair("resetskin", "重置皮膚"),
+        Pair("doyoureallywanttoresetskin", "您真的想要重置皮膚嗎？"),
+        Pair("newinstallation", "新配置"),
+        Pair("editinstallation", "編輯配置"),
+        Pair("custominstallation", "自定義配置")
     )
 }
