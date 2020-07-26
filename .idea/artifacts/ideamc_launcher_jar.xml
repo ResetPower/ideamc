@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="ideamc-launcher-alpha-0.4:jar">
+  <artifact type="jar" name="ideamc-launcher:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/ideamc_launcher_jar</output-path>
     <root id="archive" name="ideamc-launcher.jar">
       <element id="module-output" name="ideamc-launcher" />
