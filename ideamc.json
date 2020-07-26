@@ -1,0 +1,14 @@
+{
+    "accounts": {
+        "username": "none",
+        "uuid": "none",
+        "accessToken": "none"
+    },
+    "profiles": [],
+    "settings": {
+        "isLoggedIn": "false",
+        "language": "english",
+        "javapath": "java",
+        "downloadSrc": "bmclapi"
+    }
+}

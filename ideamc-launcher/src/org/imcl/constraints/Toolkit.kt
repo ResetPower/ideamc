@@ -12,7 +12,7 @@ object Toolkit {
     lateinit var obj: JSONObject
     @JvmStatic
     fun init() {
-        obj = JSON.parseObject(File("imcl.json").readText())
+        obj = JSON.parseObject(File("ideamc.json").readText())
     }
     @JvmStatic
     fun getCurrentLanguage() : String {
@@ -74,6 +74,6 @@ object Toolkit {
     }
     @JvmStatic
     fun save() {
-        File("imcl.json").writeText(obj.toJSONString())
+        File("ideamc.json").writeText(obj.toJSONString())
     }
 }

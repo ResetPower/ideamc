@@ -6,13 +6,13 @@ import java.io.File
 object FileChecker {
     @JvmStatic
     fun check() {
-        logger.info("Checking imcl.json")
-        val imclJson = File("imcl.json")
-        if (!imclJson.exists()) {
-            logger.info("imcl.json not exists, creating file")
-            imclJson.writeText("""
+        logger.info("Checking ideamc.json")
+        val ideamcJson = File("ideamc.json")
+        if (!ideamcJson.exists()) {
+            logger.info("ideamc.json not exists, creating file")
+            ideamcJson.writeText("""
                 {
-                    "account": {
+                    "accounts": {
                         "username": "none",
                         "uuid": "none",
                         "accessToken": "none"
@@ -27,7 +27,7 @@ object FileChecker {
                 }
             """.trimIndent())
         } else {
-            logger.info("imcl.json exists")
+            logger.info("ideamc.json exists")
         }
         logger.info("Checking plugins folder")
         val pluginsFolder = File("plugins")
