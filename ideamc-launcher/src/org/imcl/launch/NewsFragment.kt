@@ -33,6 +33,12 @@ object NewsFragment {
             logger.info("Loading news from https://authentication.x-speed.cc/mcbbsNews/")
             val news = JSON.parseArray(HttpRequestSender.get("https://authentication.x-speed.cc/mcbbsNews/") {})
             logger.info("News loading done")
+            if (news==null) {
+                Platform.runLater {
+                    center = Label("Cannot get news")
+                }
+                return@Thread
+            }
             val iterator = news.iterator()
             val selected = Background(BackgroundFill(Color.DARKGRAY, null, null))
             val default = Background.EMPTY

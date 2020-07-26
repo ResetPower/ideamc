@@ -41,7 +41,6 @@ import org.imcl.introductions.FolderSeparateIntroduction
 import org.imcl.lang.Translator
 import org.imcl.main.MainScene
 import org.imcl.main.MainScene.get
-import org.imcl.platform.function.IMCLPage
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
 import org.imcl.users.YggdrasilUserInformation
@@ -52,12 +51,8 @@ import java.io.FileOutputStream
 import java.nio.file.Files
 import java.util.*
 import kotlin.collections.isNotEmpty
-import kotlin.collections.mapOf
-import kotlin.collections.set
 
 object LauncherScene {
-    @JvmStatic
-    val pages = Vector<Pair<String, IMCLPage>>()
     @JvmStatic
     fun get(translator: Translator, userInformation: UserInformation, primaryStage: Stage, state: LaunchSceneState = LaunchSceneState.DEFAULT) : Scene {
         logger.info("Initializing LauncherScene")
@@ -68,6 +63,7 @@ object LauncherScene {
         var loadedProfiles = false
         val launcherProfiles = Toolkit.obj.getJSONArray("profiles")
         var theScene = Scene(Label("Loading..."), 840.0, 502.0)
+        var selected = 1
         fun BorderPane.prepareModsBorderPane() {
             val selectedItem = profileList.selectionModel.selectedItem
             if (selectedItem==null) {
@@ -448,7 +444,19 @@ object LauncherScene {
         val mcBtn = JFXButton("Minecraft")
         val setBtn = JFXButton(translator.get("settings"))
         val aboutBtn = JFXButton(translator.get("about"))
-        val selBg = Background(BackgroundFill(Color(0.1, 0.1, 0.1, 0.5), null, null))
+        val btnList = listOf(newsBtn, mcBtn, setBtn, aboutBtn)
+        val selBg = Background(BackgroundFill(Color(0.6627451, 0.6627451, 0.6627451, 0.5), null, null))
+        val unSelBg = Background(BackgroundFill(Color(0.0, 0.0, 0.0, 0.0), null, null))
+        fun changeSelected(s: Int) {
+            selected = s
+            for (i in btnList.indices) {
+                if (i==selected) {
+                    btnList[i].background = selBg
+                } else {
+                    btnList[i].background = unSelBg
+                }
+            }
+        }
         val mainListView = VBox().apply {
             val color = GlobalThemeColorController.getFromConfig().toString().removePrefix("0x").removeSuffix("ff")
             val opacity = Toolkit.getHex(LeftListOpacityController.getFromConfig())
@@ -474,6 +482,7 @@ object LauncherScene {
                 font = Font.font(15.0)
                 setOnAction {
                     logger.info("Turning to news page")
+                    changeSelected(0)
                     mainBorderPane.center = NewsFragment.get(translator)
                 }
             })
@@ -484,8 +493,8 @@ object LauncherScene {
                 font = Font.font(15.0)
                 setOnAction {
                     logger.info("Turning to Minecraft page")
+                    changeSelected(1)
                     setMinecraftJavaEditionPane()
-                    logger.info("Turned to Minecraft page")
                 }
             })
             children.add(Label(""))
@@ -495,8 +504,8 @@ object LauncherScene {
                 font = Font.font(15.0)
                 setOnAction {
                     logger.info("Turning to settings page")
+                    changeSelected(2)
                     mainBorderPane.center = SettingsFragment.get(translator, userInformation, primaryStage)
-                    logger.info("Turned to settings page")
                 }
             })
             children.add(Label(""))
@@ -506,31 +515,17 @@ object LauncherScene {
                 font = Font.font(15.0)
                 setOnAction {
                     logger.info("Turning to about page")
+                    changeSelected(3)
                     mainBorderPane.center = AboutFragment.get(translator)
-                    logger.info("Turned to about page")
                 }
             })
-            logger.info("Finding plugins' pages")
-            for (i in pages) {
-                logger.info("Adding page ${i.first}")
-                children.add(Label(""))
-                children.add(JFXButton(i.first).apply {
-                    isFocusTraversable = false
-                    setPrefSize(160.0, 20.0)
-                    font = Font.font(15.0)
-                    setOnAction {
-                        logger.info("Turning to ${i.first} page")
-                        mainBorderPane.center = i.second.node
-                        logger.info("Turned to ${i.first} page")
-                    }
-                })
-            }
         }
         mainBorderPane.left = mainListView
         if (state==LaunchSceneState.SETTINGS) {
             logger.info("LauncherSceneState is SETTINGS, navigating to settings page")
             mainBorderPane.center = SettingsFragment.get(translator, userInformation, primaryStage)
         } else setMinecraftJavaEditionPane()
+        changeSelected(1)
         theScene = Scene(deepStackPane.apply {
             children.add(AnchorPane().apply {
                 val bg = GlobalBackgroundImageController.getFromConfig()

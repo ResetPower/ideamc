@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/ideamc.iml" filepath="$PROJECT_DIR$/ideamc.iml" />
       <module fileurl="file://$PROJECT_DIR$/ideamc-core/ideamc-core.iml" filepath="$PROJECT_DIR$/ideamc-core/ideamc-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/ideamc-launcher/ideamc-launcher.iml" filepath="$PROJECT_DIR$/ideamc-launcher/ideamc-launcher.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ideamc-platform-api/ideamc-platform-api.iml" filepath="$PROJECT_DIR$/ideamc-platform-api/ideamc-platform-api.iml" />
     </modules>
   </component>
 </project>

@@ -128,7 +128,7 @@ object MainScene {
                             alert.contentText = translator.get("usernamenotinput")
                             alert.showAndWait()
                         } else {
-                            logger.info("Logging in. Writing \"isLoggedIn: true\" to imcl.json")
+                            logger.info("Logging in. Writing \"isLoggedIn: true\" to json")
                             Toolkit.obj.getJSONObject("settings").put("isLoggedIn", "true")
                             val acinf = Toolkit.obj.getJSONObject("account")
                             acinf.put("username", userTextField.text)

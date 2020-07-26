@@ -11,15 +11,14 @@ import org.imcl.lang.Translator;
 import org.imcl.launch.LaunchSceneState;
 import org.imcl.launch.LauncherScene;
 import org.imcl.main.MainScene;
-import org.imcl.plugin.PluginLoader;
 import org.imcl.users.OfflineUserInformation;
 import org.imcl.users.YggdrasilUserInformation;
 
 public class MyApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        org.imcl.constraints.ConstraintsKt.initLogger();
-        org.imcl.core.constraints.ConstraintsKt.initLogger();
+        org.imcl.constraints.LoggerInit.INSTANCE.initLogger();
+        org.imcl.core.constraints.LoggerInit.INSTANCE.initLogger();
         Logger logger = ConstraintsKt.getLogger();
         primaryStage.setResizable(false);
         logger.info("Checking file");
@@ -28,7 +27,6 @@ public class MyApplication extends Application {
         Toolkit.init();
         primaryStage.setTitle("IDEA Minecraft Launcher");
         primaryStage.setOnCloseRequest(event -> System.exit(0));
-        PluginLoader.preLoad();
         if (Toolkit.isLoggedIn()) {
             logger.info("Is logged in, using default account");
             JSONObject account = Toolkit.obj.getJSONObject("account");
@@ -37,7 +35,7 @@ public class MyApplication extends Application {
                 primaryStage.setScene(LauncherScene.get(new Translator(Toolkit.getCurrentLanguage()), new OfflineUserInformation(account.getString("username")), primaryStage, LaunchSceneState.DEFAULT));
             } else {
                 if (!account.containsKey("email")) {
-                    logger.info("Unable to find email in imcl.json, go to login page");
+                    logger.info("Unable to find email in json, go to login page");
                     JSONObject settings = Toolkit.obj.getJSONObject("settings");
                     settings.put("isLoggedIn", "false");
                     Toolkit.save();

@@ -1,14 +1,1 @@
-{
-    "accounts": {
-        "username": "none",
-        "uuid": "none",
-        "accessToken": "none"
-    },
-    "profiles": [],
-    "settings": {
-        "isLoggedIn": "false",
-        "language": "english",
-        "javapath": "java",
-        "downloadSrc": "bmclapi"
-    }
-}
+{"settings":{"downloadSrc":"bmclapi","themeColor":"0xffffffff","leftListOpacity":"200","backgroundImage":"","javapath":"java","isLoggedIn":"true","language":"chinesesimplified"},"profiles":[{"name":"Minecraft","version":"1.15.2","directory":"/Users/resetpower/Library/Application Support/minecraft","width":"auto","height":"auto","jvm-args":"","auto-connect":"false","auto-connect-server":"none","res-game-directory-separate":"false","game-directory":"none"}],"account":{"accessToken":"none","uuid":"none","username":"ResetPower"}}

@@ -17,8 +17,8 @@ object UpdateChecker {
     @JvmStatic
     fun check(): Boolean {
         if (NetworkState.isConnectedToInternet()) {
-            logger.info("Checking new version... IMCL version checking server ip: 120.79.219.113 port:90")
-            val socket = Socket("120.79.219.113", 90)
+            logger.info("Checking new version... IMCL version checking server is [service.kousaten.top:985]")
+            val socket = Socket("service.kousaten.top", 985)
             val inputStreamReader = InputStreamReader(socket.getInputStream())
             val ins = BufferedReader(inputStreamReader)
             val text = ins.readLines()
