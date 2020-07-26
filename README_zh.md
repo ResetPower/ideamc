@@ -6,14 +6,12 @@
 [日本語](README_ja.md)
 
 [Esperanto](README_eo.md)
-## Jenkins
-Jenkins构建服务器在 [这里](http://ci.kousaten.top/)
 ## 介绍
 IMCL是一个支持模组管理、游戏自定义等许多功能的启动器
 ## 说明
 这个项目于2020年4月5日开启。这个软件目前正处于一个非常不稳定的开发阶段。
 ## 快速上手
-运行 out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
+从[Jenkins服务器](http://ci.kousaten.top/job/ideamc)下载 "ideamc-launcher.jar" 并直接运行
 ## 注意
 - 这个启动器目前仅支持Minecraft官方文件夹和HMCL的文件夹
 - 这个启动器目前仅支持纯净版和Forge/Fabric版

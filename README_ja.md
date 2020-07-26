@@ -6,14 +6,12 @@
 [简体中文](README_zh.md)
 
 [Esperanto](README_eo.md)
-## Jenkins
-Jenkinsサーバーは[こちら](http://ci.kousaten.top/)です
 ## 紹介
 IMCLは、モジュール管理、ゲームのカスタマイズなど、多くの機能をサポートする起動機です。
 ## 解説
 このプロジェクトは令和2年4月5日に始まりました。このソフトウェアは現在、非常に不安定な開発段階にあります。
 ## すぐに始め
-実行 out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
+[Jenkinsサーバー](http://ci.kousaten.top/job/ideamc)から "ideamc-launcher.jar" をダウンロードして実行してください。
 ## 注目
 - 起動機は現在Minecraftの公式フォルダーとHMCLフォルダーのみをサポートています
 - 起動機は現在ピュアバージョンとForge/Fabricバージョンのみをサポートています

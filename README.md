@@ -6,14 +6,12 @@ A simple Minecraft launcher
 [日本語](README_ja.md)
 
 [Esperanto](README_eo.md)
-## Jenkins
-The Jenkins server is on [here](http://ci.kousaten.top/)
 ## Introduction
 IMCL is a Minecraft launcher which supports Mod managment, game customizing and so on.
 ## Explanation
 The project started on Apr 5, 2020, CST. This software is in a very unstable development stage.
 ## Quick start
-Run out/artifacts/ideamc_launcher_jar/ideamc-launcher.jar
+Download "ideamc-launcher.jar" from [Jenkins Server](http://ci.kousaten.top/job/ideamc) and run directly.
 ## Notice
 - The launcher supports only the official Minecraft folder and HMCL folder now
 - The launcher supports only pure version and Forge/Fabric version
