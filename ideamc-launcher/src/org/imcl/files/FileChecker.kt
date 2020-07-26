@@ -12,7 +12,7 @@ object FileChecker {
             logger.info("ideamc.json not exists, creating file")
             ideamcJson.writeText("""
                 {
-                    "accounts": {
+                    "account": {
                         "username": "none",
                         "uuid": "none",
                         "accessToken": "none"
@@ -28,14 +28,6 @@ object FileChecker {
             """.trimIndent())
         } else {
             logger.info("ideamc.json exists")
-        }
-        logger.info("Checking plugins folder")
-        val pluginsFolder = File("plugins")
-        if (!pluginsFolder.exists()) {
-            logger.info("plugins folder not exists, creating folder")
-            pluginsFolder.mkdirs()
-        } else {
-            logger.info("plugins folder exists")
         }
     }
 }

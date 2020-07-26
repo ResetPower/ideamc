@@ -28,24 +28,9 @@ object AboutFragment {
                 HBox().apply {
                     children.addAll(
                         Label("GitHub: "),
-                        Hyperlink("https://github.com/resetpower/imcl").apply {
+                        Hyperlink("https://github.com/resetpower/ideamc").apply {
                             setOnAction {
-                                logger.info("Clicked Link [GitHub](https://github.com/resetpower/imcl)")
-                                val desktop = Desktop.getDesktop()
-                                if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
-                                    val uri = URI(text)
-                                    desktop.browse(uri)
-                                }
-                            }
-                        }
-                    )
-                },
-                HBox().apply {
-                    children.addAll(
-                        Label("Gitee: "),
-                        Hyperlink("https://gitee.com/resetpower/imcl").apply {
-                            setOnAction {
-                                logger.info("Clicked Link [Gitee](https://gitee.com/resetpower/imcl)")
+                                logger.info("Clicked Link [GitHub](https://github.com/resetpower/ideamc)")
                                 val desktop = Desktop.getDesktop()
                                 if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
                                     val uri = URI(text)
@@ -60,24 +45,9 @@ object AboutFragment {
                 HBox().apply {
                     children.addAll(
                         Label("${translator.get("submiterroratgithub")}"),
-                        Hyperlink("https://github.com/resetpower/imcl/issues").apply {
+                        Hyperlink("https://github.com/resetpower/ideamc/issues").apply {
                             setOnAction {
-                                logger.info("Clicked Link [Submit Error at GitHub](https://github.com/resetpower/imcl/issues)")
-                                val desktop = Desktop.getDesktop()
-                                if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
-                                    val uri = URI(text)
-                                    desktop.browse(uri)
-                                }
-                            }
-                        }
-                    )
-                },
-                HBox().apply {
-                    children.addAll(
-                        Label("${translator.get("submiterroratgitee")}"),
-                        Hyperlink("https://gitee.com/resetpower/imcl/issues").apply {
-                            setOnAction {
-                                logger.info("Clicked Link [Submit Error at Gitee](https://gitee.com/resetpower/imcl/issues)")
+                                logger.info("Clicked Link [Submit Error at GitHub](https://github.com/resetpower/ideamc/issues)")
                                 val desktop = Desktop.getDesktop()
                                 if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
                                     val uri = URI(text)
@@ -90,24 +60,9 @@ object AboutFragment {
                 HBox().apply {
                     children.addAll(
                         Label("${translator.get("seewikiatgithub")}"),
-                        Hyperlink("https://github.com/resetpower/imcl/wiki").apply {
+                        Hyperlink("https://github.com/resetpower/ideamc/wiki").apply {
                             setOnAction {
-                                logger.info("Clicked Link [See Wiki at GitHub](https://github.com/resetpower/imcl/wiki)")
-                                val desktop = Desktop.getDesktop()
-                                if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
-                                    val uri = URI(text)
-                                    desktop.browse(uri)
-                                }
-                            }
-                        }
-                    )
-                },
-                HBox().apply {
-                    children.addAll(
-                        Label("${translator.get("seewikiatgitee")}"),
-                        Hyperlink("https://gitee.com/resetpower/imcl/wiki").apply {
-                            setOnAction {
-                                logger.info("Clicked Link [See Wiki at Gitee](https://gitee.com/resetpower/imcl/wiki)")
+                                logger.info("Clicked Link [See Wiki at GitHub](https://github.com/resetpower/ideamc/wiki)")
                                 val desktop = Desktop.getDesktop()
                                 if (Desktop.isDesktopSupported() && desktop.isSupported(Desktop.Action.BROWSE)) {
                                     val uri = URI(text)
