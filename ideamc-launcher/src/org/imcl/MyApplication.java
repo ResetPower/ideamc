@@ -3,8 +3,8 @@ package org.imcl;
 import com.alibaba.fastjson.JSONObject;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import org.apache.logging.log4j.Logger;
 import org.imcl.constraints.ConstraintsKt;
+import org.imcl.logs.Logger;
 import org.imcl.constraints.Toolkit;
 import org.imcl.files.FileChecker;
 import org.imcl.lang.Translator;
@@ -17,9 +17,8 @@ import org.imcl.users.YggdrasilUserInformation;
 public class MyApplication extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        org.imcl.constraints.LoggerInit.INSTANCE.initLogger();
-        org.imcl.core.constraints.LoggerInit.INSTANCE.initLogger();
-        Logger logger = ConstraintsKt.getLogger();
+        Logger logger = org.imcl.constraints.ConstraintsKt.getLogger();
+        logger.info("*** ideamc "+ ConstraintsKt.VERSION_NAME +" ***");
         primaryStage.setResizable(false);
         logger.info("Checking file");
         FileChecker.check();

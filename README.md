@@ -20,8 +20,6 @@ Download "ideamc-launcher.jar" from [Jenkins Server](http://ci.kousaten.top/job/
 - [JFoenix](https://github.com/jfoenixadmin/JFoenix)
 - [commons-io](https://github.com/apache/commons-io)
 - [DialogBuilder](https://github.com/Stars-One/DialogBuilder)
-- [log4j](https://github.com/apache/log4j)
-- [snakeyaml](https://github.com/asomov/snakeyaml)
 ## Statement
 Our download service is using [BMCLAPI](https://bmclapidoc.bangbang93.com/)
 ## Developer

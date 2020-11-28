@@ -20,7 +20,7 @@ object FileChecker {
                     "profiles": [],
                     "settings": {
                         "isLoggedIn": "false",
-                        "language": "english",
+                        "language": "chinesesimplified",
                         "javapath": "java",
                         "downloadSrc": "bmclapi"
                     }

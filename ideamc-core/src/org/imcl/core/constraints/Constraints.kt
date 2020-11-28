@@ -1,12 +1,5 @@
 package org.imcl.core.constraints
 
-import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
+import org.imcl.logs.LogManager
 
-lateinit var logger: Logger
-
-object LoggerInit {
-    fun initLogger() {
-        logger = LogManager.getLogger(LoggerInit.javaClass)
-    }
-}
+val logger = LogManager.getLogger()

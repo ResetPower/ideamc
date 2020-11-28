@@ -96,7 +96,7 @@ object LanguageResource {
         Pair("usernamenotinput", "Username not input"),
         Pair("pleaseinputyourpassword", "Please input you password"),
         Pair("anerroroccurredinlaunching", "An error occurred in launching Minecraft"),
-        Pair("somethingwrong", "It's look like something wrong. Please restart IMCL and retry"),
+        Pair("somethingwrong", "It's look like something wrong. Please restart ideamc and retry"),
         Pair("erroroccurredinresetingskin", "Error occurred in Reseting Skin"),
         Pair("noskinnow", "No skin now"),
         Pair("newversion", "New version"),
@@ -107,7 +107,9 @@ object LanguageResource {
         Pair("doyoureallywanttoresetskin", "Do you really want to reset skin?"),
         Pair("newinstallation", "New Installation"),
         Pair("editinstallation", "Edit Installation"),
-        Pair("custominstallation", "Custom Installation")
+        Pair("custominstallation", "Custom Installation"),
+        Pair("account", "Account"),
+        Pair("noaccountsyet", "No accounts yet")
     )
     @JvmStatic
     fun esperantoResource() = mapOf(
@@ -194,7 +196,7 @@ object LanguageResource {
         Pair("usernamenotinput", "Uzantnomo ne estas enirita"),
         Pair("pleaseinputyourpassword", "Bonvolu tajpi vian pasvorton"),
         Pair("anerroroccurredinlaunching", "Eraro okazis startinte Minecraft"),
-        Pair("somethingwrong", "Ŝajnas esti problemo, bonvolu rekomenci IMCL kaj provu denove"),
+        Pair("somethingwrong", "Ŝajnas esti problemo, bonvolu rekomenci ideamc kaj provu denove"),
         Pair("erroroccurredinresetingskin", "Io iris malbone dum restarigo de la haŭto"),
         Pair("noskinnow", "Neniu haŭto ankoraŭ"),
         Pair("newversion", "Nova versio"),
@@ -205,7 +207,9 @@ object LanguageResource {
         Pair("doyoureallywanttoresetskin", "Ĉu vi vere volas restarigi haŭton?"),
         Pair("newinstallation", "Nova Instalado"),
         Pair("editinstallation", "Redakti Instaladon"),
-        Pair("custominstallation", "Propra Instalo")
+        Pair("custominstallation", "Propra Instalo"),
+        Pair("account", "Konto"),
+        Pair("noaccountsyet", "Neniu kontoj ankoraŭ")
     )
     @JvmStatic
     fun japaneseResource() = mapOf(
@@ -292,7 +296,7 @@ object LanguageResource {
         Pair("usernamenotinput", "ユーザー名を入力されていません"),
         Pair("pleaseinputyourpassword", "パスワードを入力してください"),
         Pair("anerroroccurredinlaunching", "Minecraftを起動中にエラーを発生しました"),
-        Pair("somethingwrong", "問題があるようです。IMCLを再起動して、もう一度お試しください"),
+        Pair("somethingwrong", "問題があるようです。ideamcを再起動して、もう一度お試しください"),
         Pair("erroroccurredinresetingskin", "皮膚をリセット中にエラーを発生しました"),
         Pair("noskinnow", "現在、皮膚はまだありません"),
         Pair("newversion", "新しいバージョン"),
@@ -303,7 +307,9 @@ object LanguageResource {
         Pair("doyoureallywanttoresetskin", "本当に皮膚をリセットしますか？"),
         Pair("newinstallation", "新規構成"),
         Pair("editinstallation", "構成を編集"),
-        Pair("custominstallation", "構成をカスタマイズ")
+        Pair("custominstallation", "構成をカスタマイズ"),
+        Pair("account", "アカウント"),
+        Pair("noaccountsyet", "アカウントがありません")
     )
     @JvmStatic
     fun chineseSimplifiedResource() = mapOf(
@@ -390,7 +396,7 @@ object LanguageResource {
         Pair("usernamenotinput", "用户名未输入"),
         Pair("pleaseinputyourpassword", "请输入你的密码"),
         Pair("anerroroccurredinlaunching", "启动Minecraft中出了点问题"),
-        Pair("somethingwrong", "看起来出了点问题。请重启IMCL并重试"),
+        Pair("somethingwrong", "看起来出了点问题。请重启ideamc并重试"),
         Pair("erroroccurredinresetingskin", "重置皮肤中出了点问题"),
         Pair("noskinnow", "目前暂时还没有皮肤"),
         Pair("newversion", "新版本"),
@@ -401,7 +407,9 @@ object LanguageResource {
         Pair("doyoureallywanttoresetskin", "您真的想要重置皮肤吗？"),
         Pair("newinstallation", "新配置"),
         Pair("editinstallation", "编辑配置"),
-        Pair("custominstallation", "自定义配置")
+        Pair("custominstallation", "自定义配置"),
+        Pair("account", "账户"),
+        Pair("noaccountsyet", "暂时没有账户")
     )
     @JvmStatic
     fun chineseTraditionalResource() = mapOf(
@@ -488,7 +496,7 @@ object LanguageResource {
         Pair("usernamenotinput", "用戶名未輸入"),
         Pair("pleaseinputyourpassword", "請輸入您的密碼"),
         Pair("anerroroccurredinlaunching", "啟動Minecraft中出了點問題"),
-        Pair("somethingwrong", "看起來出了點問題。請重啓IMCL並重試"),
+        Pair("somethingwrong", "看起來出了點問題。請重啓ideamc並重試"),
         Pair("erroroccurredinresetingskin", "重置皮膚中出了點問題"),
         Pair("noskinnow", "目前暫時還沒有皮膚"),
         Pair("newversion", "新版本"),
@@ -499,6 +507,8 @@ object LanguageResource {
         Pair("doyoureallywanttoresetskin", "您真的想要重置皮膚嗎？"),
         Pair("newinstallation", "新配置"),
         Pair("editinstallation", "編輯配置"),
-        Pair("custominstallation", "自定義配置")
+        Pair("custominstallation", "自定義配置"),
+        Pair("account", "賬戶"),
+        Pair("noaccountsyet", "暫時沒有賬戶")
     )
 }

@@ -12,14 +12,11 @@ import javafx.scene.text.Font
 import javafx.stage.Stage
 import org.imcl.bg.GlobalBackgroundImageController
 import org.imcl.color.GlobalThemeColorController
-import org.imcl.color.LeftListOpacityController
 import org.imcl.constraints.Toolkit
 import org.imcl.constraints.logger
 import org.imcl.download.GlobalDownloadSourceManager
 import org.imcl.lang.Translator
 import org.imcl.main.MainScene
-import org.imcl.updating.UpdateChecker.check
-import org.imcl.updating.UpdateChecker.showUpdater
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
 import org.imcl.users.YggdrasilUserInformation
@@ -68,23 +65,11 @@ object SettingsFragment {
             }
         }, 1, 6)
         add(Label(""), 0, 7)
-        add(Label(translator.get("lefttabopacity")), 0, 8)
-        add(JFXSlider().apply {
-            value = LeftListOpacityController.getFromConfig()/2.5
-            valueProperty().addListener { _ ->
-                val valu = value
-                logger.info("Set left list opacity to $valu")
-                LeftListOpacityController.saveToConfig((valu*2.6).toInt())
-                LeftListOpacityController.updateLeftListOpacity((valu*2.6).toInt())
-            }
-        }, 1, 8)
-        add(Label(translator.get("numberhighandopacityhigh")), 0, 9)
-        add(Label(""), 0, 10)
-        add(Label(translator.get("backgroundimage")), 0, 11)
+        add(Label(translator.get("backgroundimage")), 0, 10)
         val bgIField = JFXTextField().apply {
             text = GlobalBackgroundImageController.getFromConfig()
         }
-        add(bgIField, 1, 11)
+        add(bgIField, 1, 10)
         add(JFXButton(translator.get("save")).apply {
             buttonType = JFXButton.ButtonType.RAISED
             background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
@@ -93,9 +78,9 @@ object SettingsFragment {
                 GlobalBackgroundImageController.saveToConfig(bgIField.text)
                 GlobalBackgroundImageController.updateBackgroundImage(bgIField.text)
             }
-        }, 2, 11)
-        add(Label(translator.get("usedefaultpleasekeepnone")), 0, 12)
-        add(Label(""), 0, 13)
+        }, 2, 10)
+        add(Label(translator.get("usedefaultpleasekeepnone")), 0, 11)
+        add(Label(""), 0, 12)
         add(Label(translator.get("downloadsrc")), 0, 14)
         add(JFXComboBox<String>().apply {
             items.add(translator.get("official"))
@@ -131,17 +116,7 @@ object SettingsFragment {
             buttonType = JFXButton.ButtonType.RAISED
             background = Background(BackgroundFill(Color.LIGHTBLUE, null, null))
             setOnAction {
-                var isLatest = true
-                try {
-                    isLatest = check()
-                } catch (e: Exception) {
-                    logger.warn("Network bad state, failed to check update.")
-                }
-                if (!isLatest) {
-                    showUpdater(translator)
-                } else {
-                    Toolkit.toast(translator.get("youarenowlatestversion"))
-                }
+                Toolkit.toast("not supported")
             }
         }, 1, 18)
     }

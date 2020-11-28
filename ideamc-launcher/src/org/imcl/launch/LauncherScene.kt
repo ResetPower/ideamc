@@ -8,7 +8,6 @@ import javafx.geometry.Insets
 import javafx.geometry.Pos
 import javafx.scene.Scene
 import javafx.scene.control.Alert
-import javafx.scene.control.Hyperlink
 import javafx.scene.control.Label
 import javafx.scene.control.Tab
 import javafx.scene.image.Image
@@ -20,7 +19,6 @@ import javafx.stage.FileChooser
 import javafx.stage.Stage
 import org.imcl.bg.GlobalBackgroundImageController
 import org.imcl.color.GlobalThemeColorController
-import org.imcl.color.LeftListOpacityController
 import org.imcl.constraints.Toolkit
 import org.imcl.constraints.VERSION_NAME
 import org.imcl.constraints.logger
@@ -37,10 +35,8 @@ import org.imcl.download.ForgeDownloadScene
 import org.imcl.download.MinecraftDownloadScene
 import org.imcl.installation.InstallationScene
 import org.imcl.installation.InstallationSceneType
-import org.imcl.introductions.FolderSeparateIntroduction
 import org.imcl.lang.Translator
 import org.imcl.main.MainScene
-import org.imcl.main.MainScene.get
 import org.imcl.users.OfflineUserInformation
 import org.imcl.users.UserInformation
 import org.imcl.users.YggdrasilUserInformation
@@ -189,7 +185,7 @@ object LauncherScene {
             }
             val launchBtn = JFXButton(translator.get("launch")).apply {
                 buttonType = JFXButton.ButtonType.RAISED
-                background = Background(BackgroundFill(Color.LIGHTGREEN, CornerRadii(5.0), Insets(1.0)))
+                background = Background(BackgroundFill(GlobalThemeColorController.getFromConfig(), CornerRadii(5.0), Insets(1.0)))
                 setPrefSize(90.0, 35.0)
                 setOnAction {
                     this.isDisable = true
@@ -441,12 +437,16 @@ object LauncherScene {
             mainBorderPane.center = tabPane
         }
         val newsBtn = JFXButton(translator.get("news"))
+        val accountBtn = JFXButton(translator.get("account"))
         val mcBtn = JFXButton("Minecraft")
         val setBtn = JFXButton(translator.get("settings"))
         val aboutBtn = JFXButton(translator.get("about"))
-        val btnList = listOf(newsBtn, mcBtn, setBtn, aboutBtn)
-        val selBg = Background(BackgroundFill(Color(0.6627451, 0.6627451, 0.6627451, 0.5), null, null))
+        val btnList = listOf(newsBtn, accountBtn, mcBtn, setBtn, aboutBtn)
+        val selBg = Background(BackgroundFill(Color(0.6627451, 0.6627451, 0.6627451, 0.6), null, null))
         val unSelBg = Background(BackgroundFill(Color(0.0, 0.0, 0.0, 0.0), null, null))
+        for (i in btnList) {
+            i.minHeight = 50.0
+        }
         fun changeSelected(s: Int) {
             selected = s
             for (i in btnList.indices) {
@@ -459,23 +459,15 @@ object LauncherScene {
         }
         val mainListView = VBox().apply {
             val color = GlobalThemeColorController.getFromConfig().toString().removePrefix("0x").removeSuffix("ff")
-            val opacity = Toolkit.getHex(LeftListOpacityController.getFromConfig())
-            logger.info("Generating main list view. ThemeColor: $color, Opacity: $opacity")
-            style = "-fx-background-color:#$color$opacity"
+            logger.info("Generating main list view. ThemeColor: $color")
+            style = "-fx-background-color:#${color}80"
             var ctext = color
             GlobalThemeColorController.register {
                 val color = it.toString().removePrefix("0x").removeSuffix("ff")
-                val opacity = Toolkit.getHex(LeftListOpacityController.getFromConfig())
                 logger.info("Global theme color changed. New theme color: $color")
-                style = "-fx-background-color:#$color$opacity"
+                style = "-fx-background-color:#${color}80"
                 ctext = color
             }
-            LeftListOpacityController.register {
-                val opacity = Toolkit.getHex(it)
-                style = "-fx-background-color:#$ctext$opacity"
-                logger.info("Left list opacity changed. New opacity: $opacity")
-            }
-            children.add(Label(""))
             children.add(newsBtn.apply {
                 isFocusTraversable = false
                 setPrefSize(160.0, 20.0)
@@ -486,36 +478,43 @@ object LauncherScene {
                     mainBorderPane.center = NewsFragment.get(translator)
                 }
             })
-            children.add(Label(""))
+            children.add(accountBtn.apply {
+                isFocusTraversable = false
+                setPrefSize(160.0, 20.0)
+                font = Font.font(15.0)
+                setOnAction {
+                    logger.info("Turning to account page")
+                    changeSelected(1)
+                    mainBorderPane.center = AccountFragment.get(translator)
+                }
+            })
             children.add(mcBtn.apply {
                 isFocusTraversable = false
                 setPrefSize(160.0, 20.0)
                 font = Font.font(15.0)
                 setOnAction {
                     logger.info("Turning to Minecraft page")
-                    changeSelected(1)
+                    changeSelected(2)
                     setMinecraftJavaEditionPane()
                 }
             })
-            children.add(Label(""))
             children.add(setBtn.apply {
                 isFocusTraversable = false
                 setPrefSize(160.0, 20.0)
                 font = Font.font(15.0)
                 setOnAction {
                     logger.info("Turning to settings page")
-                    changeSelected(2)
+                    changeSelected(3)
                     mainBorderPane.center = SettingsFragment.get(translator, userInformation, primaryStage)
                 }
             })
-            children.add(Label(""))
             children.add(aboutBtn.apply {
                 isFocusTraversable = false
                 setPrefSize(160.0, 20.0)
                 font = Font.font(15.0)
                 setOnAction {
                     logger.info("Turning to about page")
-                    changeSelected(3)
+                    changeSelected(4)
                     mainBorderPane.center = AboutFragment.get(translator)
                 }
             })
@@ -524,8 +523,11 @@ object LauncherScene {
         if (state==LaunchSceneState.SETTINGS) {
             logger.info("LauncherSceneState is SETTINGS, navigating to settings page")
             mainBorderPane.center = SettingsFragment.get(translator, userInformation, primaryStage)
-        } else setMinecraftJavaEditionPane()
-        changeSelected(1)
+            changeSelected(3)
+        } else {
+            setMinecraftJavaEditionPane()
+            changeSelected(2)
+        }
         theScene = Scene(deepStackPane.apply {
             children.add(AnchorPane().apply {
                 val bg = GlobalBackgroundImageController.getFromConfig()
