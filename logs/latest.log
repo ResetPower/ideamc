@@ -1,37 +1,120 @@
-[12:06:49] [org.imcl.MyApplication/INFO] *** ideamc Alpha 0.5.0 ***
-[12:06:49] [org.imcl.MyApplication/INFO] Checking file
-[12:06:49] [org.imcl.files.FileChecker/INFO] Checking ideamc.json
-[12:06:49] [org.imcl.files.FileChecker/INFO] ideamc.json exists
-[12:06:49] [org.imcl.MyApplication/INFO] Initializing Window
-[12:06:49] [org.imcl.MyApplication/INFO] Is logged in, using default account
-[12:06:49] [org.imcl.MyApplication/INFO] Offline account. Player name: rp
-[12:06:49] [org.imcl.launch.LauncherScene/INFO] Initializing LauncherScene
-[12:06:49] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
-[12:06:49] [org.imcl.launch.LauncherScene/INFO] Generating main list view. ThemeColor: ffffff
-[12:06:49] [org.imcl.color.GlobalThemeColorController/INFO] New event registered. Event@0
-[12:06:49] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
-[12:06:49] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Play
-[12:06:49] [org.imcl.bg.GlobalBackgroundImageController/INFO] Getting background image from config: 
-[12:06:49] [org.imcl.bg.GlobalBackgroundImageController/INFO] New event registered. Event@0
-[12:06:50] [org.imcl.MyApplication/INFO] primaryStage showed
-[12:06:51] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$2/INFO] Turning to account page
-[12:06:51] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$3/INFO] Turning to Minecraft page
-[12:06:51] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
-[12:06:51] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Play
-[12:06:52] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$4/INFO] Turning to settings page
-[12:06:52] [org.imcl.launch.SettingsFragment/INFO] Generating SettingsFragment
-[12:06:52] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
-[12:06:52] [org.imcl.bg.GlobalBackgroundImageController/INFO] Getting background image from config: 
-[12:06:52] [org.imcl.download.GlobalDownloadSourceManager/INFO] Getting download source from config: bmclapi
-[12:06:52] [org.imcl.download.GlobalDownloadSourceManager/INFO] Getting download source from config: bmclapi
-[12:06:53] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5/INFO] Turning to about page
-[12:06:53] [org.imcl.launch.AboutFragment/INFO] Generating AboutFragment
-[12:06:53] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$4/INFO] Turning to settings page
-[12:06:53] [org.imcl.launch.SettingsFragment/INFO] Generating SettingsFragment
-[12:06:53] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
-[12:06:53] [org.imcl.bg.GlobalBackgroundImageController/INFO] Getting background image from config: 
-[12:06:53] [org.imcl.download.GlobalDownloadSourceManager/INFO] Getting download source from config: bmclapi
-[12:06:54] [org.imcl.launch.SettingsFragment$get$$inlined$apply$lambda$1/INFO] Logging out
-[12:06:54] [org.imcl.main.MainScene/INFO] Initializing MainScene (login page)
-[12:06:54] [org.imcl.main.MainScene/INFO] Getting language: japanese
-[12:06:55] [org.imcl.main.MainScene$$special$$inlined$apply$lambda$1/INFO] Updating language, old: japanese, new: english
+[17:14:53] [org.imcl.MyApplication/INFO] *** ideamc Alpha 0.5.0 ***
+[17:14:53] [org.imcl.MyApplication/INFO] Checking file
+[17:14:53] [org.imcl.files.FileChecker/INFO] Checking ideamc.json
+[17:14:53] [org.imcl.files.FileChecker/INFO] ideamc.json exists
+[17:14:53] [org.imcl.MyApplication/INFO] Initializing Window
+[17:14:53] [org.imcl.MyApplication/INFO] Not logged in, go to login page
+[17:14:53] [org.imcl.main.MainScene/INFO] Initializing MainScene (login page)
+[17:14:53] [org.imcl.main.MainScene/INFO] Getting language: english
+[17:14:54] [org.imcl.MyApplication/INFO] primaryStage showed
+[17:15:00] [org.imcl.main.LoginPane$$special$$inlined$apply$lambda$2/INFO] Offline button clicked
+[17:15:00] [org.imcl.main.LoginPane$$special$$inlined$apply$lambda$2/INFO] Username not input
+[17:15:40] [org.imcl.main.MainScene$$special$$inlined$apply$lambda$1/INFO] Updating language, old: english, new: chinesesimplified
+[17:15:42] [org.imcl.main.MainScene$$special$$inlined$apply$lambda$1/INFO] Updating language, old: chinesesimplified, new: esperanto
+[17:16:08] [org.imcl.main.MainScene$$special$$inlined$apply$lambda$1/INFO] Updating language, old: esperanto, new: chinesesimplified
+[17:16:13] [org.imcl.main.LoginPane$$special$$inlined$apply$lambda$2/INFO] Offline button clicked
+[17:16:13] [org.imcl.main.LoginPane$$special$$inlined$apply$lambda$2/INFO] Logging in. Writing "isLoggedIn: true" to json
+[17:16:13] [org.imcl.launch.LauncherScene/INFO] Initializing LauncherScene
+[17:16:13] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
+[17:16:13] [org.imcl.launch.LauncherScene/INFO] Generating main list view. ThemeColor: ffffff
+[17:16:13] [org.imcl.color.GlobalThemeColorController/INFO] New event registered. Event@0
+[17:16:13] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
+[17:16:13] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Play
+[17:16:13] [org.imcl.bg.GlobalBackgroundImageController/INFO] Getting background image from config: 
+[17:16:13] [org.imcl.bg.GlobalBackgroundImageController/INFO] New event registered. Event@0
+[17:16:14] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Installations
+[17:16:15] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Mods
+[17:16:15] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Skin
+[17:16:15] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Download
+[17:16:16] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Skin
+[17:16:16] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Download
+[17:16:17] [org.imcl.launch.LauncherScene$get$2$setMinecraftJavaEditionPane$$inlined$apply$lambda$9/INFO] Turning to MinecraftDownloadScene
+[17:16:19] [org.imcl.download.MinecraftDownloadScene$get$1/INFO] Refreshing game list
+[17:16:19] [org.imcl.download.MinecraftDownloadScene$get$1/INFO] Refreshing game list done
+[17:16:20] [org.imcl.download.MinecraftDownloadScene$get$$inlined$apply$lambda$2/INFO] Clicked snapshot box
+[17:16:20] [org.imcl.download.MinecraftDownloadScene$get$1/INFO] Refreshing game list
+[17:16:20] [org.imcl.download.MinecraftDownloadScene$get$1/INFO] Refreshing game list done
+[17:16:21] [org.imcl.download.MinecraftDownloadScene$get$$inlined$apply$lambda$3/INFO] Clicked old box
+[17:16:21] [org.imcl.download.MinecraftDownloadScene$get$1/INFO] Refreshing game list
+[17:16:21] [org.imcl.download.MinecraftDownloadScene$get$1/INFO] Refreshing game list done
+[17:16:23] [org.imcl.download.MinecraftDownloadScene$get$1$refreshGameList$$inlined$apply$lambda$2/INFO] Turning to MinecraftInstallerScene: 1.16.3-rc1
+[17:16:23] [org.imcl.core.ostool.OSTool/INFO] Getting os from system, os.name=Mac OS X
+[17:16:23] [org.imcl.core.ostool.OSTool/INFO] Done. OS is macOS
+[17:16:23] [org.imcl.download.MinecraftInstallerScene/INFO] Generating MinecraftInstallerScene, OS=MacOS, username=resetpower, defaultInstallDir=Label@55eb3728[styleClass=label]'/Users/resetpower/Library/Application Support/minecraft'
+[17:16:25] [org.imcl.download.MinecraftInstallerScene$get$$inlined$apply$lambda$2/INFO] Selecting install path, opening DirectoryChooser
+[17:16:27] [org.imcl.download.MinecraftInstallerScene$get$$inlined$apply$lambda$2/INFO] Chose file is null, user closed DirectoryChooser or clicked cancel
+[17:16:28] [org.imcl.download.MinecraftInstallerScene$get$$inlined$apply$lambda$1/INFO] Backing to MinecraftDownloadScene
+[17:16:28] [org.imcl.download.MinecraftDownloadScene$get$$inlined$apply$lambda$4/INFO] Backing to LauncherScene
+[17:16:29] [org.imcl.launch.LauncherScene$get$2$setMinecraftJavaEditionPane$$inlined$apply$lambda$9/INFO] Turning to MinecraftDownloadScene
+[17:16:30] [org.imcl.download.MinecraftDownloadScene$get$1/INFO] Refreshing game list
+[17:16:30] [org.imcl.download.MinecraftDownloadScene$get$1/INFO] Refreshing game list done
+[17:16:52] [org.imcl.download.MinecraftDownloadScene$get$$inlined$apply$lambda$4/INFO] Backing to LauncherScene
+[17:16:52] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$2/INFO] Turning to account page
+[17:16:53] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$1/INFO] Turning to news page
+[17:16:53] [org.imcl.launch.NewsFragment/INFO] Generating NewsFragment
+[17:16:53] [org.imcl.launch.NewsFragment$get$1$2/INFO] Loading news from https://authentication.x-speed.cc/mcbbsNews/
+[17:16:54] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$2/INFO] Turning to account page
+[17:16:55] [org.imcl.launch.NewsFragment$get$1$2/INFO] News loading done
+[17:16:56] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$1/INFO] Turning to news page
+[17:16:56] [org.imcl.launch.NewsFragment/INFO] Generating NewsFragment
+[17:16:56] [org.imcl.launch.NewsFragment$get$1$2/INFO] Loading news from https://authentication.x-speed.cc/mcbbsNews/
+[17:16:58] [org.imcl.launch.NewsFragment$get$1$2/INFO] News loading done
+[17:16:59] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$2/INFO] Turning to account page
+[17:17:01] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$3/INFO] Turning to Minecraft page
+[17:17:01] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
+[17:17:01] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Play
+[17:17:02] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Installations
+[17:17:16] [org.imcl.installation.InstallationScene$get$$inlined$apply$lambda$2/INFO] Cancel clicked, exit InstallationScene:NEW
+[17:17:23] [org.imcl.installation.InstallationScene$get$$inlined$apply$lambda$3/INFO] OKed, exit InstallationScene:NEW
+[17:17:39] [org.imcl.introductions.FolderSeparateIntroduction/INFO] Generating FolderSeparateIntroduction
+[17:17:42] [org.imcl.installation.InstallationScene$get$$inlined$apply$lambda$1/INFO] Exit InstallationScene:EDIT
+[17:18:35] [org.imcl.installation.InstallationScene$get$$inlined$apply$lambda$1/INFO] Exit InstallationScene:CUSTOM
+[17:18:36] [org.imcl.installation.InstallationScene$get$$inlined$apply$lambda$1/INFO] Exit InstallationScene:EDIT
+[17:18:40] [org.imcl.installation.InstallationScene$get$$inlined$apply$lambda$6/INFO] Cancel clicked, exit InstallationScene:CUSTOM
+[17:18:43] [org.imcl.installation.InstallationScene$get$$inlined$apply$lambda$1/INFO] Exit InstallationScene:NEW
+[17:18:43] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Mods
+[17:18:51] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Skin
+[17:18:52] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Download
+[17:18:52] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Skin
+[17:18:52] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Installations
+[17:18:53] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Play
+[17:18:53] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$4/INFO] Turning to settings page
+[17:18:53] [org.imcl.launch.SettingsFragment/INFO] Generating SettingsFragment
+[17:18:53] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
+[17:18:53] [org.imcl.bg.GlobalBackgroundImageController/INFO] Getting background image from config: 
+[17:18:53] [org.imcl.download.GlobalDownloadSourceManager/INFO] Getting download source from config: bmclapi
+[17:18:53] [org.imcl.download.GlobalDownloadSourceManager/INFO] Getting download source from config: bmclapi
+[17:19:02] [org.imcl.launch.SettingsFragment$$special$$inlined$apply$lambda$3/INFO] Set background imabe to 
+[17:19:02] [org.imcl.bg.GlobalBackgroundImageController/INFO] Saving background image to config: 
+[17:19:02] [org.imcl.bg.GlobalBackgroundImageController/INFO] Background image updated, running all events
+[17:19:04] [org.imcl.launch.SettingsFragment$get$$inlined$apply$lambda$2/INFO] Language updated from English to 简体中文
+[17:19:04] [org.imcl.launch.LauncherScene/INFO] Initializing LauncherScene
+[17:19:04] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
+[17:19:04] [org.imcl.launch.LauncherScene/INFO] Generating main list view. ThemeColor: ffffff
+[17:19:04] [org.imcl.color.GlobalThemeColorController/INFO] New event registered. Event@1
+[17:19:04] [org.imcl.launch.LauncherScene/INFO] LauncherSceneState is SETTINGS, navigating to settings page
+[17:19:04] [org.imcl.launch.SettingsFragment/INFO] Generating SettingsFragment
+[17:19:04] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
+[17:19:04] [org.imcl.bg.GlobalBackgroundImageController/INFO] Getting background image from config: 
+[17:19:04] [org.imcl.download.GlobalDownloadSourceManager/INFO] Getting download source from config: bmclapi
+[17:19:04] [org.imcl.bg.GlobalBackgroundImageController/INFO] Getting background image from config: 
+[17:19:04] [org.imcl.bg.GlobalBackgroundImageController/INFO] New event registered. Event@1
+[17:19:06] [org.imcl.launch.SettingsFragment$get$1$7$1/INFO] Save download source to official
+[17:19:06] [org.imcl.download.GlobalDownloadSourceManager/INFO] Saving download source to config: official
+[17:19:10] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$5/INFO] Turning to about page
+[17:19:10] [org.imcl.launch.AboutFragment/INFO] Generating AboutFragment
+[17:19:33] [org.imcl.launch.AboutFragment$get$1$1$2$1$1/INFO] Clicked Link [Submit Error at GitHub](https://github.com/resetpower/ideamc/issues)
+[17:34:20] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$4/INFO] Turning to settings page
+[17:34:20] [org.imcl.launch.SettingsFragment/INFO] Generating SettingsFragment
+[17:34:20] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
+[17:34:20] [org.imcl.bg.GlobalBackgroundImageController/INFO] Getting background image from config: 
+[17:34:20] [org.imcl.download.GlobalDownloadSourceManager/INFO] Getting download source from config: official
+[17:34:25] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$3/INFO] Turning to Minecraft page
+[17:34:25] [org.imcl.color.GlobalThemeColorController/INFO] Saving theme color to config: 0xffffffff
+[17:34:25] [org.imcl.launch.LauncherScene$get$2$1/INFO] Changing MinecraftPane's tab to Play
+[17:34:25] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$2/INFO] Turning to account page
+[17:34:26] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$1/INFO] Turning to news page
+[17:34:26] [org.imcl.launch.NewsFragment/INFO] Generating NewsFragment
+[17:34:26] [org.imcl.launch.NewsFragment$get$1$2/INFO] Loading news from https://authentication.x-speed.cc/mcbbsNews/
+[17:34:27] [org.imcl.launch.NewsFragment$get$1$2/INFO] News loading done
+[17:34:28] [org.imcl.launch.LauncherScene$get$$inlined$apply$lambda$2/INFO] Turning to account page
